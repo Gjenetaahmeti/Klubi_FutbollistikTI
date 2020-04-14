@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Klubi_Futbollistik
+namespace Klubi_I_Futbollit
 {
     public partial class LogIn : Form
     {
@@ -17,6 +17,5 @@ namespace Klubi_Futbollistik
             InitializeComponent();
         }
 
-      
     }
 }

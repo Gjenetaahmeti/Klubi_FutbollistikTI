@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Klubi_Futbollistik
+namespace Klubi_Futbollistik.BLL
 {
-    class Test
+    class PersoneliBLL
     {
-        int v = 0;
-        bool e = false;
     }
 }
