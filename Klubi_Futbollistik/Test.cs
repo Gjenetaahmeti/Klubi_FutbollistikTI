@@ -10,6 +10,5 @@ namespace Klubi_Futbollistik
     {
         int v = 0;
         bool e = false;
-   
     }
 }
