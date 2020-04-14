@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klubi_Futbollistik.DAL", "K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klubi_I_Futbollit", "Klubi_I_Futbollit\Klubi_I_Futbollit.csproj", "{17297882-3C3A-4C6C-A09C-CEBF23B7394B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klubi_I_Futbollit.DAL", "Klubi_\Klubi_I_Futbollit.DAL.csproj", "{E6E3646F-85D8-4180-AC4E-69658786B6BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{17297882-3C3A-4C6C-A09C-CEBF23B7394B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17297882-3C3A-4C6C-A09C-CEBF23B7394B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17297882-3C3A-4C6C-A09C-CEBF23B7394B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6E3646F-85D8-4180-AC4E-69658786B6BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E3646F-85D8-4180-AC4E-69658786B6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E3646F-85D8-4180-AC4E-69658786B6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6E3646F-85D8-4180-AC4E-69658786B6BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
