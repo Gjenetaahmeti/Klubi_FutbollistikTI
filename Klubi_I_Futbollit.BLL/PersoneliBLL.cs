@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Klubi_
+namespace Klubi_Futbollistik.BLL
 {
-    class Personeli
+    class PersoneliBLL
     {
-        public int ID { get; set; }
-        public string Emri { get; set; }
     }
 }

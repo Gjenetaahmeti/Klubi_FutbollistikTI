@@ -52,12 +52,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Klubi_Futbollistik.BO\Klubi_Futbollistik.BO.csproj">
-      <Project>{d9a9f377-b43b-44c4-b5e1-18ad533d8b2c}</Project>
-      <Name>Klubi_Futbollistik.BO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="DB\KlubiFutbollstikTI1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
