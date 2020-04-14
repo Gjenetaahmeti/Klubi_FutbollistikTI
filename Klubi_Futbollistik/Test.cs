@@ -8,5 +8,8 @@ namespace Klubi_Futbollistik
 {
     class Test
     {
+        int v = 0;
+        bool e = false;
+   
     }
 }
