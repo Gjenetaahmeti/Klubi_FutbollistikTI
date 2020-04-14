@@ -10,6 +10,8 @@ namespace Klubi_Futbollistik
     {
         static void Main(string[] args)
         {
+            Test obj = new Test();
+            // ca po bon qysh je a je mire :P
         }
     }
 }
