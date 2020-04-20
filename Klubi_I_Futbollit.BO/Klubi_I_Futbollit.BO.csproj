@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\CRUD.cs" />
+    <Compile Include="Klubet.cs" />
     <Compile Include="PersoneliBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
