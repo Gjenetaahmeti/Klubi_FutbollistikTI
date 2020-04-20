@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Klubi_I_Futbollit.BO
 {
-   public class Lojtari
+    public class StafiKategorit
     {
-        public int LojtariID { get; set; }
-        public Personeli PersoneliId { get; set; }
-        public decimal Pesha { get; set; }
-        public decimal Gjatesia { get; set; }
+        public int KategoriaID { get; set; }
+        public Personeli PersoniID { get; set; }
+        public int Pozita { get; set; }
+        public DateTime KontrataDerMe { get; set; }
         public int InsertBy { get; set; }
         public DateTime InsertDate { get; set; }
         public int LUB { get; set; }
