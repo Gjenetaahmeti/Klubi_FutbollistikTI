@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Klubi_Futbollistik.BO
+namespace Klubi_I_Futbollit.BO
 {
-    public class PersoneliBO
+ public  class Personeli
     {
         public int ID { get; set; }
         public string Emri { get; set; }

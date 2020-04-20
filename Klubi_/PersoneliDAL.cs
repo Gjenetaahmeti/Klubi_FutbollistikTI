@@ -6,15 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Klubi_Futbollistik.BO;
 using Klubi_Futbollistik.BO.Interface;
+using Klubi_I_Futbollit.BO;
 
 namespace Klubi_Futbollistik.DAL
 {
-    class PersoneliDAL:CRUD<PersoneliBO>
+    class PersoneliDAL:CRUD<Personeli>
     {
         public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString; 
-        public int Shto(PersoneliBO model)
+        public int Shto(Personeli model)
         {
             try
             {
@@ -52,7 +52,7 @@ namespace Klubi_Futbollistik.DAL
                 return -1;
             }
         }
-        public int Fshij(PersoneliBO model)
+        public int Fshij(Personeli model)
         {
             try
             {
@@ -73,19 +73,19 @@ namespace Klubi_Futbollistik.DAL
             }
         }
 
-        public List<PersoneliBO> GetAll()
+        public List<Personeli> GetAll()
         {
             try
             {
-                List<PersoneliBO> rezultati = null;
+                List<Personeli> rezultati = null;
                 SqlConnection connection = new SqlConnection(_connectionstring);
                 connection.Open();
                 SqlCommand command = new SqlCommand("usp_Personel_GetAllPersonel", connection);
                 SqlDataReader reader = command.ExecuteReader();
-                rezultati = new List<PersoneliBO>();
+                rezultati = new List<Personeli>();
                 while (reader.Read())
                 {
-                    PersoneliBO personeli = TooObject(reader);
+                    Personeli personeli = TooObject(reader);
                     rezultati.Add(personeli);
                 }
                 return rezultati;
@@ -96,9 +96,9 @@ namespace Klubi_Futbollistik.DAL
             }
         }
 
-        public PersoneliBO TooObject(SqlDataReader reader)
+        public Personeli TooObject(SqlDataReader reader)
         {
-            PersoneliBO personeli = new PersoneliBO();
+            Personeli personeli = new Personeli();
             personeli.ID = int.Parse(reader["ID"].ToString());
             personeli.Mbiemri = reader["Mbiemri"].ToString();
             personeli.Specializimi = reader["Specializimi"].ToString();
@@ -122,9 +122,43 @@ namespace Klubi_Futbollistik.DAL
         }
         
 
-        public int Update(PersoneliBO model)
+        public int Update(Personeli model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection connection = new SqlConnection(_connectionstring);
+                connection.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("Emri", model.Emri);
+                command.Parameters.AddWithValue("Mbiemri", model.Mbiemri);
+                command.Parameters.AddWithValue("Specializimi", model.Specializimi);
+                command.Parameters.AddWithValue("Titulli", model.Titulli);
+                command.Parameters.AddWithValue("VendiIPunes", model.VendiIPunes);
+                command.Parameters.AddWithValue("Gjinia", model.Gjinia);
+                command.Parameters.AddWithValue("Ditelindja", model.Ditelindja);
+                command.Parameters.AddWithValue("GrupiIGjakut", model.GrupiIGjakut);
+                command.Parameters.AddWithValue("Shteti", model.Shteti);
+                command.Parameters.AddWithValue("Vendbanimi", model.Vendbanimi);
+                command.Parameters.AddWithValue("Telefoni", model.Telefoni);
+                command.Parameters.AddWithValue("Mail", model.Mail);
+                command.Parameters.AddWithValue("AnetareteGrupit", model.AnetaretEGrupit);
+                command.Parameters.AddWithValue("NderrimiIPunes", model.NderrimiIPunes);
+                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
+                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
+                command.Parameters.AddWithValue("LUB", model.LUB);
+                command.Parameters.AddWithValue("LUN", model.LUN);
+                command.Parameters.AddWithValue("LUD", model.LUD);
+                int rowAffected = command.ExecuteNonQuery();
+                command.Dispose();
+                connection.Close();
+                connection.Dispose();
+                return rowAffected;
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
         }
     }
 }

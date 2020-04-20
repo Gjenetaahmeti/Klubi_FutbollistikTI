@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formacioni.cs" />
     <Compile Include="Interface\CRUD.cs" />
-    <Compile Include="PersoneliBO.cs" />
+    <Compile Include="Lojtari.cs" />
+    <Compile Include="Personeli.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StafiKategorit.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
