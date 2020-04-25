@@ -17,5 +17,6 @@ namespace Klubi_I_Futbollit.BO
         public int LUB { get; set; }
         public int LUN { get; set; }
         public DateTime LUD { get; set; }
+
     }
 }
