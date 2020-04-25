@@ -69,31 +69,31 @@
             // regjistroLojtarToolStripMenuItem
             // 
             this.regjistroLojtarToolStripMenuItem.Name = "regjistroLojtarToolStripMenuItem";
-            this.regjistroLojtarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regjistroLojtarToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.regjistroLojtarToolStripMenuItem.Text = "Regjistro Lojtar";
             // 
             // regjistroPersonelToolStripMenuItem
             // 
             this.regjistroPersonelToolStripMenuItem.Name = "regjistroPersonelToolStripMenuItem";
-            this.regjistroPersonelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regjistroPersonelToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.regjistroPersonelToolStripMenuItem.Text = "Regjistro Personel";
             // 
             // regjistroNdeshjeToolStripMenuItem
             // 
             this.regjistroNdeshjeToolStripMenuItem.Name = "regjistroNdeshjeToolStripMenuItem";
-            this.regjistroNdeshjeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regjistroNdeshjeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.regjistroNdeshjeToolStripMenuItem.Text = "Regjistro Ndeshje";
             // 
             // vleresimetToolStripMenuItem
             // 
             this.vleresimetToolStripMenuItem.Name = "vleresimetToolStripMenuItem";
-            this.vleresimetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vleresimetToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.vleresimetToolStripMenuItem.Text = "Vleresimet";
             // 
             // formacionetToolStripMenuItem
             // 
             this.formacionetToolStripMenuItem.Name = "formacionetToolStripMenuItem";
-            this.formacionetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formacionetToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.formacionetToolStripMenuItem.Text = "Formacionet";
             // 
             // lojtaretToolStripMenuItem

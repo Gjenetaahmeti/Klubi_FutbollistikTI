@@ -54,6 +54,7 @@
     <Compile Include="PozitaReferit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referi.cs" />
+    <Compile Include="Role.cs" />
     <Compile Include="StafiKategorit.cs" />
     <Compile Include="StatusiLojtarit.cs" />
     <Compile Include="Useri.cs" />

@@ -23,6 +23,7 @@ namespace Klubi_I_Futbollit
 
             if (logIn.ShowDialog()==DialogResult.OK)
             {
+           
                 //meu konektu me databaze
                 logIn.Close();
             }
@@ -31,6 +32,10 @@ namespace Klubi_I_Futbollit
                 this.Close();
                 //Application.Exit();
             }
+            Regjistrimi r1 = new Regjistrimi();
+            r1.ShowDialog();
         }
+
+      
     }
 }

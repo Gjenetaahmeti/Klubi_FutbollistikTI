@@ -46,5 +46,9 @@ namespace Klubi_
                 throw e;
             }
         }
+        //public Useri Login(string username, string password)
+        //{
+            
+        //}
     }
 }
