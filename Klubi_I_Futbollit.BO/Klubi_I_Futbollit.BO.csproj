@@ -45,6 +45,7 @@
     <Compile Include="Golashenuesit.cs" />
     <Compile Include="Interface\CRUD.cs" />
     <Compile Include="Klubi.cs" />
+    <Compile Include="Kontrolla_Mjekesore.cs" />
     <Compile Include="Liga.cs" />
     <Compile Include="LojtaretENdeshjes.cs" />
     <Compile Include="Lojtari.cs" />

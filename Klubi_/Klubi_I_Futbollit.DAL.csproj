@@ -42,17 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormacioniDAL.cs" />
+    <Compile Include="KlubiDAL.cs" />
+    <Compile Include="KontrollaMjekesoreDAL.cs" />
+    <Compile Include="LigaDAL.cs" />
+    <Compile Include="LojtariDAL.cs" />
+    <Compile Include="NdeshjaDAL.cs" />
     <Compile Include="PersoneliDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DB\KlubiFutbollstikTI1.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Klubi_I_Futbollit.BO\Klubi_I_Futbollit.BO.csproj">
       <Project>{1edae868-fad5-4a98-b584-4c88cc88efd1}</Project>
       <Name>Klubi_I_Futbollit.BO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\dbprocedura1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
