@@ -39,12 +39,14 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLogin.Location = new System.Drawing.Point(172, 221);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 42);
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "Log In";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // txtPassword
@@ -52,6 +54,7 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtPassword.Location = new System.Drawing.Point(172, 183);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 11;
             // 
@@ -96,6 +99,7 @@
             // 
             // cmbGjuha
             // 
+            this.cmbGjuha.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cmbGjuha.FormattingEnabled = true;
             this.cmbGjuha.Items.AddRange(new object[] {
             "Shqip",
@@ -104,13 +108,13 @@
             this.cmbGjuha.Name = "cmbGjuha";
             this.cmbGjuha.Size = new System.Drawing.Size(121, 21);
             this.cmbGjuha.TabIndex = 13;
-            this.cmbGjuha.SelectedIndexChanged += new System.EventHandler(this.CmbGjuha_SelectedIndexChanged);
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 338);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(432, 338);
             this.Controls.Add(this.cmbGjuha);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);

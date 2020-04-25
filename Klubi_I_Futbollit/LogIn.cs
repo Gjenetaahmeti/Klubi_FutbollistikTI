@@ -20,55 +20,10 @@ namespace Klubi_I_Futbollit
             InitializeComponent();
         }
 
-        private void CmbGjuha_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CultureInfo ci = new CultureInfo("en-US");
-            if (cmbGjuha.Text == "English")
-            {
-                Assembly a = Assembly.Load("KlubiFutbollistik");
-                ResourceManager rm = new ResourceManager("KlubiFutbollistik.Lang.langres", a);
-
-                lblUsername.Text = rm.GetString("lblUsername", ci);
-                lblPassword.Text = rm.GetString("lblPassword", ci);
-                btnLogin.Text = rm.GetString("btnLogin", ci);
-            }
-            if (cmbGjuha.Text == "Shqip")
-            {
-                Assembly a = Assembly.Load("KlubiFutbollistik");
-                ResourceManager rm = new ResourceManager("KlubiFutbollistik.Lang.langresShqip", a);
-
-                lblUsername.Text = rm.GetString("lblUsername", ci);
-                lblPassword.Text = rm.GetString("lblPassword", ci);
-                btnLogin.Text = rm.GetString("btnLogin", ci);
-            }
-        }
-
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            
-
-            CultureInfo ci = new CultureInfo("en-US");
-            if (cmbGjuha.Text == "English")
-            {
-                Assembly a = Assembly.Load("KlubiFutbollistik");
-                ResourceManager rm = new ResourceManager("KlubiFutbollistik.Lang.langres", a);
-                lblUsername.Text = rm.GetString("lblUsername", ci);
-                lblPassword.Text = rm.GetString("lblPassword", ci);
-                btnLogin.Text = rm.GetString("btnLogin", ci);
-
-            }
-            if (cmbGjuha.Text == "Shqip")
-            {
-                Assembly a = Assembly.Load("KlubiFutbollistik");
-                ResourceManager rm = new ResourceManager("KlubiFutbollistik.Lang.langresShqip", a);
-
-                lblUsername.Text = rm.GetString("lblUsername", ci);
-                lblPassword.Text = rm.GetString("lblPassword", ci);
-                btnLogin.Text = rm.GetString("btnLogin", ci);
-
-            }
-
-           
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
         }
     }
 }
