@@ -38,10 +38,6 @@
             this.txtNrKontaktues = new System.Windows.Forms.TextBox();
             this.txtVendbanimi = new System.Windows.Forms.TextBox();
             this.txtShteti = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.rdMashkull = new System.Windows.Forms.RadioButton();
-            this.rdFemer = new System.Windows.Forms.RadioButton();
-            this.dtpDitelindja = new System.Windows.Forms.DateTimePicker();
             this.txtVendiIPunes = new System.Windows.Forms.TextBox();
             this.txtTitulli = new System.Windows.Forms.TextBox();
             this.txtSpecializimi = new System.Windows.Forms.TextBox();
@@ -58,12 +54,32 @@
             this.lblSpecializimi = new System.Windows.Forms.Label();
             this.lblMbiemri = new System.Windows.Forms.Label();
             this.lblEmri = new System.Windows.Forms.Label();
+            this.btnRegjistroPersonel = new System.Windows.Forms.Button();
+            this.txtGjinia = new System.Windows.Forms.TextBox();
+            this.txtDitelindja = new System.Windows.Forms.TextBox();
+            this.txtGrupiGjakut = new System.Windows.Forms.TextBox();
+            this.txtVendlindja = new System.Windows.Forms.TextBox();
+            this.lblVendlindja = new System.Windows.Forms.Label();
+            this.txtNdrrimiPunes = new System.Windows.Forms.TextBox();
+            this.txtAnetariGrupit = new System.Windows.Forms.TextBox();
+            this.lblNdrrimiPunes = new System.Windows.Forms.Label();
+            this.lblAnetariiGrupit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.txtNdrrimiPunes);
+            this.panel1.Controls.Add(this.txtAnetariGrupit);
+            this.panel1.Controls.Add(this.lblNdrrimiPunes);
+            this.panel1.Controls.Add(this.lblAnetariiGrupit);
+            this.panel1.Controls.Add(this.txtVendlindja);
+            this.panel1.Controls.Add(this.lblVendlindja);
+            this.panel1.Controls.Add(this.txtGrupiGjakut);
+            this.panel1.Controls.Add(this.txtDitelindja);
+            this.panel1.Controls.Add(this.txtGjinia);
+            this.panel1.Controls.Add(this.btnRegjistroPersonel);
             this.panel1.Controls.Add(this.txtGjatesia);
             this.panel1.Controls.Add(this.txtPesha);
             this.panel1.Controls.Add(this.lblGjatesia);
@@ -73,10 +89,6 @@
             this.panel1.Controls.Add(this.txtNrKontaktues);
             this.panel1.Controls.Add(this.txtVendbanimi);
             this.panel1.Controls.Add(this.txtShteti);
-            this.panel1.Controls.Add(this.checkedListBox1);
-            this.panel1.Controls.Add(this.rdMashkull);
-            this.panel1.Controls.Add(this.rdFemer);
-            this.panel1.Controls.Add(this.dtpDitelindja);
             this.panel1.Controls.Add(this.txtVendiIPunes);
             this.panel1.Controls.Add(this.txtTitulli);
             this.panel1.Controls.Add(this.txtSpecializimi);
@@ -95,19 +107,19 @@
             this.panel1.Controls.Add(this.lblEmri);
             this.panel1.Location = new System.Drawing.Point(1, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 663);
+            this.panel1.Size = new System.Drawing.Size(412, 720);
             this.panel1.TabIndex = 0;
             // 
             // txtGjatesia
             // 
-            this.txtGjatesia.Location = new System.Drawing.Point(126, 598);
+            this.txtGjatesia.Location = new System.Drawing.Point(126, 664);
             this.txtGjatesia.Name = "txtGjatesia";
             this.txtGjatesia.Size = new System.Drawing.Size(100, 20);
             this.txtGjatesia.TabIndex = 29;
             // 
             // txtPesha
             // 
-            this.txtPesha.Location = new System.Drawing.Point(126, 558);
+            this.txtPesha.Location = new System.Drawing.Point(126, 624);
             this.txtPesha.Name = "txtPesha";
             this.txtPesha.Size = new System.Drawing.Size(100, 20);
             this.txtPesha.TabIndex = 28;
@@ -115,7 +127,7 @@
             // lblGjatesia
             // 
             this.lblGjatesia.AutoSize = true;
-            this.lblGjatesia.Location = new System.Drawing.Point(41, 605);
+            this.lblGjatesia.Location = new System.Drawing.Point(41, 671);
             this.lblGjatesia.Name = "lblGjatesia";
             this.lblGjatesia.Size = new System.Drawing.Size(45, 13);
             this.lblGjatesia.TabIndex = 27;
@@ -124,7 +136,7 @@
             // lblPesha
             // 
             this.lblPesha.AutoSize = true;
-            this.lblPesha.Location = new System.Drawing.Point(41, 565);
+            this.lblPesha.Location = new System.Drawing.Point(41, 631);
             this.lblPesha.Name = "lblPesha";
             this.lblPesha.Size = new System.Drawing.Size(37, 13);
             this.lblPesha.TabIndex = 26;
@@ -162,52 +174,10 @@
             // 
             // txtShteti
             // 
-            this.txtShteti.Location = new System.Drawing.Point(126, 389);
+            this.txtShteti.Location = new System.Drawing.Point(126, 378);
             this.txtShteti.Name = "txtShteti";
             this.txtShteti.Size = new System.Drawing.Size(100, 20);
             this.txtShteti.TabIndex = 21;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "A ",
-            "B",
-            "0"});
-            this.checkedListBox1.Location = new System.Drawing.Point(126, 304);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 64);
-            this.checkedListBox1.TabIndex = 20;
-            // 
-            // rdMashkull
-            // 
-            this.rdMashkull.AutoSize = true;
-            this.rdMashkull.Location = new System.Drawing.Point(212, 227);
-            this.rdMashkull.Name = "rdMashkull";
-            this.rdMashkull.Size = new System.Drawing.Size(67, 17);
-            this.rdMashkull.TabIndex = 19;
-            this.rdMashkull.TabStop = true;
-            this.rdMashkull.Text = "Mashkull";
-            this.rdMashkull.UseVisualStyleBackColor = true;
-            // 
-            // rdFemer
-            // 
-            this.rdFemer.AutoSize = true;
-            this.rdFemer.Location = new System.Drawing.Point(126, 227);
-            this.rdFemer.Name = "rdFemer";
-            this.rdFemer.Size = new System.Drawing.Size(54, 17);
-            this.rdFemer.TabIndex = 18;
-            this.rdFemer.TabStop = true;
-            this.rdFemer.Text = "Femer";
-            this.rdFemer.UseVisualStyleBackColor = true;
-            // 
-            // dtpDitelindja
-            // 
-            this.dtpDitelindja.CustomFormat = "dd-MM-yyyy";
-            this.dtpDitelindja.Location = new System.Drawing.Point(126, 266);
-            this.dtpDitelindja.Name = "dtpDitelindja";
-            this.dtpDitelindja.Size = new System.Drawing.Size(200, 20);
-            this.dtpDitelindja.TabIndex = 17;
             // 
             // txtVendiIPunes
             // 
@@ -247,7 +217,7 @@
             // lblShteti
             // 
             this.lblShteti.AutoSize = true;
-            this.lblShteti.Location = new System.Drawing.Point(36, 396);
+            this.lblShteti.Location = new System.Drawing.Point(36, 385);
             this.lblShteti.Name = "lblShteti";
             this.lblShteti.Size = new System.Drawing.Size(34, 13);
             this.lblShteti.TabIndex = 10;
@@ -343,12 +313,91 @@
             this.lblEmri.TabIndex = 0;
             this.lblEmri.Text = "Emri";
             // 
+            // btnRegjistroPersonel
+            // 
+            this.btnRegjistroPersonel.Location = new System.Drawing.Point(291, 605);
+            this.btnRegjistroPersonel.Name = "btnRegjistroPersonel";
+            this.btnRegjistroPersonel.Size = new System.Drawing.Size(111, 39);
+            this.btnRegjistroPersonel.TabIndex = 30;
+            this.btnRegjistroPersonel.Text = "Regjistro Personel";
+            this.btnRegjistroPersonel.UseVisualStyleBackColor = true;
+            this.btnRegjistroPersonel.Click += new System.EventHandler(this.btnRegjistroPersonel_Click);
+            // 
+            // txtGjinia
+            // 
+            this.txtGjinia.Location = new System.Drawing.Point(126, 220);
+            this.txtGjinia.Name = "txtGjinia";
+            this.txtGjinia.Size = new System.Drawing.Size(100, 20);
+            this.txtGjinia.TabIndex = 31;
+            // 
+            // txtDitelindja
+            // 
+            this.txtDitelindja.Location = new System.Drawing.Point(126, 269);
+            this.txtDitelindja.Name = "txtDitelindja";
+            this.txtDitelindja.Size = new System.Drawing.Size(100, 20);
+            this.txtDitelindja.TabIndex = 32;
+            // 
+            // txtGrupiGjakut
+            // 
+            this.txtGrupiGjakut.Location = new System.Drawing.Point(126, 310);
+            this.txtGrupiGjakut.Name = "txtGrupiGjakut";
+            this.txtGrupiGjakut.Size = new System.Drawing.Size(100, 20);
+            this.txtGrupiGjakut.TabIndex = 33;
+            // 
+            // txtVendlindja
+            // 
+            this.txtVendlindja.Location = new System.Drawing.Point(126, 352);
+            this.txtVendlindja.Name = "txtVendlindja";
+            this.txtVendlindja.Size = new System.Drawing.Size(100, 20);
+            this.txtVendlindja.TabIndex = 35;
+            // 
+            // lblVendlindja
+            // 
+            this.lblVendlindja.AutoSize = true;
+            this.lblVendlindja.Location = new System.Drawing.Point(36, 359);
+            this.lblVendlindja.Name = "lblVendlindja";
+            this.lblVendlindja.Size = new System.Drawing.Size(56, 13);
+            this.lblVendlindja.TabIndex = 34;
+            this.lblVendlindja.Text = "Vendlindja";
+            // 
+            // txtNdrrimiPunes
+            // 
+            this.txtNdrrimiPunes.Location = new System.Drawing.Point(126, 595);
+            this.txtNdrrimiPunes.Name = "txtNdrrimiPunes";
+            this.txtNdrrimiPunes.Size = new System.Drawing.Size(100, 20);
+            this.txtNdrrimiPunes.TabIndex = 39;
+            // 
+            // txtAnetariGrupit
+            // 
+            this.txtAnetariGrupit.Location = new System.Drawing.Point(126, 555);
+            this.txtAnetariGrupit.Name = "txtAnetariGrupit";
+            this.txtAnetariGrupit.Size = new System.Drawing.Size(100, 20);
+            this.txtAnetariGrupit.TabIndex = 38;
+            // 
+            // lblNdrrimiPunes
+            // 
+            this.lblNdrrimiPunes.AutoSize = true;
+            this.lblNdrrimiPunes.Location = new System.Drawing.Point(41, 602);
+            this.lblNdrrimiPunes.Name = "lblNdrrimiPunes";
+            this.lblNdrrimiPunes.Size = new System.Drawing.Size(77, 13);
+            this.lblNdrrimiPunes.TabIndex = 37;
+            this.lblNdrrimiPunes.Text = "Ndrrimi i Punes";
+            // 
+            // lblAnetariiGrupit
+            // 
+            this.lblAnetariiGrupit.AutoSize = true;
+            this.lblAnetariiGrupit.Location = new System.Drawing.Point(41, 562);
+            this.lblAnetariiGrupit.Name = "lblAnetariiGrupit";
+            this.lblAnetariiGrupit.Size = new System.Drawing.Size(77, 13);
+            this.lblAnetariiGrupit.TabIndex = 36;
+            this.lblAnetariiGrupit.Text = "Anetari I Grupit";
+            // 
             // Regjistrimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(858, 657);
+            this.ClientSize = new System.Drawing.Size(858, 718);
             this.Controls.Add(this.panel1);
             this.Name = "Regjistrimi";
             this.Text = "Regjistrimi";
@@ -370,10 +419,6 @@
         private System.Windows.Forms.TextBox txtNrKontaktues;
         private System.Windows.Forms.TextBox txtVendbanimi;
         private System.Windows.Forms.TextBox txtShteti;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.RadioButton rdMashkull;
-        private System.Windows.Forms.RadioButton rdFemer;
-        private System.Windows.Forms.DateTimePicker dtpDitelindja;
         private System.Windows.Forms.TextBox txtVendiIPunes;
         private System.Windows.Forms.TextBox txtTitulli;
         private System.Windows.Forms.TextBox txtSpecializimi;
@@ -390,5 +435,15 @@
         private System.Windows.Forms.Label lblSpecializimi;
         private System.Windows.Forms.Label lblMbiemri;
         private System.Windows.Forms.Label lblEmri;
+        private System.Windows.Forms.Button btnRegjistroPersonel;
+        private System.Windows.Forms.TextBox txtGrupiGjakut;
+        private System.Windows.Forms.TextBox txtDitelindja;
+        private System.Windows.Forms.TextBox txtGjinia;
+        private System.Windows.Forms.TextBox txtVendlindja;
+        private System.Windows.Forms.Label lblVendlindja;
+        private System.Windows.Forms.TextBox txtNdrrimiPunes;
+        private System.Windows.Forms.TextBox txtAnetariGrupit;
+        private System.Windows.Forms.Label lblNdrrimiPunes;
+        private System.Windows.Forms.Label lblAnetariiGrupit;
     }
 }

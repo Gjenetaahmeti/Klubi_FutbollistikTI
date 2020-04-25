@@ -36,6 +36,5 @@ namespace Klubi_I_Futbollit
             r1.ShowDialog();
         }
 
-      
     }
 }

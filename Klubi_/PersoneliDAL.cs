@@ -11,60 +11,55 @@ using Klubi_I_Futbollit.BO;
 
 namespace Klubi_Futbollistik.DAL
 {
-    class PersoneliDAL:CRUD<Personeli>
+    public class PersoneliDAL:CRUD<Personeli>
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString; 
+      //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString; 
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=KlubiFutbollistikTI1;Integrated Security=True");
+
         public int Shto(Personeli model)
         {
-            try
-            {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Personel_ShtoPersonel", connection);
+            
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("shto", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("Emri", model.Emri);
-                command.Parameters.AddWithValue("Mbiemri", model.Mbiemri);
-                command.Parameters.AddWithValue("Specializimi", model.Specializimi);
-                command.Parameters.AddWithValue("Titulli", model.Titulli);
-                command.Parameters.AddWithValue("VendiIPunes", model.VendiIPunes);
-                command.Parameters.AddWithValue("Gjinia", model.Gjinia);
-                command.Parameters.AddWithValue("Ditelindja", model.Ditelindja);
-                command.Parameters.AddWithValue("GrupiIGjakut", model.GrupiIGjakut);
-                command.Parameters.AddWithValue("Shteti", model.Shteti);
-                command.Parameters.AddWithValue("Vendbanimi", model.Vendbanimi);
-                command.Parameters.AddWithValue("Telefoni", model.Telefoni);
-                command.Parameters.AddWithValue("Mail", model.Mail);
-                command.Parameters.AddWithValue("AnetareteGrupit", model.AnetaretEGrupit);
-                command.Parameters.AddWithValue("NderrimiIPunes", model.NderrimiIPunes);
-                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                command.Parameters.AddWithValue("LUB", model.LUB);
-                command.Parameters.AddWithValue("LUN", model.LUN);
-                command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("@Emri", model.Emri);
+                command.Parameters.AddWithValue("@Mbiemri", model.Mbiemri);
+                //command.Parameters.AddWithValue("@Specializimi", model.Specializimi);
+                //command.Parameters.AddWithValue("@Titulli", model.Titulli);
+                //command.Parameters.AddWithValue("@VendiIPunes", model.VendiIPunes);
+                //command.Parameters.AddWithValue("@Gjinia", model.Gjinia);
+                //command.Parameters.AddWithValue("@Ditelindja", model.Ditelindja);
+                //command.Parameters.AddWithValue("@GrupiIGjakut", model.GrupiIGjakut);
+                //command.Parameters.AddWithValue("@Shteti", model.Shteti);
+                //command.Parameters.AddWithValue("@Vendbanimi", model.Vendbanimi);
+                //command.Parameters.AddWithValue("@Telefoni", model.Telefoni);
+                //command.Parameters.AddWithValue("@Mail", model.Mail);
+                //command.Parameters.AddWithValue("@AnetareteGrupit", model.AnetaretEGrupit);
+                //command.Parameters.AddWithValue("@NderrimiIPunes", model.NderrimiIPunes);
+                //command.Parameters.AddWithValue("@InsertBy", model.InsertBy);
+                //command.Parameters.AddWithValue("@InsertDate", model.InsertDate);
+                //command.Parameters.AddWithValue("@LUB", model.LUB);
+                //command.Parameters.AddWithValue("@LUN", model.LUN);
+                //command.Parameters.AddWithValue("@LUD", model.LUD);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
+          
         }
         public int Fshij(Personeli model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Personel_FshijPersonel", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_Personel_FshijPersonel", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("Id", model.ID);
                 int result=command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return result;
             }
             catch (Exception e)
@@ -78,9 +73,8 @@ namespace Klubi_Futbollistik.DAL
             try
             {
                 List<Personeli> rezultati = null;
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Personel_GetAllPersonel", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_Personel_GetAllPersonel", sqlcon);
                 SqlDataReader reader = command.ExecuteReader();
                 rezultati = new List<Personeli>();
                 while (reader.Read())
@@ -126,9 +120,8 @@ namespace Klubi_Futbollistik.DAL
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("Emri", model.Emri);
                 command.Parameters.AddWithValue("Mbiemri", model.Mbiemri);
@@ -151,8 +144,8 @@ namespace Klubi_Futbollistik.DAL
                 command.Parameters.AddWithValue("LUD", model.LUD);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
