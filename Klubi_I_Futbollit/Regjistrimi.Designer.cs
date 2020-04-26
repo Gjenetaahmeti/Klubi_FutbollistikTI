@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEdito = new System.Windows.Forms.Button();
             this.txtNdrrimiPunes = new System.Windows.Forms.TextBox();
@@ -67,8 +68,14 @@
             this.lblEmri = new System.Windows.Forms.Label();
             this.dgdmbushtedhena = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnEditoPersonelin = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fshijToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdmbushtedhena)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,7 +128,7 @@
             this.btnEdito.Name = "btnEdito";
             this.btnEdito.Size = new System.Drawing.Size(111, 44);
             this.btnEdito.TabIndex = 40;
-            this.btnEdito.Text = "Edito";
+            this.btnEdito.Text = "Shfaq Personelin";
             this.btnEdito.UseVisualStyleBackColor = true;
             this.btnEdito.Click += new System.EventHandler(this.BtnEdito_Click);
             // 
@@ -410,17 +417,61 @@
             // dgdmbushtedhena
             // 
             this.dgdmbushtedhena.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdmbushtedhena.ContextMenuStrip = this.contextMenuStrip1;
             this.dgdmbushtedhena.Location = new System.Drawing.Point(419, 66);
             this.dgdmbushtedhena.Name = "dgdmbushtedhena";
-            this.dgdmbushtedhena.Size = new System.Drawing.Size(427, 392);
+            this.dgdmbushtedhena.Size = new System.Drawing.Size(1249, 392);
             this.dgdmbushtedhena.TabIndex = 1;
+            this.dgdmbushtedhena.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdmbushtedhena_CellContentClick);
+            // 
+            // btnEditoPersonelin
+            // 
+            this.btnEditoPersonelin.Location = new System.Drawing.Point(742, 464);
+            this.btnEditoPersonelin.Name = "btnEditoPersonelin";
+            this.btnEditoPersonelin.Size = new System.Drawing.Size(104, 35);
+            this.btnEditoPersonelin.TabIndex = 2;
+            this.btnEditoPersonelin.Text = "Edito Personelin";
+            this.btnEditoPersonelin.UseVisualStyleBackColor = true;
+            this.btnEditoPersonelin.Click += new System.EventHandler(this.btnEditoPersonelin_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(471, 634);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(8, 8);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editoToolStripMenuItem,
+            this.fshijToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // editoToolStripMenuItem
+            // 
+            this.editoToolStripMenuItem.Name = "editoToolStripMenuItem";
+            this.editoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editoToolStripMenuItem.Text = "Edito";
+            this.editoToolStripMenuItem.Click += new System.EventHandler(this.editoToolStripMenuItem_Click);
+            // 
+            // fshijToolStripMenuItem
+            // 
+            this.fshijToolStripMenuItem.Name = "fshijToolStripMenuItem";
+            this.fshijToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.fshijToolStripMenuItem.Text = "Fshij";
             // 
             // Regjistrimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(909, 669);
+            this.ClientSize = new System.Drawing.Size(1680, 669);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEditoPersonelin);
             this.Controls.Add(this.dgdmbushtedhena);
             this.Controls.Add(this.panel1);
             this.Name = "Regjistrimi";
@@ -428,6 +479,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdmbushtedhena)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -473,5 +525,10 @@
         private System.Windows.Forms.DataGridView dgdmbushtedhena;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnEdito;
+        private System.Windows.Forms.Button btnEditoPersonelin;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fshijToolStripMenuItem;
     }
 }
