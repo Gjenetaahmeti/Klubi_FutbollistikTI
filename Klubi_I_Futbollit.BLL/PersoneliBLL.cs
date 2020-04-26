@@ -16,5 +16,17 @@ namespace Klubi_Futbollistik.BLL
         {
             return personeliDAL.Shto(personel);
         }
+        public int EditoPersonel(Personeli personel)
+        {
+            return personeliDAL.Update(personel);
+        }
+        public List<Personeli> MerriKrejPersonel(Personeli personel)
+        {
+            return personeliDAL.GetAll();
+        }
+        public int FshijPersonel(Personeli personel)
+        {
+            return personeliDAL.Fshij(personel);
+        }
     }
 }

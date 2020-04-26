@@ -14,6 +14,8 @@ namespace Klubi_
     public class LojtariDAL //: CRUD<Lojtari>
     {
         public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
+
         public int Fshij(Lojtari model)
         {
             try
@@ -55,49 +57,44 @@ namespace Klubi_
 
 
 
-        public int Shto(Lojtari model,Personeli personeli)
+        public int Shto(Lojtari lojtari,Personeli model)
         {
 
             try
             {
                 SqlConnection conn = new SqlConnection(_connectionstring);
                 conn.Open();
-                SqlCommand comm = new SqlCommand("usp_Personel_ShtoPersonel", conn);
-                comm.CommandType = CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("Emri", personeli.Emri);
-                comm.Parameters.AddWithValue("Mbiemri", personeli.Mbiemri);
-                comm.Parameters.AddWithValue("Specializimi", personeli.Specializimi);
-                comm.Parameters.AddWithValue("Titulli", personeli.Titulli);
-                comm.Parameters.AddWithValue("VendiIPunes", personeli.VendiIPunes);
-                comm.Parameters.AddWithValue("Gjinia", personeli.Gjinia);
-                comm.Parameters.AddWithValue("Ditelindja", personeli.Ditelindja);
-                comm.Parameters.AddWithValue("GrupiIGjakut", personeli.GrupiIGjakut);
-                comm.Parameters.AddWithValue("Shteti", personeli.Shteti);
-                comm.Parameters.AddWithValue("Vendbanimi", personeli.Vendbanimi);
-                comm.Parameters.AddWithValue("Telefoni", personeli.Telefoni);
-                comm.Parameters.AddWithValue("Mail", personeli.Mail);
-                comm.Parameters.AddWithValue("AnetareteGrupit", personeli.AnetaretEGrupit);
-                comm.Parameters.AddWithValue("NderrimiIPunes", personeli.NderrimiIPunes);
-                comm.Parameters.AddWithValue("InsertBy", personeli.InsertBy);
-                comm.Parameters.AddWithValue("InsertDate", personeli.InsertDate);
-                comm.Parameters.AddWithValue("LUB", personeli.LUB);
-                comm.Parameters.AddWithValue("LUN", personeli.LUN);
-                comm.Parameters.AddWithValue("LUD", personeli.LUD);
+         
+                SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_ShtokrejtPersonel]", sqlcon);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Emri", model.Emri);
+                command.Parameters.AddWithValue("@Mbiemri", model.Mbiemri);
+                command.Parameters.AddWithValue("@Specializimi", model.Specializimi);
+                command.Parameters.AddWithValue("@Titulli", model.Titulli);
+                command.Parameters.AddWithValue("@VendiIPunes", model.VendiIPunes);
+                command.Parameters.AddWithValue("@Gjinia", model.Gjinia);
+                // command.Parameters.AddWithValue("@Ditelindja", model.Ditelindja);
+                command.Parameters.AddWithValue("@Vendlindja", model.Vendlindja);
+                command.Parameters.AddWithValue("@GrupiIGjakut", model.GrupiIGjakut);
+                command.Parameters.AddWithValue("@Shteti", model.Shteti);
+                command.Parameters.AddWithValue("@VendBanimi", model.Vendbanimi);
+                command.Parameters.AddWithValue("@Telefoni", model.Telefoni);
+                command.Parameters.AddWithValue("@Mail", model.Mail);
                 try
                 {
                     SqlConnection connection = new SqlConnection(_connectionstring);
                     connection.Open();
-                    SqlCommand command = new SqlCommand("usp_Lojtari_ShtoLojtar", connection);
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("Pesha", model.Pesha);
-                    command.Parameters.AddWithValue("Gjatesia", model.Gjatesia);
-                    command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                    command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                    command.Parameters.AddWithValue("LUB", model.LUB);
-                    command.Parameters.AddWithValue("LUN", model.LUN);
-                    command.Parameters.AddWithValue("LUD", model.LUD);
-                    int rowAffected = command.ExecuteNonQuery();
-                    command.Dispose();
+                    SqlCommand command1 = new SqlCommand("[dbo].[usp_Lojtar_ShtokrejtLojtar]", sqlcon);
+                    command1.CommandType = CommandType.StoredProcedure;
+                    command1.Parameters.AddWithValue("Pesha", lojtari.Pesha);
+                    command1.Parameters.AddWithValue("Gjatesia", lojtari.Gjatesia);
+                    //command.Parameters.AddWithValue("InsertBy", model.InsertBy);
+                    //command.Parameters.AddWithValue("InsertDate", model.InsertDate);
+                    //command.Parameters.AddWithValue("LUB", model.LUB);
+                    //command.Parameters.AddWithValue("LUN", model.LUN);
+                    //command.Parameters.AddWithValue("LUD", model.LUD);
+                    int rowAffected = command1.ExecuteNonQuery();
+                    command1.Dispose();
                     connection.Close();
                     connection.Dispose();
                     return rowAffected;

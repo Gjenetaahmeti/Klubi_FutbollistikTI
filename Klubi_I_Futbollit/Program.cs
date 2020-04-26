@@ -18,5 +18,6 @@ namespace Klubi_I_Futbollit
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
         }
+        
     }
 }
