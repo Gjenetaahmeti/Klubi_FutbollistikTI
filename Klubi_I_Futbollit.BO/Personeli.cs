@@ -51,10 +51,10 @@ namespace Klubi_I_Futbollit.BO
         public string Mail { get; set; }
         public string AnetaretEGrupit { get; set; }
         public string NderrimiIPunes { get; set; }
-        public int InsertBy { get; set; }
-        public DateTime InsertDate { get; set; }
-        public int LUB { get; set; }
-        public int LUN { get; set; }
-        public DateTime LUD { get; set; }
+        public int InsertBy { get; set; } = 0;
+        public DateTime InsertDate { get; set; } 
+        public int LUB { get; set; } = 0;
+        public int LUN { get; set; } = 0;
+        public DateTime LUD { get; set; } 
     }
 }

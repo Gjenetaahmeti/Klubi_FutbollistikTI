@@ -40,6 +40,7 @@ namespace Klubi_I_Futbollit
             personeli.Mail = txtMail.Text.Trim();
             personeli.AnetaretEGrupit = txtAnetariGrupit.Text.Trim();
             personeli.NderrimiIPunes = txtNdrrimiPunes.Text.Trim();
+           
             PersoneliDAL obj = new PersoneliDAL();
             obj.Shto(personeli);
         }
