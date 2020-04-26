@@ -16,8 +16,7 @@ namespace Klubi_
         public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
         public int Shto(Formacioni model)
         {
-            try
-            {
+       
                 SqlConnection connection = new SqlConnection(_connectionstring);
                 connection.Open();
                 SqlCommand command = new SqlCommand("usp_Formacion_ShtoFormacion", connection);
@@ -34,16 +33,11 @@ namespace Klubi_
                 connection.Close();
                 connection.Dispose();
                 return rowAffected;
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
+          
         }
         public int Fshij(Formacioni model)
         {
-            try
-            {
+     
                 SqlConnection connection = new SqlConnection(_connectionstring);
                 connection.Open();
                 SqlCommand command = new SqlCommand("usp_Formacion_FshijFormacion", connection);
@@ -54,28 +48,19 @@ namespace Klubi_
                 connection.Close();
                 connection.Dispose();
                 return result;
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
+        
         }
 
         public DataTable GetAll()
         {
-            try
-            {
+          
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Lojtar_MerriTEgjithaLojtar", _connectionstring);
 
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
                 return dataTable;
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
+        
         }
 
 
@@ -83,8 +68,7 @@ namespace Klubi_
 
         public int Update(Formacioni model)
         {
-            try
-            {
+        
                 SqlConnection connection = new SqlConnection(_connectionstring);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", connection);
@@ -101,11 +85,7 @@ namespace Klubi_
                 connection.Close();
                 connection.Dispose();
                 return rowAffected;
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
+       
         }
 
     }

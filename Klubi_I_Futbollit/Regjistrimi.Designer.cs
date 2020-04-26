@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdito = new System.Windows.Forms.Button();
+            this.txtNdrrimiPunes = new System.Windows.Forms.TextBox();
+            this.txtAnetariGrupit = new System.Windows.Forms.TextBox();
+            this.lblNdrrimiPunes = new System.Windows.Forms.Label();
+            this.lblAnetariiGrupit = new System.Windows.Forms.Label();
+            this.txtVendlindja = new System.Windows.Forms.TextBox();
+            this.lblVendlindja = new System.Windows.Forms.Label();
+            this.txtGrupiGjakut = new System.Windows.Forms.TextBox();
+            this.txtDitelindja = new System.Windows.Forms.TextBox();
+            this.txtGjinia = new System.Windows.Forms.TextBox();
+            this.btnRegjistroPersonel = new System.Windows.Forms.Button();
             this.txtGjatesia = new System.Windows.Forms.TextBox();
             this.txtPesha = new System.Windows.Forms.TextBox();
             this.lblGjatesia = new System.Windows.Forms.Label();
@@ -54,22 +65,16 @@
             this.lblSpecializimi = new System.Windows.Forms.Label();
             this.lblMbiemri = new System.Windows.Forms.Label();
             this.lblEmri = new System.Windows.Forms.Label();
-            this.btnRegjistroPersonel = new System.Windows.Forms.Button();
-            this.txtGjinia = new System.Windows.Forms.TextBox();
-            this.txtDitelindja = new System.Windows.Forms.TextBox();
-            this.txtGrupiGjakut = new System.Windows.Forms.TextBox();
-            this.txtVendlindja = new System.Windows.Forms.TextBox();
-            this.lblVendlindja = new System.Windows.Forms.Label();
-            this.txtNdrrimiPunes = new System.Windows.Forms.TextBox();
-            this.txtAnetariGrupit = new System.Windows.Forms.TextBox();
-            this.lblNdrrimiPunes = new System.Windows.Forms.Label();
-            this.lblAnetariiGrupit = new System.Windows.Forms.Label();
+            this.dgdmbushtedhena = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdmbushtedhena)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.btnEdito);
             this.panel1.Controls.Add(this.txtNdrrimiPunes);
             this.panel1.Controls.Add(this.txtAnetariGrupit);
             this.panel1.Controls.Add(this.lblNdrrimiPunes);
@@ -109,6 +114,95 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 720);
             this.panel1.TabIndex = 0;
+            // 
+            // btnEdito
+            // 
+            this.btnEdito.Location = new System.Drawing.Point(291, 555);
+            this.btnEdito.Name = "btnEdito";
+            this.btnEdito.Size = new System.Drawing.Size(111, 44);
+            this.btnEdito.TabIndex = 40;
+            this.btnEdito.Text = "Edito";
+            this.btnEdito.UseVisualStyleBackColor = true;
+            this.btnEdito.Click += new System.EventHandler(this.BtnEdito_Click);
+            // 
+            // txtNdrrimiPunes
+            // 
+            this.txtNdrrimiPunes.Location = new System.Drawing.Point(126, 595);
+            this.txtNdrrimiPunes.Name = "txtNdrrimiPunes";
+            this.txtNdrrimiPunes.Size = new System.Drawing.Size(100, 20);
+            this.txtNdrrimiPunes.TabIndex = 39;
+            // 
+            // txtAnetariGrupit
+            // 
+            this.txtAnetariGrupit.Location = new System.Drawing.Point(126, 555);
+            this.txtAnetariGrupit.Name = "txtAnetariGrupit";
+            this.txtAnetariGrupit.Size = new System.Drawing.Size(100, 20);
+            this.txtAnetariGrupit.TabIndex = 38;
+            // 
+            // lblNdrrimiPunes
+            // 
+            this.lblNdrrimiPunes.AutoSize = true;
+            this.lblNdrrimiPunes.Location = new System.Drawing.Point(41, 602);
+            this.lblNdrrimiPunes.Name = "lblNdrrimiPunes";
+            this.lblNdrrimiPunes.Size = new System.Drawing.Size(77, 13);
+            this.lblNdrrimiPunes.TabIndex = 37;
+            this.lblNdrrimiPunes.Text = "Ndrrimi i Punes";
+            // 
+            // lblAnetariiGrupit
+            // 
+            this.lblAnetariiGrupit.AutoSize = true;
+            this.lblAnetariiGrupit.Location = new System.Drawing.Point(41, 562);
+            this.lblAnetariiGrupit.Name = "lblAnetariiGrupit";
+            this.lblAnetariiGrupit.Size = new System.Drawing.Size(77, 13);
+            this.lblAnetariiGrupit.TabIndex = 36;
+            this.lblAnetariiGrupit.Text = "Anetari I Grupit";
+            // 
+            // txtVendlindja
+            // 
+            this.txtVendlindja.Location = new System.Drawing.Point(126, 352);
+            this.txtVendlindja.Name = "txtVendlindja";
+            this.txtVendlindja.Size = new System.Drawing.Size(100, 20);
+            this.txtVendlindja.TabIndex = 35;
+            // 
+            // lblVendlindja
+            // 
+            this.lblVendlindja.AutoSize = true;
+            this.lblVendlindja.Location = new System.Drawing.Point(36, 359);
+            this.lblVendlindja.Name = "lblVendlindja";
+            this.lblVendlindja.Size = new System.Drawing.Size(56, 13);
+            this.lblVendlindja.TabIndex = 34;
+            this.lblVendlindja.Text = "Vendlindja";
+            // 
+            // txtGrupiGjakut
+            // 
+            this.txtGrupiGjakut.Location = new System.Drawing.Point(126, 310);
+            this.txtGrupiGjakut.Name = "txtGrupiGjakut";
+            this.txtGrupiGjakut.Size = new System.Drawing.Size(100, 20);
+            this.txtGrupiGjakut.TabIndex = 33;
+            // 
+            // txtDitelindja
+            // 
+            this.txtDitelindja.Location = new System.Drawing.Point(126, 269);
+            this.txtDitelindja.Name = "txtDitelindja";
+            this.txtDitelindja.Size = new System.Drawing.Size(100, 20);
+            this.txtDitelindja.TabIndex = 32;
+            // 
+            // txtGjinia
+            // 
+            this.txtGjinia.Location = new System.Drawing.Point(126, 220);
+            this.txtGjinia.Name = "txtGjinia";
+            this.txtGjinia.Size = new System.Drawing.Size(100, 20);
+            this.txtGjinia.TabIndex = 31;
+            // 
+            // btnRegjistroPersonel
+            // 
+            this.btnRegjistroPersonel.Location = new System.Drawing.Point(291, 605);
+            this.btnRegjistroPersonel.Name = "btnRegjistroPersonel";
+            this.btnRegjistroPersonel.Size = new System.Drawing.Size(111, 39);
+            this.btnRegjistroPersonel.TabIndex = 30;
+            this.btnRegjistroPersonel.Text = "Regjistro Personel";
+            this.btnRegjistroPersonel.UseVisualStyleBackColor = true;
+            this.btnRegjistroPersonel.Click += new System.EventHandler(this.btnRegjistroPersonel_Click);
             // 
             // txtGjatesia
             // 
@@ -313,96 +407,27 @@
             this.lblEmri.TabIndex = 0;
             this.lblEmri.Text = "Emri";
             // 
-            // btnRegjistroPersonel
+            // dgdmbushtedhena
             // 
-            this.btnRegjistroPersonel.Location = new System.Drawing.Point(291, 605);
-            this.btnRegjistroPersonel.Name = "btnRegjistroPersonel";
-            this.btnRegjistroPersonel.Size = new System.Drawing.Size(111, 39);
-            this.btnRegjistroPersonel.TabIndex = 30;
-            this.btnRegjistroPersonel.Text = "Regjistro Personel";
-            this.btnRegjistroPersonel.UseVisualStyleBackColor = true;
-            this.btnRegjistroPersonel.Click += new System.EventHandler(this.btnRegjistroPersonel_Click);
-            // 
-            // txtGjinia
-            // 
-            this.txtGjinia.Location = new System.Drawing.Point(126, 220);
-            this.txtGjinia.Name = "txtGjinia";
-            this.txtGjinia.Size = new System.Drawing.Size(100, 20);
-            this.txtGjinia.TabIndex = 31;
-            // 
-            // txtDitelindja
-            // 
-            this.txtDitelindja.Location = new System.Drawing.Point(126, 269);
-            this.txtDitelindja.Name = "txtDitelindja";
-            this.txtDitelindja.Size = new System.Drawing.Size(100, 20);
-            this.txtDitelindja.TabIndex = 32;
-            // 
-            // txtGrupiGjakut
-            // 
-            this.txtGrupiGjakut.Location = new System.Drawing.Point(126, 310);
-            this.txtGrupiGjakut.Name = "txtGrupiGjakut";
-            this.txtGrupiGjakut.Size = new System.Drawing.Size(100, 20);
-            this.txtGrupiGjakut.TabIndex = 33;
-            // 
-            // txtVendlindja
-            // 
-            this.txtVendlindja.Location = new System.Drawing.Point(126, 352);
-            this.txtVendlindja.Name = "txtVendlindja";
-            this.txtVendlindja.Size = new System.Drawing.Size(100, 20);
-            this.txtVendlindja.TabIndex = 35;
-            // 
-            // lblVendlindja
-            // 
-            this.lblVendlindja.AutoSize = true;
-            this.lblVendlindja.Location = new System.Drawing.Point(36, 359);
-            this.lblVendlindja.Name = "lblVendlindja";
-            this.lblVendlindja.Size = new System.Drawing.Size(56, 13);
-            this.lblVendlindja.TabIndex = 34;
-            this.lblVendlindja.Text = "Vendlindja";
-            // 
-            // txtNdrrimiPunes
-            // 
-            this.txtNdrrimiPunes.Location = new System.Drawing.Point(126, 595);
-            this.txtNdrrimiPunes.Name = "txtNdrrimiPunes";
-            this.txtNdrrimiPunes.Size = new System.Drawing.Size(100, 20);
-            this.txtNdrrimiPunes.TabIndex = 39;
-            // 
-            // txtAnetariGrupit
-            // 
-            this.txtAnetariGrupit.Location = new System.Drawing.Point(126, 555);
-            this.txtAnetariGrupit.Name = "txtAnetariGrupit";
-            this.txtAnetariGrupit.Size = new System.Drawing.Size(100, 20);
-            this.txtAnetariGrupit.TabIndex = 38;
-            // 
-            // lblNdrrimiPunes
-            // 
-            this.lblNdrrimiPunes.AutoSize = true;
-            this.lblNdrrimiPunes.Location = new System.Drawing.Point(41, 602);
-            this.lblNdrrimiPunes.Name = "lblNdrrimiPunes";
-            this.lblNdrrimiPunes.Size = new System.Drawing.Size(77, 13);
-            this.lblNdrrimiPunes.TabIndex = 37;
-            this.lblNdrrimiPunes.Text = "Ndrrimi i Punes";
-            // 
-            // lblAnetariiGrupit
-            // 
-            this.lblAnetariiGrupit.AutoSize = true;
-            this.lblAnetariiGrupit.Location = new System.Drawing.Point(41, 562);
-            this.lblAnetariiGrupit.Name = "lblAnetariiGrupit";
-            this.lblAnetariiGrupit.Size = new System.Drawing.Size(77, 13);
-            this.lblAnetariiGrupit.TabIndex = 36;
-            this.lblAnetariiGrupit.Text = "Anetari I Grupit";
+            this.dgdmbushtedhena.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdmbushtedhena.Location = new System.Drawing.Point(419, 66);
+            this.dgdmbushtedhena.Name = "dgdmbushtedhena";
+            this.dgdmbushtedhena.Size = new System.Drawing.Size(427, 392);
+            this.dgdmbushtedhena.TabIndex = 1;
             // 
             // Regjistrimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(858, 718);
+            this.ClientSize = new System.Drawing.Size(909, 669);
+            this.Controls.Add(this.dgdmbushtedhena);
             this.Controls.Add(this.panel1);
             this.Name = "Regjistrimi";
             this.Text = "Regjistrimi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdmbushtedhena)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,5 +470,8 @@
         private System.Windows.Forms.TextBox txtAnetariGrupit;
         private System.Windows.Forms.Label lblNdrrimiPunes;
         private System.Windows.Forms.Label lblAnetariiGrupit;
+        private System.Windows.Forms.DataGridView dgdmbushtedhena;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnEdito;
     }
 }
