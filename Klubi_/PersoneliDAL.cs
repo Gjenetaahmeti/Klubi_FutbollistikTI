@@ -23,26 +23,22 @@ namespace Klubi_Futbollistik.DAL
         {
 
             sqlcon.Open();
-            SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_ShtokrejtPersonel]", sqlcon);
+            SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", sqlcon);
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@PersoneliID", model.ID);
             command.Parameters.AddWithValue("@Emri", model.Emri);
             command.Parameters.AddWithValue("@Mbiemri", model.Mbiemri);
             command.Parameters.AddWithValue("@Specializimi", model.Specializimi);
             command.Parameters.AddWithValue("@Titulli", model.Titulli);
             command.Parameters.AddWithValue("@VendiIPunes", model.VendiIPunes);
             command.Parameters.AddWithValue("@Gjinia", model.Gjinia);
-            // command.Parameters.AddWithValue("@Ditelindja", model.Ditelindja);
             command.Parameters.AddWithValue("@Vendlindja", model.Vendlindja);
-            command.Parameters.AddWithValue("@GrupiIGjakut", model.GrupiIGjakut);
+            command.Parameters.AddWithValue("@GrupiGjakut", model.GrupiIGjakut);
             command.Parameters.AddWithValue("@Shteti", model.Shteti);
             command.Parameters.AddWithValue("@VendBanimi", model.Vendbanimi);
             command.Parameters.AddWithValue("@Telefoni", model.Telefoni);
             command.Parameters.AddWithValue("@Mail", model.Mail);
-            //command.Parameters.AddWithValue("@Insertby", model.InsertBy);
-            //command.Parameters.AddWithValue("@Insertdate", model.InsertDate);
-            //command.Parameters.AddWithValue("@LUB", model.LUB);
-            //command.Parameters.AddWithValue("@LUN", model.LUN);
-            //command.Parameters.AddWithValue("@LUD", model.LUD);
+            
             int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
@@ -57,7 +53,7 @@ namespace Klubi_Futbollistik.DAL
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_Personel_FshijPersonel", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("Id", model.ID);
+                command.Parameters.AddWithValue("@PersoneliID", model.ID);
                 int result=command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
@@ -120,29 +116,43 @@ namespace Klubi_Futbollistik.DAL
         {
             try
             {
+                //sqlcon.Open();
+                //SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_EditoPersonel]", sqlcon);
+                //command.CommandType = CommandType.StoredProcedure;
+                //command.Parameters.AddWithValue("@ID", id);
+                //command.Parameters.AddWithValue("@Emri", txtEmri.Text);
+                //command.Parameters.AddWithValue("@Mbiemri", txtMbiemri.Text);
+                //command.Parameters.AddWithValue("@Specializimi", txtSpecializimi.Text);
+                //command.Parameters.AddWithValue("@Titulli", txtTitulli.Text);
+                //command.Parameters.AddWithValue("@VendiIPunes", txtVendiIPunes.Text);
+                //command.Parameters.AddWithValue("@Gjinia", txtGjatesia.Text);
+                //command.Parameters.AddWithValue("@Vendlindja", txtVendlindja.Text);
+                //command.Parameters.AddWithValue("@GrupiIGjakut", txtGrupiGjakut.Text);
+                //command.Parameters.AddWithValue("@Shteti", txtShteti.Text);
+                //command.Parameters.AddWithValue("@VendBanimi", txtVendbanimi.Text);
+                //command.Parameters.AddWithValue("@Telefoni", txtNrKontaktues.Text);
+                //command.Parameters.AddWithValue("@Mail", txtMail.Text);
+                //command.ExecuteNonQuery();
+                //command.Dispose();
+                //sqlcon.Close();
+                //sqlcon.Dispose();
 
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_EditoKrejtPersonel]", sqlcon);
-                sqlcon.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_EditoPersonel]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ID", model.ID);
                 command.Parameters.AddWithValue("@Emri", model.Emri);
                 command.Parameters.AddWithValue("@Mbiemri", model.Mbiemri);
                 command.Parameters.AddWithValue("@Specializimi", model.Specializimi);
                 command.Parameters.AddWithValue("@Titulli", model.Titulli);
                 command.Parameters.AddWithValue("@VendiIPunes", model.VendiIPunes);
                 command.Parameters.AddWithValue("@Gjinia", model.Gjinia);
-                // command.Parameters.AddWithValue("@Ditelindja", model.Ditelindja);
                 command.Parameters.AddWithValue("@Vendlindja", model.Vendlindja);
                 command.Parameters.AddWithValue("@GrupiIGjakut", model.GrupiIGjakut);
                 command.Parameters.AddWithValue("@Shteti", model.Shteti);
                 command.Parameters.AddWithValue("@VendBanimi", model.Vendbanimi);
                 command.Parameters.AddWithValue("@Telefoni", model.Telefoni);
                 command.Parameters.AddWithValue("@Mail", model.Mail);
-                //command.Parameters.AddWithValue("@Insertby", model.InsertBy);
-                //command.Parameters.AddWithValue("@Insertdate", model.InsertDate);
-                //command.Parameters.AddWithValue("@LUB", model.LUB);
-                //command.Parameters.AddWithValue("@LUN", model.LUN);
-                //command.Parameters.AddWithValue("@LUD", model.LUD);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
