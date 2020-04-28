@@ -16,7 +16,6 @@ namespace Klubi_Futbollistik.DAL
         //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString; 
         SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
 
-
         //SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
 
         public int Shto(Personeli model)

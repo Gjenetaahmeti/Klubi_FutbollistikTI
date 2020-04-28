@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Klubi_I_Futbollit.Administratori_Kryesor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Klubi_I_Futbollit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new RegjistroLojtar());
         }
         
     }

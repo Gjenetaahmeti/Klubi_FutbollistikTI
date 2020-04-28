@@ -1,6 +1,6 @@
 ﻿namespace Klubi_I_Futbollit
 {
-    partial class Regjistrimi
+    partial class RegjistrimiPersonelit
     {
         /// <summary>
         /// Required designer variable.
@@ -432,19 +432,19 @@
             this.editoToolStripMenuItem,
             this.fshijToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(102, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // editoToolStripMenuItem
             // 
             this.editoToolStripMenuItem.Name = "editoToolStripMenuItem";
-            this.editoToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.editoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editoToolStripMenuItem.Text = "Edito";
             this.editoToolStripMenuItem.Click += new System.EventHandler(this.editoToolStripMenuItem_Click);
             // 
             // fshijToolStripMenuItem
             // 
             this.fshijToolStripMenuItem.Name = "fshijToolStripMenuItem";
-            this.fshijToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.fshijToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fshijToolStripMenuItem.Text = "Fshij";
             this.fshijToolStripMenuItem.Click += new System.EventHandler(this.fshijToolStripMenuItem_Click);
             // 
@@ -477,7 +477,7 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // Regjistrimi
+            // RegjistrimiPersonelit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -488,7 +488,7 @@
             this.Controls.Add(this.btnEditoPersonelin);
             this.Controls.Add(this.dgdmbushtedhena);
             this.Controls.Add(this.panel1);
-            this.Name = "Regjistrimi";
+            this.Name = "RegjistrimiPersonelit";
             this.Text = "Regjistrimi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

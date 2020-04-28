@@ -13,22 +13,21 @@ namespace Klubi_
 {
     public class LojtariDAL //: CRUD<Lojtari>
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
+        //public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
 
         public int Fshij(Lojtari model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Lojtar_FshijLojtar", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_Lojtar_FshijLojtar", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("LojtariID", model.LojtariID);
                 int result = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return result;
             }
             catch (Exception e)
@@ -41,7 +40,7 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Lojtar_MerriTEgjithaLojtar",_connectionstring);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Lojtar_MerriTEgjithaLojtar", sqlcon);
 
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -57,83 +56,72 @@ namespace Klubi_
 
 
 
-        public int Shto(Lojtari lojtari,Personeli model)
+        public void Shto(Personeli person,Lojtari lojtari)
         {
 
             try
             {
-                SqlConnection conn = new SqlConnection(_connectionstring);
-                conn.Open();
-         
-                SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_ShtokrejtPersonel]", sqlcon);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("ShtoLojtarTest", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@Emri", model.Emri);
-                command.Parameters.AddWithValue("@Mbiemri", model.Mbiemri);
-                command.Parameters.AddWithValue("@Specializimi", model.Specializimi);
-                command.Parameters.AddWithValue("@Titulli", model.Titulli);
-                command.Parameters.AddWithValue("@VendiIPunes", model.VendiIPunes);
-                command.Parameters.AddWithValue("@Gjinia", model.Gjinia);
-                // command.Parameters.AddWithValue("@Ditelindja", model.Ditelindja);
-                command.Parameters.AddWithValue("@Vendlindja", model.Vendlindja);
-                command.Parameters.AddWithValue("@GrupiIGjakut", model.GrupiIGjakut);
-                command.Parameters.AddWithValue("@Shteti", model.Shteti);
-                command.Parameters.AddWithValue("@VendBanimi", model.Vendbanimi);
-                command.Parameters.AddWithValue("@Telefoni", model.Telefoni);
-                command.Parameters.AddWithValue("@Mail", model.Mail);
-                try
-                {
-                    SqlConnection connection = new SqlConnection(_connectionstring);
-                    connection.Open();
-                    SqlCommand command1 = new SqlCommand("[dbo].[usp_Lojtar_ShtokrejtLojtar]", sqlcon);
-                    command1.CommandType = CommandType.StoredProcedure;
-                    command1.Parameters.AddWithValue("Pesha", lojtari.Pesha);
-                    command1.Parameters.AddWithValue("Gjatesia", lojtari.Gjatesia);
-                    //command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                    //command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                    //command.Parameters.AddWithValue("LUB", model.LUB);
-                    //command.Parameters.AddWithValue("LUN", model.LUN);
-                    //command.Parameters.AddWithValue("LUD", model.LUD);
-                    int rowAffected = command1.ExecuteNonQuery();
-                    command1.Dispose();
-                    connection.Close();
-                    connection.Dispose();
-                    return rowAffected;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                command.Parameters.AddWithValue("@Pesha", lojtari.Pesha);
+                command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
+                command.Parameters.AddWithValue("@klubiId", 6);
+                command.Parameters.AddWithValue("@userdId", 2);
+                command.Parameters.AddWithValue("@kategoriaId", 1);
+                command.Parameters.AddWithValue("@kontrollaId", 1);
+                command.Parameters.AddWithValue("@Emri", person.Emri);
+                command.Parameters.AddWithValue("@Mbiemri", person.Mbiemri);
+                command.Parameters.AddWithValue("@Gjinia", person.Gjinia);
+                command.Parameters.AddWithValue("@Vendlindja", person.Vendlindja);
+                command.Parameters.AddWithValue("@GrupiGjakut", person.GrupiIGjakut);
+                command.Parameters.AddWithValue("@Shtetesia", person.Shteti);
+                command.Parameters.AddWithValue("@Vendbanimi", person.Vendbanimi);
+                command.Parameters.AddWithValue("@Telefonin", person.Telefoni);
+                command.Parameters.AddWithValue("@Mail", person.Mail);
+                command.ExecuteNonQuery();
+                command.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
+              
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return -1;
+                throw ex;
             }
         }
 
-        public int Update(Lojtari model)
+        public void Update(Personeli person, Lojtari lojtari)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("EditoLojtarTest", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("Pesha", model.Pesha);
-                command.Parameters.AddWithValue("Gjatesia", model.Gjatesia);             
-                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                command.Parameters.AddWithValue("LUB", model.LUB);
-                command.Parameters.AddWithValue("LUN", model.LUN);
-                command.Parameters.AddWithValue("LUD", model.LUD);
-                int rowAffected = command.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@Pesha", lojtari.Pesha);
+                command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
+                command.Parameters.AddWithValue("@klubiId", 6);
+                command.Parameters.AddWithValue("@userdId", 2);
+                command.Parameters.AddWithValue("@kategoriaId", 1);
+                command.Parameters.AddWithValue("@kontrollaId", 1);
+                command.Parameters.AddWithValue("@PersoneliID", 7);
+                command.Parameters.AddWithValue("@Emri", person.Emri);
+                command.Parameters.AddWithValue("@Mbiemri", person.Mbiemri);
+                command.Parameters.AddWithValue("@Gjinia", person.Gjinia);
+                command.Parameters.AddWithValue("@Vendlindja", person.Vendlindja);
+                command.Parameters.AddWithValue("@GrupiGjakut", person.GrupiIGjakut);
+                command.Parameters.AddWithValue("@Shtetesia", person.Shteti);
+                command.Parameters.AddWithValue("@Vendbanimi", person.Vendbanimi);
+                command.Parameters.AddWithValue("@Telefonin", person.Telefoni);
+                command.Parameters.AddWithValue("@Mail", person.Mail);
+                command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
-                return rowAffected;
+                sqlcon.Close();
+                sqlcon.Dispose();
             }
             catch (Exception e)
             {
-                return -1;
+                throw e;
             }
         }
     }

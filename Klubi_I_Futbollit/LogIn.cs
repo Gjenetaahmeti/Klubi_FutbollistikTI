@@ -29,8 +29,9 @@ namespace Klubi_I_Futbollit
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            Regjistrimi r1 = new Regjistrimi();
-            r1.ShowDialog();
+            //RegjistrimiPersonelit r1 = new RegjistrimiPersonelit();
+            //r1.ShowDialog();
+
         }
 
   

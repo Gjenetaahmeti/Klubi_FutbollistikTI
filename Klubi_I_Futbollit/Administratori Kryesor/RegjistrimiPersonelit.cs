@@ -14,10 +14,11 @@ using Klubi_I_Futbollit.BO;
 
 namespace Klubi_I_Futbollit
 {
-    public partial class Regjistrimi : Form
+    public partial class RegjistrimiPersonelit : Form
     {
-       SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
-        public Regjistrimi()
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
+
+        public RegjistrimiPersonelit()
         {
             InitializeComponent();
             btnUpdate.Visible = false;

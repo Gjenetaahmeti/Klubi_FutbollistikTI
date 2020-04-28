@@ -32,7 +32,7 @@ namespace Klubi_I_Futbollit
                 this.Close();
                 //Application.Exit();
             }
-            Regjistrimi r1 = new Regjistrimi();
+            RegjistrimiPersonelit r1 = new RegjistrimiPersonelit();
             r1.ShowDialog();
         }
 
