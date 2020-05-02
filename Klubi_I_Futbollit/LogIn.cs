@@ -12,12 +12,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_Futbollistik.BO;
 using Klubi_I_Futbollit.BLL;
-
+using System.Data.SqlClient;
 
 namespace Klubi_I_Futbollit
 {
     public partial class LogIn : Form
     {
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+
         public LogIn()
         {
             InitializeComponent();
@@ -29,8 +31,28 @@ namespace Klubi_I_Futbollit
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            //RegjistrimiPersonelit r1 = new RegjistrimiPersonelit();
-            //r1.ShowDialog();
+
+            sqlcon.Open();
+            SqlCommand command = new SqlCommand("usp_MerrUsernamedhePass", sqlcon);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = command.ExecuteReader();
+            if (dr.Read())
+            {
+
+
+                if (txtUsername.Text.Equals(dr["EmriIPerdoruesit"].ToString()) && txtPassword.Text.Equals(dr["Fjalekalimi"].ToString()))
+                {
+                    MessageBox.Show("U loguat me sukses", "Urime", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MenyKryefaqja meny = new MenyKryefaqja();
+                    meny.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Deshtoi log-in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            sqlcon.Close();
 
         }
 
@@ -41,6 +63,42 @@ namespace Klubi_I_Futbollit
             this.Close();
         }
 
-   
+        private void txtUserEnter(object sender, EventArgs e)
+        {
+            if (txtUsername.Text.Equals("Username"))
+            {
+                txtUsername.Text = "";
+            }
+        }
+
+        private void TxtUsername_Leave(object sender, EventArgs e)
+        {
+            if (txtUsername.Text.Equals(""))
+            {
+                txtUsername.Text = "Username";
+            }
+        }
+
+        private void TxtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text.Equals("Password"))
+            {
+                txtPassword.Text = "";
+            }
+
+        }
+
+        private void TxtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text.Equals(""))
+            {
+                txtPassword.Text = "Password";
+            }
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

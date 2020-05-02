@@ -70,6 +70,12 @@
     <Compile Include="Administratori Kryesor\AdministratoriMenu.Designer.cs">
       <DependentUpon>AdministratoriMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenyKryefaqja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenyKryefaqja.Designer.cs">
+      <DependentUpon>MenyKryefaqja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Administratori Kryesor\RegjistrimiPersonelit.cs">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\AdministratoriMenu.resx">
       <DependentUpon>AdministratoriMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenyKryefaqja.resx">
+      <DependentUpon>MenyKryefaqja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

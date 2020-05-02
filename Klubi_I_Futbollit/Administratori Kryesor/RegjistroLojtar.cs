@@ -124,5 +124,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             LojtariDAL Fshijlojtari = new LojtariDAL();
             Fshijlojtari.Fshij(lojtari);
         }
+
+       
     }
 }
