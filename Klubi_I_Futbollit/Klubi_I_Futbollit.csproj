@@ -52,6 +52,12 @@
     <Compile Include="Administratori Kryesor\RegjistroLojtar.Designer.cs">
       <DependentUpon>RegjistroLojtar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formacionet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formacionet.Designer.cs">
+      <DependentUpon>Formacionet.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="Administratori Kryesor\RegjistroLojtar.resx">
       <DependentUpon>RegjistroLojtar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formacionet.resx">
+      <DependentUpon>Formacionet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

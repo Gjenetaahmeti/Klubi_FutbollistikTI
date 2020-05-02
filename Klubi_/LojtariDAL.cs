@@ -8,20 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Klubi_Futbollistik.BO.Interface;
 using Klubi_I_Futbollit.BO;
+using Klubi_Futbollistik;
 
 namespace Klubi_
 {
     public class LojtariDAL //: CRUD<Lojtari>
     {
         //public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
 
         public int Fshij(Lojtari model)
         {
             try
             {
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("usp_Lojtar_FshijLojtar", sqlcon);
+                SqlCommand command = new SqlCommand("usp_FshijLojtarMeID", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("LojtariID", model.LojtariID);
                 int result = command.ExecuteNonQuery();
@@ -56,29 +57,35 @@ namespace Klubi_
 
 
 
-        public void Shto(Personeli person,Lojtari lojtari)
+        public void Shto(Lojtari lojtari)
         {
 
             try
             {
+                
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("ShtoLojtarTest", sqlcon);
+                SqlCommand command = new SqlCommand("usp_Lojtare_ShtoLojtare", sqlcon);
+              
                 command.CommandType = CommandType.StoredProcedure;
+          
+                command.Parameters.AddWithValue("@Emri", lojtari.Emri);
+                command.Parameters.AddWithValue("@Mbiemri", lojtari.Mbiemri);
+                command.Parameters.AddWithValue("@EmriIPerdoruesit", lojtari.EmriIPerdoruesit);
+                command.Parameters.AddWithValue("@Fjalkalimi", lojtari.Fjalkalimi);
+                command.Parameters.AddWithValue("@NumriIFanelles", lojtari.NumriFanelles);
+                command.Parameters.AddWithValue("@Gjinia", lojtari.Gjinia);
+                command.Parameters.AddWithValue("@Ditelindja", lojtari.Ditelindja);
+                command.Parameters.AddWithValue("@Vendlindja", lojtari.Vendlindja);
+                command.Parameters.AddWithValue("@GrupiIGjakut", lojtari.GrupiGjakut);
+                command.Parameters.AddWithValue("@Shteti", lojtari.Shteti);
+                command.Parameters.AddWithValue("@Vendbanimi", lojtari.Vendbanimi);
+                command.Parameters.AddWithValue("@Telefoni", lojtari.Telefoni);
+                command.Parameters.AddWithValue("@Mail", lojtari.Mail);
                 command.Parameters.AddWithValue("@Pesha", lojtari.Pesha);
-                command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
-                command.Parameters.AddWithValue("@klubiId", 6);
-                command.Parameters.AddWithValue("@userdId", 2);
-                command.Parameters.AddWithValue("@kategoriaId", 1);
-                command.Parameters.AddWithValue("@kontrollaId", 1);
-                command.Parameters.AddWithValue("@Emri", person.Emri);
-                command.Parameters.AddWithValue("@Mbiemri", person.Mbiemri);
-                command.Parameters.AddWithValue("@Gjinia", person.Gjinia);
-                command.Parameters.AddWithValue("@Vendlindja", person.Vendlindja);
-                command.Parameters.AddWithValue("@GrupiGjakut", person.GrupiIGjakut);
-                command.Parameters.AddWithValue("@Shtetesia", person.Shteti);
-                command.Parameters.AddWithValue("@Vendbanimi", person.Vendbanimi);
-                command.Parameters.AddWithValue("@Telefonin", person.Telefoni);
-                command.Parameters.AddWithValue("@Mail", person.Mail);
+                command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);   
+                command.Parameters.AddWithValue("@PersoneliID",0);
+                command.Parameters.AddWithValue("@klubiID", 1);
+                
                 command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
@@ -91,38 +98,70 @@ namespace Klubi_
             }
         }
 
-        public void Update(Personeli person, Lojtari lojtari)
+        public void Update( Lojtari lojtari)
         {
             try
             {
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("EditoLojtarTest", sqlcon);
+                SqlCommand command = new SqlCommand("usp_Lojtare_ShtoLojtare", sqlcon);
+
                 command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@Emri", lojtari.Emri);
+                command.Parameters.AddWithValue("@Mbiemri", lojtari.Mbiemri);
+                command.Parameters.AddWithValue("@EmriIPerdoruesit", lojtari.EmriIPerdoruesit);
+                command.Parameters.AddWithValue("@Fjalkalimi", lojtari.Fjalkalimi);
+                command.Parameters.AddWithValue("@NumriIFanelles", lojtari.NumriFanelles);
+                command.Parameters.AddWithValue("@Gjinia", lojtari.Gjinia);
+                command.Parameters.AddWithValue("@Ditelindja", lojtari.Ditelindja);
+                command.Parameters.AddWithValue("@Vendlindja", lojtari.Vendlindja);
+                command.Parameters.AddWithValue("@GrupiIGjakut", lojtari.GrupiGjakut);
+                command.Parameters.AddWithValue("@Shteti", lojtari.Shteti);
+                command.Parameters.AddWithValue("@Vendbanimi", lojtari.Vendbanimi);
+                command.Parameters.AddWithValue("@Telefoni", lojtari.Telefoni);
+                command.Parameters.AddWithValue("@Mail", lojtari.Mail);
                 command.Parameters.AddWithValue("@Pesha", lojtari.Pesha);
                 command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
-                command.Parameters.AddWithValue("@klubiId", 6);
-                command.Parameters.AddWithValue("@userdId", 2);
-                command.Parameters.AddWithValue("@kategoriaId", 1);
-                command.Parameters.AddWithValue("@kontrollaId", 1);
-                command.Parameters.AddWithValue("@PersoneliID", 7);
-                command.Parameters.AddWithValue("@Emri", person.Emri);
-                command.Parameters.AddWithValue("@Mbiemri", person.Mbiemri);
-                command.Parameters.AddWithValue("@Gjinia", person.Gjinia);
-                command.Parameters.AddWithValue("@Vendlindja", person.Vendlindja);
-                command.Parameters.AddWithValue("@GrupiGjakut", person.GrupiIGjakut);
-                command.Parameters.AddWithValue("@Shtetesia", person.Shteti);
-                command.Parameters.AddWithValue("@Vendbanimi", person.Vendbanimi);
-                command.Parameters.AddWithValue("@Telefonin", person.Telefoni);
-                command.Parameters.AddWithValue("@Mail", person.Mail);
+                command.Parameters.AddWithValue("@PersoneliID", lojtari.LojtariID);
+                command.Parameters.AddWithValue("@KlubiID", 1);
+
                 command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
                 sqlcon.Dispose();
+
             }
             catch (Exception e)
             {
                 throw e;
             }
+        }
+
+        public void GjejLojtarinMeID(Lojtari lojtari)
+        {
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_GjejLojtarMeID", sqlcon);
+            sqlDataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@LojtariID", lojtari.LojtariID);
+            DataTable dtbl = new DataTable();
+            sqlDataAdapter.Fill(dtbl);
+            sqlDataAdapter.Dispose();
+            sqlcon.Close();
+            lojtari.Emri = dtbl.Rows[0]["Emri"].ToString();
+            lojtari.Mbiemri = dtbl.Rows[0]["Mbiemri"].ToString();
+            lojtari.EmriIPerdoruesit = dtbl.Rows[0]["EmriIPerdoruesit"].ToString();
+            lojtari.Fjalkalimi= dtbl.Rows[0]["Fjalekalimi"].ToString();
+            lojtari.NumriFanelles = int.Parse(dtbl.Rows[0]["NumriFanelles"].ToString());
+            lojtari.Gjinia = dtbl.Rows[0]["Gjinia"].ToString();
+            lojtari.Ditelindja = DateTime.Parse(dtbl.Rows[0]["Ditelindja"].ToString());
+            lojtari.Vendlindja= dtbl.Rows[0]["Vendlindja"].ToString();
+            lojtari.GrupiGjakut = dtbl.Rows[0]["GrupiIGjakut"].ToString();
+            lojtari.Shteti = dtbl.Rows[0]["Shteti"].ToString();
+            lojtari.Vendbanimi = dtbl.Rows[0]["Vendbanimi"].ToString();
+            lojtari.Telefoni = dtbl.Rows[0]["Telefoni"].ToString();
+            lojtari.Mail = dtbl.Rows[0]["Email"].ToString();
+            lojtari.Pesha = decimal.Parse(dtbl.Rows[0]["Pesha"].ToString());
+            lojtari.Gjatesia= decimal.Parse(dtbl.Rows[0]["Gjatesia"].ToString());
+            
         }
     }
 }

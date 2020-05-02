@@ -17,7 +17,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
     public partial class RegjistroLojtar : Form
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
 
         public string T = "";
         public RegjistroLojtar()
@@ -27,40 +27,47 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnRegjistro_Click(object sender, EventArgs e)
         {
-            Personeli person = new Personeli();
+            Lojtari person = new Lojtari();
             person.Emri = txtEmri.Text.Trim();
             person.Mbiemri = txtMbiemri.Text.Trim();
+            person.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+            person.Fjalkalimi = txtFjalekalimi.Text.Trim();
+            person.NumriFanelles = int.Parse(txtNumriIfanelles.Text.Trim());
             person.Gjinia = txtGjinia.Text.Trim();
+            person.Ditelindja =DateTime.Parse(txtDitelindja.Text.Trim());
             person.Vendlindja = txtVendlindja.Text.Trim();
-            person.GrupiIGjakut = txtGrupigjakut.Text.Trim();
+            person.GrupiGjakut = txtGrupigjakut.Text.Trim();
             person.Shteti = txtShtetesia.Text.Trim();
             person.Vendbanimi = txtVendbanimi.Text.Trim();
             person.Telefoni = txtNumriTelefonit.Text.Trim();
             person.Mail = txtEmail.Text.Trim();
-            Lojtari lojtari = new Lojtari();
-            lojtari.Pesha = decimal.Parse(txtPesha.Text.Trim());
-            lojtari.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
+            person.Pesha = decimal.Parse(txtPesha.Text.Trim());
+            person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
             LojtariDAL dal = new LojtariDAL();
-            dal.Shto(person, lojtari);
+            dal.Shto( person);
         }
 
         private void btnEditoLojtar_Click(object sender, EventArgs e)
         {
-            Personeli person = new Personeli();
+            Lojtari person = new Lojtari();
             person.Emri = txtEmri.Text.Trim();
             person.Mbiemri = txtMbiemri.Text.Trim();
+            person.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+            person.Fjalkalimi = txtFjalekalimi.Text.Trim();
+            person.NumriFanelles = int.Parse(txtNumriIfanelles.Text.Trim());
             person.Gjinia = txtGjinia.Text.Trim();
+            person.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
             person.Vendlindja = txtVendlindja.Text.Trim();
-            person.GrupiIGjakut = txtGrupigjakut.Text.Trim();
+            person.GrupiGjakut = txtGrupigjakut.Text.Trim();
             person.Shteti = txtShtetesia.Text.Trim();
             person.Vendbanimi = txtVendbanimi.Text.Trim();
             person.Telefoni = txtNumriTelefonit.Text.Trim();
             person.Mail = txtEmail.Text.Trim();
-            Lojtari lojtari = new Lojtari();
-            lojtari.Pesha = decimal.Parse(txtPesha.Text.Trim());
-            lojtari.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
+            person.Pesha = decimal.Parse(txtPesha.Text.Trim());
+            person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
+            person.LojtariID = int.Parse(txtShkruajID.Text.Trim());
             LojtariDAL dal = new LojtariDAL();
-            dal.Update(person, lojtari);
+            dal.Update(person);
         }
 
       
@@ -68,57 +75,54 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         private void MbushLojtarT()
         {
             sqlcon.Open();
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter("[dbo].[MerriLojtarimePerson]", sqlcon);
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter("[dbo].[usp_ShfaqTeGjithLojtaret]", sqlcon);
             sqlAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
             DataTable dtbl = new DataTable();
             sqlAdapter.Fill(dtbl);
             sqlAdapter.Dispose();
             sqlcon.Close();
             dgdMbushLojtar.DataSource = dtbl;
-            T = dtbl.Rows[0]["LojtariID"].ToString();
         }
 
-        private void dgdMbushLojtar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnShfaq_Click(object sender, EventArgs e)
         {
             MbushLojtarT();
         }
-        private void editoToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void BtnGjejLojtart_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int index = dgdMbushLojtar.SelectedCells[0].RowIndex;
-                int id = Convert.ToInt32(index + 1);
-                SqlDataAdapter sqlAdapter = new SqlDataAdapter("[dbo].[MerriLojtartMePerson_MeID]", sqlcon);
-                sqlAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                sqlAdapter.SelectCommand.Parameters.AddWithValue("@LojtariID", int.Parse(T));
-                DataTable dtbl = new DataTable();
-                sqlAdapter.Fill(dtbl);
-                sqlAdapter.Dispose();
-                sqlcon.Close();
-                txtEmri.Text = dtbl.Rows[0]["Emri"].ToString();
-                txtMbiemri.Text = dtbl.Rows[0]["Mbiemri"].ToString();
-                txtGjinia.Text = dtbl.Rows[0]["Gjinia"].ToString();
-                txtVendlindja.Text = dtbl.Rows[0]["Vendlindja"].ToString();
-                txtGrupigjakut.Text = dtbl.Rows[0]["GrupiGjakut"].ToString();
-                txtShtetesia.Text = dtbl.Rows[0]["Shteti"].ToString();
-                txtVendbanimi.Text = dtbl.Rows[0]["VendBanimi"].ToString();
-                txtNumriTelefonit.Text = dtbl.Rows[0]["Telefoni"].ToString();
-                txtEmail.Text = dtbl.Rows[0]["Mail"].ToString();
-                txtPesha.Text = dtbl.Rows[0]["Pesha"].ToString();
-                txtGjatesia.Text = dtbl.Rows[0]["Gjatesia"].ToString();
+            Lojtari lojtar =  new Lojtari();
+            lojtar.LojtariID= int.Parse(txtShkruajID.Text.Trim());
+            LojtariDAL gjejlojtarin = new LojtariDAL();
+            gjejlojtarin.GjejLojtarinMeID(lojtar);
+            txtEmri.Text = lojtar.Emri;
+            txtMbiemri.Text = lojtar.Mbiemri;
+            txtEmriPerdoruesit.Text = lojtar.EmriIPerdoruesit;
+            txtFjalekalimi.Text = lojtar.Fjalkalimi;
+            txtNumriIfanelles.Text = lojtar.NumriFanelles.ToString();
+            txtGjinia.Text = lojtar.Gjinia;
+            txtDitelindja.Text = lojtar.Ditelindja.ToString();
+            txtVendlindja.Text = lojtar.Vendlindja.ToString();
+            txtGrupigjakut.Text = lojtar.GrupiGjakut;
+            txtShtetesia.Text = lojtar.Shteti;
+            txtVendbanimi.Text = lojtar.Vendbanimi;
+            txtNumriTelefonit.Text = lojtar.Telefoni.ToString();
+            txtEmail.Text = lojtar.Mail;
+            txtPesha.Text = lojtar.Pesha.ToString();
+            txtGjatesia.Text = lojtar.Gjatesia.ToString();
+            btnFshijLojtarin.Visible = true;
+            btnEditoLojtar.Visible = true;
+            btnRegjistro.Visible = false;
+            btnShfaq.Visible = false;
+        }
 
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-           
+        private void BtnFshijLojtarin_Click(object sender, EventArgs e)
+        {
+            Lojtari lojtari = new Lojtari();
+            lojtari.LojtariID = int.Parse(txtShkruajID.Text.Trim());
+            LojtariDAL Fshijlojtari = new LojtariDAL();
+            Fshijlojtari.Fshij(lojtari);
         }
     }
 }
