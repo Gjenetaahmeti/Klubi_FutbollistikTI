@@ -11,47 +11,49 @@ using Klubi_I_Futbollit.BO;
 
 namespace Klubi_
 {
-  public  class KlubiDAL
+    public class KlubiDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-        public int Fshij(Klubi model)
-        {
-            try
-            {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Klubi_FshijKlubin", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("KlubiID", model.KlubiID);
-                int result = command.ExecuteNonQuery();
-                command.Dispose();
-                connection.Close();
-                connection.Dispose();
-                return result;
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
-        }
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
 
-        public DataTable GetAll()
-        {
-            try
-            {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Klubi_MerriTeGjithaKlubi", _connectionstring);
+        //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        //public int Fshij(Klubi model)
+        //{
+        //    try
+        //    {
+        //        SqlConnection connection = new SqlConnection(_connectionstring);
+        //        connection.Open();
+        //        SqlCommand command = new SqlCommand("usp_Klubi_FshijKlubin", connection);
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.AddWithValue("KlubiID", model.KlubiID);
+        //        int result = command.ExecuteNonQuery();
+        //        command.Dispose();
+        //        connection.Close();
+        //        connection.Dispose();
+        //        return result;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return -1;
+        //    }
+        //}
 
-                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-                DataTable dataTable = new DataTable();
-                sqlDataAdapter.Fill(dataTable);
-                return dataTable;
+        //public DataTable GetAll()
+        //{
+        //    try
+        //    {
+        //        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Klubi_MerriTeGjithaKlubi", _connectionstring);
 
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
-        }
+        //        sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+        //        DataTable dataTable = new DataTable();
+        //        sqlDataAdapter.Fill(dataTable);
+        //        return dataTable;
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return null;
+        //    }
+        //}
 
 
 
@@ -59,12 +61,17 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Klubi_ShtoKlub", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_Klub_ShtoOseEditoKlub]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("Emertimi", model.Emertimi);
-                command.Parameters.AddWithValue("Vendi", model.Vendi);
+                command.Parameters.AddWithValue("@Emertimi", model.Emertimi);
+                command.Parameters.AddWithValue("@Vendi", model.Vendi);
+                command.Parameters.AddWithValue("@Kryetari", model.Kryetari);
+                command.Parameters.AddWithValue("@Ithemeluar", model.IThemeluar);
+                command.Parameters.AddWithValue("@KlubiID", 0);
+                command.Parameters.AddWithValue("@StadiumiID", 1);
+                command.Parameters.AddWithValue("@LigaID", 1);
+
                 //command.Parameters.AddWithValue("Stadiumi", model.Stadiumi);
                 //command.Parameters.AddWithValue("Kryetari", model.Kryetari);
                 //command.Parameters.AddWithValue("Rezultati", model.Rezultati);
@@ -76,8 +83,8 @@ namespace Klubi_
                 //command.Parameters.AddWithValue("LUD", model.LUD);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
@@ -90,12 +97,17 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Klubi_EditoKlub", connection);
+
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_Klub_ShtoOseEditoKlub]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("Emertimi", model.Emertimi);
-                command.Parameters.AddWithValue("Vendi", model.Vendi);
+                command.Parameters.AddWithValue("@Emertimi", model.Emertimi);
+                command.Parameters.AddWithValue("@Vendi", model.Vendi);
+                command.Parameters.AddWithValue("@Kryetari", model.Kryetari);
+                command.Parameters.AddWithValue("@Ithemeluar", model.IThemeluar);
+                command.Parameters.AddWithValue("@KlubiID", model.KlubiID);
+                command.Parameters.AddWithValue("@StadiumiID", 1);
+                command.Parameters.AddWithValue("@LigaID", 1);
                 //command.Parameters.AddWithValue("Stadiumi", model.Stadiumi);
                 //command.Parameters.AddWithValue("Kryetari", model.Kryetari);
                 //command.Parameters.AddWithValue("Rezultati", model.Rezultati);
@@ -107,15 +119,55 @@ namespace Klubi_
                 //command.Parameters.AddWithValue("LUD", model.LUD);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
             {
+           
                 return -1;
             }
         }
 
+        public void GjejKlubMeID(Klubi klubi)
+        {
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Klub_GjejKlubMeID",sqlcon);
+            sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@KlubiID", klubi.KlubiID);
+            DataTable dt = new DataTable();
+            sqlDataAdapter.Fill(dt);
+            sqlDataAdapter.Dispose();
+            sqlcon.Close();
+
+            klubi.Emertimi = dt.Rows[0]["Emertimi"].ToString();
+            klubi.Vendi = dt.Rows[0]["Vendi"].ToString();
+            klubi.Kryetari = dt.Rows[0]["Kryetari"].ToString();
+            klubi.IThemeluar =DateTime.Parse(dt.Rows[0]["IThemeluar"].ToString());
+        }
+
+        public int FshijMeID(Klubi klubi)
+        {
+            try
+            {
+
+                sqlcon.Open();
+                SqlCommand sqc = new SqlCommand("[dbo].[usp_Klub_FshijKlubMeID]", sqlcon);
+                sqc.CommandType = CommandType.StoredProcedure;
+                sqc.Parameters.AddWithValue("@KlubiID", klubi.KlubiID);
+                int result = sqc.ExecuteNonQuery();
+                sqc.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
+                return result;
+
+
+            }
+            catch (Exception e)
+            {
+
+                return -1;
+            }
+        }
     }
 }
