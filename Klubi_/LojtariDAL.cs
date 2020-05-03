@@ -12,10 +12,9 @@ using Klubi_Futbollistik;
 
 namespace Klubi_
 {
-    public class LojtariDAL //: CRUD<Lojtari>
+    public class LojtariDAL 
     {
-        //public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
 
         public int Fshij(Lojtari model)
         {
@@ -41,7 +40,7 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Lojtar_MerriTEgjithaLojtar", sqlcon);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_ShfaqTeGjithLojtaret", sqlcon);
 
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -124,12 +123,10 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
                 command.Parameters.AddWithValue("@PersoneliID", lojtari.LojtariID);
                 command.Parameters.AddWithValue("@KlubiID", 1);
-
                 command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
                 sqlcon.Dispose();
-
             }
             catch (Exception e)
             {

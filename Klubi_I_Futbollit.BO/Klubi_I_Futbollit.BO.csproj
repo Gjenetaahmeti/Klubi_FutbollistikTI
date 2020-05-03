@@ -57,6 +57,7 @@
     <Compile Include="Role.cs" />
     <Compile Include="StafiKategorit.cs" />
     <Compile Include="StatusiLojtarit.cs" />
+    <Compile Include="Trajneri.cs" />
     <Compile Include="Useri.cs" />
     <Compile Include="Vlersimet.cs" />
   </ItemGroup>

@@ -32,8 +32,8 @@ namespace Klubi_I_Futbollit
                 this.Close();
                 //Application.Exit();
             }
-            RegjistrimiPersonelit r1 = new RegjistrimiPersonelit();
-            r1.ShowDialog();
+            //RegjistrimiPersonelit r1 = new RegjistrimiPersonelit();
+            //r1.ShowDialog();
         }
 
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

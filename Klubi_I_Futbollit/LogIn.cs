@@ -18,12 +18,11 @@ namespace Klubi_I_Futbollit
 {
     public partial class LogIn : Form
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
 
         public LogIn()
         {
             InitializeComponent();
-           
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -38,8 +37,6 @@ namespace Klubi_I_Futbollit
             SqlDataReader dr = command.ExecuteReader();
             if (dr.Read())
             {
-
-
                 if (txtUsername.Text.Equals(dr["EmriIPerdoruesit"].ToString()) && txtPassword.Text.Equals(dr["Fjalekalimi"].ToString()))
                 {
                     MessageBox.Show("U loguat me sukses", "Urime", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,14 +46,10 @@ namespace Klubi_I_Futbollit
                 else
                 {
                     MessageBox.Show("Deshtoi log-in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             sqlcon.Close();
-
         }
-
-  
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {

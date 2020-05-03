@@ -53,6 +53,7 @@
     <Compile Include="RoleDAL.cs" />
     <Compile Include="StafiKategoritDAL.cs" />
     <Compile Include="StatusiLojtaritDAL.cs" />
+    <Compile Include="TrajneriDAL.cs" />
     <Compile Include="UseriDAL.cs" />
     <Compile Include="VlersimetDAL.cs" />
   </ItemGroup>

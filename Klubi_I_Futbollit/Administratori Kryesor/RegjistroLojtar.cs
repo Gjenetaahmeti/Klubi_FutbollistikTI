@@ -17,9 +17,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
     public partial class RegjistroLojtar : Form
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
 
-        public string T = "";
         public RegjistroLojtar()
         {
             InitializeComponent();
@@ -69,27 +67,11 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             LojtariDAL dal = new LojtariDAL();
             dal.Update(person);
         }
-
-      
-
-        private void MbushLojtarT()
-        {
-            sqlcon.Open();
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter("[dbo].[usp_ShfaqTeGjithLojtaret]", sqlcon);
-            sqlAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            DataTable dtbl = new DataTable();
-            sqlAdapter.Fill(dtbl);
-            sqlAdapter.Dispose();
-            sqlcon.Close();
-            dgdMbushLojtar.DataSource = dtbl;
-        }
-
-
         private void btnShfaq_Click(object sender, EventArgs e)
         {
-            MbushLojtarT();
+            LojtariDAL obj = new LojtariDAL();
+            dgdMbushLojtar.DataSource = obj.GetAll();
         }
-
         private void BtnGjejLojtart_Click(object sender, EventArgs e)
         {
             Lojtari lojtar =  new Lojtari();
@@ -116,7 +98,6 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             btnRegjistro.Visible = false;
             btnShfaq.Visible = false;
         }
-
         private void BtnFshijLojtarin_Click(object sender, EventArgs e)
         {
             Lojtari lojtari = new Lojtari();
@@ -124,7 +105,5 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             LojtariDAL Fshijlojtari = new LojtariDAL();
             Fshijlojtari.Fshij(lojtari);
         }
-
-       
     }
 }
