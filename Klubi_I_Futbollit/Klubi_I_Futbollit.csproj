@@ -108,6 +108,9 @@
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoKlub.resx">
       <DependentUpon>MenaxhoKlub.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoNdeshje.resx">
+      <DependentUpon>MenaxhoNdeshje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoPersonelin.resx">
       <DependentUpon>MenaxhoPersonelin.cs</DependentUpon>
     </EmbeddedResource>
