@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegatDAL.cs" />
     <Compile Include="FormacioniDAL.cs" />
     <Compile Include="KlubiDAL.cs" />
     <Compile Include="KontrollaMjekesoreDAL.cs" />
