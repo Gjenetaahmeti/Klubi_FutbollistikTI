@@ -12,8 +12,8 @@ namespace Klubi_
    public class DelegatDAL
     {
 
+      //  SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
         SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
-
         public DataTable GetAll()
         {
             try

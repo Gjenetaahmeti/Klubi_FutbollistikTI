@@ -13,20 +13,23 @@ namespace Klubi_
 {
     public class StatusiLojtaritDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        //public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+
         public int Fshij(StatusiLojtarit model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_StatusiLojtarit_FshijStatusinLojtarit]", connection);
+
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_Formacioni_FshijMeIDFormacion]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("StatusiID", model.StatusiID);
                 int result = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return result;
             }
             catch (Exception e)
@@ -39,7 +42,7 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_StatusiLojtarit_MerrTeGjitha]", _connectionstring);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Formacioni_MerriKrejtFormacion]", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
@@ -53,27 +56,25 @@ namespace Klubi_
 
 
 
-        public int Shto(StatusiLojtarit model)
+        public int Shto(StatusiLojtarit model,Lojtari lojtar)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_StatusiLojtarit_ShtoStatusiLojtarit]", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_Formacioni_ShtooseEditoFormacion", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("Pergjegjes", model.Pergjegjes);
-                command.Parameters.AddWithValue("Rezerve", model.Rezerv);
-                command.Parameters.AddWithValue("Huazim", model.Huazim);
-                command.Parameters.AddWithValue("Shoqerues", model.Shoqerues);
-                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                command.Parameters.AddWithValue("LUB", model.LUB);
-                command.Parameters.AddWithValue("LUN", model.LUN);
-                command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("@Pergjegjes", model.Pergjegjes);
+                command.Parameters.AddWithValue("@Rezerve", model.Rezerv);
+                command.Parameters.AddWithValue("@Huazim", model.Huazim);
+                command.Parameters.AddWithValue("@Shoqerues", model.Shoqerues);
+                command.Parameters.AddWithValue("@StatusiID", 0);
+                command.Parameters.AddWithValue("@LojtariID", lojtar.LojtariID);
+                command.Parameters.AddWithValue("@FormacioniID", 1);
+    
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
@@ -82,27 +83,25 @@ namespace Klubi_
             }
         }
 
-        public int Update(StatusiLojtarit model)
+        public int Update(StatusiLojtarit model,Lojtari lojtari)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_StatusiLojtarit_Edito]", connection);
+
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_Formacioni_ShtooseEditoFormacion", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("Pergjegjes", model.Pergjegjes);
                 command.Parameters.AddWithValue("Rezerve", model.Rezerv);
                 command.Parameters.AddWithValue("Huazim", model.Huazim);
                 command.Parameters.AddWithValue("Shoqerues", model.Shoqerues);
-                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                command.Parameters.AddWithValue("LUB", model.LUB);
-                command.Parameters.AddWithValue("LUN", model.LUN);
-                command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("StatusiID", model.StatusiID);
+                command.Parameters.AddWithValue("LojtariID", lojtari.LojtariID);
+                command.Parameters.AddWithValue("FormacioniID", 1);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
@@ -111,5 +110,22 @@ namespace Klubi_
             }
         }
 
+        public void MerriMeIdFormacion(StatusiLojtarit formacioni)
+        {
+            sqlcon.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Formacioni_MerriFormacionID]", sqlcon);
+            sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            sqlDataAdapter.SelectCommand.Parameters.AddWithValue("StatusiID", formacioni.StatusiID);
+
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlDataAdapter.Dispose();
+            sqlcon.Close();
+
+            formacioni.Pergjegjes = dataTable.Rows[0]["Pergjegjes"].ToString();
+            formacioni.Rezerv = dataTable.Rows[0]["Rezerve"].ToString();
+            formacioni.Huazim = dataTable.Rows[0]["Huazim"].ToString();
+            formacioni.Shoqerues = dataTable.Rows[0]["Shoqerues"].ToString();
+        }
     }
 }
