@@ -11,22 +11,22 @@ using Klubi_I_Futbollit.BO;
 
 namespace Klubi_
 {
-    class NdeshjaDAL
+    public class NdeshjaDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-E831M76\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+
         public int Fshij(Ndeshja model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Ndeshja_FshijNdeshje]", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_FshijMeId_Ndeshje", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("NdeshjaID", model.NdeshjaID);
+                command.Parameters.AddWithValue("@NdeshjaID", model.NdeshjaID);
                 int result = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return result;
             }
             catch (Exception e)
@@ -39,13 +39,11 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Ndeshja_MerriTeGjithaNdeshja]", _connectionstring);
-
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_MerrTeGjitha_Ndeshjet", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
                 return dataTable;
-
             }
             catch (Exception e)
             {
@@ -59,27 +57,22 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Ndeshja_ShtoNdeshje]", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_ShtooseEdito_Ndeshje", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("DataNdeshjes", model.dataNdeshjes);
-                command.Parameters.AddWithValue("VitiKalendarik", model.Vitikalendarik);
-                command.Parameters.AddWithValue("Sezoni", model.Sezoni);
-                command.Parameters.AddWithValue("Stadiumi", model.Stadiumi);
-                command.Parameters.AddWithValue("RaportiAmbullances", model.RaportiAmbulances);
-                command.Parameters.AddWithValue("RaportiPolicor", model.RaportiPolicor);
-                command.Parameters.AddWithValue("KlubiMysafir", model.KlubiMysafir);
-                command.Parameters.AddWithValue("KlubiNikoqir", model.KlubiNikoqir);
-                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                command.Parameters.AddWithValue("LUB", model.LUB);
-                command.Parameters.AddWithValue("LUN", model.LUN);
-                command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("@DataENdeshjes", model.dataNdeshjes);
+                command.Parameters.AddWithValue("@Sezoni", model.Sezoni);
+                command.Parameters.AddWithValue("@RaportiIAmbulances", model.RaportiAmbulances);
+                command.Parameters.AddWithValue("@RaportiIPolicis", model.RaportiPolicor);
+                command.Parameters.AddWithValue("@NdeshjaID", 0);
+                command.Parameters.AddWithValue("@KlubiVendasID", 1);
+                command.Parameters.AddWithValue("@KlubiNikoqirID", 2);
+                command.Parameters.AddWithValue("@FormacioniID", 1);
+                command.Parameters.AddWithValue("@StadiumiID", 2);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
@@ -88,36 +81,55 @@ namespace Klubi_
             }
         }
 
-        public int Update(Ndeshja model)
+        public int Update(Ndeshja ndeshjaModel)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Ndeshja_EditoNdeshja]", connection);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("[dbo].[usp_ShtooseEdito_Ndeshje]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("DataNdeshjes", model.dataNdeshjes);
-                command.Parameters.AddWithValue("VitiKalendarik", model.Vitikalendarik);
-                command.Parameters.AddWithValue("Sezoni", model.Sezoni);
-                command.Parameters.AddWithValue("Stadiumi", model.Stadiumi);
-                command.Parameters.AddWithValue("RaportiAmbullances", model.RaportiAmbulances);
-                command.Parameters.AddWithValue("RaportiPolicor", model.RaportiPolicor);
-                command.Parameters.AddWithValue("KlubiMysafir", model.KlubiMysafir);
-                command.Parameters.AddWithValue("KlubiNikoqir", model.KlubiNikoqir);
-                command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                command.Parameters.AddWithValue("LUB", model.LUB);
-                command.Parameters.AddWithValue("LUN", model.LUN);
-                command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("@NdeshjaID", ndeshjaModel.NdeshjaID);
+                command.Parameters.AddWithValue("@DataENdeshjes", ndeshjaModel.dataNdeshjes);
+                command.Parameters.AddWithValue("@Sezoni", ndeshjaModel.Sezoni);
+                command.Parameters.AddWithValue("@RaportiIAmbulances", ndeshjaModel.RaportiAmbulances);
+                command.Parameters.AddWithValue("@RaportiIPolicis", ndeshjaModel.RaportiPolicor);
+                command.Parameters.AddWithValue("@KlubiVendasID", 1);
+                command.Parameters.AddWithValue("@KlubiNikoqirID", 2);
+                command.Parameters.AddWithValue("@FormacioniID", 1);
+                command.Parameters.AddWithValue("@StadiumiID", 2);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
-                connection.Close();
-                connection.Dispose();
+                sqlcon.Close();
+                sqlcon.Dispose();
                 return rowAffected;
             }
             catch (Exception e)
             {
                 return -1;
+            }
+        }
+
+        public void MerrNdeshjeMeID(Ndeshja ndeshja)
+        {
+            try
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("usp_MerrNdeshjenMeID", sqlcon);
+                sqlda.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlda.SelectCommand.Parameters.AddWithValue("@NdeshjaID", ndeshja.NdeshjaID);
+                DataTable dt = new DataTable();
+                sqlda.Fill(dt);
+                sqlda.Dispose();
+                sqlcon.Close();
+                ndeshja.dataNdeshjes = DateTime.Parse(dt.Rows[0]["DataENdeshjes"].ToString());
+                ndeshja.Sezoni = dt.Rows[0]["Sezoni"].ToString();
+                ndeshja.RaportiAmbulances = dt.Rows[0]["RaportiIAmbulances"].ToString();
+                ndeshja.RaportiPolicor = dt.Rows[0]["RaportiIPolicise"].ToString();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
 

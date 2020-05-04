@@ -14,26 +14,26 @@ namespace Klubi_
   public  class LigaDAL
     {
         public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-        public int Fshij(Liga model)
-        {
-            try
-            {
-                SqlConnection connection = new SqlConnection(_connectionstring);
-                connection.Open();
-                SqlCommand command = new SqlCommand("usp_Klubi_FshijKlubin", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("KlubiID", model.KlubiID);
-                int result = command.ExecuteNonQuery();
-                command.Dispose();
-                connection.Close();
-                connection.Dispose();
-                return result;
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
-        }
+        //public int Fshij(Liga model)
+        //{
+        //    try
+        //    {
+        //        SqlConnection connection = new SqlConnection(_connectionstring);
+        //        connection.Open();
+        //        SqlCommand command = new SqlCommand("usp_Klubi_FshijKlubin", connection);
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.AddWithValue("KlubiID", model.KlubiID);
+        //        int result = command.ExecuteNonQuery();
+        //        command.Dispose();
+        //        connection.Close();
+        //        connection.Dispose();
+        //        return result;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return -1;
+        //    }
+        //}
 
         public DataTable GetAll()
         {

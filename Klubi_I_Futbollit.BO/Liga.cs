@@ -10,7 +10,7 @@ namespace Klubi_I_Futbollit.BO
     {
         public int LigaID { get; set; }
 
-        public Klubi KlubiID { get; set; }
+        public string Emertimi { get; set; }
 
         public DateTime vitiKalendarik { get; set; }
         public int InsertBy { get; set; }
