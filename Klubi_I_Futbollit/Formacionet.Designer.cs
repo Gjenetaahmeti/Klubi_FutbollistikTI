@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtLojtari = new System.Windows.Forms.TextBox();
             this.txtFormacioni = new System.Windows.Forms.TextBox();
             this.btnRegjistroFormacion = new System.Windows.Forms.Button();
             this.dgdmbushFormacion = new System.Windows.Forms.DataGridView();
@@ -38,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtRoli = new System.Windows.Forms.TextBox();
             this.txtNrFanelles = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgdmbushFormacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,13 +58,6 @@
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Formacioni";
-            // 
-            // txtLojtari
-            // 
-            this.txtLojtari.Location = new System.Drawing.Point(103, 29);
-            this.txtLojtari.Name = "txtLojtari";
-            this.txtLojtari.Size = new System.Drawing.Size(100, 20);
-            this.txtLojtari.TabIndex = 2;
             // 
             // txtFormacioni
             // 
@@ -122,11 +115,20 @@
             this.txtNrFanelles.Size = new System.Drawing.Size(100, 20);
             this.txtNrFanelles.TabIndex = 9;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(103, 28);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 10;
+            // 
             // Formacionet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtNrFanelles);
             this.Controls.Add(this.txtRoli);
             this.Controls.Add(this.label4);
@@ -134,7 +136,6 @@
             this.Controls.Add(this.dgdmbushFormacion);
             this.Controls.Add(this.btnRegjistroFormacion);
             this.Controls.Add(this.txtFormacioni);
-            this.Controls.Add(this.txtLojtari);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Formacionet";
@@ -149,7 +150,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtLojtari;
         private System.Windows.Forms.TextBox txtFormacioni;
         private System.Windows.Forms.Button btnRegjistroFormacion;
         private System.Windows.Forms.DataGridView dgdmbushFormacion;
@@ -157,5 +157,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRoli;
         private System.Windows.Forms.TextBox txtNrFanelles;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
