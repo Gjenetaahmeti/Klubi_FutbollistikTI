@@ -14,7 +14,7 @@ namespace Klubi_
 {
     public class LojtariDAL 
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
 
         public int Fshij(Lojtari model)
         {
@@ -23,7 +23,7 @@ namespace Klubi_
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_FshijLojtarMeID", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("LojtariID", model.LojtariID);
+                command.Parameters.AddWithValue("@LojtariID", model.LojtariID);
                 int result = command.ExecuteNonQuery();
                 command.Dispose();
                 sqlcon.Close();
@@ -41,7 +41,6 @@ namespace Klubi_
             try
             {
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_ShfaqTeGjithLojtaret", sqlcon);
-
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);

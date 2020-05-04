@@ -13,7 +13,7 @@ namespace Klubi_
 {
     public class NdeshjaDAL
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-E831M76\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
 
         public int Fshij(Ndeshja model)
         {

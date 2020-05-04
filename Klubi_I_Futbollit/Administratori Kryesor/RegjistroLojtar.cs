@@ -12,6 +12,7 @@ using Klubi_;
 using Klubi_Futbollistik.DAL;
 using Klubi_I_Futbollit.BO;
 using System.Data.SqlClient;
+using Klubi_I_Futbollit.BLL;
 
 namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
@@ -41,10 +42,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             person.Mail = txtEmail.Text.Trim();
             person.Pesha = decimal.Parse(txtPesha.Text.Trim());
             person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
-            LojtariDAL dal = new LojtariDAL();
-            dal.Shto( person);
+            LojtariBLL lojtariBLL = new LojtariBLL();
+            lojtariBLL.Regjistro(person);
         }
-
         private void btnEditoLojtar_Click(object sender, EventArgs e)
         {
             Lojtari person = new Lojtari();
@@ -64,20 +64,23 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             person.Pesha = decimal.Parse(txtPesha.Text.Trim());
             person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
             person.LojtariID = int.Parse(txtShkruajID.Text.Trim());
-            LojtariDAL dal = new LojtariDAL();
-            dal.Update(person);
+            LojtariBLL lojtariEditoBll = new LojtariBLL();
+            lojtariEditoBll.Edito(person);
         }
         private void btnShfaq_Click(object sender, EventArgs e)
         {
-            LojtariDAL obj = new LojtariDAL();
-            dgdMbushLojtar.DataSource = obj.GetAll();
+            //LojtariDAL obj = new LojtariDAL();
+            //dgdMbushLojtar.DataSource = obj.GetAll();
+
+            LojtariBLL lojtariShfaqja = new LojtariBLL();
+            dgdMbushLojtar.DataSource = lojtariShfaqja.ShfaqLojtaret();
         }
         private void BtnGjejLojtart_Click(object sender, EventArgs e)
         {
             Lojtari lojtar =  new Lojtari();
             lojtar.LojtariID= int.Parse(txtShkruajID.Text.Trim());
-            LojtariDAL gjejlojtarin = new LojtariDAL();
-            gjejlojtarin.GjejLojtarinMeID(lojtar);
+            LojtariBLL gjejLojtarin = new LojtariBLL();
+            gjejLojtarin.GjejLojtarMeID(lojtar);
             txtEmri.Text = lojtar.Emri;
             txtMbiemri.Text = lojtar.Mbiemri;
             txtEmriPerdoruesit.Text = lojtar.EmriIPerdoruesit;
@@ -102,8 +105,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             Lojtari lojtari = new Lojtari();
             lojtari.LojtariID = int.Parse(txtShkruajID.Text.Trim());
-            LojtariDAL Fshijlojtari = new LojtariDAL();
-            Fshijlojtari.Fshij(lojtari);
+            LojtariBLL lojtariBLL = new LojtariBLL();
+            lojtariBLL.Fshij(lojtari);
         }
     }
 }
