@@ -52,6 +52,12 @@
     <Compile Include="Administratori Kryesor\MenagjoTrajner.Designer.cs">
       <DependentUpon>MenagjoTrajner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoDelegat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoDelegat.Designer.cs">
+      <DependentUpon>MenaxhoDelegat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoKlub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administratori Kryesor\MenagjoTrajner.resx">
       <DependentUpon>MenagjoTrajner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoDelegat.resx">
+      <DependentUpon>MenaxhoDelegat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoKlub.resx">
       <DependentUpon>MenaxhoKlub.cs</DependentUpon>
