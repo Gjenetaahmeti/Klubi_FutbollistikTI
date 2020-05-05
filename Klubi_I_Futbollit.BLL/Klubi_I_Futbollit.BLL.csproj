@@ -46,6 +46,7 @@
     <Compile Include="PersoneliBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseriBLL.cs" />
+    <Compile Include="VlersimetBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Klubi_I_Futbollit.BO\Klubi_I_Futbollit.BO.csproj">

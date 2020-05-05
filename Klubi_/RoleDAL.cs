@@ -14,8 +14,9 @@ namespace Klubi_
 {
    public class RoleDAL
     {
-        //public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //  public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
+
         public int Fshij(Role model)
         {
             try

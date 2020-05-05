@@ -13,8 +13,9 @@ namespace Klubi_
 {
     public class NdeshjaDAL
     {
-      //  public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //  public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
+
         public int Fshij(Ndeshja model)
         {
             try
