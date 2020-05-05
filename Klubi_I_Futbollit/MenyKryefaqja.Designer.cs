@@ -32,9 +32,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminstratoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lojtarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoLojtareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoNdeshjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lojtarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -78,13 +78,6 @@
             this.adminstratoriToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.adminstratoriToolStripMenuItem.Text = "Adminstratori";
             // 
-            // lojtarToolStripMenuItem
-            // 
-            this.lojtarToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lojtarToolStripMenuItem.Name = "lojtarToolStripMenuItem";
-            this.lojtarToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
-            this.lojtarToolStripMenuItem.Text = "Lojtar";
-            // 
             // menaxhoLojtareToolStripMenuItem
             // 
             this.menaxhoLojtareToolStripMenuItem.Name = "menaxhoLojtareToolStripMenuItem";
@@ -97,6 +90,13 @@
             this.menaxhoNdeshjetToolStripMenuItem.Name = "menaxhoNdeshjetToolStripMenuItem";
             this.menaxhoNdeshjetToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.menaxhoNdeshjetToolStripMenuItem.Text = "Menaxho Ndeshjet";
+            // 
+            // lojtarToolStripMenuItem
+            // 
+            this.lojtarToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lojtarToolStripMenuItem.Name = "lojtarToolStripMenuItem";
+            this.lojtarToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.lojtarToolStripMenuItem.Text = "Lojtar";
             // 
             // pictureBox1
             // 
@@ -132,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(335, 236);
+            this.label2.Location = new System.Drawing.Point(346, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 22);
             this.label2.TabIndex = 4;

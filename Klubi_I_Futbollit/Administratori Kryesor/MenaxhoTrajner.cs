@@ -13,9 +13,9 @@ using Klubi_I_Futbollit.BO;
 
 namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
-    public partial class MenagjoTrajner : Form
+    public partial class MenaxhoTrajner : Form
     {
-        public MenagjoTrajner()
+        public MenaxhoTrajner()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
-    partial class MenagjoTrajner
+    partial class MenaxhoTrajner
     {
         /// <summary>
         /// Required designer variable.

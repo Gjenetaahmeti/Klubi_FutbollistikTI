@@ -1,6 +1,6 @@
 ﻿namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
-    partial class RegjistroLojtar
+    partial class MenaxhoLojtaret
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegjistroLojtar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenaxhoLojtaret));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDitelindja = new System.Windows.Forms.TextBox();

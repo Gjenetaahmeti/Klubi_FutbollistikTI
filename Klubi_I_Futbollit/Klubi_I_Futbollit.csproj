@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administratori Kryesor\MenagjoTrajner.cs">
+    <Compile Include="Administratori Kryesor\MenaxhoTrajner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administratori Kryesor\MenagjoTrajner.Designer.cs">
-      <DependentUpon>MenagjoTrajner.cs</DependentUpon>
+    <Compile Include="Administratori Kryesor\MenaxhoTrajner.Designer.cs">
+      <DependentUpon>MenaxhoTrajner.cs</DependentUpon>
     </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoDelegat.cs">
       <SubType>Form</SubType>
@@ -82,17 +82,17 @@
     <Compile Include="Administratori Kryesor\MenaxhoPersonelin.Designer.cs">
       <DependentUpon>MenaxhoPersonelin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administratori Kryesor\RegjistroLojtar.cs">
+    <Compile Include="Administratori Kryesor\MenaxhoLojtaret.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administratori Kryesor\RegjistroLojtar.Designer.cs">
-      <DependentUpon>RegjistroLojtar.cs</DependentUpon>
+    <Compile Include="Administratori Kryesor\MenaxhoLojtaret.Designer.cs">
+      <DependentUpon>MenaxhoLojtaret.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formacionet.cs">
+    <Compile Include="Administratori Kryesor\MenaxhoFormacionet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formacionet.Designer.cs">
-      <DependentUpon>Formacionet.cs</DependentUpon>
+    <Compile Include="Administratori Kryesor\MenaxhoFormacionet.Designer.cs">
+      <DependentUpon>MenaxhoFormacionet.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
@@ -114,8 +114,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Administratori Kryesor\MenagjoTrajner.resx">
-      <DependentUpon>MenagjoTrajner.cs</DependentUpon>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoTrajner.resx">
+      <DependentUpon>MenaxhoTrajner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoDelegat.resx">
       <DependentUpon>MenaxhoDelegat.cs</DependentUpon>
@@ -132,11 +132,11 @@
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoPersonelin.resx">
       <DependentUpon>MenaxhoPersonelin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administratori Kryesor\RegjistroLojtar.resx">
-      <DependentUpon>RegjistroLojtar.cs</DependentUpon>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoLojtaret.resx">
+      <DependentUpon>MenaxhoLojtaret.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formacionet.resx">
-      <DependentUpon>Formacionet.cs</DependentUpon>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoFormacionet.resx">
+      <DependentUpon>MenaxhoFormacionet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

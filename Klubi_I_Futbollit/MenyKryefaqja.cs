@@ -24,7 +24,7 @@ namespace Klubi_I_Futbollit
 
         private void MenaxhoLojtareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (Administratori_Kryesor.RegjistroLojtar regjistroLojtar = new Administratori_Kryesor.RegjistroLojtar())
+            using (Administratori_Kryesor.MenaxhoLojtaret regjistroLojtar = new Administratori_Kryesor.MenaxhoLojtaret())
             {
 
                 regjistroLojtar.ShowDialog();

@@ -16,10 +16,10 @@ using Klubi_I_Futbollit.BLL;
 
 namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
-    public partial class RegjistroLojtar : Form
+    public partial class MenaxhoLojtaret : Form
     {
 
-        public RegjistroLojtar()
+        public MenaxhoLojtaret()
         {
             InitializeComponent();
         }
