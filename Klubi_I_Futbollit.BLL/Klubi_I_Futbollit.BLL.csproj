@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GolashenuesiBLL.cs" />
     <Compile Include="LojtariBLL.cs" />
     <Compile Include="PersoneliBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

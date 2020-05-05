@@ -40,7 +40,6 @@ namespace Klubi_
         {
             try
             {
-
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Formacioni_MerriKrejtFormacion]", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;

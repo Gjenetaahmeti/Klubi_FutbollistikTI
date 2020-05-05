@@ -8,15 +8,13 @@ namespace Klubi_I_Futbollit.BO
 {
     public class Golashenuesit
     {
-        public Ndeshja ndeshjaID { get; set; }
+        public int GolashenuesiID { get; set; }
+        public static Lojtari LojtariID { get; set; }
+        public int NumriGolave { get; set; }
+        public static Ndeshja NdeshjaID { get; set; }
 
-        public Klubi KlubiID { get; set; }
+        public int lojtariID = Convert.ToInt32(LojtariID);
+        public int ndeshjaID = Convert.ToInt32(NdeshjaID);
 
-        public Lojtari LojtariID { get; set; }
-        public int InsertBy { get; set; }
-        public DateTime InsertDate { get; set; }
-        public int LUB { get; set; }
-        public int LUN { get; set; }
-        public DateTime LUD { get; set; }
     }
 }
