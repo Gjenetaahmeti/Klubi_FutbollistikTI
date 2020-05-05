@@ -22,7 +22,7 @@ namespace Klubi_
             try
             {
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_delegat_merrikejtDelegat]", sqlcon);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_delegat_merrkejtDelegat2", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
@@ -33,7 +33,7 @@ namespace Klubi_
                 return null;
             }
         }
-
+   
         public void Shto(Delegat delegat)
         {
 
@@ -84,7 +84,7 @@ namespace Klubi_
 
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("[dbo].[usp_Delegat_ShtooseEditoDelegat]", sqlcon);
+                SqlCommand command = new SqlCommand("[dbo].[Delegat]", sqlcon);
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -104,6 +104,8 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@PersoneliID", delegat.DelegatID);
                 command.Parameters.AddWithValue("@KlubiID", 1);
                 command.Parameters.AddWithValue("@RoliID", 5);
+                command.Parameters.AddWithValue("@Roli", delegat.Roli);
+                command.Parameters.AddWithValue("@RaportiPasNdeshjes", delegat.RaportiPasNdeshjes);
 
                 command.ExecuteNonQuery();
                 command.Dispose();
@@ -140,6 +142,8 @@ namespace Klubi_
             delegat.Vendbanimi = dtbl.Rows[0]["Vendbanimi"].ToString();
             delegat.Telefoni = dtbl.Rows[0]["Telefoni"].ToString();
             delegat.Mail = dtbl.Rows[0]["Email"].ToString();
+            delegat.Roli = dtbl.Rows[0]["Roli"].ToString();
+            delegat.RaportiPasNdeshjes = dtbl.Rows[0]["RaportPasNdeshjes"].ToString();
         }
         public int Fshij(Delegat delegat)
         {

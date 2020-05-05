@@ -51,7 +51,7 @@ namespace Klubi_I_Futbollit
             Lojtari lojtari = new Lojtari();
             lojtari.LojtariID =int.Parse(der2);
             StatusiLojtaritDAL statusiLojtaritDAL = new StatusiLojtaritDAL();
-            statusiLojtaritDAL.Shto(statusiLojtarit, lojtari);
+            statusiLojtaritDAL.Shto(statusiLojtarit);
 
 
         }
@@ -83,7 +83,7 @@ namespace Klubi_I_Futbollit
             Lojtari lojtari = new Lojtari();
             lojtari.LojtariID = int.Parse(der2);
             StatusiLojtaritDAL statusiLojtaritDAL = new StatusiLojtaritDAL();
-            statusiLojtaritDAL.Update(statusiLojtarit, lojtari);
+            statusiLojtaritDAL.Update(statusiLojtarit);
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)
@@ -98,6 +98,73 @@ namespace Klubi_I_Futbollit
             statusiLojtarit.StatusiID=int.Parse(txtGjejMeIDFormacion.Text.Trim());
             StatusiLojtaritDAL statusiLojtaritDAL = new StatusiLojtaritDAL();
             statusiLojtaritDAL.Fshij(statusiLojtarit);
+        }
+
+        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenyKryefaqja menyKryefaqja = new MenyKryefaqja();
+            menyKryefaqja.ShowDialog();
+        }
+
+        private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(Administratori_Kryesor.MenaxhoPersonelin personelin = new Administratori_Kryesor.MenaxhoPersonelin())
+            {
+                personelin.ShowDialog();
+            }
+        }
+
+        private void MenaxhoLojtarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoLojtaret lojtaret = new Administratori_Kryesor.MenaxhoLojtaret())
+            {
+                lojtaret.ShowDialog();
+            }
+        }
+
+        private void MenaxhoTrajnerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoTrajner trajner = new Administratori_Kryesor.MenaxhoTrajner())
+            {
+                trajner.ShowDialog();
+            }
+        }
+
+        private void MenaxhoNdeshjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoNdeshje ndeshje = new Administratori_Kryesor.MenaxhoNdeshje())
+            {
+                ndeshje.ShowDialog();
+            }
+        }
+
+        private void MenaxhoFormacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenaxhoGolashenuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoGolashenuesin golashenuesin = new Administratori_Kryesor.MenaxhoGolashenuesin())
+            {
+                golashenuesin.ShowDialog();
+            }
+        }
+
+        private void MenaxhoDelegatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoDelegat delegat = new Administratori_Kryesor.MenaxhoDelegat())
+            {
+                delegat.ShowDialog();
+            }
+        }
+
+        private void MenaxhoKluubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoKlub klub = new Administratori_Kryesor.MenaxhoKlub())
+            {
+                klub.ShowDialog();
+            }
         }
     }
 }

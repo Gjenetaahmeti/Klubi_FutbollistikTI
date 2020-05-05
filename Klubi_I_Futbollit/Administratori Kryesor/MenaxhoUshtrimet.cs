@@ -10,83 +10,73 @@ using System.Windows.Forms;
 using Klubi_;
 using Klubi_I_Futbollit.BO;
 
-
 namespace Klubi_I_Futbollit.Administratori_Kryesor
 {
-    public partial class MenaxhoKlub : Form
+    public partial class MenaxhoUshtrimet : Form
     {
-        public MenaxhoKlub()
+        public MenaxhoUshtrimet()
         {
             InitializeComponent();
         }
 
         private void BtnRegjistro_Click(object sender, EventArgs e)
         {
-            Klubi klubi = new Klubi();
-            klubi.Emertimi = txtEmertimi.Text.Trim();
-            klubi.Vendi = txtEmertimi.Text.Trim();
-            klubi.Kryetari = txtKyetari.Text.Trim();
-            klubi.IThemeluar =DateTime.Parse(dtpDataeThemelimit.Text.Trim());
+            Ushtrimet ushtrime = new Ushtrimet();
+            ushtrime.Dita = txtDita.Text.Trim();
+            ushtrime.Ora =txtOra.Text.Trim();
 
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.Shto(klubi);
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            ushtrimetDAL.Shto(ushtrime);
         }
 
-        private void BtnKerkoKlubMeID_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
-            Klubi kl = new Klubi();
-            kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.GjejKlubMeID(kl);
-            txtEmertimi.Text = kl.Emertimi;
-            txtVendi.Text = kl.Vendi;
-            txtKyetari.Text = kl.Kryetari;
-            dtpDataeThemelimit.Text = kl.IThemeluar.ToString();
-
-
-
+            Ushtrimet ushtrime = new Ushtrimet();
+            ushtrime.Dita = txtDita.Text.Trim();
+            ushtrime.Ora = txtOra.Text.Trim();
+            ushtrime.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            ushtrimetDAL.Update(ushtrime);
         }
 
-        private void BtnEdito_Click(object sender, EventArgs e)
+        private void BtnShfaqTeGjitha_Click(object sender, EventArgs e)
         {
-            Klubi klubi = new Klubi();
-            klubi.Emertimi = txtEmertimi.Text.Trim();
-            klubi.Vendi = txtEmertimi.Text.Trim();
-            klubi.Kryetari = txtKyetari.Text.Trim();
-            klubi.IThemeluar = DateTime.Parse(dtpDataeThemelimit.Text.Trim());
-            klubi.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
 
-
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.Update(klubi);
+            dgdMbushUshtrime.DataSource = ushtrimetDAL.GetAll();
         }
 
-        private void BtnFshijKlub_Click(object sender, EventArgs e)
-        {
-            Klubi kl = new Klubi();
-            kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.FshijMeID(kl);
+        private void BtnKerko_Click(object sender, EventArgs e)
+        {     
+
+            Ushtrimet ushtrimet = new Ushtrimet();
+            ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            ushtrimetDAL.GjejUshtrimMeID(ushtrimet);
+            txtDita.Text = ushtrimet.Dita;
+
+            txtOra.Text = ushtrimet.Ora;
         }
 
-        private void BtnShfaq_Click(object sender, EventArgs e)
+        private void BtnFshij_Click(object sender, EventArgs e)
         {
-            KlubiDAL klubi = new KlubiDAL();
-         
-
-            dgdMbushKlub.DataSource = klubi.GetAll();
-        }
-
-        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenyKryefaqja menyKryefaqja = new MenyKryefaqja();
-            menyKryefaqja.ShowDialog();
+            Ushtrimet kl = new Ushtrimet();
+            kl.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            ushtrimetDAL.FshijMeID(kl);
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenaxhoPersonelin menaxhoPersonelin = new MenaxhoPersonelin();
             menaxhoPersonelin.ShowDialog();
+            this.Close();
+        }
+
+        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenyKryefaqja menyKryefaqja = new MenyKryefaqja();
+            menyKryefaqja.ShowDialog();
         }
 
         private void MenaxhoLojtarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -99,13 +89,13 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             MenaxhoTrajner menaxhoTrajner = new MenaxhoTrajner();
             menaxhoTrajner.ShowDialog();
+
         }
 
         private void MenaxhoNdeshjeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenaxhoNdeshje menaxhoNdeshje = new MenaxhoNdeshje();
             menaxhoNdeshje.ShowDialog();
-
         }
 
         private void MenaxhoFormacionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,6 +114,13 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             MenaxhoDelegat menaxhoDelegat = new MenaxhoDelegat();
             menaxhoDelegat.ShowDialog();
+
+        }
+
+        private void MenaxhoKlubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoKlub menaxhoKlub = new MenaxhoKlub();
+            menaxhoKlub.ShowDialog();
         }
     }
 }

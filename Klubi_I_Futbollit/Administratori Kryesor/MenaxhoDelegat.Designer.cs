@@ -66,14 +66,27 @@
             this.Roli = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnfshijDelegat = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administratoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoPersonelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoLojtarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoTrajnerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoNdeshjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoFormacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoGolashenuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoDelegatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoKlubinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMbushDelegat)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShfaqDelegat
             // 
-            this.btnShfaqDelegat.Location = new System.Drawing.Point(57, 521);
+            this.btnShfaqDelegat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShfaqDelegat.Location = new System.Drawing.Point(688, 268);
             this.btnShfaqDelegat.Name = "btnShfaqDelegat";
-            this.btnShfaqDelegat.Size = new System.Drawing.Size(92, 23);
+            this.btnShfaqDelegat.Size = new System.Drawing.Size(81, 47);
             this.btnShfaqDelegat.TabIndex = 41;
             this.btnShfaqDelegat.Text = "Shfaq te dhenat";
             this.btnShfaqDelegat.UseVisualStyleBackColor = true;
@@ -81,9 +94,10 @@
             // 
             // btnEdito
             // 
-            this.btnEdito.Location = new System.Drawing.Point(84, 571);
+            this.btnEdito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdito.Location = new System.Drawing.Point(799, 267);
             this.btnEdito.Name = "btnEdito";
-            this.btnEdito.Size = new System.Drawing.Size(65, 23);
+            this.btnEdito.Size = new System.Drawing.Size(81, 47);
             this.btnEdito.TabIndex = 40;
             this.btnEdito.Text = "Edito";
             this.btnEdito.UseVisualStyleBackColor = true;
@@ -91,91 +105,104 @@
             // 
             // txtTelefoni
             // 
-            this.txtTelefoni.Location = new System.Drawing.Point(178, 389);
+            this.txtTelefoni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtTelefoni.Location = new System.Drawing.Point(511, 181);
             this.txtTelefoni.Name = "txtTelefoni";
             this.txtTelefoni.Size = new System.Drawing.Size(100, 20);
             this.txtTelefoni.TabIndex = 67;
             // 
             // txtVendbanimi
             // 
-            this.txtVendbanimi.Location = new System.Drawing.Point(178, 360);
+            this.txtVendbanimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtVendbanimi.Location = new System.Drawing.Point(511, 152);
             this.txtVendbanimi.Name = "txtVendbanimi";
             this.txtVendbanimi.Size = new System.Drawing.Size(100, 20);
             this.txtVendbanimi.TabIndex = 66;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(178, 416);
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtEmail.Location = new System.Drawing.Point(511, 213);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 65;
             // 
             // txtShteti
             // 
-            this.txtShteti.Location = new System.Drawing.Point(178, 328);
+            this.txtShteti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtShteti.Location = new System.Drawing.Point(511, 122);
             this.txtShteti.Name = "txtShteti";
             this.txtShteti.Size = new System.Drawing.Size(100, 20);
             this.txtShteti.TabIndex = 64;
             // 
             // txtVendlindja
             // 
-            this.txtVendlindja.Location = new System.Drawing.Point(178, 301);
+            this.txtVendlindja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtVendlindja.Location = new System.Drawing.Point(511, 94);
             this.txtVendlindja.Name = "txtVendlindja";
             this.txtVendlindja.Size = new System.Drawing.Size(100, 20);
             this.txtVendlindja.TabIndex = 63;
             // 
             // txtDitelindja
             // 
-            this.txtDitelindja.Location = new System.Drawing.Point(178, 274);
+            this.txtDitelindja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtDitelindja.Location = new System.Drawing.Point(178, 329);
             this.txtDitelindja.Name = "txtDitelindja";
             this.txtDitelindja.Size = new System.Drawing.Size(100, 20);
             this.txtDitelindja.TabIndex = 62;
             // 
             // txtGjinia
             // 
-            this.txtGjinia.Location = new System.Drawing.Point(178, 243);
+            this.txtGjinia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtGjinia.Location = new System.Drawing.Point(178, 290);
             this.txtGjinia.Name = "txtGjinia";
             this.txtGjinia.Size = new System.Drawing.Size(100, 20);
             this.txtGjinia.TabIndex = 61;
             // 
             // txtTitulli
             // 
-            this.txtTitulli.Location = new System.Drawing.Point(178, 211);
+            this.txtTitulli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtTitulli.Location = new System.Drawing.Point(178, 252);
             this.txtTitulli.Name = "txtTitulli";
             this.txtTitulli.Size = new System.Drawing.Size(100, 20);
             this.txtTitulli.TabIndex = 60;
             // 
             // txtSpecializimi
             // 
-            this.txtSpecializimi.Location = new System.Drawing.Point(178, 182);
+            this.txtSpecializimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtSpecializimi.Location = new System.Drawing.Point(178, 223);
             this.txtSpecializimi.Name = "txtSpecializimi";
             this.txtSpecializimi.Size = new System.Drawing.Size(100, 20);
             this.txtSpecializimi.TabIndex = 59;
             // 
             // txtFjalkalimi
             // 
-            this.txtFjalkalimi.Location = new System.Drawing.Point(178, 139);
+            this.txtFjalkalimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtFjalkalimi.Location = new System.Drawing.Point(178, 187);
             this.txtFjalkalimi.Name = "txtFjalkalimi";
             this.txtFjalkalimi.Size = new System.Drawing.Size(100, 20);
             this.txtFjalkalimi.TabIndex = 58;
             // 
             // txtEmriPerdoruesit
             // 
-            this.txtEmriPerdoruesit.Location = new System.Drawing.Point(178, 97);
+            this.txtEmriPerdoruesit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtEmriPerdoruesit.Location = new System.Drawing.Point(178, 152);
             this.txtEmriPerdoruesit.Name = "txtEmriPerdoruesit";
             this.txtEmriPerdoruesit.Size = new System.Drawing.Size(100, 20);
             this.txtEmriPerdoruesit.TabIndex = 57;
             // 
             // txtMbiemri
             // 
-            this.txtMbiemri.Location = new System.Drawing.Point(178, 69);
+            this.txtMbiemri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtMbiemri.Location = new System.Drawing.Point(178, 124);
             this.txtMbiemri.Name = "txtMbiemri";
             this.txtMbiemri.Size = new System.Drawing.Size(100, 20);
             this.txtMbiemri.TabIndex = 56;
             // 
             // txtEmri
             // 
-            this.txtEmri.Location = new System.Drawing.Point(178, 39);
+            this.txtEmri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtEmri.Location = new System.Drawing.Point(178, 94);
             this.txtEmri.Name = "txtEmri";
             this.txtEmri.Size = new System.Drawing.Size(100, 20);
             this.txtEmri.TabIndex = 55;
@@ -183,133 +210,147 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(58, 211);
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(36, 252);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
+            this.label13.Size = new System.Drawing.Size(40, 20);
             this.label13.TabIndex = 54;
             this.label13.Text = "Titulli";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(60, 392);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(356, 179);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
+            this.label11.Size = new System.Drawing.Size(64, 20);
             this.label11.TabIndex = 53;
             this.label11.Text = "Telefoni";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(58, 360);
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(354, 152);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 13);
+            this.label12.Size = new System.Drawing.Size(97, 20);
             this.label12.TabIndex = 52;
             this.label12.Text = "Vendbanimi";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(58, 328);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(354, 123);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.Size = new System.Drawing.Size(48, 20);
             this.label9.TabIndex = 51;
             this.label9.Text = "Shteti";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(58, 243);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(36, 290);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.Size = new System.Drawing.Size(50, 20);
             this.label10.TabIndex = 50;
             this.label10.Text = "Gjinia";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 301);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(354, 96);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(87, 20);
             this.label7.TabIndex = 49;
             this.label7.Text = "Vendlindja";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(58, 274);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(36, 329);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.Size = new System.Drawing.Size(76, 20);
             this.label8.TabIndex = 48;
             this.label8.Text = "Ditelindja";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 416);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(356, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 47;
             this.label5.Text = "Email";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 182);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(36, 223);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.Size = new System.Drawing.Size(90, 20);
             this.label6.TabIndex = 46;
             this.label6.Text = "Specializimi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 139);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 45;
             this.label3.Text = "FJalkalimi";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 97);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.Size = new System.Drawing.Size(131, 20);
             this.label4.TabIndex = 44;
             this.label4.Text = "Emri i Perdoruesit";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 69);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "Mbiemri";
             // 
             // lblEmri
             // 
             this.lblEmri.AutoSize = true;
-            this.lblEmri.Location = new System.Drawing.Point(58, 39);
+            this.lblEmri.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmri.Location = new System.Drawing.Point(36, 94);
             this.lblEmri.Name = "lblEmri";
-            this.lblEmri.Size = new System.Drawing.Size(27, 13);
+            this.lblEmri.Size = new System.Drawing.Size(38, 20);
             this.lblEmri.TabIndex = 42;
             this.lblEmri.Text = "Emri";
             // 
             // dgvMbushDelegat
             // 
             this.dgvMbushDelegat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMbushDelegat.Location = new System.Drawing.Point(323, 26);
+            this.dgvMbushDelegat.Location = new System.Drawing.Point(29, 366);
             this.dgvMbushDelegat.Name = "dgvMbushDelegat";
             this.dgvMbushDelegat.Size = new System.Drawing.Size(528, 237);
             this.dgvMbushDelegat.TabIndex = 70;
             // 
             // btnKerko
             // 
-            this.btnKerko.Location = new System.Drawing.Point(449, 318);
+            this.btnKerko.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKerko.Location = new System.Drawing.Point(780, 463);
             this.btnKerko.Name = "btnKerko";
-            this.btnKerko.Size = new System.Drawing.Size(100, 23);
+            this.btnKerko.Size = new System.Drawing.Size(100, 37);
             this.btnKerko.TabIndex = 73;
             this.btnKerko.Text = "Kerko";
             this.btnKerko.UseVisualStyleBackColor = true;
@@ -317,7 +358,8 @@
             // 
             // txtShkruajID
             // 
-            this.txtShkruajID.Location = new System.Drawing.Point(449, 274);
+            this.txtShkruajID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtShkruajID.Location = new System.Drawing.Point(780, 421);
             this.txtShkruajID.Name = "txtShkruajID";
             this.txtShkruajID.Size = new System.Drawing.Size(100, 20);
             this.txtShkruajID.TabIndex = 72;
@@ -325,17 +367,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 274);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(589, 419);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.Size = new System.Drawing.Size(165, 20);
             this.label1.TabIndex = 71;
             this.label1.Text = "Shkruaj ID e Delegatit";
             // 
             // btnregjistrodelegat
             // 
-            this.btnregjistrodelegat.Location = new System.Drawing.Point(178, 521);
+            this.btnregjistrodelegat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregjistrodelegat.Location = new System.Drawing.Point(688, 203);
             this.btnregjistrodelegat.Name = "btnregjistrodelegat";
-            this.btnregjistrodelegat.Size = new System.Drawing.Size(75, 23);
+            this.btnregjistrodelegat.Size = new System.Drawing.Size(81, 47);
             this.btnregjistrodelegat.TabIndex = 74;
             this.btnregjistrodelegat.Text = "regjistro";
             this.btnregjistrodelegat.UseVisualStyleBackColor = true;
@@ -343,14 +387,16 @@
             // 
             // txtRoli
             // 
-            this.txtRoli.Location = new System.Drawing.Point(178, 453);
+            this.txtRoli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtRoli.Location = new System.Drawing.Point(511, 254);
             this.txtRoli.Name = "txtRoli";
             this.txtRoli.Size = new System.Drawing.Size(100, 20);
             this.txtRoli.TabIndex = 78;
             // 
             // txtRaportiPasndeshjes
             // 
-            this.txtRaportiPasndeshjes.Location = new System.Drawing.Point(178, 480);
+            this.txtRaportiPasndeshjes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtRaportiPasndeshjes.Location = new System.Drawing.Point(511, 298);
             this.txtRaportiPasndeshjes.Name = "txtRaportiPasndeshjes";
             this.txtRaportiPasndeshjes.Size = new System.Drawing.Size(100, 20);
             this.txtRaportiPasndeshjes.TabIndex = 77;
@@ -358,36 +404,131 @@
             // Roli
             // 
             this.Roli.AutoSize = true;
-            this.Roli.Location = new System.Drawing.Point(60, 456);
+            this.Roli.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Roli.Location = new System.Drawing.Point(356, 254);
             this.Roli.Name = "Roli";
-            this.Roli.Size = new System.Drawing.Size(25, 13);
+            this.Roli.Size = new System.Drawing.Size(34, 20);
             this.Roli.TabIndex = 76;
             this.Roli.Text = "Roli";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(60, 480);
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(354, 298);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 13);
+            this.label15.Size = new System.Drawing.Size(151, 20);
             this.label15.TabIndex = 75;
             this.label15.Text = "RaportiPasNdeshjes";
             // 
             // btnfshijDelegat
             // 
-            this.btnfshijDelegat.Location = new System.Drawing.Point(178, 571);
+            this.btnfshijDelegat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfshijDelegat.Location = new System.Drawing.Point(799, 203);
             this.btnfshijDelegat.Name = "btnfshijDelegat";
-            this.btnfshijDelegat.Size = new System.Drawing.Size(75, 23);
+            this.btnfshijDelegat.Size = new System.Drawing.Size(81, 47);
             this.btnfshijDelegat.TabIndex = 79;
             this.btnfshijDelegat.Text = "fshij";
             this.btnfshijDelegat.UseVisualStyleBackColor = true;
             this.btnfshijDelegat.Click += new System.EventHandler(this.BtnfshijDelegat_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem,
+            this.administratoriToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(974, 29);
+            this.menuStrip1.TabIndex = 80;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(67, 25);
+            this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.MenuToolStripMenuItem_Click);
+            // 
+            // administratoriToolStripMenuItem
+            // 
+            this.administratoriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menaxhoPersonelToolStripMenuItem,
+            this.menaxhoLojtarToolStripMenuItem,
+            this.menaxhoTrajnerToolStripMenuItem,
+            this.menaxhoNdeshjeToolStripMenuItem,
+            this.menaxhoFormacionToolStripMenuItem,
+            this.menaxhoGolashenuesToolStripMenuItem,
+            this.menaxhoDelegatToolStripMenuItem,
+            this.menaxhoKlubinToolStripMenuItem});
+            this.administratoriToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.administratoriToolStripMenuItem.Name = "administratoriToolStripMenuItem";
+            this.administratoriToolStripMenuItem.Size = new System.Drawing.Size(131, 25);
+            this.administratoriToolStripMenuItem.Text = "Administratori";
+            // 
+            // menaxhoPersonelToolStripMenuItem
+            // 
+            this.menaxhoPersonelToolStripMenuItem.Name = "menaxhoPersonelToolStripMenuItem";
+            this.menaxhoPersonelToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoPersonelToolStripMenuItem.Text = "Menaxho Personel";
+            this.menaxhoPersonelToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoPersonelToolStripMenuItem_Click);
+            // 
+            // menaxhoLojtarToolStripMenuItem
+            // 
+            this.menaxhoLojtarToolStripMenuItem.Name = "menaxhoLojtarToolStripMenuItem";
+            this.menaxhoLojtarToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoLojtarToolStripMenuItem.Text = "Menaxho Lojtar";
+            this.menaxhoLojtarToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoLojtarToolStripMenuItem_Click);
+            // 
+            // menaxhoTrajnerToolStripMenuItem
+            // 
+            this.menaxhoTrajnerToolStripMenuItem.Name = "menaxhoTrajnerToolStripMenuItem";
+            this.menaxhoTrajnerToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoTrajnerToolStripMenuItem.Text = "Menaxho Trajner";
+            this.menaxhoTrajnerToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoTrajnerToolStripMenuItem_Click);
+            // 
+            // menaxhoNdeshjeToolStripMenuItem
+            // 
+            this.menaxhoNdeshjeToolStripMenuItem.Name = "menaxhoNdeshjeToolStripMenuItem";
+            this.menaxhoNdeshjeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoNdeshjeToolStripMenuItem.Text = "Menaxho Ndeshje";
+            this.menaxhoNdeshjeToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoNdeshjeToolStripMenuItem_Click);
+            // 
+            // menaxhoFormacionToolStripMenuItem
+            // 
+            this.menaxhoFormacionToolStripMenuItem.Name = "menaxhoFormacionToolStripMenuItem";
+            this.menaxhoFormacionToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoFormacionToolStripMenuItem.Text = "Menaxho Formacion";
+            this.menaxhoFormacionToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoFormacionToolStripMenuItem_Click);
+            // 
+            // menaxhoGolashenuesToolStripMenuItem
+            // 
+            this.menaxhoGolashenuesToolStripMenuItem.Name = "menaxhoGolashenuesToolStripMenuItem";
+            this.menaxhoGolashenuesToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoGolashenuesToolStripMenuItem.Text = "Menaxho Golashenues";
+            this.menaxhoGolashenuesToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoGolashenuesToolStripMenuItem_Click);
+            // 
+            // menaxhoDelegatToolStripMenuItem
+            // 
+            this.menaxhoDelegatToolStripMenuItem.Name = "menaxhoDelegatToolStripMenuItem";
+            this.menaxhoDelegatToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoDelegatToolStripMenuItem.Text = "Menaxho Delegat";
+            // 
+            // menaxhoKlubinToolStripMenuItem
+            // 
+            this.menaxhoKlubinToolStripMenuItem.Name = "menaxhoKlubinToolStripMenuItem";
+            this.menaxhoKlubinToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoKlubinToolStripMenuItem.Text = "Menaxho Klubin";
+            this.menaxhoKlubinToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoKlubinToolStripMenuItem_Click);
+            // 
             // MenaxhoDelegat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 638);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(150)))), ((int)(((byte)(153)))));
+            this.ClientSize = new System.Drawing.Size(974, 634);
             this.Controls.Add(this.btnfshijDelegat);
             this.Controls.Add(this.btnregjistrodelegat);
             this.Controls.Add(this.btnKerko);
@@ -426,9 +567,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEmri);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenaxhoDelegat";
             this.Text = "MenaxhoDelegat";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMbushDelegat)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +619,16 @@
         private System.Windows.Forms.Label Roli;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnfshijDelegat;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administratoriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoPersonelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoLojtarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoTrajnerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoNdeshjeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoFormacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoGolashenuesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoDelegatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoKlubinToolStripMenuItem;
     }
 }

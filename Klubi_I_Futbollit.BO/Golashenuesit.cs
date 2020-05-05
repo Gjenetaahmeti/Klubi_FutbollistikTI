@@ -15,6 +15,5 @@ namespace Klubi_I_Futbollit.BO
 
         public int lojtariID = Convert.ToInt32(LojtariID);
         public int ndeshjaID = Convert.ToInt32(NdeshjaID);
-
     }
 }

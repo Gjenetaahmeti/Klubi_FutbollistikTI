@@ -57,6 +57,7 @@
     <Compile Include="StatusiLojtaritDAL.cs" />
     <Compile Include="TrajneriDAL.cs" />
     <Compile Include="UseriDAL.cs" />
+    <Compile Include="UshtrimetDAL.cs" />
     <Compile Include="VlersimetDAL.cs" />
   </ItemGroup>
   <ItemGroup>

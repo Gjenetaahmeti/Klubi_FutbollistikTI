@@ -108,5 +108,76 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             LojtariBLL lojtariBLL = new LojtariBLL();
             lojtariBLL.Fshij(lojtari);
         }
+
+        private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoPersonelin personelin = new Administratori_Kryesor.MenaxhoPersonelin())
+            {
+
+                personelin.ShowDialog();
+            }
+        }
+
+        private void MenaxhoTrajnerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoTrajner trajneri = new Administratori_Kryesor.MenaxhoTrajner())
+            {
+
+                trajneri.ShowDialog();
+            }
+        }
+
+        private void MenaxhoNdeshjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoNdeshje ndeshje = new Administratori_Kryesor.MenaxhoNdeshje())
+            {
+
+                ndeshje.ShowDialog();
+            }
+        }
+
+        private void MenaxhoFormacionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (Formacionet formacionet = new Formacionet())
+            {
+
+                formacionet.ShowDialog();
+            }
+        }
+
+        private void MenaxhoGolashenuesinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoGolashenuesin golashenuesi = new Administratori_Kryesor.MenaxhoGolashenuesin())
+            {
+
+                golashenuesi.ShowDialog();
+            }
+        }
+
+        private void MenaxhoDelegatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoDelegat delegat = new Administratori_Kryesor.MenaxhoDelegat())
+            {
+
+                delegat.ShowDialog();
+            }
+        }
+
+        private void MenaxhoKluibnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoKlub klub = new Administratori_Kryesor.MenaxhoKlub())
+            {
+
+                klub.ShowDialog();
+            }
+        }
+
+        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(MenyKryefaqja mk =new MenyKryefaqja())
+            {
+                mk.ShowDialog();
+            }
+        }
     }
 }

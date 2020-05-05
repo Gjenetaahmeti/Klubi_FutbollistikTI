@@ -61,6 +61,7 @@
     <Compile Include="StatusiLojtarit.cs" />
     <Compile Include="Trajneri.cs" />
     <Compile Include="Useri.cs" />
+    <Compile Include="Ushtrimet.cs" />
     <Compile Include="Vlersimet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,8 +15,10 @@ namespace Klubi_I_Futbollit.BO
         public string Huazim { get; set; }
         public string Shoqerues { get; set; }
 
-        public Lojtari LojtariID { get; set; }
+        public static Lojtari LojtariID { get; set; }
         public Formacioni FormacioniID { get; set; }
+
+        public int Lojtariid = Convert.ToInt32(LojtariID);
         //public int InsertBy { get; set; }
         //public DateTime InsertDate { get; set; }
         //public int LUB { get; set; }

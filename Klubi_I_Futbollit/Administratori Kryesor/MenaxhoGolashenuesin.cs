@@ -107,5 +107,58 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             }
 
         }
+
+        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenyKryefaqja mk = new MenyKryefaqja();
+            mk.ShowDialog();
+        }
+
+        private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoPersonelin menaxhoPersonelin = new MenaxhoPersonelin();
+            menaxhoPersonelin.ShowDialog();
+        }
+
+        private void MenaxhoLojtarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoLojtaret menaxhoLojtaret = new MenaxhoLojtaret();
+            menaxhoLojtaret.ShowDialog();
+        }
+
+        private void MenaxhoTrajnerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoTrajner menaxho = new MenaxhoTrajner();
+            menaxho.ShowDialog();
+        }
+
+        private void MenaxhoNdeshjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoNdeshje menaxhoNdeshje = new MenaxhoNdeshje();
+            menaxhoNdeshje.ShowDialog();
+        }
+
+        private void MenaxhoFormacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formacionet formacionet = new Formacionet();
+            formacionet.ShowDialog();
+        }
+
+        private void MenaxhoGolashenuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenaxhoDelegatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoDelegat menaxhoDelegat = new MenaxhoDelegat();
+            menaxhoDelegat.ShowDialog();
+        }
+
+        private void MenaxhoKlubinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoKlub menaxhoKlub = new MenaxhoKlub();
+            menaxhoKlub.ShowDialog();
+        }
     }
 }

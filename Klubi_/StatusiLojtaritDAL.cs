@@ -56,7 +56,7 @@ namespace Klubi_
 
 
 
-        public int Shto(StatusiLojtarit model,Lojtari lojtar)
+        public int Shto(StatusiLojtarit model )//,Lojtari lojtar)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Huazim", model.Huazim);
                 command.Parameters.AddWithValue("@Shoqerues", model.Shoqerues);
                 command.Parameters.AddWithValue("@StatusiID", 0);
-                command.Parameters.AddWithValue("@LojtariID", lojtar.LojtariID);
+                command.Parameters.AddWithValue("@LojtariID", model.Lojtariid);
                 command.Parameters.AddWithValue("@FormacioniID", 1);
     
                 int rowAffected = command.ExecuteNonQuery();
@@ -85,7 +85,7 @@ namespace Klubi_
             }
         }
 
-        public int Update(StatusiLojtarit model,Lojtari lojtari)
+        public int Update(StatusiLojtarit model)//,Lojtari lojtari)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace Klubi_
                 command.Parameters.AddWithValue("Huazim", model.Huazim);
                 command.Parameters.AddWithValue("Shoqerues", model.Shoqerues);
                 command.Parameters.AddWithValue("StatusiID", model.StatusiID);
-                command.Parameters.AddWithValue("LojtariID", lojtari.LojtariID);
+                command.Parameters.AddWithValue("LojtariID", model.Lojtariid);
                 command.Parameters.AddWithValue("FormacioniID", 1);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
