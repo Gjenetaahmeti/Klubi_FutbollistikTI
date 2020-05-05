@@ -14,12 +14,12 @@ namespace Klubi_
 {
     public class LojtariDAL 
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Fshij(Lojtari model)
         {
             try
             {
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_FshijLojtarMeID", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -40,6 +40,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_ShfaqTeGjithLojtaret", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -60,11 +62,13 @@ namespace Klubi_
 
             try
             {
-                
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("usp_Lojtare_ShtoLojtare", sqlcon);
-              
+                SqlCommand command = new SqlCommand();
+                command.CommandText = "usp_Lojtare_ShtoLojtare";
                 command.CommandType = CommandType.StoredProcedure;
+                command.Connection = sqlcon;
           
                 command.Parameters.AddWithValue("@Emri", lojtari.Emri);
                 command.Parameters.AddWithValue("@Mbiemri", lojtari.Mbiemri);
@@ -100,6 +104,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_Lojtare_ShtoLojtare", sqlcon);
 
@@ -135,6 +141,8 @@ namespace Klubi_
 
         public void GjejLojtarinMeID(Lojtari lojtari)
         {
+
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_GjejLojtarMeID", sqlcon);
             sqlDataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
             sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@LojtariID", lojtari.LojtariID);
