@@ -13,15 +13,13 @@ namespace Klubi_
 {
     public class StatusiLojtaritDAL
     {
-        //public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Fshij(StatusiLojtarit model)
         {
             try
             {
 
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Formacioni_FshijMeIDFormacion]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -42,6 +40,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Formacioni_MerriKrejtFormacion]", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -60,6 +60,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_Formacioni_ShtooseEditoFormacion", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -88,6 +90,7 @@ namespace Klubi_
             try
             {
 
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_Formacioni_ShtooseEditoFormacion", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -112,6 +115,8 @@ namespace Klubi_
 
         public void MerriMeIdFormacion(StatusiLojtarit formacioni)
         {
+
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             sqlcon.Open();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Formacioni_MerriFormacionID]", sqlcon);
             sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;

@@ -13,12 +13,12 @@ namespace Klubi_
 {
     public class StafiKategoritDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Fshij(StafiKategorit model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_StafiKategorive_FshijgjithaStaf]", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -39,7 +39,7 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_StafiKategorive_MerrTegjithaStaf]", _connectionstring);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_StafiKategorive_MerrTegjithaStaf]", _connectionString);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
@@ -57,7 +57,7 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_StafiKategorive_ShtoStaf]", connection);
                 command.CommandType = CommandType.StoredProcedure; 
@@ -85,7 +85,7 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_StafiKategorive_EditoStaf]", connection);
                 command.CommandType = CommandType.StoredProcedure;

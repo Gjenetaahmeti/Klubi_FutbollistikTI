@@ -15,14 +15,13 @@ namespace Klubi_
 {
    public class UseriDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
 
         public bool CheckLogIn(Useri useri)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("usp_Useri_CheckInUser", connection);
                 command.CommandType = CommandType.StoredProcedure;

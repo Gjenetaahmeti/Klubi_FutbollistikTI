@@ -12,12 +12,12 @@ namespace Klubi_
 {
    public class KontrollaMjekesoreDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Fshij(Kontrolla_Mjekesore model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("usp_KontrollaMjeksore_FshijKontrollaMjeksore", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -38,7 +38,7 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_KontrollaMjekesore_MerriTeGjithaKontrollatMjekesore", _connectionstring);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_KontrollaMjekesore_MerriTeGjithaKontrollatMjekesore", _connectionString);
 
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -58,7 +58,7 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("usp_KontrollaMjekesore_ShtoKontrollMjekesore", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -85,7 +85,7 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[usp_KontrollaMjekesore_EditoKontrollaMjekesore]", connection);
                 command.CommandType = CommandType.StoredProcedure;

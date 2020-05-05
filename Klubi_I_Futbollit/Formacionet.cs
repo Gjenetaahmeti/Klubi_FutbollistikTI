@@ -19,7 +19,6 @@ namespace Klubi_I_Futbollit
         public Formacionet()
         {
             InitializeComponent();
-            // SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
             SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
             sqlcon.Open();
             SqlCommand command = new SqlCommand("usp_MerrLojtart", sqlcon);
@@ -31,7 +30,6 @@ namespace Klubi_I_Futbollit
                 comboBox1.DataSource = dt.Tables[0];
                 comboBox1.DisplayMember = "Emri"; 
                 comboBox1.ValueMember = "PersoneliId";
-
             }
             else
             {

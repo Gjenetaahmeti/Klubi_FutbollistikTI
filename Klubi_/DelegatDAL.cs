@@ -7,17 +7,19 @@ using System.Data;
 using System.Data.SqlClient;
 using Klubi_Futbollistik;
 using Klubi_I_Futbollit.BO;
+using System.Configuration;
+
 namespace Klubi_
 {
    public class DelegatDAL
     {
 
-      //  SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public DataTable GetAll()
         {
             try
             {
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_delegat_merrikejtDelegat]", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -36,6 +38,7 @@ namespace Klubi_
             try
             {
 
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("Delegat", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -76,6 +79,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Delegat_ShtooseEditoDelegat]", sqlcon);
 
@@ -111,6 +116,8 @@ namespace Klubi_
         }
         public void GjejDelegatMeID(Delegat delegat)
         {
+
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Delegat_GjejDelegatMeID]", sqlcon);
             sqlDataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
             sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@DelegatID", delegat.DelegatID);
@@ -136,6 +143,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Delegat_FshijDelegatMeID]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;

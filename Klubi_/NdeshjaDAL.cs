@@ -13,12 +13,12 @@ namespace Klubi_
 {
     public class NdeshjaDAL
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Fshij(Ndeshja model)
         {
             try
             {
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_FshijMeId_Ndeshje", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -39,6 +39,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_MerrTeGjitha_Ndeshjet", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -57,6 +59,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_ShtooseEdito_Ndeshje", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -85,6 +89,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_ShtooseEdito_Ndeshje]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -113,6 +119,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlDataAdapter sqlda = new SqlDataAdapter("usp_MerrNdeshjenMeID", sqlcon);
                 sqlda.SelectCommand.CommandType = CommandType.StoredProcedure;

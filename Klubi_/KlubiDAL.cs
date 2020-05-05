@@ -13,8 +13,7 @@ namespace Klubi_
 {
     public class KlubiDAL
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
         //public int Fshij(Klubi model)
         //{
@@ -61,6 +60,8 @@ namespace Klubi_
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Klub_ShtoOseEditoKlub]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -98,6 +99,7 @@ namespace Klubi_
             try
             {
 
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Klub_ShtoOseEditoKlub]", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -132,6 +134,8 @@ namespace Klubi_
 
         public void GjejKlubMeID(Klubi klubi)
         {
+
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Klub_GjejKlubMeID",sqlcon);
             sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
             sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@KlubiID", klubi.KlubiID);
@@ -151,6 +155,7 @@ namespace Klubi_
             try
             {
 
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand sqc = new SqlCommand("[dbo].[usp_Klub_FshijKlubMeID]", sqlcon);
                 sqc.CommandType = CommandType.StoredProcedure;

@@ -13,14 +13,11 @@ namespace Klubi_Futbollistik.DAL
 {
     public class PersoneliDAL:CRUD<Personeli>
     {
-        //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString; 
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
-
-        //SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=DB_KlubiIFutbollitTI1;Integrated Security=True");
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Shto(Personeli model)
         {
 
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             sqlcon.Open();
             SqlCommand command = new SqlCommand("[dbo].[usp_Personel_UpdatePersonel]", sqlcon);
             command.CommandType = CommandType.StoredProcedure;
@@ -49,6 +46,8 @@ namespace Klubi_Futbollistik.DAL
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_Personel_FshijPersonel", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
@@ -69,6 +68,8 @@ namespace Klubi_Futbollistik.DAL
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 List<Personeli> rezultati = null;
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Personel_MerriTeGjithePersonel]", sqlcon);
@@ -89,6 +90,8 @@ namespace Klubi_Futbollistik.DAL
 
         public Personeli TooObject(SqlDataReader reader)
         {
+
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             Personeli personeli = new Personeli();
             personeli.ID = int.Parse(reader["ID"].ToString());
             personeli.Mbiemri = reader["Mbiemri"].ToString();
@@ -115,6 +118,8 @@ namespace Klubi_Futbollistik.DAL
         {
             try
             {
+
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 //sqlcon.Open();
                 //SqlCommand command = new SqlCommand("[dbo].[usp_Personeli_EditoPersonel]", sqlcon);
                 //command.CommandType = CommandType.StoredProcedure;

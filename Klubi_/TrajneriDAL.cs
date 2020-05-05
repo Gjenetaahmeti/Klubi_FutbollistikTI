@@ -7,19 +7,18 @@ using System.Data;
 using System.Data.SqlClient;
 using Klubi_Futbollistik;
 using Klubi_I_Futbollit.BO;
+using System.Configuration;
 
 namespace Klubi_
 {
     public class TrajneriDAL
     {
-        //SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
-
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public DataTable GetAll()
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_ShfaqTeGjitheTrajner", sqlcon);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_ShfaqTeGjitheTrajner", _connectionString);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
@@ -35,7 +34,7 @@ namespace Klubi_
 
             try
             {
-
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_ShtooseEditoTrajner", sqlcon);
 
@@ -74,6 +73,7 @@ namespace Klubi_
         {
             try
             {
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_ShtooseEditoTrajner", sqlcon);
 
@@ -109,6 +109,7 @@ namespace Klubi_
         }
         public void GjejTrajnerinMeID(Trajneri trajneri)
         {
+            SqlConnection sqlcon = new SqlConnection(_connectionString);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_GjejTrajnerMeID", sqlcon);
             sqlDataAdapter.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
             sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@TrajneriID", trajneri.TrajneriID);
@@ -134,6 +135,7 @@ namespace Klubi_
         {
             try
             {
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_FshijTrajnerMeID", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;

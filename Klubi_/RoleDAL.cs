@@ -14,12 +14,12 @@ namespace Klubi_
 {
    public class RoleDAL
     {
-        public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         public int Fshij(Role model)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Role_FshijRole]", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -40,7 +40,8 @@ namespace Klubi_
         {
             try
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Role_MerriTeGjithaRole]", _connectionstring);
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Role_MerriTeGjithaRole]", _connectionString);
 
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
@@ -60,7 +61,7 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Role_ShtoRole]", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -87,7 +88,7 @@ namespace Klubi_
         {
             try
             {
-                SqlConnection connection = new SqlConnection(_connectionstring);
+                SqlConnection connection = new SqlConnection(_connectionString);
                 connection.Open();
                 SqlCommand command = new SqlCommand("[dbo].[usp_Role_EditoRole]", connection);
                 command.CommandType = CommandType.StoredProcedure;
