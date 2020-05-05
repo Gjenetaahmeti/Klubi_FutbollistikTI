@@ -8,15 +8,17 @@ namespace Klubi_I_Futbollit.BO
 {
     public class Vlersimet
     {
-        public int VlersimiID { get; set; }
-        public Klubi KlubiID { get; set; }
-        public Lojtari LojtariID { get; set; }
-        public int Nota { get; set; }
-        public int InsertBy { get; set; }
+        public int  StatusiID { get; set; }
+        public static Lojtari  LojtariID { get; set; }
+        public decimal  Vlersimi { get; set; }
+        public int InsertBY { get; set; }
         public DateTime InsertDate { get; set; }
         public int LUB { get; set; }
-        public int LUN { get; set; }
         public DateTime LUD { get; set; }
+        public int LUN { get; set; }
+
+
+        public int lojtariID = Convert.ToInt32(LojtariID);
 
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administratori Kryesor\MenaxhoReferat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoReferat.Designer.cs">
+      <DependentUpon>MenaxhoReferat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoTrajner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +100,11 @@
     <Compile Include="Administratori Kryesor\MenaxhoFormacionet.Designer.cs">
       <DependentUpon>MenaxhoFormacionet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administratori Kryesor\MenaxhoUshtrimet.cs">
+    <Compile Include="Administratori Kryesor\MenaxhoVlersimet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administratori Kryesor\MenaxhoUshtrimet.Designer.cs">
-      <DependentUpon>MenaxhoUshtrimet.cs</DependentUpon>
+    <Compile Include="Administratori Kryesor\MenaxhoVlersimet.Designer.cs">
+      <DependentUpon>MenaxhoVlersimet.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
@@ -120,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoReferat.resx">
+      <DependentUpon>MenaxhoReferat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoTrajner.resx">
       <DependentUpon>MenaxhoTrajner.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,8 +153,8 @@
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoFormacionet.resx">
       <DependentUpon>MenaxhoFormacionet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administratori Kryesor\MenaxhoUshtrimet.resx">
-      <DependentUpon>MenaxhoUshtrimet.cs</DependentUpon>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoVlersimet.resx">
+      <DependentUpon>MenaxhoVlersimet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

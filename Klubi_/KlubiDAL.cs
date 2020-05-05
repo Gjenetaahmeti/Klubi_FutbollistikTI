@@ -13,8 +13,9 @@ namespace Klubi_
 {
     public class KlubiDAL
     {
-       // public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //  public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
+
         //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
         //public int Fshij(Klubi model)
         //{
