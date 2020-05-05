@@ -12,7 +12,8 @@ namespace Klubi_
 {
    public class KontrollaMjekesoreDAL
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+      //  public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         public int Fshij(Kontrolla_Mjekesore model)
         {
             try

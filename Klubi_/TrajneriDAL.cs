@@ -13,7 +13,8 @@ namespace Klubi_
 {
     public class TrajneriDAL
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+       // public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         public DataTable GetAll()
         {
             try

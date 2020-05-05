@@ -12,7 +12,8 @@ namespace Klubi_
 {
     public class GolashenuesiDAL
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         
         public int Shto(Golashenuesit golaShenuesi)//,Lojtari lojtari,Ndeshja ndeshja)
         {

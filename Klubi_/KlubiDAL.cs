@@ -13,7 +13,8 @@ namespace Klubi_
 {
     public class KlubiDAL
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+       // public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         //  public string _connectionstring = ConfigurationManager.ConnectionStrings["KlubiFutbollistikTI1"].ConnectionString;
         //public int Fshij(Klubi model)
         //{
@@ -36,23 +37,25 @@ namespace Klubi_
         //    }
         //}
 
-        //public DataTable GetAll()
-        //{
-        //    try
-        //    {
-        //        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_Klubi_MerriTeGjithaKlubi", _connectionstring);
+        public DataTable GetAll()
+        {
+            try
+            {
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
+                sqlcon.Open();
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("[dbo].[usp_Klubet_MerriKrejtKlubet]", sqlcon);
 
-        //        sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-        //        DataTable dataTable = new DataTable();
-        //        sqlDataAdapter.Fill(dataTable);
-        //        return dataTable;
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                return dataTable;
 
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return null;
-        //    }
-        //}
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
 
 
 

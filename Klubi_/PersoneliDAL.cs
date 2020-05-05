@@ -13,7 +13,8 @@ namespace Klubi_Futbollistik.DAL
 {
     public class PersoneliDAL:CRUD<Personeli>
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         public int Shto(Personeli model)
         {
 

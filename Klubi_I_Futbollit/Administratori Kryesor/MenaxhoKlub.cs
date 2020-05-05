@@ -68,5 +68,13 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             KlubiDAL klubiDAL = new KlubiDAL();
             klubiDAL.FshijMeID(kl);
         }
+
+        private void BtnShfaq_Click(object sender, EventArgs e)
+        {
+            KlubiDAL klubi = new KlubiDAL();
+         
+
+            dgdMbushKlub.DataSource = klubi.GetAll();
+        }
     }
 }

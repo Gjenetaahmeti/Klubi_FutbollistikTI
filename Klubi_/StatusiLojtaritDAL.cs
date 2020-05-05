@@ -13,7 +13,8 @@ namespace Klubi_
 {
     public class StatusiLojtaritDAL
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         public int Fshij(StatusiLojtarit model)
         {
             try

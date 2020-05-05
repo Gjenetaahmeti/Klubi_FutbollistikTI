@@ -13,7 +13,8 @@ namespace Klubi_
 {
     class VlersimetDAL
     {
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         public int Fshij(Vlersimet model)
         {
             try

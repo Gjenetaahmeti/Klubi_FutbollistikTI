@@ -39,13 +39,14 @@
             this.txtData = new System.Windows.Forms.TextBox();
             this.btnRegjistro = new System.Windows.Forms.Button();
             this.btnKerkoKlubMeID = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgdMbushKlub = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtGjejKlubMeID = new System.Windows.Forms.TextBox();
             this.btnEdito = new System.Windows.Forms.Button();
             this.btnFshijKlub = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnShfaq = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdMbushKlub)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -139,13 +140,13 @@
             this.btnKerkoKlubMeID.UseVisualStyleBackColor = true;
             this.btnKerkoKlubMeID.Click += new System.EventHandler(this.BtnKerkoKlubMeID_Click);
             // 
-            // dataGridView1
+            // dgdMbushKlub
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(339, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(423, 232);
-            this.dataGridView1.TabIndex = 11;
+            this.dgdMbushKlub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdMbushKlub.Location = new System.Drawing.Point(339, 31);
+            this.dgdMbushKlub.Name = "dgdMbushKlub";
+            this.dgdMbushKlub.Size = new System.Drawing.Size(423, 232);
+            this.dgdMbushKlub.TabIndex = 11;
             // 
             // label5
             // 
@@ -192,17 +193,28 @@
             this.btnFshijKlub.UseVisualStyleBackColor = true;
             this.btnFshijKlub.Click += new System.EventHandler(this.BtnFshijKlub_Click);
             // 
+            // btnShfaq
+            // 
+            this.btnShfaq.Location = new System.Drawing.Point(212, 412);
+            this.btnShfaq.Name = "btnShfaq";
+            this.btnShfaq.Size = new System.Drawing.Size(98, 23);
+            this.btnShfaq.TabIndex = 17;
+            this.btnShfaq.Text = "Shfaq te gjitha";
+            this.btnShfaq.UseVisualStyleBackColor = true;
+            this.btnShfaq.Click += new System.EventHandler(this.BtnShfaq_Click);
+            // 
             // MenaxhoKlub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShfaq);
             this.Controls.Add(this.btnFshijKlub);
             this.Controls.Add(this.btnEdito);
             this.Controls.Add(this.txtGjejKlubMeID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgdMbushKlub);
             this.Controls.Add(this.btnKerkoKlubMeID);
             this.Controls.Add(this.btnRegjistro);
             this.Controls.Add(this.txtData);
@@ -216,7 +228,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MenaxhoKlub";
             this.Text = "MenaxhoKlub";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdMbushKlub)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,11 +247,12 @@
         private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Button btnRegjistro;
         private System.Windows.Forms.Button btnKerkoKlubMeID;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgdMbushKlub;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtGjejKlubMeID;
         private System.Windows.Forms.Button btnEdito;
         private System.Windows.Forms.Button btnFshijKlub;
+        private System.Windows.Forms.Button btnShfaq;
     }
 }

@@ -13,8 +13,10 @@ namespace Klubi_
 {
    public class DelegatDAL
     {
+        
 
-        public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        //public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
+        public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
         public DataTable GetAll()
         {
             try
