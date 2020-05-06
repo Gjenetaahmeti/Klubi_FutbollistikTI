@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_Futbollistik.BO;
 using Klubi_;
-using Klubi_Futbollistik.DAL;
 using Klubi_I_Futbollit.BO;
 using System.Data.SqlClient;
 using Klubi_I_Futbollit.BLL;

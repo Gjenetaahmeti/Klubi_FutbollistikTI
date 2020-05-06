@@ -17,7 +17,7 @@ namespace Klubi_I_Futbollit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenaxhoUshtrime());
+            Application.Run(new MenyKryefaqja());
         }
     }
 }
