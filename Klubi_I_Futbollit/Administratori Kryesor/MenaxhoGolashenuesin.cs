@@ -160,5 +160,17 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             MenaxhoKlub menaxhoKlub = new MenaxhoKlub();
             menaxhoKlub.ShowDialog();
         }
+
+        private void MenaxhoUshtrimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoUshtrime menaxhoUshtrime = new MenaxhoUshtrime();
+            menaxhoUshtrime.ShowDialog();
+        }
+
+        private void MenaxhoVleresimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoVlersimet menaxhoVlersimet = new MenaxhoVlersimet();
+            menaxhoVlersimet.ShowDialog();
+        }
     }
 }

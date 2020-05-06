@@ -166,5 +166,22 @@ namespace Klubi_I_Futbollit
                 klub.ShowDialog();
             }
         }
+
+        private void MenaxhoUshtrimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoUshtrime ushtrime = new Administratori_Kryesor.MenaxhoUshtrime()) 
+            {
+                ushtrime.ShowDialog();
+            }
+           
+        }
+
+        private void MenaxhoVleresimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Administratori_Kryesor.MenaxhoVlersimet vlersimet = new Administratori_Kryesor.MenaxhoVlersimet())
+            {
+                vlersimet.ShowDialog();
+            }
+        }
     }
 }

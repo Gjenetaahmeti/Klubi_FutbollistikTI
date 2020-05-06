@@ -56,6 +56,8 @@
             this.menaxhoGolashenuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoDelegatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoKlubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoUshtrimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoVleresimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgdMbushKlub)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -108,7 +110,7 @@
             // 
             this.txtEmertimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtEmertimi.Location = new System.Drawing.Point(147, 97);
-            this.txtEmertimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmertimi.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmertimi.Name = "txtEmertimi";
             this.txtEmertimi.Size = new System.Drawing.Size(132, 23);
             this.txtEmertimi.TabIndex = 4;
@@ -117,7 +119,7 @@
             // 
             this.txtVendi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtVendi.Location = new System.Drawing.Point(147, 167);
-            this.txtVendi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVendi.Margin = new System.Windows.Forms.Padding(4);
             this.txtVendi.Name = "txtVendi";
             this.txtVendi.Size = new System.Drawing.Size(132, 23);
             this.txtVendi.TabIndex = 5;
@@ -126,7 +128,7 @@
             // 
             this.txtKyetari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtKyetari.Location = new System.Drawing.Point(147, 234);
-            this.txtKyetari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKyetari.Margin = new System.Windows.Forms.Padding(4);
             this.txtKyetari.Name = "txtKyetari";
             this.txtKyetari.Size = new System.Drawing.Size(132, 23);
             this.txtKyetari.TabIndex = 6;
@@ -134,7 +136,7 @@
             // dtpDataeThemelimit
             // 
             this.dtpDataeThemelimit.Location = new System.Drawing.Point(147, 292);
-            this.dtpDataeThemelimit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDataeThemelimit.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDataeThemelimit.Name = "dtpDataeThemelimit";
             this.dtpDataeThemelimit.Size = new System.Drawing.Size(265, 23);
             this.dtpDataeThemelimit.TabIndex = 7;
@@ -143,7 +145,7 @@
             // 
             this.txtData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtData.Location = new System.Drawing.Point(147, 357);
-            this.txtData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtData.Margin = new System.Windows.Forms.Padding(4);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(132, 23);
             this.txtData.TabIndex = 8;
@@ -152,7 +154,7 @@
             // 
             this.btnRegjistro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegjistro.Location = new System.Drawing.Point(147, 417);
-            this.btnRegjistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegjistro.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegjistro.Name = "btnRegjistro";
             this.btnRegjistro.Size = new System.Drawing.Size(97, 47);
             this.btnRegjistro.TabIndex = 9;
@@ -164,7 +166,7 @@
             // 
             this.btnKerkoKlubMeID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKerkoKlubMeID.Location = new System.Drawing.Point(772, 430);
-            this.btnKerkoKlubMeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKerkoKlubMeID.Margin = new System.Windows.Forms.Padding(4);
             this.btnKerkoKlubMeID.Name = "btnKerkoKlubMeID";
             this.btnKerkoKlubMeID.Size = new System.Drawing.Size(97, 47);
             this.btnKerkoKlubMeID.TabIndex = 10;
@@ -176,7 +178,7 @@
             // 
             this.dgdMbushKlub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdMbushKlub.Location = new System.Drawing.Point(487, 80);
-            this.dgdMbushKlub.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgdMbushKlub.Margin = new System.Windows.Forms.Padding(4);
             this.dgdMbushKlub.Name = "dgdMbushKlub";
             this.dgdMbushKlub.Size = new System.Drawing.Size(564, 303);
             this.dgdMbushKlub.TabIndex = 11;
@@ -196,7 +198,7 @@
             // 
             this.txtGjejKlubMeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtGjejKlubMeID.Location = new System.Drawing.Point(584, 451);
-            this.txtGjejKlubMeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGjejKlubMeID.Margin = new System.Windows.Forms.Padding(4);
             this.txtGjejKlubMeID.Name = "txtGjejKlubMeID";
             this.txtGjejKlubMeID.Size = new System.Drawing.Size(132, 23);
             this.txtGjejKlubMeID.TabIndex = 14;
@@ -205,7 +207,7 @@
             // 
             this.btnEdito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdito.Location = new System.Drawing.Point(147, 469);
-            this.btnEdito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdito.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdito.Name = "btnEdito";
             this.btnEdito.Size = new System.Drawing.Size(97, 47);
             this.btnEdito.TabIndex = 15;
@@ -217,7 +219,7 @@
             // 
             this.btnFshijKlub.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFshijKlub.Location = new System.Drawing.Point(147, 522);
-            this.btnFshijKlub.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFshijKlub.Margin = new System.Windows.Forms.Padding(4);
             this.btnFshijKlub.Name = "btnFshijKlub";
             this.btnFshijKlub.Size = new System.Drawing.Size(97, 47);
             this.btnFshijKlub.TabIndex = 16;
@@ -229,7 +231,7 @@
             // 
             this.btnShfaq.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShfaq.Location = new System.Drawing.Point(283, 522);
-            this.btnShfaq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShfaq.Margin = new System.Windows.Forms.Padding(4);
             this.btnShfaq.Name = "btnShfaq";
             this.btnShfaq.Size = new System.Drawing.Size(118, 47);
             this.btnShfaq.TabIndex = 17;
@@ -268,7 +270,9 @@
             this.menaxhoFormacionToolStripMenuItem,
             this.menaxhoGolashenuesToolStripMenuItem,
             this.menaxhoDelegatToolStripMenuItem,
-            this.menaxhoKlubToolStripMenuItem});
+            this.menaxhoKlubToolStripMenuItem,
+            this.menaxhoUshtrimeToolStripMenuItem,
+            this.menaxhoVleresimeToolStripMenuItem});
             this.administratoriToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.administratoriToolStripMenuItem.Name = "administratoriToolStripMenuItem";
             this.administratoriToolStripMenuItem.Size = new System.Drawing.Size(131, 25);
@@ -329,6 +333,20 @@
             this.menaxhoKlubToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.menaxhoKlubToolStripMenuItem.Text = "Menaxho Klub";
             // 
+            // menaxhoUshtrimeToolStripMenuItem
+            // 
+            this.menaxhoUshtrimeToolStripMenuItem.Name = "menaxhoUshtrimeToolStripMenuItem";
+            this.menaxhoUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoUshtrimeToolStripMenuItem.Text = "Menaxho Ushtrime";
+            this.menaxhoUshtrimeToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoUshtrimeToolStripMenuItem_Click);
+            // 
+            // menaxhoVleresimeToolStripMenuItem
+            // 
+            this.menaxhoVleresimeToolStripMenuItem.Name = "menaxhoVleresimeToolStripMenuItem";
+            this.menaxhoVleresimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoVleresimeToolStripMenuItem.Text = "Menaxho Vleresime";
+            this.menaxhoVleresimeToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoVleresimeToolStripMenuItem_Click);
+            // 
             // MenaxhoKlub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -355,7 +373,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenaxhoKlub";
             this.Text = "MenaxhoKlub";
             ((System.ComponentModel.ISupportInitialize)(this.dgdMbushKlub)).EndInit();
@@ -396,5 +414,7 @@
         private System.Windows.Forms.ToolStripMenuItem menaxhoGolashenuesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menaxhoDelegatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menaxhoKlubToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoUshtrimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoVleresimeToolStripMenuItem;
     }
 }
