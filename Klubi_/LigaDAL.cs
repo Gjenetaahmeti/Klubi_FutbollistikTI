@@ -16,27 +16,6 @@ namespace Klubi_
         public string _connectionString = ConfigurationManager.ConnectionStrings["Arno"].ConnectionString;
         //  public string _connectionString = ConfigurationManager.ConnectionStrings["Gjeneta"].ConnectionString;
 
-        //public int Fshij(Liga model)
-        //{
-        //    try
-        //    {
-        //        SqlConnection connection = new SqlConnection(_connectionstring);
-        //        connection.Open();
-        //        SqlCommand command = new SqlCommand("usp_Klubi_FshijKlubin", connection);
-        //        command.CommandType = CommandType.StoredProcedure;
-        //        command.Parameters.AddWithValue("KlubiID", model.KlubiID);
-        //        int result = command.ExecuteNonQuery();
-        //        command.Dispose();
-        //        connection.Close();
-        //        connection.Dispose();
-        //        return result;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return -1;
-        //    }
-        //}
-
         public DataTable GetAll()
         {
             try
@@ -67,15 +46,11 @@ namespace Klubi_
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("Emertimi", model.Emertimi);
                 command.Parameters.AddWithValue("Vendi", model.Vendi);
-                //command.Parameters.AddWithValue("Stadiumi", model.Stadiumi);
-                //command.Parameters.AddWithValue("Kryetari", model.Kryetari);
-                //command.Parameters.AddWithValue("Rezultati", model.Rezultati);
-                //command.Parameters.AddWithValue("Themeluar", model.Themeluar);
-                //command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                //command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                //command.Parameters.AddWithValue("LUB", model.LUB);
-                //command.Parameters.AddWithValue("LUN", model.LUN);
-                //command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();
@@ -98,15 +73,11 @@ namespace Klubi_
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("Emertimi", model.Emertimi);
                 command.Parameters.AddWithValue("Vendi", model.Vendi);
-                //command.Parameters.AddWithValue("Stadiumi", model.Stadiumi);
-                //command.Parameters.AddWithValue("Kryetari", model.Kryetari);
-                //command.Parameters.AddWithValue("Rezultati", model.Rezultati);
-                //command.Parameters.AddWithValue("Themeluar", model.Themeluar);
-                //command.Parameters.AddWithValue("InsertBy", model.InsertBy);
-                //command.Parameters.AddWithValue("InsertDate", model.InsertDate);
-                //command.Parameters.AddWithValue("LUB", model.LUB);
-                //command.Parameters.AddWithValue("LUN", model.LUN);
-                //command.Parameters.AddWithValue("LUD", model.LUD);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();

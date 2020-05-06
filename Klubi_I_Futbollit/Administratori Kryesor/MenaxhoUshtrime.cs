@@ -21,12 +21,20 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void BtnRuaj_Click(object sender, EventArgs e)
         {
-            Ushtrimet ushtrimet = new Ushtrimet();
-            ushtrimet.Dita = txtDita.Text.Trim();
-            ushtrimet.Ora = txtOra.Text.Trim();
+            if (txtDita.Text== " " || txtOra.Text=="")
+            {
+                MessageBox.Show("Plotesoni te gjitha fushat");
+            }
+            else
+            {
+                Ushtrimet ushtrimet = new Ushtrimet();
+                ushtrimet.Dita = txtDita.Text.Trim();
+                ushtrimet.Ora = txtOra.Text.Trim();
 
-            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-            ushtrimetDAL.Shto(ushtrimet);
+                UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+                ushtrimetDAL.Shto(ushtrimet);
+            }
+           
         }
 
         private void BtnKerkoMeID_Click(object sender, EventArgs e)

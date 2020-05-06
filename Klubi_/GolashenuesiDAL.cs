@@ -26,6 +26,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@GolashenuesiID", 0);
                 command.Parameters.AddWithValue("@LojtariID", golaShenuesi.lojtariID);
                 command.Parameters.AddWithValue("@Golat", golaShenuesi.NumriGolave);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@NdeshjaID", golaShenuesi.ndeshjaID);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();
@@ -49,6 +54,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@GolashenuesiID", golaShenuesi.GolashenuesiID);
                 command.Parameters.AddWithValue("@LojtariID", golaShenuesi.lojtariID);
                 command.Parameters.AddWithValue("@Golat", golaShenuesi.NumriGolave);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@NdeshjaID", 1);
                 int rowAffected = command.ExecuteNonQuery();
                 command.Dispose();

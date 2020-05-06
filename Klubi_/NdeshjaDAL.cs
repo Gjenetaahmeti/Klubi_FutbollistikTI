@@ -70,6 +70,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Sezoni", model.Sezoni);
                 command.Parameters.AddWithValue("@RaportiIAmbulances", model.RaportiAmbulances);
                 command.Parameters.AddWithValue("@RaportiIPolicis", model.RaportiPolicor);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@NdeshjaID", 0);
                 command.Parameters.AddWithValue("@KlubiVendasID", 1);
                 command.Parameters.AddWithValue("@KlubiNikoqirID", 2);
@@ -101,6 +106,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Sezoni", ndeshjaModel.Sezoni);
                 command.Parameters.AddWithValue("@RaportiIAmbulances", ndeshjaModel.RaportiAmbulances);
                 command.Parameters.AddWithValue("@RaportiIPolicis", ndeshjaModel.RaportiPolicor);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@KlubiVendasID", 1);
                 command.Parameters.AddWithValue("@KlubiNikoqirID", 2);
                 command.Parameters.AddWithValue("@FormacioniID", 1);

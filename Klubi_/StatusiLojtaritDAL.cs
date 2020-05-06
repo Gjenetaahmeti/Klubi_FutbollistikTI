@@ -70,6 +70,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Rezerve", model.Rezerv);
                 command.Parameters.AddWithValue("@Huazim", model.Huazim);
                 command.Parameters.AddWithValue("@Shoqerues", model.Shoqerues);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@StatusiID", 0);
                 command.Parameters.AddWithValue("@LojtariID", model.Lojtariid);
                 command.Parameters.AddWithValue("@FormacioniID", 1);
@@ -99,6 +104,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("Rezerve", model.Rezerv);
                 command.Parameters.AddWithValue("Huazim", model.Huazim);
                 command.Parameters.AddWithValue("Shoqerues", model.Shoqerues);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("StatusiID", model.StatusiID);
                 command.Parameters.AddWithValue("LojtariID", model.Lojtariid);
                 command.Parameters.AddWithValue("FormacioniID", 1);
