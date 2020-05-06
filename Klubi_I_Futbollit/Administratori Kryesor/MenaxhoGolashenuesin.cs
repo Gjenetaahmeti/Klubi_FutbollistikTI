@@ -23,57 +23,38 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnRegjistro_Click(object sender, EventArgs e)
         {
-            if (txtNumriGolave.Text == "")
-            {
-                MessageBox.Show("Plotesoni te gjitha fushat");
-
-            }
-            else
-            {
-
-
-                var lojtari = cmbLojtari.SelectedValue.ToString();
-                var ndeshja = cmbNdeshja.SelectedValue.ToString();
-                Golashenuesit golaShenuesit = new Golashenuesit();
-                golaShenuesit.lojtariID = int.Parse(lojtari);
-                golaShenuesit.NumriGolave = int.Parse(txtNumriGolave.Text.Trim());
-                golaShenuesit.ndeshjaID = int.Parse(ndeshja);
-                GolashenuesiBLL golashenuesiBLL = new GolashenuesiBLL();
-                golashenuesiBLL.Regjistro(golaShenuesit);
-                MessageBox.Show("U regjistrua me sukses!", MessageBoxButtons.OK.ToString());
-
-            }
+            var lojtari = cmbLojtari.SelectedValue.ToString() ;
+            var ndeshja = cmbNdeshja.SelectedValue.ToString() ;
+            Golashenuesit golaShenuesit = new Golashenuesit();
+            golaShenuesit.lojtariID = int.Parse(lojtari);
+            golaShenuesit.NumriGolave=int.Parse(txtNumriGolave.Text.Trim());
+            golaShenuesit.ndeshjaID = int.Parse(ndeshja);
+            GolashenuesiBLL golashenuesiBLL = new GolashenuesiBLL();
+            golashenuesiBLL.Regjistro(golaShenuesit);
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         private void btnEdito_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
-
-            if (rez == DialogResult.Yes)
-            {
-                var lojtari = cmbLojtari.SelectedValue.ToString();
-                var ndeshja = cmbNdeshja.SelectedValue.ToString();
-                Golashenuesit golaShenuesit = new Golashenuesit();
-                golaShenuesit.GolashenuesiID = int.Parse(txtKerkoMeID.Text);
-                golaShenuesit.lojtariID = int.Parse(lojtari);
-                golaShenuesit.NumriGolave = int.Parse(txtNumriGolave.Text.Trim());
-                golaShenuesit.ndeshjaID = int.Parse(ndeshja);
-                GolashenuesiBLL golashenuesiBLL = new GolashenuesiBLL();
-                golashenuesiBLL.Edito(golaShenuesit);
-            }
+            var lojtari = cmbLojtari.SelectedValue.ToString();
+            var ndeshja = cmbNdeshja.SelectedValue.ToString();
+            Golashenuesit golaShenuesit = new Golashenuesit();
+            golaShenuesit.GolashenuesiID = int.Parse(txtKerkoMeID.Text);
+            golaShenuesit.lojtariID = int.Parse(lojtari);
+            golaShenuesit.NumriGolave = int.Parse(txtNumriGolave.Text.Trim());
+            golaShenuesit.ndeshjaID = int.Parse(ndeshja);
+            GolashenuesiBLL golashenuesiBLL = new GolashenuesiBLL();
+            golashenuesiBLL.Edito(golaShenuesit);
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         private void btnFshije_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta fshini?", "Kujdes", MessageBoxButtons.YesNo);
-
-            if (rez == DialogResult.Yes)
-            {
-                Golashenuesit golaShenuesi = new Golashenuesit();
-                golaShenuesi.GolashenuesiID = int.Parse(txtKerkoMeID.Text.Trim());
-                GolashenuesiBLL golaShenuesiBLLL = new GolashenuesiBLL();
-                golaShenuesiBLLL.Fshij(golaShenuesi);
-            }
+            Golashenuesit golaShenuesi = new Golashenuesit();
+            golaShenuesi.GolashenuesiID = int.Parse(txtKerkoMeID.Text.Trim());
+            GolashenuesiBLL golaShenuesiBLLL = new GolashenuesiBLL();
+            golaShenuesiBLLL.Fshij(golaShenuesi);
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -94,6 +75,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             GolashenuesiBLL golashenuesi = new GolashenuesiBLL();
             dgdShfaqGolaShenuesit.DataSource = golashenuesi.ShfaqListenEGolaShenuesve();
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         public void GjejLojtarinDheNdeshjen()

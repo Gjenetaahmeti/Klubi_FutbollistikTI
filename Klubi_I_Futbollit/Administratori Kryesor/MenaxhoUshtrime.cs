@@ -33,7 +33,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
                 UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
                 ushtrimetDAL.Shto(ushtrimet);
-                MessageBox.Show("U regjistrua me sukses!",MessageBoxButtons.OK.ToString());
+                txtDita.Text = txtOra.Text = "";
             }
            
         }
@@ -52,40 +52,31 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void BtnEdito_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
+            Ushtrimet ushtrimet = new Ushtrimet();
+            ushtrimet.Dita = txtDita.Text.Trim();
+            ushtrimet.Ora = txtOra.Text.Trim();
+            ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            ushtrimetDAL.Update(ushtrimet);
 
-            if (rez == DialogResult.Yes)
-            {
-
-                Ushtrimet ushtrimet = new Ushtrimet();
-                ushtrimet.Dita = txtDita.Text.Trim();
-                ushtrimet.Ora = txtOra.Text.Trim();
-                ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
-                UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-                ushtrimetDAL.Update(ushtrimet);
-            }
+            txtDita.Text = txtOra.Text = "";
         }
 
         private void BtnFshij_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta fshini?", "Kujdes", MessageBoxButtons.YesNo);
+            Ushtrimet ushtrimet = new Ushtrimet();
+            ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
+            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            ushtrimetDAL.FshijMeID(ushtrimet);
 
-            if (rez==DialogResult.Yes)
-            {
-                Ushtrimet ushtrimet = new Ushtrimet();
-                ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
-                UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-                ushtrimetDAL.FshijMeID(ushtrimet);
-            }
-      
-      
-           
+            txtDita.Text = txtOra.Text = "";
         }
 
         private void BtnShfaqTeGjitha_Click(object sender, EventArgs e)
         {
             UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
             dgdMbushUshtrime.DataSource = ushtrimetDAL.GetAll();
+            txtDita.Text = txtOra.Text = "";
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)

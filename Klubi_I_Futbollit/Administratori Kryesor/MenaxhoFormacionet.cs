@@ -20,7 +20,7 @@ namespace Klubi_I_Futbollit
         public Formacionet()
         {
             InitializeComponent();
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
             sqlcon.Open();
             SqlCommand command = new SqlCommand("usp_MerrLojtart", sqlcon);
             SqlDataAdapter d = new SqlDataAdapter("usp_MerrLojtart", sqlcon);
@@ -40,27 +40,22 @@ namespace Klubi_I_Futbollit
 
         private void BtnRegjistroFormacion_Click(object sender, EventArgs e)
         {
-            if (txtPergjegjes.Text == "")
-            {
-                MessageBox.Show("Plotesoni te gjitha fushat");
 
-            }
-            else
-            {
+            var der2 = comboBox1.SelectedValue.ToString();
+            txtFormacioni.Text = der2;
 
+            StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
+            statusiLojtarit.Pergjegjes = txtPergjegjes.Text.Trim();
+            statusiLojtarit.Rezerv = txtRezerve.Text.Trim();
+            statusiLojtarit.Huazim = txtHuazim.Text.Trim();
+            statusiLojtarit.Shoqerues = txtShoqerues.Text.Trim();
+            Lojtari lojtari = new Lojtari();
+            lojtari.LojtariID =int.Parse(der2);
+            StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
+            statusiLojtaritDAL.Regjistro(statusiLojtarit);
 
-                var der2 = comboBox1.SelectedValue.ToString();
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
 
-                StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
-                statusiLojtarit.Pergjegjes = txtPergjegjes.Text.Trim();
-                statusiLojtarit.Rezerv = txtRezerve.Text.Trim();
-                statusiLojtarit.Huazim = txtHuazim.Text.Trim();
-                statusiLojtarit.Shoqerues = txtShoqerues.Text.Trim();
-                statusiLojtarit.Lojtariid = int.Parse(der2);
-                StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
-                statusiLojtaritDAL.Regjistro(statusiLojtarit);
-
-            }
         }
 
         private void BtnKerkoMeId_Click(object sender, EventArgs e)
@@ -78,41 +73,38 @@ namespace Klubi_I_Futbollit
 
         private void BtnEdito_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
+            var der2 = comboBox1.SelectedValue.ToString();
+            txtFormacioni.Text = der2;
 
-            if (rez == DialogResult.Yes)
-            {
-                var der2 = comboBox1.SelectedValue.ToString();
+            StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
+            statusiLojtarit.Pergjegjes = txtPergjegjes.Text.Trim();
+            statusiLojtarit.Rezerv = txtRezerve.Text.Trim();
+            statusiLojtarit.Huazim = txtHuazim.Text.Trim();
+            statusiLojtarit.Shoqerues = txtShoqerues.Text.Trim();
+            statusiLojtarit.StatusiID=int.Parse(txtGjejMeIDFormacion.Text.Trim());
+            Lojtari lojtari = new Lojtari();
+            lojtari.LojtariID = int.Parse(der2);
+            StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
+            statusiLojtaritDAL.Edito(statusiLojtarit);
 
-                StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
-                statusiLojtarit.Pergjegjes = txtPergjegjes.Text.Trim();
-                statusiLojtarit.Rezerv = txtRezerve.Text.Trim();
-                statusiLojtarit.Huazim = txtHuazim.Text.Trim();
-                statusiLojtarit.Shoqerues = txtShoqerues.Text.Trim();
-                statusiLojtarit.StatusiID = int.Parse(txtGjejMeIDFormacion.Text.Trim());
-                statusiLojtarit.Lojtariid = int.Parse(der2);
-                StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
-                statusiLojtaritDAL.Edito(statusiLojtarit);
-            }
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)
         {
             StatusiLojtaritBLL statusiLojtarit = new StatusiLojtaritBLL();
             dgdmbushFormacion.DataSource = statusiLojtarit.ShfaqListenEStatuseveTeLojtarit();
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
         }
 
         private void BtnFshij_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta fshini?", "Kujdes", MessageBoxButtons.YesNo);
+            StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
+            statusiLojtarit.StatusiID=int.Parse(txtGjejMeIDFormacion.Text.Trim());
+            StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
+            statusiLojtaritDAL.Fshij(statusiLojtarit);
 
-            if (rez == DialogResult.Yes)
-            {
-                StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
-                statusiLojtarit.StatusiID = int.Parse(txtGjejMeIDFormacion.Text.Trim());
-                StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
-                statusiLojtaritDAL.Fshij(statusiLojtarit);
-            }
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

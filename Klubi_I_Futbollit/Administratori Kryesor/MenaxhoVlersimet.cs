@@ -24,40 +24,27 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnRegjistro_Click(object sender, EventArgs e)
         {
-            if (txtVlersimi.Text == "")
-            {
-                MessageBox.Show("Plotesoni te gjitha fushat");
-            }
-            else
-            {
+            var lojtari = cmbSelektoLojtarin.SelectedValue.ToString();
 
-
-                var lojtari = cmbSelektoLojtarin.SelectedValue.ToString();
-
-                Vlersimet vlersimet = new Vlersimet();
-                vlersimet.lojtariID = int.Parse(lojtari);
-                vlersimet.Vlersimi = decimal.Parse(txtVlersimi.Text);
-                VlersimetBLL bll = new VlersimetBLL();
-                bll.Regjistro(vlersimet);
-                MessageBox.Show("U regjistrua me sukses!", MessageBoxButtons.OK.ToString());
-            }
+            Vlersimet vlersimet = new Vlersimet();
+            vlersimet.lojtariID = int.Parse(lojtari);
+            vlersimet.Vlersimi = decimal.Parse(txtVlersimi.Text);
+            VlersimetBLL bll = new VlersimetBLL();
+            bll.Regjistro(vlersimet);
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
        
 
         private void btnEdito_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
-
-            if (rez == DialogResult.Yes)
-            {
-                var lojtari = cmbSelektoLojtarin.SelectedValue.ToString();
-                Vlersimet vlersimet = new Vlersimet();
-                vlersimet.StatusiID = int.Parse(txtKerko.Text.Trim());
-                vlersimet.lojtariID = int.Parse(lojtari);
-                vlersimet.Vlersimi = decimal.Parse(txtVlersimi.Text.Trim());
-                VlersimetBLL vlersimetBLL = new VlersimetBLL();
-                vlersimetBLL.Edito(vlersimet);
-            }
+            var lojtari = cmbSelektoLojtarin.SelectedValue.ToString();
+            Vlersimet vlersimet = new Vlersimet();
+            vlersimet.StatusiID = int.Parse(txtKerko.Text.Trim());
+            vlersimet.lojtariID = int.Parse(lojtari);
+            vlersimet.Vlersimi = decimal.Parse(txtVlersimi.Text.Trim());
+            VlersimetBLL vlersimetBLL = new VlersimetBLL();
+            vlersimetBLL.Edito(vlersimet);
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
         public void GjejLojtarin()
         {
@@ -80,21 +67,18 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnFshij_Click(object sender, EventArgs e)
         {
-            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta fshini?", "Kujdes", MessageBoxButtons.YesNo);
-
-            if (rez == DialogResult.Yes)
-            {
-                Vlersimet vler = new Vlersimet();
-                vler.StatusiID = int.Parse(txtKerko.Text.Trim());
-                VlersimetBLL bll = new VlersimetBLL();
-                bll.Fshij(vler);
-            }
+            Vlersimet vler = new Vlersimet();
+            vler.StatusiID = int.Parse(txtKerko.Text.Trim());
+            VlersimetBLL bll = new VlersimetBLL();
+            bll.Fshij(vler);
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
 
         private void btnShfaq_Click(object sender, EventArgs e)
         {
             VlersimetBLL bll = new VlersimetBLL();
             dgdMbushVlersimet.DataSource = bll.ShfaqListenEVlersimeve();
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
