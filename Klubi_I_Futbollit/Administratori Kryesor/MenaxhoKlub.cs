@@ -23,16 +23,25 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void BtnRegjistro_Click(object sender, EventArgs e)
         {
-            Klubi klubi = new Klubi();
-            klubi.Emertimi = txtEmertimi.Text.Trim();
-            klubi.Vendi = txtVendi.Text.Trim();
-            klubi.Kryetari = txtKyetari.Text.Trim();
-            klubi.IThemeluar =DateTime.Parse(dtpDataeThemelimit.Text.Trim());
+            if (txtEmertimi.Text == " " || txtVendi.Text == ""||txtKyetari.Text=="")
+            {
+                MessageBox.Show("Plotesoni te gjitha fushat");
+            }
+            else
+            {
+                Klubi klubi = new Klubi();
+                klubi.Emertimi = txtEmertimi.Text.Trim();
+                klubi.Vendi = txtVendi.Text.Trim();
+                klubi.Kryetari = txtKyetari.Text.Trim();
+                klubi.IThemeluar = DateTime.Parse(dtpDataeThemelimit.Text.Trim());
 
-            KlubiBLL klubiDAL = new KlubiBLL();
-            klubiDAL.Regjistro(klubi);
+                KlubiBLL klubiDAL = new KlubiBLL();
+                klubiDAL.Regjistro(klubi);
 
-            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
+                txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
+                MessageBox.Show("U regjistrua me sukses");
+
+            }
         }
 
         private void BtnKerkoKlubMeID_Click(object sender, EventArgs e)
@@ -52,26 +61,34 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void BtnEdito_Click(object sender, EventArgs e)
         {
-            Klubi klubi = new Klubi();
-            klubi.Emertimi = txtEmertimi.Text.Trim();
-            klubi.Vendi = txtEmertimi.Text.Trim();
-            klubi.Kryetari = txtKyetari.Text.Trim();
-            klubi.IThemeluar = DateTime.Parse(dtpDataeThemelimit.Text.Trim());
-            klubi.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi te editoni", "Kujdes", MessageBoxButtons.YesNo);
+            if (rez == DialogResult.Yes)
+            {
+                Klubi klubi = new Klubi();
+                klubi.Emertimi = txtEmertimi.Text.Trim();
+                klubi.Vendi = txtEmertimi.Text.Trim();
+                klubi.Kryetari = txtKyetari.Text.Trim();
+                klubi.IThemeluar = DateTime.Parse(dtpDataeThemelimit.Text.Trim());
+                klubi.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
 
 
-            KlubiBLL klubiDAL = new KlubiBLL();
-            klubiDAL.Edito(klubi);
-            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
+                KlubiBLL klubiDAL = new KlubiBLL();
+                klubiDAL.Edito(klubi);
+                txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
+            }
         }
 
         private void BtnFshijKlub_Click(object sender, EventArgs e)
         {
-            Klubi kl = new Klubi();
-            kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
-            KlubiBLL klubiDAL = new KlubiBLL();
-            klubiDAL.Fshij(kl);
-            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi te fshij", "Kujdes", MessageBoxButtons.YesNo);
+            if (rez == DialogResult.Yes)
+            {
+                Klubi kl = new Klubi();
+                kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
+                KlubiBLL klubiDAL = new KlubiBLL();
+                klubiDAL.Fshij(kl);
+                txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
+            }
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)

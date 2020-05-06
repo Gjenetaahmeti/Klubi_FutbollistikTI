@@ -25,52 +25,70 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnRegjistro_Click(object sender, EventArgs e)
         {
-            Lojtari person = new Lojtari();
-            person.Emri = txtEmri.Text.Trim();
-            person.Mbiemri = txtMbiemri.Text.Trim();
-            person.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
-            person.Fjalkalimi = txtFjalekalimi.Text.Trim();
-            person.NumriFanelles = int.Parse(txtNumriIfanelles.Text.Trim());
-            person.Gjinia = txtGjinia.Text.Trim();
-            person.Ditelindja =DateTime.Parse(txtDitelindja.Text.Trim());
-            person.Vendlindja = txtVendlindja.Text.Trim();
-            person.GrupiGjakut = txtGrupigjakut.Text.Trim();
-            person.Shteti = txtShtetesia.Text.Trim();
-            person.Vendbanimi = txtVendbanimi.Text.Trim();
-            person.Telefoni = txtNumriTelefonit.Text.Trim();
-            person.Mail = txtEmail.Text.Trim();
-            person.Pesha = decimal.Parse(txtPesha.Text.Trim());
-            person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
-            LojtariBLL lojtariBLL = new LojtariBLL();
-            lojtariBLL.Regjistro(person);
+            if (txtEmri.Text == "" || txtMbiemri.Text == "" || txtEmriPerdoruesit.Text == "" || txtFjalekalimi.Text == "" || txtNumriIfanelles.Text == "" 
+               || txtGjinia.Text == "" || txtDitelindja.Text == "" || txtVendlindja.Text == "" ||txtGrupigjakut.Text==""||
+               txtShtetesia.Text == "" || txtVendbanimi.Text == "" || txtShtetesia.Text == ""
+               || txtEmail.Text == ""||txtPesha.Text==""||txtGjatesia.Text=="")
+            {
+                MessageBox.Show("Plotesoni te gjitha fushat");
 
-            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text =txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
-                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
+            }
+            else
+            {
+                Lojtari person = new Lojtari();
+                person.Emri = txtEmri.Text.Trim();
+                person.Mbiemri = txtMbiemri.Text.Trim();
+                person.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+                person.Fjalkalimi = txtFjalekalimi.Text.Trim();
+                person.NumriFanelles = int.Parse(txtNumriIfanelles.Text.Trim());
+                person.Gjinia = txtGjinia.Text.Trim();
+                person.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
+                person.Vendlindja = txtVendlindja.Text.Trim();
+                person.GrupiGjakut = txtGrupigjakut.Text.Trim();
+                person.Shteti = txtShtetesia.Text.Trim();
+                person.Vendbanimi = txtVendbanimi.Text.Trim();
+                person.Telefoni = txtNumriTelefonit.Text.Trim();
+                person.Mail = txtEmail.Text.Trim();
+                person.Pesha = decimal.Parse(txtPesha.Text.Trim());
+                person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
+                LojtariBLL lojtariBLL = new LojtariBLL();
+                lojtariBLL.Regjistro(person);
+
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                    txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
+                MessageBox.Show("U regjistrua me sukses");
+
+            }
         }
         private void btnEditoLojtar_Click(object sender, EventArgs e)
         {
-            Lojtari person = new Lojtari();
-            person.Emri = txtEmri.Text.Trim();
-            person.Mbiemri = txtMbiemri.Text.Trim();
-            person.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
-            person.Fjalkalimi = txtFjalekalimi.Text.Trim();
-            person.NumriFanelles = int.Parse(txtNumriIfanelles.Text.Trim());
-            person.Gjinia = txtGjinia.Text.Trim();
-            person.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
-            person.Vendlindja = txtVendlindja.Text.Trim();
-            person.GrupiGjakut = txtGrupigjakut.Text.Trim();
-            person.Shteti = txtShtetesia.Text.Trim();
-            person.Vendbanimi = txtVendbanimi.Text.Trim();
-            person.Telefoni = txtNumriTelefonit.Text.Trim();
-            person.Mail = txtEmail.Text.Trim();
-            person.Pesha = decimal.Parse(txtPesha.Text.Trim());
-            person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
-            person.LojtariID = int.Parse(txtShkruajID.Text.Trim());
-            LojtariBLL lojtariEditoBll = new LojtariBLL();
-            lojtariEditoBll.Edito(person);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi te editoni", "Kujdes", MessageBoxButtons.YesNo);
+            if (rez == DialogResult.Yes)
+            {
 
-            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
-                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
+                Lojtari person = new Lojtari();
+                person.Emri = txtEmri.Text.Trim();
+                person.Mbiemri = txtMbiemri.Text.Trim();
+                person.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+                person.Fjalkalimi = txtFjalekalimi.Text.Trim();
+                person.NumriFanelles = int.Parse(txtNumriIfanelles.Text.Trim());
+                person.Gjinia = txtGjinia.Text.Trim();
+                person.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
+                person.Vendlindja = txtVendlindja.Text.Trim();
+                person.GrupiGjakut = txtGrupigjakut.Text.Trim();
+                person.Shteti = txtShtetesia.Text.Trim();
+                person.Vendbanimi = txtVendbanimi.Text.Trim();
+                person.Telefoni = txtNumriTelefonit.Text.Trim();
+                person.Mail = txtEmail.Text.Trim();
+                person.Pesha = decimal.Parse(txtPesha.Text.Trim());
+                person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
+                person.LojtariID = int.Parse(txtShkruajID.Text.Trim());
+                LojtariBLL lojtariEditoBll = new LojtariBLL();
+                lojtariEditoBll.Edito(person);
+
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                    txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
+            }
         }
         private void btnShfaq_Click(object sender, EventArgs e)
         {
@@ -112,13 +130,17 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         }
         private void BtnFshijLojtarin_Click(object sender, EventArgs e)
         {
-            Lojtari lojtari = new Lojtari();
-            lojtari.LojtariID = int.Parse(txtShkruajID.Text.Trim());
-            LojtariBLL lojtariBLL = new LojtariBLL();
-            lojtariBLL.Fshij(lojtari);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi te fshij", "Kujdes", MessageBoxButtons.YesNo);
+            if (rez == DialogResult.Yes)
+            {
+                Lojtari lojtari = new Lojtari();
+                lojtari.LojtariID = int.Parse(txtShkruajID.Text.Trim());
+                LojtariBLL lojtariBLL = new LojtariBLL();
+                lojtariBLL.Fshij(lojtari);
 
-            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
-                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                    txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
+            }
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
