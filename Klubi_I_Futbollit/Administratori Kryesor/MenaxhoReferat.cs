@@ -1,4 +1,5 @@
 ﻿using Klubi_;
+using Klubi_I_Futbollit.BLL;
 using Klubi_I_Futbollit.BO;
 using System;
 using System.Collections.Generic;
@@ -35,15 +36,15 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             referi.Telefoni = txtTelefoni.Text.Trim();
             referi.Mail = txtEmail.Text.Trim();
             referi.Pozita = txtPozita.Text.Trim();
-            ReferiDAL del = new ReferiDAL();
-            del.Shto(referi);
+            ReferiBLL del = new ReferiBLL();
+            del.Regjistro(referi);
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
             Referi referi = new Referi();
             referi.ReferiID = int.Parse(txtKerko.Text.Trim());
-            ReferiDAL gjejRefer = new ReferiDAL();
+            ReferiBLL gjejRefer = new ReferiBLL();
             gjejRefer.GjejReferMeID(referi);
             txtEmri.Text = referi.Emri;
             txtMbiemri.Text = referi.Mbiemri;
@@ -79,7 +80,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             referi.Mail = txtEmail.Text.Trim();
             referi.Pozita = txtPozita.Text.Trim();
             referi.ReferiID = int.Parse(txtKerko.Text.Trim());
-            ReferiDAL dal = new ReferiDAL();
+            ReferiBLL dal = new ReferiBLL();
             dal.Edito(referi);
         }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_;
+using Klubi_I_Futbollit.BLL;
 using Klubi_I_Futbollit.BO;
 
 
@@ -28,16 +29,16 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             klubi.Kryetari = txtKyetari.Text.Trim();
             klubi.IThemeluar =DateTime.Parse(dtpDataeThemelimit.Text.Trim());
 
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.Shto(klubi);
+            KlubiBLL klubiDAL = new KlubiBLL();
+            klubiDAL.Regjistro(klubi);
         }
 
         private void BtnKerkoKlubMeID_Click(object sender, EventArgs e)
         {
             Klubi kl = new Klubi();
             kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.GjejKlubMeID(kl);
+            KlubiBLL klubiDAL = new KlubiBLL();
+            klubiDAL.GjejKlubinMeID(kl);
             txtEmertimi.Text = kl.Emertimi;
             txtVendi.Text = kl.Vendi;
             txtKyetari.Text = kl.Kryetari;
@@ -57,24 +58,24 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             klubi.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
 
 
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.Update(klubi);
+            KlubiBLL klubiDAL = new KlubiBLL();
+            klubiDAL.Edito(klubi);
         }
 
         private void BtnFshijKlub_Click(object sender, EventArgs e)
         {
             Klubi kl = new Klubi();
             kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
-            KlubiDAL klubiDAL = new KlubiDAL();
-            klubiDAL.FshijMeID(kl);
+            KlubiBLL klubiDAL = new KlubiBLL();
+            klubiDAL.Fshij(kl);
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)
         {
-            KlubiDAL klubi = new KlubiDAL();
+            KlubiBLL klubi = new KlubiBLL();
          
 
-            dgdMbushKlub.DataSource = klubi.GetAll();
+            dgdMbushKlub.DataSource = klubi.ShfaqListenEKlubeve();
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

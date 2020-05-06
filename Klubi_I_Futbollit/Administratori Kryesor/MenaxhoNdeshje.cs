@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_;
+using Klubi_I_Futbollit.BLL;
 using Klubi_I_Futbollit.BO;
 
 namespace Klubi_I_Futbollit.Administratori_Kryesor
@@ -26,16 +27,16 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ndeshja.Sezoni = txtSezoni.Text.Trim();
             ndeshja.RaportiAmbulances = txtRaportiAmbulances.Text.Trim();
             ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
-            NdeshjaDAL ndeshjaDAL = new NdeshjaDAL();
-            ndeshjaDAL.Shto(ndeshja);
+            NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
+            ndeshjaDAL.Regjistro(ndeshja);
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
             Ndeshja ndeshja = new Ndeshja();
             ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text.Trim());
-            NdeshjaDAL dali = new NdeshjaDAL();
-            dali.MerrNdeshjeMeID(ndeshja);
+            NdeshjaBLL dali = new NdeshjaBLL();
+            dali.GjejNdeshjenMeID(ndeshja);
             dtData.Text = ndeshja.dataNdeshjes.ToString();
             txtSezoni.Text = ndeshja.Sezoni;
             txtRaportiAmbulances.Text = ndeshja.RaportiAmbulances;
@@ -50,22 +51,22 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ndeshja.RaportiAmbulances = txtRaportiAmbulances.Text.Trim();
             ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
             ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text);
-            NdeshjaDAL ndeshjaDAL = new NdeshjaDAL();
-            ndeshjaDAL.Update(ndeshja);
+            NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
+            ndeshjaDAL.Edito(ndeshja);
         }
 
         private void btnFshij_Click(object sender, EventArgs e)
         {
             Ndeshja ndeshja = new Ndeshja();
             ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text.Trim());
-            NdeshjaDAL dali = new NdeshjaDAL();
+            NdeshjaBLL dali = new NdeshjaBLL();
             dali.Fshij(ndeshja);
         }
 
         private void btnShfaqi_Click(object sender, EventArgs e)
         {
-            NdeshjaDAL dali = new NdeshjaDAL();
-            dgdMbushNdeshje.DataSource = dali.GetAll();
+            NdeshjaBLL dali = new NdeshjaBLL();
+            dgdMbushNdeshje.DataSource = dali.ShfaqListenENdeshjeve();
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
