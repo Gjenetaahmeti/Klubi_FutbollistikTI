@@ -20,6 +20,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         public MenaxhoDelegat()
         {
             InitializeComponent();
+            
         }
 
         private void Btnregjistrodelegat_Click(object sender, EventArgs e)
@@ -47,7 +48,6 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 delegat.Vendbanimi = txtVendbanimi.Text.Trim();
                 delegat.Telefoni = txtTelefoni.Text.Trim();
                 delegat.Mail = txtEmail.Text.Trim();
-
                 delegat.Roli = txtRoli.Text.Trim();
                 delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
                 DelegatBLL del = new DelegatBLL();
@@ -139,6 +139,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             MenyKryefaqja mk = new MenyKryefaqja();
             mk.ShowDialog();
+         
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -193,6 +194,11 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             MenaxhoVlersimet menaxhoVlersimet = new MenaxhoVlersimet();
             menaxhoVlersimet.ShowDialog();
+        }
+
+        private void MenaxhoDelegatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

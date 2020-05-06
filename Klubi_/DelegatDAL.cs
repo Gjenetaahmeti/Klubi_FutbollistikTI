@@ -58,8 +58,8 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Vendbanimi", delegat.Vendbanimi);
                 command.Parameters.AddWithValue("@Telefoni", delegat.Telefoni);
                 command.Parameters.AddWithValue("@Email", delegat.Mail);
-                command.Parameters.AddWithValue("@InsertBy",1);
-                command.Parameters.AddWithValue("@InsertDate","06/05/2020");
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
                 command.Parameters.AddWithValue("@LUB", 1);
                 command.Parameters.AddWithValue("@LUD", "06/05/2020");
                 command.Parameters.AddWithValue("@LUN", 1);
@@ -90,7 +90,7 @@ namespace Klubi_
 
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("[dbo].[Delegat]", sqlcon);
+                SqlCommand command = new SqlCommand("Delegat", sqlcon);
 
                 command.CommandType = CommandType.StoredProcedure;
 

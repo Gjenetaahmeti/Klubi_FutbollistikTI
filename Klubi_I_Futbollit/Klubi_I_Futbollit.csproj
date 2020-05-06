@@ -130,7 +130,7 @@
     <Compile Include="MenyKryefaqja.Designer.cs">
       <DependentUpon>MenyKryefaqja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="lo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoReferat.resx">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>

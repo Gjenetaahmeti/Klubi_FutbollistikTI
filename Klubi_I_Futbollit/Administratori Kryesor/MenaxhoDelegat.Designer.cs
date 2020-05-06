@@ -519,6 +519,7 @@
             this.menaxhoDelegatToolStripMenuItem.Name = "menaxhoDelegatToolStripMenuItem";
             this.menaxhoDelegatToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.menaxhoDelegatToolStripMenuItem.Text = "Menaxho Delegat";
+            this.menaxhoDelegatToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoDelegatToolStripMenuItem_Click);
             // 
             // menaxhoKlubinToolStripMenuItem
             // 

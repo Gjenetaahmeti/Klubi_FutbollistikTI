@@ -54,8 +54,7 @@ namespace Klubi_I_Futbollit
                 statusiLojtarit.Rezerv = txtRezerve.Text.Trim();
                 statusiLojtarit.Huazim = txtHuazim.Text.Trim();
                 statusiLojtarit.Shoqerues = txtShoqerues.Text.Trim();
-                Lojtari lojtari = new Lojtari();
-                lojtari.LojtariID = int.Parse(der2);
+                statusiLojtarit.Lojtariid =int.Parse(der2);
                 StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
                 statusiLojtaritDAL.Regjistro(statusiLojtarit);
 
