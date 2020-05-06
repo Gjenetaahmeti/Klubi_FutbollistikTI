@@ -57,6 +57,8 @@
             this.mneaxhoGolashenuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoDelegatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoKlubinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoUshtrimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoVleresimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdMbushNdeshje)).BeginInit();
@@ -292,7 +294,9 @@
             this.menaxhoFormacionToolStripMenuItem,
             this.mneaxhoGolashenuesToolStripMenuItem,
             this.menaxhoDelegatToolStripMenuItem,
-            this.menaxhoKlubinToolStripMenuItem});
+            this.menaxhoKlubinToolStripMenuItem,
+            this.menaxhoUshtrimeToolStripMenuItem,
+            this.menaxhoVleresimeToolStripMenuItem});
             this.administratoriToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.administratoriToolStripMenuItem.Name = "administratoriToolStripMenuItem";
             this.administratoriToolStripMenuItem.Size = new System.Drawing.Size(131, 25);
@@ -353,6 +357,20 @@
             this.menaxhoKlubinToolStripMenuItem.Text = "Menaxho Klubin";
             this.menaxhoKlubinToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoKlubinToolStripMenuItem_Click);
             // 
+            // menaxhoUshtrimeToolStripMenuItem
+            // 
+            this.menaxhoUshtrimeToolStripMenuItem.Name = "menaxhoUshtrimeToolStripMenuItem";
+            this.menaxhoUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoUshtrimeToolStripMenuItem.Text = "Menaxho Ushtrime";
+            this.menaxhoUshtrimeToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoUshtrimeToolStripMenuItem_Click);
+            // 
+            // menaxhoVleresimeToolStripMenuItem
+            // 
+            this.menaxhoVleresimeToolStripMenuItem.Name = "menaxhoVleresimeToolStripMenuItem";
+            this.menaxhoVleresimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoVleresimeToolStripMenuItem.Text = "Menaxho Vleresime";
+            this.menaxhoVleresimeToolStripMenuItem.Click += new System.EventHandler(this.MenaxhoVleresimeToolStripMenuItem_Click);
+            // 
             // MenaxhoNdeshje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,5 +428,7 @@
         private System.Windows.Forms.ToolStripMenuItem mneaxhoGolashenuesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menaxhoDelegatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menaxhoKlubinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoUshtrimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menaxhoVleresimeToolStripMenuItem;
     }
 }

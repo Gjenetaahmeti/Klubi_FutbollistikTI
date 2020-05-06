@@ -64,5 +64,66 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
             dgdMbushUshtrime.DataSource = ushtrimetDAL.GetAll();
         }
+
+        private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoPersonelin menaxhoPersonelin = new MenaxhoPersonelin();
+            menaxhoPersonelin.ShowDialog();
+        }
+
+        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenyKryefaqja menyKryefaqja = new MenyKryefaqja();
+            menyKryefaqja.ShowDialog();
+        }
+
+        private void MenaxhoLojtarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoLojtaret menaxho = new MenaxhoLojtaret();
+            menaxho.ShowDialog();
+        }
+
+        private void MenaxhoTrajnerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoTrajner menaxhoTrajner = new MenaxhoTrajner();
+            menaxhoTrajner.ShowDialog();
+        }
+
+        private void MenaxhoNdeshjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoNdeshje menaxhoNdeshje = new MenaxhoNdeshje();
+            menaxhoNdeshje.ShowDialog();
+        }
+
+        private void FormacioniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formacionet formacionet = new Formacionet();
+            formacionet.ShowDialog();
+        }
+
+        private void MenaxhoGolashenuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoGolashenuesin menaxhoGolashenuesin = new MenaxhoGolashenuesin();
+            menaxhoGolashenuesin.ShowDialog();
+        }
+
+        private void MenaxhoDelegatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoDelegat menaxhoDelegat = new MenaxhoDelegat();
+            menaxhoDelegat.ShowDialog();
+        }
+
+        private void MenaxhoKlubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MenaxhoKlub menaxhoKlub = new MenaxhoKlub();
+            menaxhoKlub.ShowDialog();
+        }
+
+        private void MenaxhoVleresimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenaxhoVlersimet menaxhoVlersimet = new MenaxhoVlersimet();
+            menaxhoVlersimet.ShowDialog();
+        }
     }
 }
