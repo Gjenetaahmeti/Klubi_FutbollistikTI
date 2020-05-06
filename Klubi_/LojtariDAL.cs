@@ -86,7 +86,12 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Telefoni", lojtari.Telefoni);
                 command.Parameters.AddWithValue("@Mail", lojtari.Mail);
                 command.Parameters.AddWithValue("@Pesha", lojtari.Pesha);
-                command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);   
+                command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@PersoneliID",0);
                 command.Parameters.AddWithValue("@klubiID", 1);
                 
@@ -128,6 +133,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Mail", lojtari.Mail);
                 command.Parameters.AddWithValue("@Pesha", lojtari.Pesha);
                 command.Parameters.AddWithValue("@Gjatesia", lojtari.Gjatesia);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@PersoneliID", lojtari.LojtariID);
                 command.Parameters.AddWithValue("@KlubiID", 1);
                 command.ExecuteNonQuery();

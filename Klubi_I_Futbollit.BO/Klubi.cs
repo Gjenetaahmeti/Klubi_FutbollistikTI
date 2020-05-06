@@ -18,5 +18,10 @@ namespace Klubi_I_Futbollit.BO
         public Stadiumi StadiumiID { get; set; }
 
         public Liga LigaID { get; set; }
+        public int InsertBy { get; set; }
+        public DateTime InsertDate { get; set; }
+        public int LUB { get; set; }
+        public int LUN { get; set; }
+        public DateTime LUD { get; set; }
     }
 }

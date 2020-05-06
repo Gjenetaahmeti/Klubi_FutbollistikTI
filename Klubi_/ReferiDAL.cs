@@ -35,6 +35,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Vendbanimi", referi.Vendbanimi);
                 command.Parameters.AddWithValue("@Telefoni", referi.Telefoni);
                 command.Parameters.AddWithValue("@Email", referi.Mail);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@RoliID", 4);
                 command.Parameters.AddWithValue("@PersoneliID", 0);
                 command.Parameters.AddWithValue("@Pozita", referi.Pozita);
@@ -71,6 +76,11 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@Vendbanimi", referi.Vendbanimi);
                 command.Parameters.AddWithValue("@Telefoni", referi.Telefoni);
                 command.Parameters.AddWithValue("@Email", referi.Mail);
+                command.Parameters.AddWithValue("@InsertBy", 1);
+                command.Parameters.AddWithValue("@InsertDate", "06/05/2020");
+                command.Parameters.AddWithValue("@LUB", 1);
+                command.Parameters.AddWithValue("@LUD", "06/05/2020");
+                command.Parameters.AddWithValue("@LUN", 1);
                 command.Parameters.AddWithValue("@RoliID", 4);
                 command.Parameters.AddWithValue("@PersoneliID", referi.ReferiID);
                 command.Parameters.AddWithValue("@Pozita", referi.Pozita);
