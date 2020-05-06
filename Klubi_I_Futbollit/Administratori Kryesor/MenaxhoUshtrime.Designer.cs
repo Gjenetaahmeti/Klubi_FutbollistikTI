@@ -39,6 +39,8 @@
             this.menaxhoGolashenuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoDelegatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menaxhoKlubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoUshtrimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menaxhoVleresimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgdMbushUshtrime = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.btnFshij = new System.Windows.Forms.Button();
             this.btnEdito = new System.Windows.Forms.Button();
             this.btnKerkoMeID = new System.Windows.Forms.Button();
-            this.menaxhoUshtrimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menaxhoVleresimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdMbushUshtrime)).BeginInit();
             this.SuspendLayout();
@@ -140,6 +140,18 @@
             this.menaxhoKlubToolStripMenuItem.Name = "menaxhoKlubToolStripMenuItem";
             this.menaxhoKlubToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.menaxhoKlubToolStripMenuItem.Text = "Menaxho Klub";
+            // 
+            // menaxhoUshtrimeToolStripMenuItem
+            // 
+            this.menaxhoUshtrimeToolStripMenuItem.Name = "menaxhoUshtrimeToolStripMenuItem";
+            this.menaxhoUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoUshtrimeToolStripMenuItem.Text = "Menaxho Ushtrime";
+            // 
+            // menaxhoVleresimeToolStripMenuItem
+            // 
+            this.menaxhoVleresimeToolStripMenuItem.Name = "menaxhoVleresimeToolStripMenuItem";
+            this.menaxhoVleresimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.menaxhoVleresimeToolStripMenuItem.Text = "Menaxho Vleresime";
             // 
             // dgdMbushUshtrime
             // 
@@ -253,18 +265,6 @@
             this.btnKerkoMeID.UseVisualStyleBackColor = true;
             this.btnKerkoMeID.Click += new System.EventHandler(this.BtnKerkoMeID_Click);
             // 
-            // menaxhoUshtrimeToolStripMenuItem
-            // 
-            this.menaxhoUshtrimeToolStripMenuItem.Name = "menaxhoUshtrimeToolStripMenuItem";
-            this.menaxhoUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
-            this.menaxhoUshtrimeToolStripMenuItem.Text = "Menaxho Ushtrime";
-            // 
-            // menaxhoVleresimeToolStripMenuItem
-            // 
-            this.menaxhoVleresimeToolStripMenuItem.Name = "menaxhoVleresimeToolStripMenuItem";
-            this.menaxhoVleresimeToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
-            this.menaxhoVleresimeToolStripMenuItem.Text = "Menaxho Vleresime";
-            // 
             // MenaxhoUshtrime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,7 +285,7 @@
             this.Controls.Add(this.dgdMbushUshtrime);
             this.Controls.Add(this.menuStrip2);
             this.Name = "MenaxhoUshtrime";
-            this.Text = "MenaxhoUshtrime";
+            this.Text = "\\";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdMbushUshtrime)).EndInit();
