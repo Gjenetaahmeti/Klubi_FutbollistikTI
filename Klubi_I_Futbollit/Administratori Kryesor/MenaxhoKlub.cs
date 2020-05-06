@@ -25,12 +25,14 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             Klubi klubi = new Klubi();
             klubi.Emertimi = txtEmertimi.Text.Trim();
-            klubi.Vendi = txtEmertimi.Text.Trim();
+            klubi.Vendi = txtVendi.Text.Trim();
             klubi.Kryetari = txtKyetari.Text.Trim();
             klubi.IThemeluar =DateTime.Parse(dtpDataeThemelimit.Text.Trim());
 
             KlubiBLL klubiDAL = new KlubiBLL();
             klubiDAL.Regjistro(klubi);
+
+            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
         }
 
         private void BtnKerkoKlubMeID_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
             KlubiBLL klubiDAL = new KlubiBLL();
             klubiDAL.Edito(klubi);
+            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
         }
 
         private void BtnFshijKlub_Click(object sender, EventArgs e)
@@ -68,6 +71,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             kl.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
             KlubiBLL klubiDAL = new KlubiBLL();
             klubiDAL.Fshij(kl);
+            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)
@@ -76,6 +80,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
          
 
             dgdMbushKlub.DataSource = klubi.ShfaqListenEKlubeve();
+            txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

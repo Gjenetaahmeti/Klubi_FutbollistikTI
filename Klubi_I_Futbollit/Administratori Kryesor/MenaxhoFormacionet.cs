@@ -54,6 +54,7 @@ namespace Klubi_I_Futbollit
             StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
             statusiLojtaritDAL.Regjistro(statusiLojtarit);
 
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
 
         }
 
@@ -85,12 +86,15 @@ namespace Klubi_I_Futbollit
             lojtari.LojtariID = int.Parse(der2);
             StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
             statusiLojtaritDAL.Edito(statusiLojtarit);
+
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)
         {
             StatusiLojtaritBLL statusiLojtarit = new StatusiLojtaritBLL();
             dgdmbushFormacion.DataSource = statusiLojtarit.ShfaqListenEStatuseveTeLojtarit();
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
         }
 
         private void BtnFshij_Click(object sender, EventArgs e)
@@ -99,6 +103,8 @@ namespace Klubi_I_Futbollit
             statusiLojtarit.StatusiID=int.Parse(txtGjejMeIDFormacion.Text.Trim());
             StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
             statusiLojtaritDAL.Fshij(statusiLojtarit);
+
+            txtPergjegjes.Text = txtHuazim.Text = txtShoqerues.Text = comboBox1.Text = "";
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

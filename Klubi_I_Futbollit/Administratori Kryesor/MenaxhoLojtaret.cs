@@ -43,6 +43,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             person.Gjatesia = decimal.Parse(txtGjatesia.Text.Trim());
             LojtariBLL lojtariBLL = new LojtariBLL();
             lojtariBLL.Regjistro(person);
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text =txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
         }
         private void btnEditoLojtar_Click(object sender, EventArgs e)
         {
@@ -65,6 +68,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             person.LojtariID = int.Parse(txtShkruajID.Text.Trim());
             LojtariBLL lojtariEditoBll = new LojtariBLL();
             lojtariEditoBll.Edito(person);
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
         }
         private void btnShfaq_Click(object sender, EventArgs e)
         {
@@ -73,6 +79,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
             LojtariBLL lojtariShfaqja = new LojtariBLL();
             dgdMbushLojtar.DataSource = lojtariShfaqja.ShfaqLojtaret();
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
         }
         private void BtnGjejLojtart_Click(object sender, EventArgs e)
         {
@@ -99,6 +108,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             btnEditoLojtar.Visible = true;
             btnRegjistro.Visible = false;
             btnShfaq.Visible = false;
+
         }
         private void BtnFshijLojtarin_Click(object sender, EventArgs e)
         {
@@ -106,6 +116,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             lojtari.LojtariID = int.Parse(txtShkruajID.Text.Trim());
             LojtariBLL lojtariBLL = new LojtariBLL();
             lojtariBLL.Fshij(lojtari);
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)

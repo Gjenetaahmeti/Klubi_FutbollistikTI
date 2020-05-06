@@ -29,6 +29,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
             NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
             ndeshjaDAL.Regjistro(ndeshja);
+            dtData.Text = txtSezoni.Text = txtRaportiAmbulances.Text = txtRaportiPolicis.Text = "";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text);
             NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
             ndeshjaDAL.Edito(ndeshja);
+            dtData.Text = txtSezoni.Text = txtRaportiAmbulances.Text = txtRaportiPolicis.Text = "";
         }
 
         private void btnFshij_Click(object sender, EventArgs e)
@@ -61,12 +63,14 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text.Trim());
             NdeshjaBLL dali = new NdeshjaBLL();
             dali.Fshij(ndeshja);
+            dtData.Text = txtSezoni.Text = txtRaportiAmbulances.Text = txtRaportiPolicis.Text = "";
         }
 
         private void btnShfaqi_Click(object sender, EventArgs e)
         {
             NdeshjaBLL dali = new NdeshjaBLL();
             dgdMbushNdeshje.DataSource = dali.ShfaqListenENdeshjeve();
+            dtData.Text = txtSezoni.Text = txtRaportiAmbulances.Text = txtRaportiPolicis.Text = "";
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

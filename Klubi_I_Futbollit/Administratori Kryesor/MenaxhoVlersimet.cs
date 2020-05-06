@@ -31,6 +31,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             vlersimet.Vlersimi = decimal.Parse(txtVlersimi.Text);
             VlersimetBLL bll = new VlersimetBLL();
             bll.Regjistro(vlersimet);
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
        
 
@@ -43,6 +44,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             vlersimet.Vlersimi = decimal.Parse(txtVlersimi.Text.Trim());
             VlersimetBLL vlersimetBLL = new VlersimetBLL();
             vlersimetBLL.Edito(vlersimet);
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
         public void GjejLojtarin()
         {
@@ -69,12 +71,14 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             vler.StatusiID = int.Parse(txtKerko.Text.Trim());
             VlersimetBLL bll = new VlersimetBLL();
             bll.Fshij(vler);
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
 
         private void btnShfaq_Click(object sender, EventArgs e)
         {
             VlersimetBLL bll = new VlersimetBLL();
             dgdMbushVlersimet.DataSource = bll.ShfaqListenEVlersimeve();
+            cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)

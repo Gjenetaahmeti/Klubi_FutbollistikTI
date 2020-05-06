@@ -38,6 +38,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             referi.Pozita = txtPozita.Text.Trim();
             ReferiBLL del = new ReferiBLL();
             del.Regjistro(referi);
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtPozita.Text = "";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -82,6 +84,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             referi.ReferiID = int.Parse(txtKerko.Text.Trim());
             ReferiBLL dal = new ReferiBLL();
             dal.Edito(referi);
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtPozita.Text = "";
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)

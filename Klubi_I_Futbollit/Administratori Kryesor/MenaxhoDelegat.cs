@@ -43,12 +43,17 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
             DelegatBLL del = new DelegatBLL();
             del.Regjistro(delegat);
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShteti.Text =
+                txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtRoli.Text = txtRaportiPasndeshjes.Text = "";
         }
 
         private void BtnShfaqDelegat_Click(object sender, EventArgs e)
         {
             DelegatBLL obj = new DelegatBLL();
             dgvMbushDelegat.DataSource = obj.ShfaqListenEDelegateve();
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShteti.Text =
+               txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtRoli.Text = txtRaportiPasndeshjes.Text = "";
+
         }
 
         private void BtnEdito_Click_1(object sender, EventArgs e)
@@ -73,6 +78,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
             DelegatBLL del = new DelegatBLL();
             del.Edito(delegat);
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShteti.Text =
+                txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtRoli.Text = txtRaportiPasndeshjes.Text = "";
         }
 
         private void BtnKerko_Click_1(object sender, EventArgs e)
@@ -96,8 +103,6 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             txtEmail.Text = delegat.Mail;
             txtRoli.Text = delegat.Roli;
             txtRaportiPasndeshjes.Text = delegat.RaportiPasNdeshjes;
-
-   
         }
 
         private void BtnfshijDelegat_Click(object sender, EventArgs e)
@@ -106,6 +111,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
             DelegatBLL fshijdelegat = new DelegatBLL();
             fshijdelegat.Fshij(delegat);
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShteti.Text =
+                txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtRoli.Text = txtRaportiPasndeshjes.Text = "";
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

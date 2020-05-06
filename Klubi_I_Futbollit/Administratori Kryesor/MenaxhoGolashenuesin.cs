@@ -31,6 +31,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             golaShenuesit.ndeshjaID = int.Parse(ndeshja);
             GolashenuesiBLL golashenuesiBLL = new GolashenuesiBLL();
             golashenuesiBLL.Regjistro(golaShenuesit);
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         private void btnEdito_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             golaShenuesit.ndeshjaID = int.Parse(ndeshja);
             GolashenuesiBLL golashenuesiBLL = new GolashenuesiBLL();
             golashenuesiBLL.Edito(golaShenuesit);
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         private void btnFshije_Click(object sender, EventArgs e)
@@ -52,6 +54,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             golaShenuesi.GolashenuesiID = int.Parse(txtKerkoMeID.Text.Trim());
             GolashenuesiBLL golaShenuesiBLLL = new GolashenuesiBLL();
             golaShenuesiBLLL.Fshij(golaShenuesi);
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -72,6 +75,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             GolashenuesiBLL golashenuesi = new GolashenuesiBLL();
             dgdShfaqGolaShenuesit.DataSource = golashenuesi.ShfaqListenEGolaShenuesve();
+            cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
         }
 
         public void GjejLojtarinDheNdeshjen()

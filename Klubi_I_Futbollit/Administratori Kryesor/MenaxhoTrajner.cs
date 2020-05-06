@@ -39,6 +39,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             trajneri.Mail = txtEmail.Text.Trim();
             TrajneriBLL trajner = new TrajneriBLL();
             trajner.Regjistro(trajneri);
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text ="";
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -85,6 +88,9 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             trajneri.TrajneriID = int.Parse(txtShkruajID.Text.Trim());
             TrajneriBLL trajner = new TrajneriBLL();
             trajner.Edito(trajneri);
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
         }
         private void btnFshije_Click(object sender, EventArgs e)
         {
@@ -92,11 +98,17 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             trajner.TrajneriID = int.Parse(txtShkruajID.Text.Trim());
             TrajneriBLL fshijTrajnerin = new TrajneriBLL();
             fshijTrajnerin.Fshij(trajner);
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
         }
         private void btnShfaqTrajnerat_Click(object sender, EventArgs e)
         {
             TrajneriBLL obj = new TrajneriBLL();
             dgdShfaqTrajnerat.DataSource = obj.ShfaqListenETrajnereve();
+
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
