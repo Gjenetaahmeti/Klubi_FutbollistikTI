@@ -49,7 +49,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 TrajneriBLL trajner = new TrajneriBLL();
                 trajner.Regjistro(trajneri);
                 MessageBox.Show("U regjistrua me sukses");
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text  =
                     txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
             }
         }
@@ -75,8 +75,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             txtEmail.Text = trajneri.Mail;
             btnFshije.Visible = true;
             btnEdito.Visible = true;
-            btnRegjistroTrajner.Visible = false;
-            btnShfaqTrajnerat.Visible = false;
+            btnRegjistroTrajner.Visible = true;
+            btnShfaqTrajnerat.Visible = true;
         }
 
         private void btnEdito_Click(object sender, EventArgs e)
@@ -102,7 +102,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 TrajneriBLL trajner = new TrajneriBLL();
                 trajner.Edito(trajneri);
 
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text =txtDitelindja.Text=
                     txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
             }
         }
@@ -116,7 +116,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 TrajneriBLL fshijTrajnerin = new TrajneriBLL();
                 fshijTrajnerin.Fshij(trajner);
 
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text  = txtDitelindja.Text =
                     txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
             }
         }
@@ -125,7 +125,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             TrajneriBLL obj = new TrajneriBLL();
             dgdShfaqTrajnerat.DataSource = obj.ShfaqListenETrajnereve();
 
-            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text  = txtDitelindja.Text =
                 txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = "";
         }
 

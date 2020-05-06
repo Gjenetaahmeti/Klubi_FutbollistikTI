@@ -37,6 +37,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 VlersimetBLL bll = new VlersimetBLL();
                 bll.Regjistro(vlersimet);
                 cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
+                MessageBox.Show("u regjistrua me sukses");
             }
         }
        

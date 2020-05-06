@@ -54,7 +54,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 LojtariBLL lojtariBLL = new LojtariBLL();
                 lojtariBLL.Regjistro(person);
 
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtGrupigjakut.Text= txtShtetesia.Text =
                     txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
                 MessageBox.Show("U regjistrua me sukses");
 
@@ -86,7 +86,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 LojtariBLL lojtariEditoBll = new LojtariBLL();
                 lojtariEditoBll.Edito(person);
 
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtGrupigjakut.Text = txtShtetesia.Text =
                     txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
             }
         }
@@ -98,7 +98,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             LojtariBLL lojtariShfaqja = new LojtariBLL();
             dgdMbushLojtar.DataSource = lojtariShfaqja.ShfaqLojtaret();
 
-            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+            txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtGrupigjakut.Text = txtShtetesia.Text =
                 txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
         }
         private void BtnGjejLojtart_Click(object sender, EventArgs e)
@@ -124,8 +124,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             txtGjatesia.Text = lojtar.Gjatesia.ToString();
             btnFshijLojtarin.Visible = true;
             btnEditoLojtar.Visible = true;
-            btnRegjistro.Visible = false;
-            btnShfaq.Visible = false;
+            btnRegjistro.Visible = true;
+            btnShfaq.Visible = true;
 
         }
         private void BtnFshijLojtarin_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 LojtariBLL lojtariBLL = new LojtariBLL();
                 lojtariBLL.Fshij(lojtari);
 
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtShtetesia.Text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalekalimi.Text = txtNumriIfanelles.Text = txtGjinia.Text = txtDitelindja.Text = txtVendlindja.Text = txtGrupigjakut.Text = txtShtetesia.Text =
                     txtVendbanimi.Text = txtNumriTelefonit.Text = txtEmail.Text = txtPesha.Text = txtGjatesia.Text = "";
             }
         }

@@ -47,7 +47,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 referi.Pozita = txtPozita.Text.Trim();
                 ReferiBLL del = new ReferiBLL();
                 del.Regjistro(referi);
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text =
                     txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtPozita.Text = "";
                 MessageBox.Show("U regjistrua me sukses");
 
@@ -99,7 +99,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 referi.ReferiID = int.Parse(txtKerko.Text.Trim());
                 ReferiBLL dal = new ReferiBLL();
                 dal.Edito(referi);
-                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text = txtDitelindja.text =
+                txtEmri.Text = txtMbiemri.Text = txtEmriPerdoruesit.Text = txtFjalkalimi.Text = txtSpecializimi.Text = txtTitulli.Text = txtGjinia.Text  =
                     txtVendlindja.Text = txtShteti.Text = txtVendbanimi.Text = txtTelefoni.Text = txtEmail.Text = txtPozita.Text = "";
             }
         }
