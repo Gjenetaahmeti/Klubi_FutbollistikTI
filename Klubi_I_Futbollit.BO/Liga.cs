@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Klubi_I_Futbollit.BO
 {
-    public class Liga
+  public  class Liga
     {
         public int LigaID { get; set; }
 

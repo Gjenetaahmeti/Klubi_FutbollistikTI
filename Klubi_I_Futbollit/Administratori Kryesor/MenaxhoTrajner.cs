@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_;
 using Klubi_Futbollistik;
+using Klubi_I_Futbollit.BLL;
 using Klubi_I_Futbollit.BO;
 
 namespace Klubi_I_Futbollit.Administratori_Kryesor
@@ -36,15 +37,15 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             trajneri.Vendbanimi = txtVendbanimi.Text.Trim();
             trajneri.Telefoni = txtTelefoni.Text.Trim();
             trajneri.Mail = txtEmail.Text.Trim();
-            TrajneriDAL trajner = new TrajneriDAL();
-            trajner.Shto(trajneri);
+            TrajneriBLL trajner = new TrajneriBLL();
+            trajner.Regjistro(trajneri);
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
             Trajneri trajneri = new Trajneri();
             trajneri.TrajneriID = int.Parse(txtShkruajID.Text.Trim());
-            TrajneriDAL gjejTrajnerin = new TrajneriDAL();
+            TrajneriBLL gjejTrajnerin = new TrajneriBLL();
             gjejTrajnerin.GjejTrajnerinMeID(trajneri);
             txtEmri.Text = trajneri.Emri;
             txtMbiemri.Text = trajneri.Mbiemri;
@@ -82,20 +83,20 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             trajneri.Telefoni = txtTelefoni.Text.Trim();
             trajneri.Mail = txtEmail.Text.Trim();
             trajneri.TrajneriID = int.Parse(txtShkruajID.Text.Trim());
-            TrajneriDAL trajner = new TrajneriDAL();
-            trajner.Update(trajneri);
+            TrajneriBLL trajner = new TrajneriBLL();
+            trajner.Edito(trajneri);
         }
         private void btnFshije_Click(object sender, EventArgs e)
         {
             Trajneri trajner = new Trajneri();
             trajner.TrajneriID = int.Parse(txtShkruajID.Text.Trim());
-            TrajneriDAL fshijTrajnerin = new TrajneriDAL();
+            TrajneriBLL fshijTrajnerin = new TrajneriBLL();
             fshijTrajnerin.Fshij(trajner);
         }
         private void btnShfaqTrajnerat_Click(object sender, EventArgs e)
         {
-            TrajneriDAL obj = new TrajneriDAL();
-            dgdShfaqTrajnerat.DataSource = obj.GetAll();
+            TrajneriBLL obj = new TrajneriBLL();
+            dgdShfaqTrajnerat.DataSource = obj.ShfaqListenETrajnereve();
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)

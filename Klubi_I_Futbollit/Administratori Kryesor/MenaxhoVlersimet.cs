@@ -46,7 +46,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         }
         public void GjejLojtarin()
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-LG439J7\MYSQLSERVERARNO;Initial Catalog=Gjeneta;Integrated Security=True");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
             sqlcon.Open();
             SqlDataAdapter d = new SqlDataAdapter("usp_MerrLojtart", sqlcon);
             DataSet dt = new DataSet();
