@@ -11,6 +11,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Klubi_;
 using Klubi_I_Futbollit.BO;
+using Klubi_I_Futbollit.BLL;
 
 namespace Klubi_I_Futbollit
 {
@@ -50,8 +51,8 @@ namespace Klubi_I_Futbollit
             statusiLojtarit.Shoqerues = txtShoqerues.Text.Trim();
             Lojtari lojtari = new Lojtari();
             lojtari.LojtariID =int.Parse(der2);
-            StatusiLojtaritDAL statusiLojtaritDAL = new StatusiLojtaritDAL();
-            statusiLojtaritDAL.Shto(statusiLojtarit);
+            StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
+            statusiLojtaritDAL.Regjistro(statusiLojtarit);
 
 
         }
@@ -60,8 +61,8 @@ namespace Klubi_I_Futbollit
         {
             StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
             statusiLojtarit.StatusiID =int.Parse(txtGjejMeIDFormacion.Text.Trim());
-            StatusiLojtaritDAL statusiLojtarit1 = new StatusiLojtaritDAL();
-            statusiLojtarit1.MerriMeIdFormacion(statusiLojtarit);
+            StatusiLojtaritBLL statusiLojtarit1 = new StatusiLojtaritBLL();
+            statusiLojtarit1.GjejStatusinELojtaritMeID(statusiLojtarit);
 
             txtPergjegjes.Text = statusiLojtarit.Pergjegjes;
             txtRezerve.Text = statusiLojtarit.Rezerv;
@@ -82,21 +83,21 @@ namespace Klubi_I_Futbollit
             statusiLojtarit.StatusiID=int.Parse(txtGjejMeIDFormacion.Text.Trim());
             Lojtari lojtari = new Lojtari();
             lojtari.LojtariID = int.Parse(der2);
-            StatusiLojtaritDAL statusiLojtaritDAL = new StatusiLojtaritDAL();
-            statusiLojtaritDAL.Update(statusiLojtarit);
+            StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
+            statusiLojtaritDAL.Edito(statusiLojtarit);
         }
 
         private void BtnShfaq_Click(object sender, EventArgs e)
         {
-            StatusiLojtaritDAL statusiLojtarit = new StatusiLojtaritDAL();
-            dgdmbushFormacion.DataSource = statusiLojtarit.GetAll();
+            StatusiLojtaritBLL statusiLojtarit = new StatusiLojtaritBLL();
+            dgdmbushFormacion.DataSource = statusiLojtarit.ShfaqListenEStatuseveTeLojtarit();
         }
 
         private void BtnFshij_Click(object sender, EventArgs e)
         {
             StatusiLojtarit statusiLojtarit = new StatusiLojtarit();
             statusiLojtarit.StatusiID=int.Parse(txtGjejMeIDFormacion.Text.Trim());
-            StatusiLojtaritDAL statusiLojtaritDAL = new StatusiLojtaritDAL();
+            StatusiLojtaritBLL statusiLojtaritDAL = new StatusiLojtaritBLL();
             statusiLojtaritDAL.Fshij(statusiLojtarit);
         }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_;
+using Klubi_I_Futbollit.BLL;
 using Klubi_I_Futbollit.BO;
 
 namespace Klubi_I_Futbollit.Administratori_Kryesor
@@ -25,17 +26,17 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ushtrimet.Dita = txtDita.Text.Trim();
             ushtrimet.Ora = txtOra.Text.Trim();
 
-            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-            ushtrimetDAL.Shto(ushtrimet);
+            UshtrimeBLL ushtrimetDAL = new UshtrimeBLL();
+            ushtrimetDAL.Regjistro(ushtrimet);
         }
 
         private void BtnKerkoMeID_Click(object sender, EventArgs e)
         {
             Ushtrimet ushtrimet = new Ushtrimet();
             ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
-            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
+            UshtrimeBLL ushtrimetDAL = new UshtrimeBLL();
 
-            ushtrimetDAL.GjejUshtrimMeID(ushtrimet);
+            ushtrimetDAL.GjejUshtrimetMeID(ushtrimet);
             txtDita.Text = ushtrimet.Dita;
             txtOra.Text = ushtrimet.Ora;
 
@@ -47,22 +48,22 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             ushtrimet.Dita = txtDita.Text.Trim();
             ushtrimet.Ora = txtOra.Text.Trim();
             ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
-            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-            ushtrimetDAL.Update(ushtrimet);
+            UshtrimeBLL ushtrimetDAL = new UshtrimeBLL();
+            ushtrimetDAL.Edito(ushtrimet);
         }
 
         private void BtnFshij_Click(object sender, EventArgs e)
         {
             Ushtrimet ushtrimet = new Ushtrimet();
             ushtrimet.UshtrimetID = int.Parse(txtGjejMeID.Text.Trim());
-            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-            ushtrimetDAL.FshijMeID(ushtrimet);
+            UshtrimeBLL ushtrimetDAL = new UshtrimeBLL();
+            ushtrimetDAL.Fshij(ushtrimet);
         }
 
         private void BtnShfaqTeGjitha_Click(object sender, EventArgs e)
         {
-            UshtrimetDAL ushtrimetDAL = new UshtrimetDAL();
-            dgdMbushUshtrime.DataSource = ushtrimetDAL.GetAll();
+            UshtrimeBLL ushtrimetDAL = new UshtrimeBLL();
+            dgdMbushUshtrime.DataSource = ushtrimetDAL.ShfaqTeGjithaUshtrimet();
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)

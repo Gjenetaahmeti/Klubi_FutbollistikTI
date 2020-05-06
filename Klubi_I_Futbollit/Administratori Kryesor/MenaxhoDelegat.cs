@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_;
 using Klubi_Futbollistik;
+using Klubi_I_Futbollit.BLL;
 using Klubi_I_Futbollit.BO;
 
 
@@ -40,14 +41,14 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
             delegat.Roli = txtRoli.Text.Trim();
             delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
-            DelegatDAL del = new DelegatDAL();
-            del.Shto(delegat);
+            DelegatBLL del = new DelegatBLL();
+            del.Regjistro(delegat);
         }
 
         private void BtnShfaqDelegat_Click(object sender, EventArgs e)
         {
-            DelegatDAL obj = new DelegatDAL ();
-            dgvMbushDelegat.DataSource = obj.GetAll();
+            DelegatBLL obj = new DelegatBLL();
+            dgvMbushDelegat.DataSource = obj.ShfaqListenEDelegateve();
         }
 
         private void BtnEdito_Click_1(object sender, EventArgs e)
@@ -70,16 +71,16 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
           //  delegat.DelegatID = int.Parse(txtIdEDelegatit.Text.Trim());
             delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
-            DelegatDAL del = new DelegatDAL();
-            del.Update(delegat);
+            DelegatBLL del = new DelegatBLL();
+            del.Edito(delegat);
         }
 
         private void BtnKerko_Click_1(object sender, EventArgs e)
         {
             Delegat delegat = new Delegat();
             delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
-            DelegatDAL gjejdelegat = new DelegatDAL();
-            gjejdelegat.GjejDelegatMeID(delegat);
+            DelegatBLL gjejdelegat = new DelegatBLL();
+            gjejdelegat.GjejDelegatinMeID(delegat);
             txtEmri.Text = delegat.Emri;
             txtMbiemri.Text = delegat.Mbiemri;
             txtEmriPerdoruesit.Text = delegat.EmriIPerdoruesit;
@@ -103,7 +104,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             Delegat delegat = new Delegat();
             delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
-            DelegatDAL fshijdelegat = new DelegatDAL();
+            DelegatBLL fshijdelegat = new DelegatBLL();
             fshijdelegat.Fshij(delegat);
         }
 
