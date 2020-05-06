@@ -100,6 +100,12 @@
     <Compile Include="Administratori Kryesor\MenaxhoFormacionet.Designer.cs">
       <DependentUpon>MenaxhoFormacionet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoUshtrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoUshtrime.Designer.cs">
+      <DependentUpon>MenaxhoUshtrime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoVlersimet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoFormacionet.resx">
       <DependentUpon>MenaxhoFormacionet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoUshtrime.resx">
+      <DependentUpon>MenaxhoUshtrime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoVlersimet.resx">
       <DependentUpon>MenaxhoVlersimet.cs</DependentUpon>
