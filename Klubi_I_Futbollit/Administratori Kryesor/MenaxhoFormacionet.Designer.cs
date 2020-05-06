@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFormacioni = new System.Windows.Forms.TextBox();
             this.btnRegjistroFormacion = new System.Windows.Forms.Button();
             this.dgdmbushFormacion = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -75,28 +73,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lojtari";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Formacioni";
-            // 
-            // txtFormacioni
-            // 
-            this.txtFormacioni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtFormacioni.Location = new System.Drawing.Point(124, 135);
-            this.txtFormacioni.Name = "txtFormacioni";
-            this.txtFormacioni.Size = new System.Drawing.Size(100, 20);
-            this.txtFormacioni.TabIndex = 3;
-            // 
             // btnRegjistroFormacion
             // 
             this.btnRegjistroFormacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegjistroFormacion.Location = new System.Drawing.Point(34, 362);
+            this.btnRegjistroFormacion.Location = new System.Drawing.Point(22, 329);
             this.btnRegjistroFormacion.Name = "btnRegjistroFormacion";
             this.btnRegjistroFormacion.Size = new System.Drawing.Size(96, 44);
             this.btnRegjistroFormacion.TabIndex = 4;
@@ -116,7 +96,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 99);
+            this.comboBox1.Location = new System.Drawing.Point(124, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 10;
@@ -125,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 182);
+            this.label3.Location = new System.Drawing.Point(18, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 21);
             this.label3.TabIndex = 11;
@@ -135,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 232);
+            this.label4.Location = new System.Drawing.Point(19, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 21);
             this.label4.TabIndex = 12;
@@ -145,7 +125,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 264);
+            this.label5.Location = new System.Drawing.Point(19, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 21);
             this.label5.TabIndex = 13;
@@ -155,7 +135,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 298);
+            this.label6.Location = new System.Drawing.Point(19, 269);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 21);
             this.label6.TabIndex = 14;
@@ -164,7 +144,7 @@
             // txtPergjegjes
             // 
             this.txtPergjegjes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtPergjegjes.Location = new System.Drawing.Point(124, 182);
+            this.txtPergjegjes.Location = new System.Drawing.Point(124, 153);
             this.txtPergjegjes.Name = "txtPergjegjes";
             this.txtPergjegjes.Size = new System.Drawing.Size(100, 20);
             this.txtPergjegjes.TabIndex = 15;
@@ -172,7 +152,7 @@
             // txtRezerve
             // 
             this.txtRezerve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtRezerve.Location = new System.Drawing.Point(124, 229);
+            this.txtRezerve.Location = new System.Drawing.Point(124, 200);
             this.txtRezerve.Name = "txtRezerve";
             this.txtRezerve.Size = new System.Drawing.Size(100, 20);
             this.txtRezerve.TabIndex = 16;
@@ -180,7 +160,7 @@
             // txtHuazim
             // 
             this.txtHuazim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtHuazim.Location = new System.Drawing.Point(124, 264);
+            this.txtHuazim.Location = new System.Drawing.Point(124, 235);
             this.txtHuazim.Name = "txtHuazim";
             this.txtHuazim.Size = new System.Drawing.Size(100, 20);
             this.txtHuazim.TabIndex = 17;
@@ -188,7 +168,7 @@
             // txtShoqerues
             // 
             this.txtShoqerues.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtShoqerues.Location = new System.Drawing.Point(124, 298);
+            this.txtShoqerues.Location = new System.Drawing.Point(124, 269);
             this.txtShoqerues.Name = "txtShoqerues";
             this.txtShoqerues.Size = new System.Drawing.Size(100, 20);
             this.txtShoqerues.TabIndex = 18;
@@ -225,7 +205,7 @@
             // btnEdito
             // 
             this.btnEdito.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdito.Location = new System.Drawing.Point(151, 362);
+            this.btnEdito.Location = new System.Drawing.Point(139, 329);
             this.btnEdito.Name = "btnEdito";
             this.btnEdito.Size = new System.Drawing.Size(96, 45);
             this.btnEdito.TabIndex = 22;
@@ -236,7 +216,7 @@
             // btnShfaq
             // 
             this.btnShfaq.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShfaq.Location = new System.Drawing.Point(151, 425);
+            this.btnShfaq.Location = new System.Drawing.Point(139, 392);
             this.btnShfaq.Name = "btnShfaq";
             this.btnShfaq.Size = new System.Drawing.Size(96, 45);
             this.btnShfaq.TabIndex = 23;
@@ -247,7 +227,7 @@
             // btnFshij
             // 
             this.btnFshij.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFshij.Location = new System.Drawing.Point(34, 425);
+            this.btnFshij.Location = new System.Drawing.Point(22, 392);
             this.btnFshij.Name = "btnFshij";
             this.btnFshij.Size = new System.Drawing.Size(96, 45);
             this.btnFshij.TabIndex = 24;
@@ -386,8 +366,6 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dgdmbushFormacion);
             this.Controls.Add(this.btnRegjistroFormacion);
-            this.Controls.Add(this.txtFormacioni);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -404,8 +382,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFormacioni;
         private System.Windows.Forms.Button btnRegjistroFormacion;
         private System.Windows.Forms.DataGridView dgdmbushFormacion;
         private System.Windows.Forms.ComboBox comboBox1;

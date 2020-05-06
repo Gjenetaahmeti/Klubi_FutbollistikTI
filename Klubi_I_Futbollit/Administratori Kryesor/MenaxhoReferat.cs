@@ -21,23 +21,35 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         }
         private void btnRegjistro_Click(object sender, EventArgs e)
         {
-            Referi referi = new Referi();
-            referi.Emri = txtEmri.Text.Trim();
-            referi.Mbiemri = txtMbiemri.Text.Trim();
-            referi.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
-            referi.Fjalkalimi = txtFjalkalimi.Text.Trim();
-            referi.Specializimi = txtSpecializimi.Text.Trim();
-            referi.Titulli = txtTitulli.Text.Trim();
-            referi.Gjinia = txtGjinia.Text.Trim();
-            referi.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
-            referi.Vendlindja = txtVendlindja.Text.Trim();
-            referi.Shteti = txtShteti.Text.Trim();
-            referi.Vendbanimi = txtVendbanimi.Text.Trim();
-            referi.Telefoni = txtTelefoni.Text.Trim();
-            referi.Mail = txtEmail.Text.Trim();
-            referi.Pozita = txtPozita.Text.Trim();
-            ReferiBLL del = new ReferiBLL();
-            del.Regjistro(referi);
+            if (txtEmri.Text == "" || txtMbiemri.Text == "" || txtEmriPerdoruesit.Text == "" ||
+                txtFjalkalimi.Text == "" || txtSpecializimi.Text == "" || txtTitulli.Text == "" || txtGjinia.Text == "" || txtDitelindja.Text == "" || txtVendlindja.Text == "" ||
+                txtShteti.Text == "" || txtVendbanimi.Text == "" || txtTelefoni.Text == "" || txtEmail.Text == "")
+            {
+                MessageBox.Show("Plotesoni te gjitha fushat");
+            }
+            else
+            {
+
+
+                Referi referi = new Referi();
+                referi.Emri = txtEmri.Text.Trim();
+                referi.Mbiemri = txtMbiemri.Text.Trim();
+                referi.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+                referi.Fjalkalimi = txtFjalkalimi.Text.Trim();
+                referi.Specializimi = txtSpecializimi.Text.Trim();
+                referi.Titulli = txtTitulli.Text.Trim();
+                referi.Gjinia = txtGjinia.Text.Trim();
+                referi.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
+                referi.Vendlindja = txtVendlindja.Text.Trim();
+                referi.Shteti = txtShteti.Text.Trim();
+                referi.Vendbanimi = txtVendbanimi.Text.Trim();
+                referi.Telefoni = txtTelefoni.Text.Trim();
+                referi.Mail = txtEmail.Text.Trim();
+                referi.Pozita = txtPozita.Text.Trim();
+                ReferiBLL del = new ReferiBLL();
+                del.Regjistro(referi);
+                MessageBox.Show("U regjistrua me sukses!", MessageBoxButtons.OK.ToString());
+            }
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -64,24 +76,29 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void Edito_Click(object sender, EventArgs e)
         {
-            Referi referi = new Referi();
-            referi.Emri = txtEmri.Text.Trim();
-            referi.Mbiemri = txtMbiemri.Text.Trim();
-            referi.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
-            referi.Fjalkalimi = txtFjalkalimi.Text.Trim();
-            referi.Specializimi = txtSpecializimi.Text.Trim();
-            referi.Titulli = txtTitulli.Text.Trim();
-            referi.Gjinia = txtGjinia.Text.Trim();
-            referi.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
-            referi.Vendlindja = txtVendlindja.Text.Trim();
-            referi.Shteti = txtShteti.Text.Trim();
-            referi.Vendbanimi = txtVendbanimi.Text.Trim();
-            referi.Telefoni = txtTelefoni.Text.Trim();
-            referi.Mail = txtEmail.Text.Trim();
-            referi.Pozita = txtPozita.Text.Trim();
-            referi.ReferiID = int.Parse(txtKerko.Text.Trim());
-            ReferiBLL dal = new ReferiBLL();
-            dal.Edito(referi);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
+
+            if (rez == DialogResult.Yes)
+            {
+                Referi referi = new Referi();
+                referi.Emri = txtEmri.Text.Trim();
+                referi.Mbiemri = txtMbiemri.Text.Trim();
+                referi.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+                referi.Fjalkalimi = txtFjalkalimi.Text.Trim();
+                referi.Specializimi = txtSpecializimi.Text.Trim();
+                referi.Titulli = txtTitulli.Text.Trim();
+                referi.Gjinia = txtGjinia.Text.Trim();
+                referi.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
+                referi.Vendlindja = txtVendlindja.Text.Trim();
+                referi.Shteti = txtShteti.Text.Trim();
+                referi.Vendbanimi = txtVendbanimi.Text.Trim();
+                referi.Telefoni = txtTelefoni.Text.Trim();
+                referi.Mail = txtEmail.Text.Trim();
+                referi.Pozita = txtPozita.Text.Trim();
+                referi.ReferiID = int.Parse(txtKerko.Text.Trim());
+                ReferiBLL dal = new ReferiBLL();
+                dal.Edito(referi);
+            }
         }
 
         private void MenaxhoPersonelToolStripMenuItem_Click(object sender, EventArgs e)

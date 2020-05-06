@@ -22,13 +22,23 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnRegjistroNdeshje_Click(object sender, EventArgs e)
         {
-            Ndeshja ndeshja = new Ndeshja();
-            ndeshja.dataNdeshjes = DateTime.Parse(dtData.Text.Trim());
-            ndeshja.Sezoni = txtSezoni.Text.Trim();
-            ndeshja.RaportiAmbulances = txtRaportiAmbulances.Text.Trim();
-            ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
-            NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
-            ndeshjaDAL.Regjistro(ndeshja);
+            if (txtSezoni.Text == "" || txtRaportiAmbulances.Text == "" || txtRaportiPolicis.Text == "")
+            {
+                MessageBox.Show("Plotesoni te gjitha fushat");
+            }
+            else
+            {
+
+                Ndeshja ndeshja = new Ndeshja();
+                ndeshja.dataNdeshjes = DateTime.Parse(dtData.Text.Trim());
+                ndeshja.Sezoni = txtSezoni.Text.Trim();
+                ndeshja.RaportiAmbulances = txtRaportiAmbulances.Text.Trim();
+                ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
+                NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
+                ndeshjaDAL.Regjistro(ndeshja);
+                MessageBox.Show("U regjistrua me sukses!", MessageBoxButtons.OK.ToString());
+
+            }
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -45,22 +55,32 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void btnEdito_Click(object sender, EventArgs e)
         {
-            Ndeshja ndeshja = new Ndeshja();
-            ndeshja.dataNdeshjes = DateTime.Parse(dtData.Text.Trim());
-            ndeshja.Sezoni = txtSezoni.Text.Trim();
-            ndeshja.RaportiAmbulances = txtRaportiAmbulances.Text.Trim();
-            ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
-            ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text);
-            NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
-            ndeshjaDAL.Edito(ndeshja);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
+
+            if (rez == DialogResult.Yes)
+            {
+                Ndeshja ndeshja = new Ndeshja();
+                ndeshja.dataNdeshjes = DateTime.Parse(dtData.Text.Trim());
+                ndeshja.Sezoni = txtSezoni.Text.Trim();
+                ndeshja.RaportiAmbulances = txtRaportiAmbulances.Text.Trim();
+                ndeshja.RaportiPolicor = txtRaportiPolicis.Text.Trim();
+                ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text);
+                NdeshjaBLL ndeshjaDAL = new NdeshjaBLL();
+                ndeshjaDAL.Edito(ndeshja);
+            }
         }
 
         private void btnFshij_Click(object sender, EventArgs e)
         {
-            Ndeshja ndeshja = new Ndeshja();
-            ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text.Trim());
-            NdeshjaBLL dali = new NdeshjaBLL();
-            dali.Fshij(ndeshja);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta fshini?", "Kujdes", MessageBoxButtons.YesNo);
+
+            if (rez == DialogResult.Yes)
+            {
+                Ndeshja ndeshja = new Ndeshja();
+                ndeshja.NdeshjaID = int.Parse(txtShkruajID.Text.Trim());
+                NdeshjaBLL dali = new NdeshjaBLL();
+                dali.Fshij(ndeshja);
+            }
         }
 
         private void btnShfaqi_Click(object sender, EventArgs e)

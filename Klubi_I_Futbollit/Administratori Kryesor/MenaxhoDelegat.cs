@@ -24,25 +24,36 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void Btnregjistrodelegat_Click(object sender, EventArgs e)
         {
-            Delegat delegat = new Delegat();
-            delegat.Emri = txtEmri.Text.Trim();
-            delegat.Mbiemri = txtMbiemri.Text.Trim();
-            delegat.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
-            delegat.Fjalkalimi = txtFjalkalimi.Text.Trim();
-            delegat.Specializimi = txtSpecializimi.Text.Trim();
-            delegat.Titulli = txtTitulli.Text.Trim();
-            delegat.Gjinia = txtGjinia.Text.Trim();
-            delegat.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
-            delegat.Vendlindja = txtVendlindja.Text.Trim();
-            delegat.Shteti = txtShteti.Text.Trim();
-            delegat.Vendbanimi = txtVendbanimi.Text.Trim();
-            delegat.Telefoni = txtTelefoni.Text.Trim();
-            delegat.Mail = txtEmail.Text.Trim();
+            if (txtEmri.Text == "" || txtMbiemri.Text == "" || txtEmriPerdoruesit.Text == "" ||
+               txtFjalkalimi.Text == "" || txtSpecializimi.Text == "" || txtTitulli.Text == "" || txtGjinia.Text == "" || txtDitelindja.Text == "" || txtVendlindja.Text == "" ||
+               txtShteti.Text == "" || txtVendbanimi.Text == "" || txtTelefoni.Text == "" || txtEmail.Text == "")
+            {
+                MessageBox.Show("Plotesoni te gjitha fushat");
+            }
+            else
+            {
+                Delegat delegat = new Delegat();
+                delegat.Emri = txtEmri.Text.Trim();
+                delegat.Mbiemri = txtMbiemri.Text.Trim();
+                delegat.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+                delegat.Fjalkalimi = txtFjalkalimi.Text.Trim();
+                delegat.Specializimi = txtSpecializimi.Text.Trim();
+                delegat.Titulli = txtTitulli.Text.Trim();
+                delegat.Gjinia = txtGjinia.Text.Trim();
+                delegat.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
+                delegat.Vendlindja = txtVendlindja.Text.Trim();
+                delegat.Shteti = txtShteti.Text.Trim();
+                delegat.Vendbanimi = txtVendbanimi.Text.Trim();
+                delegat.Telefoni = txtTelefoni.Text.Trim();
+                delegat.Mail = txtEmail.Text.Trim();
 
-            delegat.Roli = txtRoli.Text.Trim();
-            delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
-            DelegatBLL del = new DelegatBLL();
-            del.Regjistro(delegat);
+                delegat.Roli = txtRoli.Text.Trim();
+                delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
+                DelegatBLL del = new DelegatBLL();
+                del.Regjistro(delegat);
+                MessageBox.Show("U regjistrua me sukses!", MessageBoxButtons.OK.ToString());
+
+            }
         }
 
         private void BtnShfaqDelegat_Click(object sender, EventArgs e)
@@ -53,26 +64,31 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void BtnEdito_Click_1(object sender, EventArgs e)
         {
-            Delegat delegat = new Delegat();
-            delegat.Emri = txtEmri.Text.Trim();
-            delegat.Mbiemri = txtMbiemri.Text.Trim();
-            delegat.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
-            delegat.Fjalkalimi = txtFjalkalimi.Text.Trim();
-            delegat.Specializimi = txtSpecializimi.Text.Trim();
-            delegat.Titulli = txtTitulli.Text.Trim();
-            delegat.Gjinia = txtGjinia.Text.Trim();
-            delegat.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
-            delegat.Vendlindja = txtVendlindja.Text.Trim();
-            delegat.Shteti = txtShteti.Text.Trim();
-            delegat.Vendbanimi = txtVendbanimi.Text.Trim();
-            delegat.Telefoni = txtTelefoni.Text.Trim();
-            delegat.Mail = txtEmail.Text.Trim();
-            delegat.Roli = txtRoli.Text.Trim();
-            delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
-          //  delegat.DelegatID = int.Parse(txtIdEDelegatit.Text.Trim());
-            delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
-            DelegatBLL del = new DelegatBLL();
-            del.Edito(delegat);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta editoni?", "Kujdes", MessageBoxButtons.YesNo);
+
+            if (rez == DialogResult.Yes)
+            {
+                Delegat delegat = new Delegat();
+                delegat.Emri = txtEmri.Text.Trim();
+                delegat.Mbiemri = txtMbiemri.Text.Trim();
+                delegat.EmriIPerdoruesit = txtEmriPerdoruesit.Text.Trim();
+                delegat.Fjalkalimi = txtFjalkalimi.Text.Trim();
+                delegat.Specializimi = txtSpecializimi.Text.Trim();
+                delegat.Titulli = txtTitulli.Text.Trim();
+                delegat.Gjinia = txtGjinia.Text.Trim();
+                delegat.Ditelindja = DateTime.Parse(txtDitelindja.Text.Trim());
+                delegat.Vendlindja = txtVendlindja.Text.Trim();
+                delegat.Shteti = txtShteti.Text.Trim();
+                delegat.Vendbanimi = txtVendbanimi.Text.Trim();
+                delegat.Telefoni = txtTelefoni.Text.Trim();
+                delegat.Mail = txtEmail.Text.Trim();
+                delegat.Roli = txtRoli.Text.Trim();
+                delegat.RaportiPasNdeshjes = txtRaportiPasndeshjes.Text.Trim();
+                //  delegat.DelegatID = int.Parse(txtIdEDelegatit.Text.Trim());
+                delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
+                DelegatBLL del = new DelegatBLL();
+                del.Edito(delegat);
+            }
         }
 
         private void BtnKerko_Click_1(object sender, EventArgs e)
@@ -102,10 +118,16 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
 
         private void BtnfshijDelegat_Click(object sender, EventArgs e)
         {
-            Delegat delegat = new Delegat();
-            delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
-            DelegatBLL fshijdelegat = new DelegatBLL();
-            fshijdelegat.Fshij(delegat);
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta fshini?", "Kujdes", MessageBoxButtons.YesNo);
+
+            if (rez == DialogResult.Yes)
+            {
+
+                Delegat delegat = new Delegat();
+                delegat.DelegatID = int.Parse(txtShkruajID.Text.Trim());
+                DelegatBLL fshijdelegat = new DelegatBLL();
+                fshijdelegat.Fshij(delegat);
+            }
         }
 
         private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
