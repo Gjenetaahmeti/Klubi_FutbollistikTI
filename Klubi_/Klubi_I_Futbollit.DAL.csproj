@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DelegatDAL.cs" />
-    <Compile Include="FormacioniDAL.cs" />
     <Compile Include="GolashenuesiDAL.cs" />
     <Compile Include="KlubiDAL.cs" />
     <Compile Include="KontrollaMjekesoreDAL.cs" />
