@@ -225,5 +225,160 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             MenaxhoVlersimet menaxhoVlersimet = new MenaxhoVlersimet();
             menaxhoVlersimet.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumriIfanelles_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGjatesia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDitelindja_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPesha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFjalekalimi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmriPerdoruesit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Emriperdoruesit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumriTelefonit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtShtetesia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGrupigjakut_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVendlindja_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVendbanimi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGjinia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMbiemri_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmri_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

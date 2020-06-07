@@ -36,7 +36,6 @@
             this.txtVendi = new System.Windows.Forms.TextBox();
             this.txtKyetari = new System.Windows.Forms.TextBox();
             this.dtpDataeThemelimit = new System.Windows.Forms.DateTimePicker();
-            this.txtData = new System.Windows.Forms.TextBox();
             this.btnRegjistro = new System.Windows.Forms.Button();
             this.btnKerkoKlubMeID = new System.Windows.Forms.Button();
             this.dgdMbushKlub = new System.Windows.Forms.DataGridView();
@@ -141,19 +140,10 @@
             this.dtpDataeThemelimit.Size = new System.Drawing.Size(265, 23);
             this.dtpDataeThemelimit.TabIndex = 7;
             // 
-            // txtData
-            // 
-            this.txtData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtData.Location = new System.Drawing.Point(147, 357);
-            this.txtData.Margin = new System.Windows.Forms.Padding(4);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(132, 23);
-            this.txtData.TabIndex = 8;
-            // 
             // btnRegjistro
             // 
             this.btnRegjistro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegjistro.Location = new System.Drawing.Point(147, 417);
+            this.btnRegjistro.Location = new System.Drawing.Point(159, 345);
             this.btnRegjistro.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegjistro.Name = "btnRegjistro";
             this.btnRegjistro.Size = new System.Drawing.Size(97, 47);
@@ -206,7 +196,7 @@
             // btnEdito
             // 
             this.btnEdito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdito.Location = new System.Drawing.Point(147, 469);
+            this.btnEdito.Location = new System.Drawing.Point(159, 397);
             this.btnEdito.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdito.Name = "btnEdito";
             this.btnEdito.Size = new System.Drawing.Size(97, 47);
@@ -361,7 +351,6 @@
             this.Controls.Add(this.dgdMbushKlub);
             this.Controls.Add(this.btnKerkoKlubMeID);
             this.Controls.Add(this.btnRegjistro);
-            this.Controls.Add(this.txtData);
             this.Controls.Add(this.dtpDataeThemelimit);
             this.Controls.Add(this.txtKyetari);
             this.Controls.Add(this.txtVendi);
@@ -394,7 +383,6 @@
         private System.Windows.Forms.TextBox txtVendi;
         private System.Windows.Forms.TextBox txtKyetari;
         private System.Windows.Forms.DateTimePicker dtpDataeThemelimit;
-        private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Button btnRegjistro;
         private System.Windows.Forms.Button btnKerkoKlubMeID;
         private System.Windows.Forms.DataGridView dgdMbushKlub;
