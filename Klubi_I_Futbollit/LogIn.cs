@@ -23,14 +23,11 @@ namespace Klubi_I_Futbollit
         public LogIn()
         {
             InitializeComponent();
-        }
-
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-
-
+        }
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
             sqlcon.Open();
             SqlCommand command = new SqlCommand("usp_MerrUsernamedhePass", sqlcon);
             command.CommandType = CommandType.StoredProcedure;
@@ -92,6 +89,16 @@ namespace Klubi_I_Futbollit
         private void Label1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

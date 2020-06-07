@@ -79,6 +79,7 @@
             this.txtUsername.Size = new System.Drawing.Size(238, 27);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Text = "Username";
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.Enter += new System.EventHandler(this.txtUserEnter);
             this.txtUsername.Leave += new System.EventHandler(this.TxtUsername_Leave);
             // 
@@ -117,11 +118,12 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(527, 552);
             this.panel2.TabIndex = 16;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(127, 139);
+            this.pictureBox1.Location = new System.Drawing.Point(62, 140);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(186, 224);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
