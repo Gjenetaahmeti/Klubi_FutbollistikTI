@@ -47,8 +47,10 @@
     <Compile Include="KlubiDAL.cs" />
     <Compile Include="LojtariDAL.cs" />
     <Compile Include="NdeshjaDAL.cs" />
+    <Compile Include="PersoneliDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReferiDAL.cs" />
+    <Compile Include="StadiumiDAL.cs" />
     <Compile Include="StatusiLojtaritDAL.cs" />
     <Compile Include="TrajneriDAL.cs" />
     <Compile Include="UseriDAL.cs" />

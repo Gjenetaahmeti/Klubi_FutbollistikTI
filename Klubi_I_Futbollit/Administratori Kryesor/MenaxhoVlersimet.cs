@@ -166,5 +166,10 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             
         }
+
+        private void cmbSelektoLojtarin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

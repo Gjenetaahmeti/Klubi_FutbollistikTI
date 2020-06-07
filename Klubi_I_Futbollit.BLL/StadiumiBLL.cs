@@ -1,25 +1,23 @@
-﻿using System;
+﻿using Klubi_;
+using Klubi_I_Futbollit.BO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Klubi_;
 
-using Klubi_I_Futbollit.BO;
-
-
-namespace Klubi_Futbollistik.BLL
+namespace Klubi_I_Futbollit.BLL
 {
-    public class PersoneliBLL
+    public class StadiumiBLL
     {
-        public int Fshij(Personeli l)
+        public int Fshij(Stadiumi g)
         {
             try
             {
-                PersoneliDAL dal = new PersoneliDAL();
-                dal.Fshij(l);
-                int rowsAffected = l.PersonelID;
+                StadiumiDAL dal = new StadiumiDAL();
+                dal.FshijMeID(g);
+                int rowsAffected = g.StadiumiID;
                 return rowsAffected;
             }
             catch (Exception ex)
@@ -28,13 +26,13 @@ namespace Klubi_Futbollistik.BLL
             }
         }
 
-        public int GjejPersonelMeID(Personeli l)
+        public int GjejStadiuminMeID(Stadiumi g)
         {
             try
             {
-                PersoneliDAL gjejpersonel = new PersoneliDAL();
-                gjejpersonel.GjejPersonelMeID(l);
-                int rowsAffected = l.PersonelID;
+                StadiumiDAL dal = new StadiumiDAL();
+                dal.GjejStadiumMeID(g);
+                int rowsAffected = g.StadiumiID;
                 return rowsAffected;
             }
             catch (Exception ex)
@@ -43,12 +41,12 @@ namespace Klubi_Futbollistik.BLL
             }
         }
 
-        public DataTable ShfaqPersonel()
+        public DataTable ShfaqListenEStadiumeve()
         {
             try
             {
-                PersoneliDAL obj = new PersoneliDAL();
-                var r = obj.GetAll();
+                StadiumiDAL dal = new StadiumiDAL();
+                var r = dal.GetAll();
                 return r;
             }
             catch (Exception ex)
@@ -57,12 +55,12 @@ namespace Klubi_Futbollistik.BLL
             }
         }
 
-        public void Edito(Personeli l)
+        public void Edito(Stadiumi g)
         {
             try
             {
-                PersoneliDAL dal = new PersoneliDAL();
-                dal.Update(l);
+                StadiumiDAL dal = new StadiumiDAL();
+                dal.Update(g);
             }
             catch (Exception)
             {
@@ -70,12 +68,12 @@ namespace Klubi_Futbollistik.BLL
             }
         }
 
-        public void Regjistro(Personeli l)
+        public void Regjistro(Stadiumi g)
         {
             try
             {
-                PersoneliDAL personeli = new PersoneliDAL();
-                personeli.Shto(l);
+                StadiumiDAL dal = new StadiumiDAL();
+                dal.Shto(g);
             }
             catch (Exception ex)
             {

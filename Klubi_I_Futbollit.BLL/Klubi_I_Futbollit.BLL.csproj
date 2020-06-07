@@ -52,6 +52,7 @@
     <Compile Include="PersoneliBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReferiBLL.cs" />
+    <Compile Include="StadiumiBLL.cs" />
     <Compile Include="StatusiLojtaritBLL.cs" />
     <Compile Include="TrajneriBLL.cs" />
     <Compile Include="UseriBLL.cs" />

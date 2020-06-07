@@ -44,6 +44,11 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2019.1.219.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administratori Kryesor\MenaxhoReferat.cs">
@@ -51,6 +56,12 @@
     </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoReferat.Designer.cs">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoStadiume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoStadiume.Designer.cs">
+      <DependentUpon>MenaxhoStadiume.cs</DependentUpon>
     </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoTrajner.cs">
       <SubType>Form</SubType>
@@ -135,6 +146,9 @@
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoReferat.resx">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoStadiume.resx">
+      <DependentUpon>MenaxhoStadiume.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoTrajner.resx">
       <DependentUpon>MenaxhoTrajner.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +188,7 @@
     <EmbeddedResource Include="MenyKryefaqja.resx">
       <DependentUpon>MenyKryefaqja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

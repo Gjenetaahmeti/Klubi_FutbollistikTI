@@ -158,6 +158,7 @@
             this.cmbSelektoLojtarin.Name = "cmbSelektoLojtarin";
             this.cmbSelektoLojtarin.Size = new System.Drawing.Size(192, 21);
             this.cmbSelektoLojtarin.TabIndex = 2;
+            this.cmbSelektoLojtarin.SelectedIndexChanged += new System.EventHandler(this.cmbSelektoLojtarin_SelectedIndexChanged);
             // 
             // label2
             // 

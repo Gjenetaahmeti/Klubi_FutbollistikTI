@@ -230,7 +230,7 @@
             this.btnKerko.Name = "btnKerko";
             this.btnKerko.Size = new System.Drawing.Size(56, 19);
             this.btnKerko.TabIndex = 8;
-            this.btnKerko.Text = "Regjistro";
+            this.btnKerko.Text = "Kerko";
             this.btnKerko.UseVisualStyleBackColor = true;
             this.btnKerko.Click += new System.EventHandler(this.btnKerko_Click);
             // 
