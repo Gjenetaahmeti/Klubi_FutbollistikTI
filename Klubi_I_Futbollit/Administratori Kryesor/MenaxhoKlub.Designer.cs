@@ -365,6 +365,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenaxhoKlub";
             this.Text = "MenaxhoKlub";
+            this.Load += new System.EventHandler(this.MenaxhoKlub_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgdMbushKlub)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

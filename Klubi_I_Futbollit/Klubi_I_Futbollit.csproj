@@ -72,6 +72,12 @@
     <Compile Include="Administratori Kryesor\MenaxhoReferat.Designer.cs">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoStadium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoStadium.Designer.cs">
+      <DependentUpon>MenaxhoStadium.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoTrajner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoReferat.resx">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoStadium.resx">
+      <DependentUpon>MenaxhoStadium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoTrajner.resx">
       <DependentUpon>MenaxhoTrajner.cs</DependentUpon>

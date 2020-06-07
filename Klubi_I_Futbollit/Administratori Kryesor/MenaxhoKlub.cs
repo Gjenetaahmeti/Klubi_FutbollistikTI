@@ -66,7 +66,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             {
                 Klubi klubi = new Klubi();
                 klubi.Emertimi = txtEmertimi.Text.Trim();
-                klubi.Vendi = txtEmertimi.Text.Trim();
+                klubi.Vendi = txtVendi.Text.Trim();
                 klubi.Kryetari = txtKyetari.Text.Trim();
                 klubi.IThemeluar = DateTime.Parse(dtpDataeThemelimit.Text.Trim());
                 klubi.KlubiID = int.Parse(txtGjejKlubMeID.Text.Trim());
@@ -159,6 +159,11 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             MenaxhoVlersimet menaxhoVlersimet = new MenaxhoVlersimet();
             menaxhoVlersimet.ShowDialog();
+        }
+
+        private void MenaxhoKlub_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
