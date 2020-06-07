@@ -107,5 +107,10 @@ namespace Klubi_I_Futbollit
                 vleresimet.ShowDialog();
             }
         }
+
+        private void MenyKryefaqja_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
