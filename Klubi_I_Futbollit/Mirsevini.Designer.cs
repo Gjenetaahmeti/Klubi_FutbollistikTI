@@ -77,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.label2.Location = new System.Drawing.Point(508, 111);
+            this.label2.Location = new System.Drawing.Point(578, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 63);
             this.label2.TabIndex = 3;
@@ -87,21 +87,19 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblUsername.Location = new System.Drawing.Point(599, 188);
+            this.lblUsername.ForeColor = System.Drawing.Color.Silver;
+            this.lblUsername.Location = new System.Drawing.Point(650, 218);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(120, 29);
+            this.lblUsername.Size = new System.Drawing.Size(159, 29);
             this.lblUsername.TabIndex = 3;
-            this.lblUsername.Text = "username";
+            this.lblUsername.Text = "Duke Kerkuar";
             // 
             // timer1
             // 
-            this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
-            this.timer2.Interval = 30;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // circularProgressBar1
@@ -114,7 +112,7 @@
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(584, 404);
+            this.circularProgressBar1.Location = new System.Drawing.Point(659, 360);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));

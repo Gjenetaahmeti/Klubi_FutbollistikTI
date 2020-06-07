@@ -13,13 +13,14 @@ using System.Windows.Forms;
 using Klubi_Futbollistik.BO;
 using Klubi_I_Futbollit.BLL;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Klubi_I_Futbollit
 {
     public partial class LogIn : Form
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
-
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=ARNIS;Initial Catalog=Gjeneta;Integrated Security=True");
+        Thread th;
         public LogIn()
         {
             InitializeComponent();
@@ -37,8 +38,12 @@ namespace Klubi_I_Futbollit
                 if (txtUsername.Text.Equals(dr["EmriIPerdoruesit"].ToString()) && txtPassword.Text.Equals(dr["Fjalekalimi"].ToString()))
                 {
                     MessageBox.Show("U loguat me sukses", "Urime", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MenyKryefaqja meny = new MenyKryefaqja();
-                    meny.ShowDialog();
+                    //MenyKryefaqja meny = new MenyKryefaqja();
+                    //meny.ShowDialog();
+                    this.Close();
+                    th = new Thread(HapeFormen);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
                 }
                 else
                 {
@@ -46,6 +51,11 @@ namespace Klubi_I_Futbollit
                 }
             }
             sqlcon.Close();
+        }
+
+        private void HapeFormen()
+        {
+            Application.Run(new Mirsevini());
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -97,6 +107,11 @@ namespace Klubi_I_Futbollit
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
