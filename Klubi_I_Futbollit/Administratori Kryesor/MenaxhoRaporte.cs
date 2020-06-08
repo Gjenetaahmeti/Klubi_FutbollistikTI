@@ -32,12 +32,12 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 Raporti raporti = new Raporti();
                 raporti.dataNdeshjes = DateTime.Parse(dtpDataNdeshjes.Text.Trim());
                 raporti.Sezoni = txtSezoni.Text.Trim();
-                raporti.RaportiAmbulances = txtRaportambullant.Text.Trim();
-                raporti.RaportiPolicor = txtRaportpolicor.Text.Trim();
-                raporti.Raportii = txtRaport.Text.Trim();
+                raporti.RaportiAmbulances = rtbRaportiAmbullances.Text.Trim();
+                raporti.RaportiPolicor = rtbRaportiPolicor.Text.Trim();
+                raporti.Raportii = rtbRaporti.Text.Trim();
                 RaportiBLL raportibll = new RaportiBLL();
                 raportibll.Regjistro(raporti);
-               // dtpDataNdeshjes.Text = txtSezoni.Text = rtbRaportiAmbullances.Text = rtbRaportiPolicor.Text = rtbRaporti.Text= "";
+                dtpDataNdeshjes.Text = txtSezoni.Text = rtbRaportiAmbullances.Text = rtbRaportiPolicor.Text = rtbRaporti.Text= "";
                 MessageBox.Show("U regjistrua me sukses");
 
             }
@@ -67,6 +67,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 raporti.RaportiAmbulances = rtbRaportiAmbullances.Text.Trim();
                 raporti.RaportiPolicor = rtbRaportiPolicor.Text.Trim();
                 raporti.Raportii = rtbRaporti.Text.Trim();
+                raporti.NdeshjaID = int.Parse(txtGjejMeid.Text);
                 RaportiBLL raportibll = new RaportiBLL();
                 raportibll.Edito(raporti);
                 dtpDataNdeshjes.Text = txtSezoni.Text = rtbRaportiAmbullances.Text = rtbRaportiPolicor.Text = rtbRaporti.Text = "";

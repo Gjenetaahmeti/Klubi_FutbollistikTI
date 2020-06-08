@@ -46,9 +46,6 @@
             this.btnKerko = new System.Windows.Forms.Button();
             this.dgvMbushRaporte = new System.Windows.Forms.DataGridView();
             this.dtpDataNdeshjes = new System.Windows.Forms.DateTimePicker();
-            this.txtRaportambullant = new System.Windows.Forms.TextBox();
-            this.txtRaportpolicor = new System.Windows.Forms.TextBox();
-            this.txtRaport = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMbushRaporte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,35 +206,11 @@
             this.dtpDataNdeshjes.Size = new System.Drawing.Size(200, 20);
             this.dtpDataNdeshjes.TabIndex = 18;
             // 
-            // txtRaportambullant
-            // 
-            this.txtRaportambullant.Location = new System.Drawing.Point(418, 362);
-            this.txtRaportambullant.Name = "txtRaportambullant";
-            this.txtRaportambullant.Size = new System.Drawing.Size(175, 20);
-            this.txtRaportambullant.TabIndex = 19;
-            // 
-            // txtRaportpolicor
-            // 
-            this.txtRaportpolicor.Location = new System.Drawing.Point(418, 405);
-            this.txtRaportpolicor.Name = "txtRaportpolicor";
-            this.txtRaportpolicor.Size = new System.Drawing.Size(175, 20);
-            this.txtRaportpolicor.TabIndex = 20;
-            // 
-            // txtRaport
-            // 
-            this.txtRaport.Location = new System.Drawing.Point(425, 449);
-            this.txtRaport.Name = "txtRaport";
-            this.txtRaport.Size = new System.Drawing.Size(175, 20);
-            this.txtRaport.TabIndex = 21;
-            // 
             // MenaxhoRaporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 534);
-            this.Controls.Add(this.txtRaport);
-            this.Controls.Add(this.txtRaportpolicor);
-            this.Controls.Add(this.txtRaportambullant);
             this.Controls.Add(this.dtpDataNdeshjes);
             this.Controls.Add(this.dgvMbushRaporte);
             this.Controls.Add(this.btnKerko);
@@ -284,8 +257,5 @@
         private System.Windows.Forms.Button btnKerko;
         private System.Windows.Forms.DataGridView dgvMbushRaporte;
         private System.Windows.Forms.DateTimePicker dtpDataNdeshjes;
-        private System.Windows.Forms.TextBox txtRaportambullant;
-        private System.Windows.Forms.TextBox txtRaportpolicor;
-        private System.Windows.Forms.TextBox txtRaport;
     }
 }

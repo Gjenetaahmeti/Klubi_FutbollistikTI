@@ -53,7 +53,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
                 kategorit.Emertimi = txtEmertimi.Text.Trim();
                 kategorit.Deri = int.Parse(txtDeri.Text.Trim());
                 kategorit.Prej = int.Parse(txtPrej.Text.Trim());
-
+                kategorit.KategoriaID = int.Parse(txtGjejmeid.Text);
                 KategoriteKluboreBLL kategori = new KategoriteKluboreBLL();
                 kategori.Edito(kategorit);
 
