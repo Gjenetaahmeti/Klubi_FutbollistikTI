@@ -17,7 +17,7 @@ namespace Klubi_I_Futbollit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenaxhoStadium());
+            Application.Run(new MenaxhoKategoriteKlubore());
         }
     }
 }
