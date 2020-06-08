@@ -14,6 +14,7 @@ using Klubi_Futbollistik.BO;
 using Klubi_I_Futbollit.BLL;
 using System.Data.SqlClient;
 using System.Threading;
+using Klubi_I_Futbollit.Administratori_Kryesor;
 
 namespace Klubi_I_Futbollit
 {
@@ -29,28 +30,43 @@ namespace Klubi_I_Futbollit
         }
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            sqlcon.Open();
-            SqlCommand command = new SqlCommand("usp_MerrUsernamedhePass", sqlcon);
-            command.CommandType = CommandType.StoredProcedure;
-            SqlDataReader dr = command.ExecuteReader();
-            if (dr.Read())
+            //sqlcon.Open();
+            //SqlCommand command = new SqlCommand("[dbo].[usp_MerrUsernamedhePass2]", sqlcon);
+            //command.CommandType = CommandType.StoredProcedure;
+            //SqlDataReader dr = command.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    if (txtUsername.Text.Equals(dr["EmriIPerdoruesit"].ToString()) && txtPassword.Text.Equals(dr["Fjalekalimi"].ToString()))
+            //    {
+            //        MessageBox.Show("U loguat me sukses", "Urime", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        //MenyKryefaqja meny = new MenyKryefaqja();
+            //        //meny.ShowDialog();
+            //        this.Close();
+            //        th = new Thread(HapeFormen);
+            //        th.SetApartmentState(ApartmentState.STA);
+            //        th.Start();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Deshtoi log-in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
+            //sqlcon.Close();
+
+            SqlDataAdapter da = new SqlDataAdapter("Select RoliID from Personeli where EmriIPerdoruesit='" + txtUsername.Text + " ' and Fjalekalimi='" + txtPassword.Text + "'  ", sqlcon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count == 1)
             {
-                if (txtUsername.Text.Equals(dr["EmriIPerdoruesit"].ToString()) && txtPassword.Text.Equals(dr["Fjalekalimi"].ToString()))
-                {
-                    MessageBox.Show("U loguat me sukses", "Urime", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //MenyKryefaqja meny = new MenyKryefaqja();
-                    //meny.ShowDialog();
-                    this.Close();
-                    th = new Thread(HapeFormen);
-                    th.SetApartmentState(ApartmentState.STA);
-                    th.Start();
-                }
-                else
-                {
-                    MessageBox.Show("Deshtoi log-in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                Mirsevini mm = new Mirsevini();
+                mm.Show();
             }
-            sqlcon.Close();
+            else
+            {
+                  MessageBox.Show("Deshtoi log-in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            //(dt.Rows[0][0].ToString()== "1")
         }
 
         private void HapeFormen()
