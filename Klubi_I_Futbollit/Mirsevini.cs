@@ -55,7 +55,7 @@ namespace Klubi_I_Futbollit
 
         private void HapeFormen()
         {
-            Application.Run(new MenyKryefaqja());
+            Application.Run(new Administratori_Kryesor.AdministratoriDashboard());
         }
 
         private void timer2_Tick(object sender, EventArgs e)

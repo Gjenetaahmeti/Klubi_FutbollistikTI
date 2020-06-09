@@ -42,7 +42,6 @@ namespace Klubi_
         {
             try
             {
-
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("usp_ShfaqTeGjithLojtaret", sqlcon);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;

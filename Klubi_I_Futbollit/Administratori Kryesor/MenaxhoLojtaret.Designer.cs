@@ -142,7 +142,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.panel1.Location = new System.Drawing.Point(0, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1169, 832);
+            this.panel1.Size = new System.Drawing.Size(1487, 832);
             this.panel1.TabIndex = 0;
             // 
             // btnGjejLojtart
@@ -615,7 +615,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, -138);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1169, 170);
+            this.panel2.Size = new System.Drawing.Size(1487, 170);
             this.panel2.TabIndex = 3;
             // 
             // menuStrip1
@@ -626,7 +626,7 @@
             this.administatorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1169, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1487, 29);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -730,7 +730,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1169, 864);
+            this.ClientSize = new System.Drawing.Size(1487, 864);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -71,6 +71,7 @@ namespace Klubi_
                 throw ex;
             }
         }
+        public static List<Golashenuesit> obj = new List<Golashenuesit>();
         public void MerrGolashenuesinMeID(Golashenuesit golaShenuesi)//, Lojtari lojtari, Ndeshja ndeshja)
         {
 
@@ -89,7 +90,11 @@ namespace Klubi_
             golaShenuesi.lojtariID = int.Parse(dataTable.Rows[0]["LojtariId"].ToString());
             golaShenuesi.NumriGolave = int.Parse(dataTable.Rows[0]["Golat"].ToString());
             golaShenuesi.ndeshjaID = int.Parse(dataTable.Rows[0]["NdeshjaId"].ToString());
+    
+            
         }
+        
+        
         public DataTable GetAll()
         {
             try
@@ -106,12 +111,36 @@ namespace Klubi_
                 return null;
             }
         }
-
+        public List<Golashenuesit> GetAllByList()
+        {
+            try
+            {
+                List<Golashenuesit> rezult = null;
+                SqlConnection sqlcon = new SqlConnection(_connectionString);
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("usp_Golashenuesi_MerrTeGjithListen", sqlcon);
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataReader reader = command.ExecuteReader();
+                rezult = new List<Golashenuesit>();
+                while (reader.Read())
+                {
+                    Golashenuesit gr = new Golashenuesit();
+                    gr.lojtariID = int.Parse(reader["LojtariId"].ToString());
+                    gr.NumriGolave = int.Parse(reader["Golat"].ToString());
+                    rezult.Add(gr);
+                    Golashenuesit.obj.Add(gr);
+                }
+                return rezult;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
         public int Fshij(Golashenuesit golaShenuesi)
         {
             try
             {
-
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("usp_Golashenuesi_FshijGolashenuesin", sqlcon);

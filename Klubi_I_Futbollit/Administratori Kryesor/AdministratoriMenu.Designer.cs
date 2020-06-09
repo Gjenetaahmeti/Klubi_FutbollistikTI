@@ -54,7 +54,7 @@
             this.ndeshjetToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(926, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -78,55 +78,55 @@
             // menaxhoLojtaretToolStripMenuItem
             // 
             this.menaxhoLojtaretToolStripMenuItem.Name = "menaxhoLojtaretToolStripMenuItem";
-            this.menaxhoLojtaretToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoLojtaretToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoLojtaretToolStripMenuItem.Text = "Menaxho Lojtaret";
             // 
             // menaxhoReferToolStripMenuItem
             // 
             this.menaxhoReferToolStripMenuItem.Name = "menaxhoReferToolStripMenuItem";
-            this.menaxhoReferToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoReferToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoReferToolStripMenuItem.Text = "Menaxho Refer";
             // 
             // menaxhoTrajnerToolStripMenuItem
             // 
             this.menaxhoTrajnerToolStripMenuItem.Name = "menaxhoTrajnerToolStripMenuItem";
-            this.menaxhoTrajnerToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoTrajnerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoTrajnerToolStripMenuItem.Text = "Menaxho Trajner";
             // 
             // menaxhoStafToolStripMenuItem
             // 
             this.menaxhoStafToolStripMenuItem.Name = "menaxhoStafToolStripMenuItem";
-            this.menaxhoStafToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoStafToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoStafToolStripMenuItem.Text = "Menaxho Staf";
             // 
             // menaxhoKlubToolStripMenuItem
             // 
             this.menaxhoKlubToolStripMenuItem.Name = "menaxhoKlubToolStripMenuItem";
-            this.menaxhoKlubToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoKlubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoKlubToolStripMenuItem.Text = "Menaxho Klub";
             // 
             // menaxhoKategoriToolStripMenuItem
             // 
             this.menaxhoKategoriToolStripMenuItem.Name = "menaxhoKategoriToolStripMenuItem";
-            this.menaxhoKategoriToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoKategoriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoKategoriToolStripMenuItem.Text = "Menaxho Kategori";
             // 
             // menaxhoVlersimeToolStripMenuItem
             // 
             this.menaxhoVlersimeToolStripMenuItem.Name = "menaxhoVlersimeToolStripMenuItem";
-            this.menaxhoVlersimeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoVlersimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoVlersimeToolStripMenuItem.Text = "Menaxho Vlersime";
             // 
             // menaxhoPersonelToolStripMenuItem
             // 
             this.menaxhoPersonelToolStripMenuItem.Name = "menaxhoPersonelToolStripMenuItem";
-            this.menaxhoPersonelToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoPersonelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoPersonelToolStripMenuItem.Text = "Menaxho Personel";
             // 
             // menaxhoFushaToolStripMenuItem
             // 
             this.menaxhoFushaToolStripMenuItem.Name = "menaxhoFushaToolStripMenuItem";
-            this.menaxhoFushaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.menaxhoFushaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.menaxhoFushaToolStripMenuItem.Text = "Menaxho Fusha";
             // 
             // lojtaretToolStripMenuItem
@@ -151,11 +151,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.ClientSize = new System.Drawing.Size(926, 485);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Shown += new System.EventHandler(this.Menu_Shown);
             this.menuStrip1.ResumeLayout(false);

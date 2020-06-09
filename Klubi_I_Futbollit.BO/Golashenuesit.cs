@@ -8,6 +8,7 @@ namespace Klubi_I_Futbollit.BO
 {
     public class Golashenuesit
     {
+        public static List<Golashenuesit> obj = new List<Golashenuesit>();
         public int GolashenuesiID { get; set; }
         public static Lojtari LojtariID { get; set; }
         public int NumriGolave { get; set; }
