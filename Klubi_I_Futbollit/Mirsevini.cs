@@ -37,9 +37,8 @@ namespace Klubi_I_Futbollit
                     {
                         lblUsername.Text = "";
                         lblUsername.Text = emri + " " + mbiemri;
-                        if (circularProgressBar1.Value == 100)
+                        if (circularProgressBar1.Value==100)
                         {
-                          
                             timer1.Stop();
                             this.Close();
                             th = new Thread(HapeFormen);
@@ -55,7 +54,7 @@ namespace Klubi_I_Futbollit
 
         private void HapeFormen()
         {
-            Application.Run(new Administratori_Kryesor.AdministratoriDashboard());
+            Application.Run(new Administratori_Kryesor.Dashboard());
         }
 
         private void timer2_Tick(object sender, EventArgs e)

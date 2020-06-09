@@ -20,7 +20,7 @@ namespace Klubi_I_Futbollit
 {
     public partial class LogIn : Form
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HDHN4DB\SQLEXPRESS;Initial Catalog=Gjeneta;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=ARNIS;Initial Catalog=Gjeneta;Integrated Security=True");
         Thread th;
         public LogIn()
         {
@@ -58,8 +58,10 @@ namespace Klubi_I_Futbollit
             da.Fill(dt);
             if (dt.Rows.Count == 1)
             {
-                Mirsevini mm = new Mirsevini();
-                mm.Show();
+                this.Close();
+                        th = new Thread(HapeFormen);
+                     th.SetApartmentState(ApartmentState.STA);
+                       th.Start();
             }
             else
             {
