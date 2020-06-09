@@ -66,7 +66,7 @@ namespace Klubi_I_Futbollit.UserControls.TrajnerUserControls
             txtVendbanimi.Text = trajneri.Vendbanimi;
             txtTelefoni.Text = trajneri.Telefoni.ToString();
             txtEmail.Text = trajneri.Mail;
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
     }
 }

@@ -16,16 +16,17 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         public Dashboard()
         {
             InitializeComponent();
+            fshijReferatUserControl1.Visible = false;
         }
 
         private void regjistroLojtarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void editoLojtarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void regjistroLojtarToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -227,12 +228,15 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroDelegatUserControls1);
             bunifuTransition2.HideSync(editoDelegatUserControls1);
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
+
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
-            bunifuTransition1.Show(shikoUshtrimeUserControl1);
+            bunifuTransition1.Show(shikoLojtaretUserControl1);
         }
 
         private void regjistroFormacionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -281,6 +285,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
@@ -333,6 +339,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
@@ -384,6 +392,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoDelegatUserControls1);
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
@@ -399,7 +409,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
-            bunifuTransition2.HideSync(editoFormacionUserControl1); 
+            bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
@@ -433,6 +443,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijRaporteUserControl1);
             bunifuTransition2.HideSync(shikoRaporteUserControl1);
             bunifuTransition2.HideSync(regjistroDelegatUserControls1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(editoDelegatUserControls1);
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
@@ -489,6 +501,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
@@ -543,6 +557,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
             bunifuTransition1.Show(editoTrajnerUserControl1);
         }
@@ -596,6 +612,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition1.Show(fshijTrajnerUserControl1);
         }
 
@@ -647,6 +665,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
             bunifuTransition1.Show(shikoTrajnerUserControl1);
         }
@@ -697,6 +717,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
@@ -751,6 +773,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
             bunifuTransition1.Show(editoNdeshjeUserControl1);
         }
@@ -803,6 +827,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
             bunifuTransition1.Show(fshijNdeshjeUserControl1);
         }
@@ -855,6 +881,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
             bunifuTransition1.Show(shikoNdeshjeUserControl1);
         }
@@ -905,6 +933,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
@@ -955,6 +985,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroDelegatUserControls1);
             bunifuTransition2.HideSync(editoDelegatUserControls1);
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
@@ -1011,6 +1043,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
             bunifuTransition1.Show(fshijKlubUserControl1);
         }
@@ -1059,6 +1093,8 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroDelegatUserControls1);
             bunifuTransition2.HideSync(editoDelegatUserControls1);
             bunifuTransition2.HideSync(fshijeDelegatUserControls1);
+            bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
+
             bunifuTransition2.HideSync(shikoDelegatUserControls1);
             bunifuTransition2.HideSync(regjistroGolashenuesiUserControl1);
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
@@ -1247,7 +1283,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
-            bunifuTransition2.HideSync(fshijUshtrimeUserControl1); 
+            bunifuTransition2.HideSync(fshijUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
             bunifuTransition2.HideSync(editoVlersimetUserControl1);
             bunifuTransition2.HideSync(fshijVlersimetUserControl1);
@@ -2761,6 +2797,26 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition1.Show(shikoGolashenuesiUserControl1);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi te dilni", "Kujdes", MessageBoxButtons.YesNo);
+            if (rez == DialogResult.Yes)
+            {
+                LogIn obj = new LogIn();
+                obj.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var rez = MessageBox.Show("A jeni te sigurt qe deshironi ta mbyllni aplikacionin ", "Kujdes", MessageBoxButtons.YesNo);
+            if (rez == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

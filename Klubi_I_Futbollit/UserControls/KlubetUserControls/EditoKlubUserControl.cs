@@ -29,7 +29,7 @@ namespace Klubi_I_Futbollit.UserControls.KlubetUserControls
             txtVendi.Text = kl.Vendi;
             txtKyetari.Text = kl.Kryetari;
             dtpDataeThemelimit.Text = kl.IThemeluar.ToString();
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace Klubi_I_Futbollit.UserControls.KlubetUserControls
                 klubiDAL.Edito(klubi);
                 txtEmertimi.Text = txtVendi.Text = txtKyetari.Text = dtpDataeThemelimit.Text = "";
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Klubi_I_Futbollit
         Thread th;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             string emri = "Arnis";
             string mbiemri = "Hasani";
             if (this.Opacity < 1) this.Opacity += 0.05;

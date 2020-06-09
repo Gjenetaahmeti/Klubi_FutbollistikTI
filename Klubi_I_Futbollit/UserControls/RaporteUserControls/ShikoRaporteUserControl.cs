@@ -20,9 +20,9 @@ namespace Klubi_I_Futbollit.UserControls.RaporteUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             RaportiBLL obj = new RaportiBLL();
-            dataGridView1.DataSource = obj.ShfaqListenERaporteve();
+            radGridView1.DataSource = obj.ShfaqListenERaporteve();
         }
     }
 }

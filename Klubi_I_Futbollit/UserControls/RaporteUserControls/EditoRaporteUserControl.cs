@@ -30,7 +30,7 @@ namespace Klubi_I_Futbollit.UserControls.RaporteUserControls
             rtbRaportiAmbullances.Text = raporti.RaportiAmbulances;
             rtbRaportiPolicor.Text = raporti.RaportiPolicor;
             rtbRaporti.Text = raporti.Raportii;
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace Klubi_I_Futbollit.UserControls.ReferatUserControls
             txtTelefoni.Text = referi.Telefoni.ToString();
             txtEmail.Text = referi.Mail;
             txtPozita.Text = referi.Pozita;
-            panel1.Visible = false;
+            panel2.Visible = false;
         }
     }
 }

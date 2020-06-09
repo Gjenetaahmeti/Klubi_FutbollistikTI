@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_I_Futbollit.BO;
 using Klubi_I_Futbollit.BLL;
+using System.Data.SqlClient;
 
 namespace Klubi_I_Futbollit.UserControls.FormacioniUserControls
 {
@@ -17,6 +18,22 @@ namespace Klubi_I_Futbollit.UserControls.FormacioniUserControls
         public EditoFormacionUserControl()
         {
             InitializeComponent();
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=ARNIS;Initial Catalog=Gjeneta;Integrated Security=True");
+            sqlcon.Open();
+            SqlCommand command = new SqlCommand("usp_MerrLojtart", sqlcon);
+            SqlDataAdapter d = new SqlDataAdapter("usp_MerrLojtart", sqlcon);
+            DataSet dt = new DataSet();
+            d.Fill(dt);
+            if (dt.Tables[0].Rows.Count > 0)
+            {
+                comboBox1.DataSource = dt.Tables[0];
+                comboBox1.DisplayMember = "Emri";
+                comboBox1.ValueMember = "PersoneliId";
+            }
+            else
+            {
+                MessageBox.Show("Asnje lojtar nuk eshte gjetur");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,7 +47,7 @@ namespace Klubi_I_Futbollit.UserControls.FormacioniUserControls
             txtRezerve.Text = statusiLojtarit.Rezerv;
             txtHuazim.Text = statusiLojtarit.Huazim;
             txtShoqerues.Text = statusiLojtarit.Shoqerues;
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

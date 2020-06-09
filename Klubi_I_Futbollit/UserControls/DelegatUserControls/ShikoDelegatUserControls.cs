@@ -20,9 +20,9 @@ namespace Klubi_I_Futbollit.UserControls.DelegatUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             DelegatBLL obj = new DelegatBLL();
-            dataGridView1.DataSource = obj.ShfaqListenEDelegateve();
+            radGridView1.DataSource = obj.ShfaqListenEDelegateve();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Klubi_I_Futbollit.UserControls.NdeshjetUserControls
             txtSezoni.Text = ndeshja.Sezoni;
             txtRaportiAmbulances.Text = ndeshja.RaportiAmbulances;
             txtRaportiPolicis.Text = ndeshja.RaportiPolicor;
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

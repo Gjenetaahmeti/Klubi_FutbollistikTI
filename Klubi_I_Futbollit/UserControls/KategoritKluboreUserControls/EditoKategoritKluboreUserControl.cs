@@ -28,7 +28,7 @@ namespace Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls
             txtEmertimi.Text = kl.Emertimi;
             txtPrej.Text = kl.Prej.ToString();
             txtDeri.Text = kl.Deri.ToString();
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

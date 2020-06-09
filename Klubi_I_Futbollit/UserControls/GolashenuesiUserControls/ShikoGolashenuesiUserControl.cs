@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Klubi_I_Futbollit.BLL;
 
 namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
 {
@@ -15,6 +16,13 @@ namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
         public ShikoGolashenuesiUserControl()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            radGridView1.Visible = true;
+            GolashenuesiBLL obj = new GolashenuesiBLL();
+            radGridView1.DataSource = obj.ShfaqListenEGolaShenuesve();
         }
     }
 }

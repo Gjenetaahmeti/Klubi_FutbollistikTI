@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_I_Futbollit.BO;
 using Klubi_I_Futbollit.BLL;
+using System.Data.SqlClient;
 
 namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
 {
@@ -17,6 +18,7 @@ namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
         public EditoGolashenuesiUserControl()
         {
             InitializeComponent();
+            GjejLojtarinDheNdeshjen();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
             cmbLojtari.Text = golashenuesit.lojtariID.ToString();
             txtNumriGolave.Text = golashenuesit.NumriGolave.ToString();
             cmbNdeshja.Text = golashenuesit.ndeshjaID.ToString();
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,6 +49,39 @@ namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
                 golashenuesiBLL.Edito(golaShenuesit);
                 cmbLojtari.Text = cmbNdeshja.Text = txtNumriGolave.Text = "";
             }
+        }
+        public void GjejLojtarinDheNdeshjen()
+        {
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=ARNIS;Initial Catalog=Gjeneta;Integrated Security=True");
+            sqlcon.Open();
+            //    SqlCommand command = new SqlCommand("usp_MerrLojtart", sqlcon);
+            SqlDataAdapter d = new SqlDataAdapter("usp_MerrLojtart", sqlcon);
+            DataSet dt = new DataSet();
+            d.Fill(dt);
+            if (dt.Tables[0].Rows.Count > 0)
+            {
+                cmbLojtari.DataSource = dt.Tables[0];
+                cmbLojtari.DisplayMember = "Emri";
+                cmbLojtari.ValueMember = "PersoneliId";
+            }
+            else
+            {
+                MessageBox.Show("Asnje lojtar nuk eshte gjetur");
+            }
+
+            SqlDataAdapter ndeshja = new SqlDataAdapter("usp_MerrNdeshjet_PerComboBox", sqlcon);
+            DataSet dtNdeshja = new DataSet();
+            ndeshja.Fill(dtNdeshja);
+            if (dtNdeshja.Tables[0].Rows.Count > 0)
+            {
+                cmbNdeshja.DataSource = dtNdeshja.Tables[0];
+                cmbNdeshja.ValueMember = "NdeshjaID";
+            }
+            else
+            {
+                MessageBox.Show("Asnje lojtar nuk eshte gjetur");
+            }
+
         }
     }
 }

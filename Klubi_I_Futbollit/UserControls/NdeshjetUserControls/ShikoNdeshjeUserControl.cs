@@ -20,9 +20,9 @@ namespace Klubi_I_Futbollit.UserControls.NdeshjetUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             NdeshjaBLL obj = new NdeshjaBLL();
-            dataGridView1.DataSource = obj.ShfaqListenENdeshjeve();
+            radGridView1.DataSource = obj.ShfaqListenENdeshjeve();
         }
     }
 }

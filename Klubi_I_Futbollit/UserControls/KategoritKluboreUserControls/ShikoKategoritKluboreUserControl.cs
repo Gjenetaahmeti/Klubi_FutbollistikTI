@@ -25,9 +25,9 @@ namespace Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             KategoriteKluboreBLL obj = new KategoriteKluboreBLL();
-            dataGridView1.DataSource = obj.ShfaqListenEKategorivee();
+            radGridView1.DataSource = obj.ShfaqListenEKategorivee();
         }
     }
 }

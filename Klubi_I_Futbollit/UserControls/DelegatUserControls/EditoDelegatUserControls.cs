@@ -75,7 +75,7 @@ namespace Klubi_I_Futbollit.UserControls.DelegatUserControls
             txtEmail.Text = delegat.Mail;
             txtRoli.Text = delegat.Roli;
             txtRaportiPasndeshjes.Text = delegat.RaportiPasNdeshjes;
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
     }
 }

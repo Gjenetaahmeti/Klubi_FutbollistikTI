@@ -32,7 +32,7 @@ namespace Klubi_I_Futbollit.UserControls.UshtrimetUserControls
             ushtrimetDAL.GjejUshtrimMeID(ushtrimet);
             txtDita.Text = ushtrimet.Dita;
             txtOra.Text = ushtrimet.Ora;
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
         private void button1_Click(object sender, EventArgs e)
         {

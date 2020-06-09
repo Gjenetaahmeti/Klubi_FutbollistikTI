@@ -42,9 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGjejKlubMeID = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -190,6 +190,17 @@
             this.panel2.Size = new System.Drawing.Size(668, 160);
             this.panel2.TabIndex = 70;
             this.panel2.Visible = false;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(491, 87);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 48);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "Edito";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -211,16 +222,6 @@
             this.txtGjejKlubMeID.Name = "txtGjejKlubMeID";
             this.txtGjejKlubMeID.Size = new System.Drawing.Size(132, 20);
             this.txtGjejKlubMeID.TabIndex = 72;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(491, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 48);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "Edito";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EditoKlubUserControl
             // 

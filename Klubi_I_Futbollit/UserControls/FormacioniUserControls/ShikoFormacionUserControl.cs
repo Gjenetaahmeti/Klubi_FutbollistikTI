@@ -20,9 +20,9 @@ namespace Klubi_I_Futbollit.UserControls.FormacioniUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             StatusiLojtaritBLL obj = new StatusiLojtaritBLL();
-            dataGridView1.DataSource = obj.ShfaqListenEStatuseveTeLojtarit();
+            radGridView1.DataSource = obj.ShfaqListenEStatuseveTeLojtarit();
         }
     }
 }

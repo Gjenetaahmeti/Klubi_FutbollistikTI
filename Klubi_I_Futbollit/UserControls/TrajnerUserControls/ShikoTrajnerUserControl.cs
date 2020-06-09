@@ -20,9 +20,9 @@ namespace Klubi_I_Futbollit.UserControls.TrajnerUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             TrajneriBLL obj = new TrajneriBLL();
-            dataGridView1.DataSource = obj.ShfaqListenETrajnereve();
+            radGridView1.DataSource = obj.ShfaqListenETrajnereve();
         }
     }
 }

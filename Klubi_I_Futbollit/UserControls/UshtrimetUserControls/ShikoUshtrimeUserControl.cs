@@ -20,9 +20,9 @@ namespace Klubi_I_Futbollit.UserControls.UshtrimetUserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            radGridView1.Visible = true;
             UshtrimeBLL obj = new UshtrimeBLL();
-            dataGridView1.DataSource = obj.ShfaqTeGjithaUshtrimet();
+            radGridView1.DataSource = obj.ShfaqTeGjithaUshtrimet();
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Klubi_I_Futbollit.BO;
 using Klubi_I_Futbollit.BLL;
+using System.Data.SqlClient;
 
 namespace Klubi_I_Futbollit.UserControls.VlersimetUserControls
 {
@@ -17,6 +18,7 @@ namespace Klubi_I_Futbollit.UserControls.VlersimetUserControls
         public EditoVlersimetUserControl()
         {
             InitializeComponent();
+            GjejLojtarin();
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace Klubi_I_Futbollit.UserControls.VlersimetUserControls
             bll.GjejVlersiminMeID(vler);
             cmbSelektoLojtarin.Text = vler.lojtariID.ToString();
             txtVlersimi.Text = vler.Vlersimi.ToString();
-            panel1.Visible = true;
+            panel2.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,6 +45,24 @@ namespace Klubi_I_Futbollit.UserControls.VlersimetUserControls
                 VlersimetBLL vlersimetBLL = new VlersimetBLL();
                 vlersimetBLL.Edito(vlersimet);
                 cmbSelektoLojtarin.Text = txtVlersimi.Text = "";
+            }
+        }
+        public void GjejLojtarin()
+        {
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=ARNIS;Initial Catalog=Gjeneta;Integrated Security=True");
+            sqlcon.Open();
+            SqlDataAdapter d = new SqlDataAdapter("usp_MerrLojtart", sqlcon);
+            DataSet dt = new DataSet();
+            d.Fill(dt);
+            if (dt.Tables[0].Rows.Count > 0)
+            {
+                cmbSelektoLojtarin.DataSource = dt.Tables[0];
+                cmbSelektoLojtarin.DisplayMember = "Emri";
+                cmbSelektoLojtarin.ValueMember = "PersoneliId";
+            }
+            else
+            {
+                MessageBox.Show("Asnje lojtar nuk eshte gjetur");
             }
         }
     }

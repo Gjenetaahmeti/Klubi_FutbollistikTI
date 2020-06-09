@@ -40,7 +40,7 @@ namespace Klubi_I_Futbollit.UserControls.LojtartUserControls
             txtEmail.Text = lojtar.Mail.ToString();
             txtPesha.Text = lojtar.Pesha.ToString();
             txtGjatesia.Text = lojtar.Gjatesia.ToString();
-            panel1.Visible = true; 
+            panel2.Visible = true; 
         }
 
         private void button1_Click(object sender, EventArgs e)
