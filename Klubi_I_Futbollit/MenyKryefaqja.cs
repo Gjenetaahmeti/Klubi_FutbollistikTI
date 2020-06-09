@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Klubi_I_Futbollit.Administratori_Kryesor;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,10 @@ namespace Klubi_I_Futbollit
 
                 regjistrolojtar.ShowDialog();
             }
+
+            //MenaxhoLojtaret mm = new MenaxhoLojtaret();
+            //  mm.MdiParent = this;
+            //mm.Show();
         }
 
         private void MenaxhoToolStripMenuItem_Click(object sender, EventArgs e)

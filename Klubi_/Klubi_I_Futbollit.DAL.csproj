@@ -148,11 +148,13 @@
   <ItemGroup>
     <Compile Include="DelegatDAL.cs" />
     <Compile Include="GolashenuesiDAL.cs" />
+    <Compile Include="KategoriteKluboreDAL.cs" />
     <Compile Include="KlubiDAL.cs" />
     <Compile Include="LojtariDAL.cs" />
     <Compile Include="NdeshjaDAL.cs" />
     <Compile Include="PersoneliDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaportiDAL.cs" />
     <Compile Include="ReferiDAL.cs" />
     <Compile Include="StadiumiDAL.cs" />
     <Compile Include="StatusiLojtaritDAL.cs" />

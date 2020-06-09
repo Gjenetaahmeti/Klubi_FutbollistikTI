@@ -33,114 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="bdr, Version=2.1.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Utilities\bdr.exe</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.Licensing, Version=1.8.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.1-Beta\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
-    </Reference>
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
-    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -164,24 +61,34 @@
       <HintPath>..\lib\RCWF\2019.1.219.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administratori Kryesor\AdministratoriDashboard.cs">
+    <Compile Include="Administratori Kryesor\MenaxhoKategoriteKlubore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administratori Kryesor\AdministratoriDashboard.Designer.cs">
-      <DependentUpon>AdministratoriDashboard.cs</DependentUpon>
+    <Compile Include="Administratori Kryesor\MenaxhoKategoriteKlubore.Designer.cs">
+      <DependentUpon>MenaxhoKategoriteKlubore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoRaporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoRaporte.Designer.cs">
+      <DependentUpon>MenaxhoRaporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoReferat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoReferat.Designer.cs">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoStadium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori Kryesor\MenaxhoStadium.Designer.cs">
+      <DependentUpon>MenaxhoStadium.cs</DependentUpon>
     </Compile>
     <Compile Include="Administratori Kryesor\MenaxhoTrajner.cs">
       <SubType>Form</SubType>
@@ -243,59 +150,6 @@
     <Compile Include="Administratori Kryesor\MenaxhoVlersimet.Designer.cs">
       <DependentUpon>MenaxhoVlersimet.cs</DependentUpon>
     </Compile>
-    <Compile Include="DelegatUserControls\EditoDelegatUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DelegatUserControls\EditoDelegatUserControl.Designer.cs">
-      <DependentUpon>EditoDelegatUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DelegatUserControls\FshijDelegatUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DelegatUserControls\FshijDelegatUserControl.Designer.cs">
-      <DependentUpon>FshijDelegatUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DelegatUserControls\RegjistroDelegatUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DelegatUserControls\RegjistroDelegatUserControl.Designer.cs">
-      <DependentUpon>RegjistroDelegatUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DelegatUserControls\ShikoDelegatUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DelegatUserControls\ShikoDelegatUserControl.Designer.cs">
-      <DependentUpon>ShikoDelegatUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormacionetUserControls\EditoFormacionUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormacionetUserControls\EditoFormacionUserControl.Designer.cs">
-      <DependentUpon>EditoFormacionUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormacionetUserControls\FshijFormacionUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormacionetUserControls\FshijFormacionUserControl.Designer.cs">
-      <DependentUpon>FshijFormacionUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormacionetUserControls\RegjistroFormacionUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormacionetUserControls\RegjistroFormacionUserControl.Designer.cs">
-      <DependentUpon>RegjistroFormacionUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormacionetUserControls\ShikoFormacionetUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormacionetUserControls\ShikoFormacionetUserControl.Designer.cs">
-      <DependentUpon>ShikoFormacionetUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GjenetaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GjenetaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,18 +161,6 @@
     </Compile>
     <Compile Include="Administratori Kryesor\AdministratoriMenu.Designer.cs">
       <DependentUpon>AdministratoriMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LojtartUserControls\FshijLojtartUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LojtartUserControls\FshijLojtartUserControl.Designer.cs">
-      <DependentUpon>FshijLojtartUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LojtartUserControls\ShfaqLojtaretUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LojtartUserControls\ShfaqLojtaretUserControl.Designer.cs">
-      <DependentUpon>ShfaqLojtaretUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MenyKryefaqja.cs">
       <SubType>Form</SubType>
@@ -334,23 +176,17 @@
       <DependentUpon>Mirsevini.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LojtartUserControls\EditoLojtarUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LojtartUserControls\EditoLojtarUserControl.Designer.cs">
-      <DependentUpon>EditoLojtarUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LojtartUserControls\RegjistroLojtarUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LojtartUserControls\RegjistroLojtarUserControl.Designer.cs">
-      <DependentUpon>RegjistroLojtarUserControl.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Administratori Kryesor\AdministratoriDashboard.resx">
-      <DependentUpon>AdministratoriDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoKategoriteKlubore.resx">
+      <DependentUpon>MenaxhoKategoriteKlubore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoRaporte.resx">
+      <DependentUpon>MenaxhoRaporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoReferat.resx">
       <DependentUpon>MenaxhoReferat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\MenaxhoStadium.resx">
+      <DependentUpon>MenaxhoStadium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoTrajner.resx">
       <DependentUpon>MenaxhoTrajner.cs</DependentUpon>
@@ -382,41 +218,11 @@
     <EmbeddedResource Include="Administratori Kryesor\MenaxhoVlersimet.resx">
       <DependentUpon>MenaxhoVlersimet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DelegatUserControls\EditoDelegatUserControl.resx">
-      <DependentUpon>EditoDelegatUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DelegatUserControls\FshijDelegatUserControl.resx">
-      <DependentUpon>FshijDelegatUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DelegatUserControls\RegjistroDelegatUserControl.resx">
-      <DependentUpon>RegjistroDelegatUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DelegatUserControls\ShikoDelegatUserControl.resx">
-      <DependentUpon>ShikoDelegatUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormacionetUserControls\EditoFormacionUserControl.resx">
-      <DependentUpon>EditoFormacionUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormacionetUserControls\FshijFormacionUserControl.resx">
-      <DependentUpon>FshijFormacionUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormacionetUserControls\RegjistroFormacionUserControl.resx">
-      <DependentUpon>RegjistroFormacionUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormacionetUserControls\ShikoFormacionetUserControl.resx">
-      <DependentUpon>ShikoFormacionetUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administratori Kryesor\AdministratoriMenu.resx">
       <DependentUpon>AdministratoriMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LojtartUserControls\FshijLojtartUserControl.resx">
-      <DependentUpon>FshijLojtartUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LojtartUserControls\ShfaqLojtaretUserControl.resx">
-      <DependentUpon>ShfaqLojtaretUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenyKryefaqja.resx">
       <DependentUpon>MenyKryefaqja.cs</DependentUpon>
@@ -434,23 +240,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LojtartUserControls\EditoLojtarUserControl.resx">
-      <DependentUpon>EditoLojtarUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LojtartUserControls\RegjistroLojtarUserControl.resx">
-      <DependentUpon>RegjistroLojtarUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="GjenetaDataSet.xsc">
-      <DependentUpon>GjenetaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GjenetaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GjenetaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GjenetaDataSet.xss">
-      <DependentUpon>GjenetaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

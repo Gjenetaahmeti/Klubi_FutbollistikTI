@@ -171,5 +171,10 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
 
         }
+
+        private void MenaxhoVlersimet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

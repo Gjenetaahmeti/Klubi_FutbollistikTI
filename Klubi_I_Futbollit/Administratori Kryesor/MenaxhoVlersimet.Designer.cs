@@ -314,6 +314,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenaxhoVlersimet";
             this.Text = "MenaxhoVlersimet";
+            this.Load += new System.EventHandler(this.MenaxhoVlersimet_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

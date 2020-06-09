@@ -149,6 +149,7 @@
     <Compile Include="Formacioni.cs" />
     <Compile Include="Golashenuesit.cs" />
     <Compile Include="Interface\CRUD.cs" />
+    <Compile Include="KategoriteKlubore.cs" />
     <Compile Include="Klubi.cs" />
     <Compile Include="Liga.cs" />
     <Compile Include="LojtaretENdeshjes.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Ndeshja.cs" />
     <Compile Include="Personeli.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporti.cs" />
     <Compile Include="Referi.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Stadiumi.cs" />

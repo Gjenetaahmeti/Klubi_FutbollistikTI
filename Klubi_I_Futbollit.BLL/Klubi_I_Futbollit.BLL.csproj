@@ -148,6 +148,7 @@
     <Compile Include="DelegatBLL.cs" />
     <Compile Include="FormacioniBLL.cs" />
     <Compile Include="GolashenuesiBLL.cs" />
+    <Compile Include="KategoriteKluboreBLL.cs" />
     <Compile Include="KlubiBLL.cs" />
     <Compile Include="KontrollaMjeksoreBLL.cs" />
     <Compile Include="LigaBLL.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="NdeshjaBLL.cs" />
     <Compile Include="PersoneliBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaportiBLL.cs" />
     <Compile Include="ReferiBLL.cs" />
     <Compile Include="StadiumiBLL.cs" />
     <Compile Include="StatusiLojtaritBLL.cs" />
