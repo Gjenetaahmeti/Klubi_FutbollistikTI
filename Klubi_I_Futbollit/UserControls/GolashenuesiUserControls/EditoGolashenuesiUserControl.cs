@@ -28,6 +28,7 @@ namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
             GolashenuesiBLL gjejGolaShenuesin = new GolashenuesiBLL();
             gjejGolaShenuesin.GjejGolashenuesinmeID(golashenuesit);
             cmbLojtari.Text = golashenuesit.lojtariID.ToString();
+            txtEmriLojtarit.Text = golashenuesit.EmriLojtarit.ToString();
             txtNumriGolave.Text = golashenuesit.NumriGolave.ToString();
             cmbNdeshja.Text = golashenuesit.ndeshjaID.ToString();
             panel2.Visible = true;
@@ -42,6 +43,7 @@ namespace Klubi_I_Futbollit.UserControls.GolashenuesiUserControls
                 var ndeshja = cmbNdeshja.SelectedValue.ToString();
                 Golashenuesit golaShenuesit = new Golashenuesit();
                 golaShenuesit.GolashenuesiID = int.Parse(txtKerkoMeID.Text);
+                golaShenuesit.EmriLojtarit = txtEmriLojtarit.Text.Trim();
                 golaShenuesit.lojtariID = int.Parse(lojtari);
                 golaShenuesit.NumriGolave = int.Parse(txtNumriGolave.Text.Trim());
                 golaShenuesit.ndeshjaID = int.Parse(ndeshja);

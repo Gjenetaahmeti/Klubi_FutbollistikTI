@@ -40,7 +40,6 @@ namespace Klubi_
 
             try
             {
-
                 SqlConnection sqlcon = new SqlConnection(_connectionString);
                 sqlcon.Open();
                 SqlCommand command = new SqlCommand("Delegat", sqlcon);
@@ -63,7 +62,6 @@ namespace Klubi_
                 command.Parameters.AddWithValue("@LUB", 1);
                 command.Parameters.AddWithValue("@LUD", "06/05/2020");
                 command.Parameters.AddWithValue("@LUN", 1);
-
                 command.Parameters.AddWithValue("@PersoneliID", 0);
                 command.Parameters.AddWithValue("@KlubiID", 1);
                 command.Parameters.AddWithValue("@RoliID", 5);

@@ -133,5 +133,21 @@ namespace Klubi_I_Futbollit
         {
 
         }
+
+        private void rbEnglish_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbEnglish.Checked) ChangeLahnguage(langCode: "en-US");
+        }
+
+        private void rbAlbanian_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbAlbanian.Checked) ChangeLahnguage(langCode: "sq");
+        }
+        public void ChangeLahnguage(string langCode)
+        {
+            CultureInfo ci = new CultureInfo(langCode);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+        }
     }
 }

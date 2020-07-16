@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtKerkoMeID = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblEmriLojtarit = new System.Windows.Forms.Label();
+            this.txtEmriLojtarit = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -50,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 136);
+            this.button1.Location = new System.Drawing.Point(186, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 48);
             this.button1.TabIndex = 67;
@@ -61,7 +63,7 @@
             // txtNumriGolave
             // 
             this.txtNumriGolave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtNumriGolave.Location = new System.Drawing.Point(160, 56);
+            this.txtNumriGolave.Location = new System.Drawing.Point(160, 84);
             this.txtNumriGolave.Name = "txtNumriGolave";
             this.txtNumriGolave.Size = new System.Drawing.Size(163, 20);
             this.txtNumriGolave.TabIndex = 66;
@@ -70,7 +72,7 @@
             // 
             this.cmbNdeshja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.cmbNdeshja.FormattingEnabled = true;
-            this.cmbNdeshja.Location = new System.Drawing.Point(160, 89);
+            this.cmbNdeshja.Location = new System.Drawing.Point(160, 127);
             this.cmbNdeshja.Name = "cmbNdeshja";
             this.cmbNdeshja.Size = new System.Drawing.Size(163, 21);
             this.cmbNdeshja.TabIndex = 65;
@@ -89,7 +91,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(31, 87);
+            this.label3.Location = new System.Drawing.Point(56, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 64;
@@ -100,7 +102,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(28, 54);
+            this.label2.Location = new System.Drawing.Point(19, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 20);
             this.label2.TabIndex = 63;
@@ -111,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(28, 16);
+            this.label1.Location = new System.Drawing.Point(71, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 61;
@@ -150,16 +152,18 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblEmriLojtarit);
             this.panel2.Controls.Add(this.cmbLojtari);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtEmriLojtarit);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtNumriGolave);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cmbNdeshja);
-            this.panel2.Location = new System.Drawing.Point(303, 114);
+            this.panel2.Location = new System.Drawing.Point(303, 96);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(358, 208);
+            this.panel2.Size = new System.Drawing.Size(358, 226);
             this.panel2.TabIndex = 69;
             // 
             // label4
@@ -167,7 +171,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(331, 25);
+            this.label4.Location = new System.Drawing.Point(331, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 20);
             this.label4.TabIndex = 70;
@@ -176,20 +180,39 @@
             // txtKerkoMeID
             // 
             this.txtKerkoMeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtKerkoMeID.Location = new System.Drawing.Point(463, 27);
+            this.txtKerkoMeID.Location = new System.Drawing.Point(463, 16);
             this.txtKerkoMeID.Name = "txtKerkoMeID";
             this.txtKerkoMeID.Size = new System.Drawing.Size(163, 20);
             this.txtKerkoMeID.TabIndex = 71;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(463, 53);
+            this.button2.Location = new System.Drawing.Point(463, 42);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 48);
             this.button2.TabIndex = 72;
             this.button2.Text = "Kerko";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblEmriLojtarit
+            // 
+            this.lblEmriLojtarit.AutoSize = true;
+            this.lblEmriLojtarit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmriLojtarit.ForeColor = System.Drawing.Color.Silver;
+            this.lblEmriLojtarit.Location = new System.Drawing.Point(29, 43);
+            this.lblEmriLojtarit.Name = "lblEmriLojtarit";
+            this.lblEmriLojtarit.Size = new System.Drawing.Size(116, 20);
+            this.lblEmriLojtarit.TabIndex = 68;
+            this.lblEmriLojtarit.Text = "Emri Lojtarit :";
+            // 
+            // txtEmriLojtarit
+            // 
+            this.txtEmriLojtarit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
+            this.txtEmriLojtarit.Location = new System.Drawing.Point(160, 45);
+            this.txtEmriLojtarit.Name = "txtEmriLojtarit";
+            this.txtEmriLojtarit.Size = new System.Drawing.Size(163, 20);
+            this.txtEmriLojtarit.TabIndex = 69;
             // 
             // EditoGolashenuesiUserControl
             // 
@@ -229,5 +252,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtKerkoMeID;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblEmriLojtarit;
+        private System.Windows.Forms.TextBox txtEmriLojtarit;
     }
 }

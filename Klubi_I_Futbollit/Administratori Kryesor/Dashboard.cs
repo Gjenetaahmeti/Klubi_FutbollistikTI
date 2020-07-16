@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +19,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
         {
             InitializeComponent();
             fshijReferatUserControl1.Visible = false;
+            dashboardHelpUserControl1.Visible = true;
         }
 
         private void regjistroLojtarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +81,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoGolashenuesiUserControl1);
             bunifuTransition2.HideSync(fshijGolashenuesiUserControl1);
             bunifuTransition2.HideSync(shikoGolashenuesiUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition1.Show(regjistroLojtartUserControls2);
         }
 
@@ -108,6 +112,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
             bunifuTransition2.HideSync(editoVlersimetUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijVlersimetUserControl1);
             bunifuTransition2.HideSync(shikoVlersimetUserControl1);
             bunifuTransition2.HideSync(regjistroStadiumUserControl1);
@@ -142,6 +147,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
@@ -192,6 +198,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoLojtarUserControl2);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
@@ -247,6 +254,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
@@ -300,6 +308,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoLojtarUserControl2);
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
@@ -355,6 +364,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
@@ -410,6 +420,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
@@ -462,6 +473,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoLojtarUserControl2);
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
@@ -518,6 +530,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
@@ -573,6 +586,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
@@ -628,6 +642,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
@@ -683,6 +698,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
@@ -738,6 +754,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
@@ -794,6 +811,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
@@ -843,6 +861,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
@@ -901,6 +920,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
@@ -956,6 +976,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
@@ -1011,6 +1032,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
@@ -1061,6 +1083,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
@@ -1116,6 +1139,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
@@ -1174,6 +1198,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
             bunifuTransition2.HideSync(fshijKlubUserControl1);
             bunifuTransition2.HideSync(shikoKlubUserControl1);
@@ -1223,6 +1248,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
@@ -1276,6 +1302,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
@@ -1331,6 +1358,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijKlubUserControl1);
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
@@ -1383,6 +1411,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijUshtrimeUserControl1);
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
@@ -1435,6 +1464,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
             bunifuTransition2.HideSync(editoVlersimetUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoVlersimetUserControl1);
             bunifuTransition2.HideSync(regjistroReferatUserControl1);
             bunifuTransition2.HideSync(editoReferatUserControl1);
@@ -1479,6 +1509,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijUshtrimeUserControl1);
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
@@ -1525,6 +1556,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoKlubUserControl1);
             bunifuTransition2.HideSync(fshijKlubUserControl1);
             bunifuTransition2.HideSync(shikoKlubUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
             bunifuTransition2.HideSync(fshijUshtrimeUserControl1);
@@ -1574,6 +1606,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
             bunifuTransition2.HideSync(fshijKlubUserControl1);
             bunifuTransition2.HideSync(shikoKlubUserControl1);
@@ -1617,6 +1650,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
@@ -1672,6 +1706,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
@@ -1722,6 +1757,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
@@ -1774,6 +1810,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
@@ -1829,6 +1866,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
             bunifuTransition2.HideSync(shikoTrajnerUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
@@ -1884,6 +1922,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoNdeshjeUserControl1);
             bunifuTransition2.HideSync(fshijNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroNdeshjeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
@@ -1943,6 +1982,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijUshtrimeUserControl1);
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
@@ -2001,6 +2041,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoVlersimetUserControl1);
             bunifuTransition2.HideSync(fshijVlersimetUserControl1);
             bunifuTransition2.HideSync(shikoVlersimetUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroStadiumUserControl1);
             bunifuTransition2.HideSync(editoStadiumUserControl1);
             bunifuTransition2.HideSync(fshijStadiumUserControl1);
@@ -2059,6 +2100,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoStadiumUserControl1);
             bunifuTransition2.HideSync(regjistroReferatUserControl1);
             bunifuTransition2.HideSync(editoReferatUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijReferatUserControl1);
             bunifuTransition2.HideSync(shikoReferatUserControl1);
             bunifuTransition2.HideSync(regjistroRaporteUserControl1);
@@ -2111,6 +2153,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoStadiumUserControl1);
             bunifuTransition2.HideSync(regjistroReferatUserControl1);
             bunifuTransition2.HideSync(editoReferatUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijReferatUserControl1);
             bunifuTransition2.HideSync(shikoReferatUserControl1);
             bunifuTransition2.HideSync(regjistroRaporteUserControl1);
@@ -2164,6 +2207,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroReferatUserControl1);
             bunifuTransition2.HideSync(editoReferatUserControl1);
             bunifuTransition2.HideSync(fshijReferatUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoReferatUserControl1);
             bunifuTransition2.HideSync(regjistroRaporteUserControl1);
             bunifuTransition2.HideSync(editoRaporteUserControl1);
@@ -2225,6 +2269,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(editoRaporteUserControl1);
             bunifuTransition2.HideSync(fshijRaporteUserControl1);
             bunifuTransition2.HideSync(shikoRaporteUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroKategoritKluboreUserControl1);
             bunifuTransition2.HideSync(fshijKategoritKluboreUserControl1);
             bunifuTransition2.HideSync(shikoKategoritKluboreUserControl1);
@@ -2274,6 +2319,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijStadiumUserControl1);
             bunifuTransition2.HideSync(shikoStadiumUserControl1);
             bunifuTransition2.HideSync(regjistroReferatUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoReferatUserControl1);
             bunifuTransition2.HideSync(fshijReferatUserControl1);
             bunifuTransition2.HideSync(shikoReferatUserControl1);
@@ -2323,6 +2369,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
             bunifuTransition2.HideSync(editoVlersimetUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijVlersimetUserControl1);
             bunifuTransition2.HideSync(shikoVlersimetUserControl1);
             bunifuTransition2.HideSync(regjistroStadiumUserControl1);
@@ -2376,6 +2423,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
             bunifuTransition2.HideSync(fshijUshtrimeUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoUshtrimeUserControl1);
             bunifuTransition2.HideSync(regjistroVlersimetUserControl1);
             bunifuTransition2.HideSync(editoVlersimetUserControl1);
@@ -2428,6 +2476,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
             bunifuTransition2.HideSync(fshijKlubUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
             bunifuTransition2.HideSync(editoUshtrimeUserControl1);
@@ -2483,6 +2532,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoNdeshjeUserControl1);
             bunifuTransition2.HideSync(regjistroKlubUserControl1);
             bunifuTransition2.HideSync(editoKlubUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(fshijKlubUserControl1);
             bunifuTransition2.HideSync(shikoKlubUserControl1);
             bunifuTransition2.HideSync(regjistroUshtrimeUserControl1);
@@ -2529,6 +2579,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
@@ -2584,6 +2635,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
@@ -2637,6 +2689,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijLojtarUserControl1);
             bunifuTransition2.HideSync(editoLojtarUserControl2);
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
@@ -2695,6 +2748,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(shikoLojtaretUserControl1);
             bunifuTransition2.HideSync(regjistroFormacionUserControl1);
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
@@ -2753,6 +2807,7 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             bunifuTransition2.HideSync(fshijFormacionUserControl1);
             bunifuTransition2.HideSync(editoFormacionUserControl1);
             bunifuTransition2.HideSync(shikoFormacionUserControl1);
+            bunifuTransition2.HideSync(dashboardHelpUserControl1);
             bunifuTransition2.HideSync(editoTrajnerUserControl1);
             bunifuTransition2.HideSync(fshijTrajnerUserControl1);
             bunifuTransition2.HideSync(regjistroTrajnerUserControl1);
@@ -2817,6 +2872,19 @@ namespace Klubi_I_Futbollit.Administratori_Kryesor
             {
                 Application.Exit();
             }
+        }
+
+        private void shqipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CultureInfo ci = new CultureInfo("sq");
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+           // dashboardHelpUserControl1.Visible = true;
+            bunifuTransition1.Show(dashboardHelpUserControl1);
         }
     }
 }

@@ -41,68 +41,47 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 344);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 123);
-            this.panel1.TabIndex = 1;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label14, "label14");
             this.label14.ForeColor = System.Drawing.Color.Silver;
-            this.label14.Location = new System.Drawing.Point(245, 46);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(250, 37);
-            this.label14.TabIndex = 58;
-            this.label14.Text = "FC PRISHTINA";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 5);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(398, 151);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 48);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Vazhdo";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtShkruajID
             // 
+            resources.ApplyResources(this.txtShkruajID, "txtShkruajID");
             this.txtShkruajID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtShkruajID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtShkruajID.Location = new System.Drawing.Point(398, 100);
             this.txtShkruajID.Name = "txtShkruajID";
-            this.txtShkruajID.Size = new System.Drawing.Size(137, 20);
-            this.txtShkruajID.TabIndex = 60;
             // 
             // label
             // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label, "label");
             this.label.ForeColor = System.Drawing.Color.Silver;
-            this.label.Location = new System.Drawing.Point(25, 100);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(367, 20);
-            this.label.TabIndex = 59;
-            this.label.Text = "Shkruaj ID-n e lojtarit qe deshironi ta fshini : ";
             // 
             // FshijLojtarUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.Controls.Add(this.button1);
@@ -110,7 +89,6 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.panel1);
             this.Name = "FshijLojtarUserControl";
-            this.Size = new System.Drawing.Size(1000, 470);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

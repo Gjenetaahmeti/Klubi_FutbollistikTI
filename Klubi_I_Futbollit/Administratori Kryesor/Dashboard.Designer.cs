@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.administatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.regjistroLojtarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editoLojtarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,7 +100,44 @@
             this.editoKategoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fshijKategoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shfaqKategoritToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gjuhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.amglishtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shqipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dashboardHelpUserControl1 = new Klubi_I_Futbollit.UserControls.HelpUserControls.DashboardHelpUserControl();
+            this.shikoGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.ShikoGolashenuesiUserControl();
+            this.regjistroGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.RegjistroGolashenuesiUserControl();
+            this.fshijGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.FshijGolashenuesiUserControl();
+            this.editoGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.EditoGolashenuesiUserControl();
+            this.editoDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.EditoDelegatUserControls();
+            this.fshijeDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.FshijeDelegatUserControls();
+            this.regjistroDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.RegjistroDelegatUserControls();
+            this.shikoDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.ShikoDelegatUserControls();
+            this.editoKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.EditoKategoritKluboreUserControl();
+            this.fshijKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.FshijKategoritKluboreUserControl();
+            this.regjistroKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.RegjistroKategoritKluboreUserControl();
+            this.shikoKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.ShikoKategoritKluboreUserControl();
+            this.editoRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.EditoRaporteUserControl();
+            this.fshijRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.FshijRaporteUserControl();
+            this.regjistroRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.RegjistroRaporteUserControl();
+            this.shikoRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.ShikoRaporteUserControl();
+            this.editoReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.EditoReferatUserControl();
+            this.fshijReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.FshijReferatUserControl();
+            this.regjistroReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.RegjistroReferatUserControl();
+            this.shikoReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.ShikoReferatUserControl();
+            this.editoStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.EditoStadiumUserControl();
+            this.fshijStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.FshijStadiumUserControl();
+            this.regjistroStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.RegjistroStadiumUserControl();
+            this.shikoStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.ShikoStadiumUserControl();
+            this.editoVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.EditoVlersimetUserControl();
+            this.fshijVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.FshijVlersimetUserControl();
+            this.regjistroVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.RegjistroVlersimetUserControl();
+            this.shikoVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.ShikoVlersimetUserControl();
             this.editoUshtrimeUserControl1 = new Klubi_I_Futbollit.UserControls.UshtrimetUserControls.EditoUshtrimeUserControl();
             this.fshijUshtrimeUserControl1 = new Klubi_I_Futbollit.UserControls.UshtrimetUserControls.FshijUshtrimeUserControl();
             this.regjistroUshtrimeUserControl1 = new Klubi_I_Futbollit.UserControls.UshtrimetUserControls.RegjistroUshtrimeUserControl();
@@ -126,41 +162,10 @@
             this.fshijLojtarUserControl1 = new Klubi_I_Futbollit.UserControls.LojtartUserControls.FshijLojtarUserControl();
             this.editoLojtarUserControl2 = new Klubi_I_Futbollit.UserControls.LojtartUserControls.EditoLojtarUserControl();
             this.regjistroLojtartUserControls2 = new Klubi_I_Futbollit.UserControls.LojtartUserControls.RegjistroLojtartUserControls();
-            this.shikoVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.ShikoVlersimetUserControl();
-            this.regjistroVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.RegjistroVlersimetUserControl();
-            this.fshijVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.FshijVlersimetUserControl();
-            this.editoVlersimetUserControl1 = new Klubi_I_Futbollit.UserControls.VlersimetUserControls.EditoVlersimetUserControl();
-            this.shikoStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.ShikoStadiumUserControl();
-            this.regjistroStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.RegjistroStadiumUserControl();
-            this.fshijStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.FshijStadiumUserControl();
-            this.editoStadiumUserControl1 = new Klubi_I_Futbollit.UserControls.StadiumUserControls.EditoStadiumUserControl();
-            this.shikoReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.ShikoReferatUserControl();
-            this.regjistroReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.RegjistroReferatUserControl();
-            this.fshijReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.FshijReferatUserControl();
-            this.editoReferatUserControl1 = new Klubi_I_Futbollit.UserControls.ReferatUserControls.EditoReferatUserControl();
-            this.shikoRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.ShikoRaporteUserControl();
-            this.regjistroRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.RegjistroRaporteUserControl();
-            this.fshijRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.FshijRaporteUserControl();
-            this.editoRaporteUserControl1 = new Klubi_I_Futbollit.UserControls.RaporteUserControls.EditoRaporteUserControl();
-            this.shikoKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.ShikoKategoritKluboreUserControl();
-            this.regjistroKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.RegjistroKategoritKluboreUserControl();
-            this.fshijKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.FshijKategoritKluboreUserControl();
-            this.editoKategoritKluboreUserControl1 = new Klubi_I_Futbollit.UserControls.KategoritKluboreUserControls.EditoKategoritKluboreUserControl();
-            this.shikoDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.ShikoDelegatUserControls();
-            this.regjistroDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.RegjistroDelegatUserControls();
-            this.fshijeDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.FshijeDelegatUserControls();
-            this.editoDelegatUserControls1 = new Klubi_I_Futbollit.UserControls.DelegatUserControls.EditoDelegatUserControls();
-            this.editoGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.EditoGolashenuesiUserControl();
-            this.fshijGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.FshijGolashenuesiUserControl();
-            this.regjistroGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.RegjistroGolashenuesiUserControl();
-            this.shikoGolashenuesiUserControl1 = new Klubi_I_Futbollit.UserControls.GolashenuesiUserControls.ShikoGolashenuesiUserControl();
-            this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -168,27 +173,22 @@
             this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.bunifuTransition2.SetDecoration(this.menuStrip2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.menuStrip2, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.menuStrip2, "menuStrip2");
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.administatorToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.administatorToolStripMenuItem,
+            this.gjuhaToolStripMenuItem});
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1000, 28);
-            this.menuStrip2.TabIndex = 5;
-            this.menuStrip2.Text = "menuStrip2";
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Silver;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(65, 24);
-            this.toolStripMenuItem1.Text = "Menu";
             // 
             // administatorToolStripMenuItem
             // 
             this.administatorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4,
             this.toolStripMenuItem5,
@@ -202,17 +202,9 @@
             this.menaxhoReferatToolStripMenuItem,
             this.menaxhoRaporteToolStripMenuItem,
             this.menaxhoKategoritKluboreToolStripMenuItem});
-            this.administatorToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.administatorToolStripMenuItem, "administatorToolStripMenuItem");
             this.administatorToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.administatorToolStripMenuItem.Name = "administatorToolStripMenuItem";
-            this.administatorToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            this.administatorToolStripMenuItem.Text = "Administator";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem2.Text = "Menaxho Personel";
             // 
             // toolStripMenuItem3
             // 
@@ -222,35 +214,30 @@
             this.fshijLojtarToolStripMenuItem,
             this.shfaqLojtarToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem3.Text = "Menaxho Lojtar";
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             // 
             // regjistroLojtarToolStripMenuItem
             // 
             this.regjistroLojtarToolStripMenuItem.Name = "regjistroLojtarToolStripMenuItem";
-            this.regjistroLojtarToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
-            this.regjistroLojtarToolStripMenuItem.Text = "Regjistro Lojtar";
+            resources.ApplyResources(this.regjistroLojtarToolStripMenuItem, "regjistroLojtarToolStripMenuItem");
             this.regjistroLojtarToolStripMenuItem.Click += new System.EventHandler(this.regjistroLojtarToolStripMenuItem_Click_1);
             // 
             // editoLojtarToolStripMenuItem
             // 
             this.editoLojtarToolStripMenuItem.Name = "editoLojtarToolStripMenuItem";
-            this.editoLojtarToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
-            this.editoLojtarToolStripMenuItem.Text = "Edito Lojtar";
+            resources.ApplyResources(this.editoLojtarToolStripMenuItem, "editoLojtarToolStripMenuItem");
             this.editoLojtarToolStripMenuItem.Click += new System.EventHandler(this.editoLojtarToolStripMenuItem_Click_1);
             // 
             // fshijLojtarToolStripMenuItem
             // 
             this.fshijLojtarToolStripMenuItem.Name = "fshijLojtarToolStripMenuItem";
-            this.fshijLojtarToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
-            this.fshijLojtarToolStripMenuItem.Text = "Fshij Lojtar";
+            resources.ApplyResources(this.fshijLojtarToolStripMenuItem, "fshijLojtarToolStripMenuItem");
             this.fshijLojtarToolStripMenuItem.Click += new System.EventHandler(this.fshijLojtarToolStripMenuItem_Click);
             // 
             // shfaqLojtarToolStripMenuItem
             // 
             this.shfaqLojtarToolStripMenuItem.Name = "shfaqLojtarToolStripMenuItem";
-            this.shfaqLojtarToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
-            this.shfaqLojtarToolStripMenuItem.Text = "Shfaq Lojtar";
+            resources.ApplyResources(this.shfaqLojtarToolStripMenuItem, "shfaqLojtarToolStripMenuItem");
             this.shfaqLojtarToolStripMenuItem.Click += new System.EventHandler(this.shfaqLojtarToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
@@ -261,35 +248,30 @@
             this.fshijTrajnerToolStripMenuItem,
             this.shikoTrajneratToolStripMenuItem});
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem4.Text = "Menaxho Trajner";
+            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             // 
             // regjistroTrajnerToolStripMenuItem
             // 
             this.regjistroTrajnerToolStripMenuItem.Name = "regjistroTrajnerToolStripMenuItem";
-            this.regjistroTrajnerToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.regjistroTrajnerToolStripMenuItem.Text = "Regjistro Trajner";
+            resources.ApplyResources(this.regjistroTrajnerToolStripMenuItem, "regjistroTrajnerToolStripMenuItem");
             this.regjistroTrajnerToolStripMenuItem.Click += new System.EventHandler(this.regjistroTrajnerToolStripMenuItem_Click);
             // 
             // editoTrajnerToolStripMenuItem
             // 
             this.editoTrajnerToolStripMenuItem.Name = "editoTrajnerToolStripMenuItem";
-            this.editoTrajnerToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.editoTrajnerToolStripMenuItem.Text = "Edito Trajner";
+            resources.ApplyResources(this.editoTrajnerToolStripMenuItem, "editoTrajnerToolStripMenuItem");
             this.editoTrajnerToolStripMenuItem.Click += new System.EventHandler(this.editoTrajnerToolStripMenuItem_Click);
             // 
             // fshijTrajnerToolStripMenuItem
             // 
             this.fshijTrajnerToolStripMenuItem.Name = "fshijTrajnerToolStripMenuItem";
-            this.fshijTrajnerToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.fshijTrajnerToolStripMenuItem.Text = "Fshij Trajner";
+            resources.ApplyResources(this.fshijTrajnerToolStripMenuItem, "fshijTrajnerToolStripMenuItem");
             this.fshijTrajnerToolStripMenuItem.Click += new System.EventHandler(this.fshijTrajnerToolStripMenuItem_Click);
             // 
             // shikoTrajneratToolStripMenuItem
             // 
             this.shikoTrajneratToolStripMenuItem.Name = "shikoTrajneratToolStripMenuItem";
-            this.shikoTrajneratToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.shikoTrajneratToolStripMenuItem.Text = "Shiko Trajnerat";
+            resources.ApplyResources(this.shikoTrajneratToolStripMenuItem, "shikoTrajneratToolStripMenuItem");
             this.shikoTrajneratToolStripMenuItem.Click += new System.EventHandler(this.shikoTrajneratToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
@@ -300,35 +282,30 @@
             this.fshijNdeshjeToolStripMenuItem,
             this.shikoNdeshjetToolStripMenuItem});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem5.Text = "Menaxho Ndeshje";
+            resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
             // 
             // regjistroNdeshjeToolStripMenuItem
             // 
             this.regjistroNdeshjeToolStripMenuItem.Name = "regjistroNdeshjeToolStripMenuItem";
-            this.regjistroNdeshjeToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.regjistroNdeshjeToolStripMenuItem.Text = "Regjistro Ndeshje";
+            resources.ApplyResources(this.regjistroNdeshjeToolStripMenuItem, "regjistroNdeshjeToolStripMenuItem");
             this.regjistroNdeshjeToolStripMenuItem.Click += new System.EventHandler(this.regjistroNdeshjeToolStripMenuItem_Click);
             // 
             // editoNdeshjeToolStripMenuItem
             // 
             this.editoNdeshjeToolStripMenuItem.Name = "editoNdeshjeToolStripMenuItem";
-            this.editoNdeshjeToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.editoNdeshjeToolStripMenuItem.Text = "Edito Ndeshje";
+            resources.ApplyResources(this.editoNdeshjeToolStripMenuItem, "editoNdeshjeToolStripMenuItem");
             this.editoNdeshjeToolStripMenuItem.Click += new System.EventHandler(this.editoNdeshjeToolStripMenuItem_Click);
             // 
             // fshijNdeshjeToolStripMenuItem
             // 
             this.fshijNdeshjeToolStripMenuItem.Name = "fshijNdeshjeToolStripMenuItem";
-            this.fshijNdeshjeToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.fshijNdeshjeToolStripMenuItem.Text = "Fshij Ndeshje";
+            resources.ApplyResources(this.fshijNdeshjeToolStripMenuItem, "fshijNdeshjeToolStripMenuItem");
             this.fshijNdeshjeToolStripMenuItem.Click += new System.EventHandler(this.fshijNdeshjeToolStripMenuItem_Click);
             // 
             // shikoNdeshjetToolStripMenuItem
             // 
             this.shikoNdeshjetToolStripMenuItem.Name = "shikoNdeshjetToolStripMenuItem";
-            this.shikoNdeshjetToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.shikoNdeshjetToolStripMenuItem.Text = "Shiko Ndeshjet";
+            resources.ApplyResources(this.shikoNdeshjetToolStripMenuItem, "shikoNdeshjetToolStripMenuItem");
             this.shikoNdeshjetToolStripMenuItem.Click += new System.EventHandler(this.shikoNdeshjetToolStripMenuItem_Click);
             // 
             // menaxhoFormacionToolStripMenuItem1
@@ -339,35 +316,30 @@
             this.fshijFormacionToolStripMenuItem,
             this.shikoFormacionToolStripMenuItem});
             this.menaxhoFormacionToolStripMenuItem1.Name = "menaxhoFormacionToolStripMenuItem1";
-            this.menaxhoFormacionToolStripMenuItem1.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoFormacionToolStripMenuItem1.Text = "Menaxho Formacion";
+            resources.ApplyResources(this.menaxhoFormacionToolStripMenuItem1, "menaxhoFormacionToolStripMenuItem1");
             // 
             // regjistroFormacionToolStripMenuItem
             // 
             this.regjistroFormacionToolStripMenuItem.Name = "regjistroFormacionToolStripMenuItem";
-            this.regjistroFormacionToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
-            this.regjistroFormacionToolStripMenuItem.Text = "Regjistro Formacion";
+            resources.ApplyResources(this.regjistroFormacionToolStripMenuItem, "regjistroFormacionToolStripMenuItem");
             this.regjistroFormacionToolStripMenuItem.Click += new System.EventHandler(this.regjistroFormacionToolStripMenuItem_Click);
             // 
             // editoFormacionToolStripMenuItem
             // 
             this.editoFormacionToolStripMenuItem.Name = "editoFormacionToolStripMenuItem";
-            this.editoFormacionToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
-            this.editoFormacionToolStripMenuItem.Text = "Edito Formacion";
+            resources.ApplyResources(this.editoFormacionToolStripMenuItem, "editoFormacionToolStripMenuItem");
             this.editoFormacionToolStripMenuItem.Click += new System.EventHandler(this.editoFormacionToolStripMenuItem_Click);
             // 
             // fshijFormacionToolStripMenuItem
             // 
             this.fshijFormacionToolStripMenuItem.Name = "fshijFormacionToolStripMenuItem";
-            this.fshijFormacionToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
-            this.fshijFormacionToolStripMenuItem.Text = "Fshij Formacion";
+            resources.ApplyResources(this.fshijFormacionToolStripMenuItem, "fshijFormacionToolStripMenuItem");
             this.fshijFormacionToolStripMenuItem.Click += new System.EventHandler(this.fshijFormacionToolStripMenuItem_Click);
             // 
             // shikoFormacionToolStripMenuItem
             // 
             this.shikoFormacionToolStripMenuItem.Name = "shikoFormacionToolStripMenuItem";
-            this.shikoFormacionToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
-            this.shikoFormacionToolStripMenuItem.Text = "Shiko Formacion";
+            resources.ApplyResources(this.shikoFormacionToolStripMenuItem, "shikoFormacionToolStripMenuItem");
             this.shikoFormacionToolStripMenuItem.Click += new System.EventHandler(this.shikoFormacionToolStripMenuItem_Click);
             // 
             // menaxhoGolashenuesinToolStripMenuItem
@@ -378,35 +350,30 @@
             this.fshijGolashenuesToolStripMenuItem,
             this.shikoGolashenuesToolStripMenuItem});
             this.menaxhoGolashenuesinToolStripMenuItem.Name = "menaxhoGolashenuesinToolStripMenuItem";
-            this.menaxhoGolashenuesinToolStripMenuItem.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoGolashenuesinToolStripMenuItem.Text = "Menaxho Golashenuesit";
+            resources.ApplyResources(this.menaxhoGolashenuesinToolStripMenuItem, "menaxhoGolashenuesinToolStripMenuItem");
             // 
             // regjistroGolashenuesToolStripMenuItem
             // 
             this.regjistroGolashenuesToolStripMenuItem.Name = "regjistroGolashenuesToolStripMenuItem";
-            this.regjistroGolashenuesToolStripMenuItem.Size = new System.Drawing.Size(261, 24);
-            this.regjistroGolashenuesToolStripMenuItem.Text = "Regjistro Golashenues";
+            resources.ApplyResources(this.regjistroGolashenuesToolStripMenuItem, "regjistroGolashenuesToolStripMenuItem");
             this.regjistroGolashenuesToolStripMenuItem.Click += new System.EventHandler(this.regjistroGolashenuesToolStripMenuItem_Click);
             // 
             // editoGolashenuesToolStripMenuItem
             // 
             this.editoGolashenuesToolStripMenuItem.Name = "editoGolashenuesToolStripMenuItem";
-            this.editoGolashenuesToolStripMenuItem.Size = new System.Drawing.Size(261, 24);
-            this.editoGolashenuesToolStripMenuItem.Text = "Edito Golashenues";
+            resources.ApplyResources(this.editoGolashenuesToolStripMenuItem, "editoGolashenuesToolStripMenuItem");
             this.editoGolashenuesToolStripMenuItem.Click += new System.EventHandler(this.editoGolashenuesToolStripMenuItem_Click);
             // 
             // fshijGolashenuesToolStripMenuItem
             // 
             this.fshijGolashenuesToolStripMenuItem.Name = "fshijGolashenuesToolStripMenuItem";
-            this.fshijGolashenuesToolStripMenuItem.Size = new System.Drawing.Size(261, 24);
-            this.fshijGolashenuesToolStripMenuItem.Text = "Fshij Golashenues";
+            resources.ApplyResources(this.fshijGolashenuesToolStripMenuItem, "fshijGolashenuesToolStripMenuItem");
             this.fshijGolashenuesToolStripMenuItem.Click += new System.EventHandler(this.fshijGolashenuesToolStripMenuItem_Click);
             // 
             // shikoGolashenuesToolStripMenuItem
             // 
             this.shikoGolashenuesToolStripMenuItem.Name = "shikoGolashenuesToolStripMenuItem";
-            this.shikoGolashenuesToolStripMenuItem.Size = new System.Drawing.Size(261, 24);
-            this.shikoGolashenuesToolStripMenuItem.Text = "Shiko Golashenues";
+            resources.ApplyResources(this.shikoGolashenuesToolStripMenuItem, "shikoGolashenuesToolStripMenuItem");
             this.shikoGolashenuesToolStripMenuItem.Click += new System.EventHandler(this.shikoGolashenuesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
@@ -417,35 +384,30 @@
             this.fshijDelegatToolStripMenuItem,
             this.shikoDelegatToolStripMenuItem});
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem6.Text = "Menaxho Delegat";
+            resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
             // 
             // regjistroDelegatToolStripMenuItem
             // 
             this.regjistroDelegatToolStripMenuItem.Name = "regjistroDelegatToolStripMenuItem";
-            this.regjistroDelegatToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
-            this.regjistroDelegatToolStripMenuItem.Text = "Regjistro Delegat";
+            resources.ApplyResources(this.regjistroDelegatToolStripMenuItem, "regjistroDelegatToolStripMenuItem");
             this.regjistroDelegatToolStripMenuItem.Click += new System.EventHandler(this.regjistroDelegatToolStripMenuItem_Click);
             // 
             // editoDelegatToolStripMenuItem
             // 
             this.editoDelegatToolStripMenuItem.Name = "editoDelegatToolStripMenuItem";
-            this.editoDelegatToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
-            this.editoDelegatToolStripMenuItem.Text = "Edito Delegat";
+            resources.ApplyResources(this.editoDelegatToolStripMenuItem, "editoDelegatToolStripMenuItem");
             this.editoDelegatToolStripMenuItem.Click += new System.EventHandler(this.editoDelegatToolStripMenuItem_Click);
             // 
             // fshijDelegatToolStripMenuItem
             // 
             this.fshijDelegatToolStripMenuItem.Name = "fshijDelegatToolStripMenuItem";
-            this.fshijDelegatToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
-            this.fshijDelegatToolStripMenuItem.Text = "Fshij Delegat";
+            resources.ApplyResources(this.fshijDelegatToolStripMenuItem, "fshijDelegatToolStripMenuItem");
             this.fshijDelegatToolStripMenuItem.Click += new System.EventHandler(this.fshijDelegatToolStripMenuItem_Click);
             // 
             // shikoDelegatToolStripMenuItem
             // 
             this.shikoDelegatToolStripMenuItem.Name = "shikoDelegatToolStripMenuItem";
-            this.shikoDelegatToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
-            this.shikoDelegatToolStripMenuItem.Text = "Shiko Delegat";
+            resources.ApplyResources(this.shikoDelegatToolStripMenuItem, "shikoDelegatToolStripMenuItem");
             this.shikoDelegatToolStripMenuItem.Click += new System.EventHandler(this.shikoDelegatToolStripMenuItem_Click);
             // 
             // menaxhoKluibnToolStripMenuItem
@@ -456,35 +418,30 @@
             this.fshijKlubinToolStripMenuItem,
             this.shikoKlubetToolStripMenuItem});
             this.menaxhoKluibnToolStripMenuItem.Name = "menaxhoKluibnToolStripMenuItem";
-            this.menaxhoKluibnToolStripMenuItem.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoKluibnToolStripMenuItem.Text = "Menaxho Klubin ";
+            resources.ApplyResources(this.menaxhoKluibnToolStripMenuItem, "menaxhoKluibnToolStripMenuItem");
             // 
             // regjistroKlubinToolStripMenuItem
             // 
             this.regjistroKlubinToolStripMenuItem.Name = "regjistroKlubinToolStripMenuItem";
-            this.regjistroKlubinToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.regjistroKlubinToolStripMenuItem.Text = "Regjistro Klubin";
+            resources.ApplyResources(this.regjistroKlubinToolStripMenuItem, "regjistroKlubinToolStripMenuItem");
             this.regjistroKlubinToolStripMenuItem.Click += new System.EventHandler(this.regjistroKlubinToolStripMenuItem_Click);
             // 
             // editoKlubinToolStripMenuItem
             // 
             this.editoKlubinToolStripMenuItem.Name = "editoKlubinToolStripMenuItem";
-            this.editoKlubinToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.editoKlubinToolStripMenuItem.Text = "Edito Klubin";
+            resources.ApplyResources(this.editoKlubinToolStripMenuItem, "editoKlubinToolStripMenuItem");
             this.editoKlubinToolStripMenuItem.Click += new System.EventHandler(this.editoKlubinToolStripMenuItem_Click);
             // 
             // fshijKlubinToolStripMenuItem
             // 
             this.fshijKlubinToolStripMenuItem.Name = "fshijKlubinToolStripMenuItem";
-            this.fshijKlubinToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.fshijKlubinToolStripMenuItem.Text = "Fshij Klubin";
+            resources.ApplyResources(this.fshijKlubinToolStripMenuItem, "fshijKlubinToolStripMenuItem");
             this.fshijKlubinToolStripMenuItem.Click += new System.EventHandler(this.fshijKlubinToolStripMenuItem_Click);
             // 
             // shikoKlubetToolStripMenuItem
             // 
             this.shikoKlubetToolStripMenuItem.Name = "shikoKlubetToolStripMenuItem";
-            this.shikoKlubetToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.shikoKlubetToolStripMenuItem.Text = "Shiko Klubet";
+            resources.ApplyResources(this.shikoKlubetToolStripMenuItem, "shikoKlubetToolStripMenuItem");
             this.shikoKlubetToolStripMenuItem.Click += new System.EventHandler(this.shikoKlubetToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
@@ -495,35 +452,30 @@
             this.fshijUshtrimeToolStripMenuItem,
             this.shikoUshtrimetToolStripMenuItem});
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem7.Text = "Menaxho Ushtrime";
+            resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
             // 
             // regjistroUshtrimeToolStripMenuItem
             // 
             this.regjistroUshtrimeToolStripMenuItem.Name = "regjistroUshtrimeToolStripMenuItem";
-            this.regjistroUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
-            this.regjistroUshtrimeToolStripMenuItem.Text = "Regjistro Ushtrime";
+            resources.ApplyResources(this.regjistroUshtrimeToolStripMenuItem, "regjistroUshtrimeToolStripMenuItem");
             this.regjistroUshtrimeToolStripMenuItem.Click += new System.EventHandler(this.regjistroUshtrimeToolStripMenuItem_Click);
             // 
             // editoUshtrimeToolStripMenuItem
             // 
             this.editoUshtrimeToolStripMenuItem.Name = "editoUshtrimeToolStripMenuItem";
-            this.editoUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
-            this.editoUshtrimeToolStripMenuItem.Text = "Edito Ushtrime";
+            resources.ApplyResources(this.editoUshtrimeToolStripMenuItem, "editoUshtrimeToolStripMenuItem");
             this.editoUshtrimeToolStripMenuItem.Click += new System.EventHandler(this.editoUshtrimeToolStripMenuItem_Click);
             // 
             // fshijUshtrimeToolStripMenuItem
             // 
             this.fshijUshtrimeToolStripMenuItem.Name = "fshijUshtrimeToolStripMenuItem";
-            this.fshijUshtrimeToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
-            this.fshijUshtrimeToolStripMenuItem.Text = "Fshij Ushtrime";
+            resources.ApplyResources(this.fshijUshtrimeToolStripMenuItem, "fshijUshtrimeToolStripMenuItem");
             this.fshijUshtrimeToolStripMenuItem.Click += new System.EventHandler(this.fshijUshtrimeToolStripMenuItem_Click);
             // 
             // shikoUshtrimetToolStripMenuItem
             // 
             this.shikoUshtrimetToolStripMenuItem.Name = "shikoUshtrimetToolStripMenuItem";
-            this.shikoUshtrimetToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
-            this.shikoUshtrimetToolStripMenuItem.Text = "Shiko Ushtrimet";
+            resources.ApplyResources(this.shikoUshtrimetToolStripMenuItem, "shikoUshtrimetToolStripMenuItem");
             // 
             // toolStripMenuItem8
             // 
@@ -533,35 +485,30 @@
             this.fshijVlersimToolStripMenuItem,
             this.shfaqVlersimToolStripMenuItem});
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(294, 24);
-            this.toolStripMenuItem8.Text = "Menaxho Vleresime";
+            resources.ApplyResources(this.toolStripMenuItem8, "toolStripMenuItem8");
             // 
             // regjistroVlersimeToolStripMenuItem
             // 
             this.regjistroVlersimeToolStripMenuItem.Name = "regjistroVlersimeToolStripMenuItem";
-            this.regjistroVlersimeToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
-            this.regjistroVlersimeToolStripMenuItem.Text = "Regjistro Vlersime";
+            resources.ApplyResources(this.regjistroVlersimeToolStripMenuItem, "regjistroVlersimeToolStripMenuItem");
             this.regjistroVlersimeToolStripMenuItem.Click += new System.EventHandler(this.regjistroVlersimeToolStripMenuItem_Click);
             // 
             // editoVlersimToolStripMenuItem
             // 
             this.editoVlersimToolStripMenuItem.Name = "editoVlersimToolStripMenuItem";
-            this.editoVlersimToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
-            this.editoVlersimToolStripMenuItem.Text = "Edito Vlersim";
+            resources.ApplyResources(this.editoVlersimToolStripMenuItem, "editoVlersimToolStripMenuItem");
             this.editoVlersimToolStripMenuItem.Click += new System.EventHandler(this.editoVlersimToolStripMenuItem_Click);
             // 
             // fshijVlersimToolStripMenuItem
             // 
             this.fshijVlersimToolStripMenuItem.Name = "fshijVlersimToolStripMenuItem";
-            this.fshijVlersimToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
-            this.fshijVlersimToolStripMenuItem.Text = "Fshij Vlersim";
+            resources.ApplyResources(this.fshijVlersimToolStripMenuItem, "fshijVlersimToolStripMenuItem");
             this.fshijVlersimToolStripMenuItem.Click += new System.EventHandler(this.fshijVlersimToolStripMenuItem_Click);
             // 
             // shfaqVlersimToolStripMenuItem
             // 
             this.shfaqVlersimToolStripMenuItem.Name = "shfaqVlersimToolStripMenuItem";
-            this.shfaqVlersimToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
-            this.shfaqVlersimToolStripMenuItem.Text = "Shfaq Vlersim";
+            resources.ApplyResources(this.shfaqVlersimToolStripMenuItem, "shfaqVlersimToolStripMenuItem");
             this.shfaqVlersimToolStripMenuItem.Click += new System.EventHandler(this.shfaqVlersimToolStripMenuItem_Click);
             // 
             // menaxhoStadiumToolStripMenuItem
@@ -572,35 +519,30 @@
             this.fshijStadiumToolStripMenuItem,
             this.shikoStadiumetToolStripMenuItem});
             this.menaxhoStadiumToolStripMenuItem.Name = "menaxhoStadiumToolStripMenuItem";
-            this.menaxhoStadiumToolStripMenuItem.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoStadiumToolStripMenuItem.Text = "Menaxho Stadium";
+            resources.ApplyResources(this.menaxhoStadiumToolStripMenuItem, "menaxhoStadiumToolStripMenuItem");
             // 
             // regjistroStadiumToolStripMenuItem
             // 
             this.regjistroStadiumToolStripMenuItem.Name = "regjistroStadiumToolStripMenuItem";
-            this.regjistroStadiumToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.regjistroStadiumToolStripMenuItem.Text = "Regjistro Stadium";
+            resources.ApplyResources(this.regjistroStadiumToolStripMenuItem, "regjistroStadiumToolStripMenuItem");
             this.regjistroStadiumToolStripMenuItem.Click += new System.EventHandler(this.regjistroStadiumToolStripMenuItem_Click);
             // 
             // editoStadiumToolStripMenuItem
             // 
             this.editoStadiumToolStripMenuItem.Name = "editoStadiumToolStripMenuItem";
-            this.editoStadiumToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.editoStadiumToolStripMenuItem.Text = "Edito Stadium";
+            resources.ApplyResources(this.editoStadiumToolStripMenuItem, "editoStadiumToolStripMenuItem");
             this.editoStadiumToolStripMenuItem.Click += new System.EventHandler(this.editoStadiumToolStripMenuItem_Click);
             // 
             // fshijStadiumToolStripMenuItem
             // 
             this.fshijStadiumToolStripMenuItem.Name = "fshijStadiumToolStripMenuItem";
-            this.fshijStadiumToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.fshijStadiumToolStripMenuItem.Text = "Fshij Stadium";
+            resources.ApplyResources(this.fshijStadiumToolStripMenuItem, "fshijStadiumToolStripMenuItem");
             this.fshijStadiumToolStripMenuItem.Click += new System.EventHandler(this.fshijStadiumToolStripMenuItem_Click);
             // 
             // shikoStadiumetToolStripMenuItem
             // 
             this.shikoStadiumetToolStripMenuItem.Name = "shikoStadiumetToolStripMenuItem";
-            this.shikoStadiumetToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.shikoStadiumetToolStripMenuItem.Text = "Shiko Stadiumet";
+            resources.ApplyResources(this.shikoStadiumetToolStripMenuItem, "shikoStadiumetToolStripMenuItem");
             this.shikoStadiumetToolStripMenuItem.Click += new System.EventHandler(this.shikoStadiumetToolStripMenuItem_Click);
             // 
             // menaxhoReferatToolStripMenuItem
@@ -611,35 +553,30 @@
             this.fshijReferToolStripMenuItem,
             this.shfaqReferatToolStripMenuItem});
             this.menaxhoReferatToolStripMenuItem.Name = "menaxhoReferatToolStripMenuItem";
-            this.menaxhoReferatToolStripMenuItem.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoReferatToolStripMenuItem.Text = "Menaxho Referat";
+            resources.ApplyResources(this.menaxhoReferatToolStripMenuItem, "menaxhoReferatToolStripMenuItem");
             // 
             // regjistroReferaToolStripMenuItem
             // 
             this.regjistroReferaToolStripMenuItem.Name = "regjistroReferaToolStripMenuItem";
-            this.regjistroReferaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.regjistroReferaToolStripMenuItem.Text = "Regjistro Refera";
+            resources.ApplyResources(this.regjistroReferaToolStripMenuItem, "regjistroReferaToolStripMenuItem");
             this.regjistroReferaToolStripMenuItem.Click += new System.EventHandler(this.regjistroReferaToolStripMenuItem_Click);
             // 
             // editoReferToolStripMenuItem
             // 
             this.editoReferToolStripMenuItem.Name = "editoReferToolStripMenuItem";
-            this.editoReferToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.editoReferToolStripMenuItem.Text = "Edito Refer";
+            resources.ApplyResources(this.editoReferToolStripMenuItem, "editoReferToolStripMenuItem");
             this.editoReferToolStripMenuItem.Click += new System.EventHandler(this.editoReferToolStripMenuItem_Click);
             // 
             // fshijReferToolStripMenuItem
             // 
             this.fshijReferToolStripMenuItem.Name = "fshijReferToolStripMenuItem";
-            this.fshijReferToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.fshijReferToolStripMenuItem.Text = "Fshij Refer";
+            resources.ApplyResources(this.fshijReferToolStripMenuItem, "fshijReferToolStripMenuItem");
             this.fshijReferToolStripMenuItem.Click += new System.EventHandler(this.fshijReferToolStripMenuItem_Click);
             // 
             // shfaqReferatToolStripMenuItem
             // 
             this.shfaqReferatToolStripMenuItem.Name = "shfaqReferatToolStripMenuItem";
-            this.shfaqReferatToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.shfaqReferatToolStripMenuItem.Text = "Shfaq Referat";
+            resources.ApplyResources(this.shfaqReferatToolStripMenuItem, "shfaqReferatToolStripMenuItem");
             this.shfaqReferatToolStripMenuItem.Click += new System.EventHandler(this.shfaqReferatToolStripMenuItem_Click);
             // 
             // menaxhoRaporteToolStripMenuItem
@@ -650,35 +587,30 @@
             this.fshijRaportToolStripMenuItem,
             this.shikoRaportetToolStripMenuItem});
             this.menaxhoRaporteToolStripMenuItem.Name = "menaxhoRaporteToolStripMenuItem";
-            this.menaxhoRaporteToolStripMenuItem.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoRaporteToolStripMenuItem.Text = "Menaxho Raporte";
+            resources.ApplyResources(this.menaxhoRaporteToolStripMenuItem, "menaxhoRaporteToolStripMenuItem");
             // 
             // regjistroRaporteToolStripMenuItem
             // 
             this.regjistroRaporteToolStripMenuItem.Name = "regjistroRaporteToolStripMenuItem";
-            this.regjistroRaporteToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.regjistroRaporteToolStripMenuItem.Text = "Regjistro Raporte";
+            resources.ApplyResources(this.regjistroRaporteToolStripMenuItem, "regjistroRaporteToolStripMenuItem");
             this.regjistroRaporteToolStripMenuItem.Click += new System.EventHandler(this.regjistroRaporteToolStripMenuItem_Click);
             // 
             // editoRaportToolStripMenuItem
             // 
             this.editoRaportToolStripMenuItem.Name = "editoRaportToolStripMenuItem";
-            this.editoRaportToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.editoRaportToolStripMenuItem.Text = "Edito Raport";
+            resources.ApplyResources(this.editoRaportToolStripMenuItem, "editoRaportToolStripMenuItem");
             this.editoRaportToolStripMenuItem.Click += new System.EventHandler(this.editoRaportToolStripMenuItem_Click);
             // 
             // fshijRaportToolStripMenuItem
             // 
             this.fshijRaportToolStripMenuItem.Name = "fshijRaportToolStripMenuItem";
-            this.fshijRaportToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.fshijRaportToolStripMenuItem.Text = "Fshij Raport";
+            resources.ApplyResources(this.fshijRaportToolStripMenuItem, "fshijRaportToolStripMenuItem");
             this.fshijRaportToolStripMenuItem.Click += new System.EventHandler(this.fshijRaportToolStripMenuItem_Click);
             // 
             // shikoRaportetToolStripMenuItem
             // 
             this.shikoRaportetToolStripMenuItem.Name = "shikoRaportetToolStripMenuItem";
-            this.shikoRaportetToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.shikoRaportetToolStripMenuItem.Text = "Shiko Raportet";
+            resources.ApplyResources(this.shikoRaportetToolStripMenuItem, "shikoRaportetToolStripMenuItem");
             this.shikoRaportetToolStripMenuItem.Click += new System.EventHandler(this.shikoRaportetToolStripMenuItem_Click);
             // 
             // menaxhoKategoritKluboreToolStripMenuItem
@@ -689,666 +621,79 @@
             this.fshijKategoriToolStripMenuItem,
             this.shfaqKategoritToolStripMenuItem});
             this.menaxhoKategoritKluboreToolStripMenuItem.Name = "menaxhoKategoritKluboreToolStripMenuItem";
-            this.menaxhoKategoritKluboreToolStripMenuItem.Size = new System.Drawing.Size(294, 24);
-            this.menaxhoKategoritKluboreToolStripMenuItem.Text = "Menaxho Kategorit Klubore";
+            resources.ApplyResources(this.menaxhoKategoritKluboreToolStripMenuItem, "menaxhoKategoritKluboreToolStripMenuItem");
             // 
             // regjistroKategoriToolStripMenuItem
             // 
             this.regjistroKategoriToolStripMenuItem.Name = "regjistroKategoriToolStripMenuItem";
-            this.regjistroKategoriToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
-            this.regjistroKategoriToolStripMenuItem.Text = "Regjistro Kategori";
+            resources.ApplyResources(this.regjistroKategoriToolStripMenuItem, "regjistroKategoriToolStripMenuItem");
             this.regjistroKategoriToolStripMenuItem.Click += new System.EventHandler(this.regjistroKategoriToolStripMenuItem_Click);
             // 
             // editoKategoriToolStripMenuItem
             // 
             this.editoKategoriToolStripMenuItem.Name = "editoKategoriToolStripMenuItem";
-            this.editoKategoriToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
-            this.editoKategoriToolStripMenuItem.Text = "Edito Kategori";
+            resources.ApplyResources(this.editoKategoriToolStripMenuItem, "editoKategoriToolStripMenuItem");
             this.editoKategoriToolStripMenuItem.Click += new System.EventHandler(this.editoKategoriToolStripMenuItem_Click);
             // 
             // fshijKategoriToolStripMenuItem
             // 
             this.fshijKategoriToolStripMenuItem.Name = "fshijKategoriToolStripMenuItem";
-            this.fshijKategoriToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
-            this.fshijKategoriToolStripMenuItem.Text = "Fshij Kategori";
+            resources.ApplyResources(this.fshijKategoriToolStripMenuItem, "fshijKategoriToolStripMenuItem");
             this.fshijKategoriToolStripMenuItem.Click += new System.EventHandler(this.fshijKategoriToolStripMenuItem_Click);
             // 
             // shfaqKategoritToolStripMenuItem
             // 
             this.shfaqKategoritToolStripMenuItem.Name = "shfaqKategoritToolStripMenuItem";
-            this.shfaqKategoritToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
-            this.shfaqKategoritToolStripMenuItem.Text = "Shfaq Kategorit";
+            resources.ApplyResources(this.shfaqKategoritToolStripMenuItem, "shfaqKategoritToolStripMenuItem");
             this.shfaqKategoritToolStripMenuItem.Click += new System.EventHandler(this.shfaqKategoritToolStripMenuItem_Click);
+            // 
+            // gjuhaToolStripMenuItem
+            // 
+            this.gjuhaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.amglishtToolStripMenuItem,
+            this.shqipToolStripMenuItem});
+            this.gjuhaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.gjuhaToolStripMenuItem.Name = "gjuhaToolStripMenuItem";
+            resources.ApplyResources(this.gjuhaToolStripMenuItem, "gjuhaToolStripMenuItem");
+            // 
+            // amglishtToolStripMenuItem
+            // 
+            this.amglishtToolStripMenuItem.Name = "amglishtToolStripMenuItem";
+            resources.ApplyResources(this.amglishtToolStripMenuItem, "amglishtToolStripMenuItem");
+            // 
+            // shqipToolStripMenuItem
+            // 
+            this.shqipToolStripMenuItem.Name = "shqipToolStripMenuItem";
+            resources.ApplyResources(this.shqipToolStripMenuItem, "shqipToolStripMenuItem");
+            this.shqipToolStripMenuItem.Click += new System.EventHandler(this.shqipToolStripMenuItem_Click);
             // 
             // bunifuTransition1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 1F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation3;
-            // 
-            // editoUshtrimeUserControl1
-            // 
-            this.editoUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoUshtrimeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoUshtrimeUserControl1.Name = "editoUshtrimeUserControl1";
-            this.editoUshtrimeUserControl1.Size = new System.Drawing.Size(1000, 500);
-            this.editoUshtrimeUserControl1.TabIndex = 29;
-            this.editoUshtrimeUserControl1.Visible = false;
-            // 
-            // fshijUshtrimeUserControl1
-            // 
-            this.fshijUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijUshtrimeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijUshtrimeUserControl1.Name = "fshijUshtrimeUserControl1";
-            this.fshijUshtrimeUserControl1.Size = new System.Drawing.Size(1000, 500);
-            this.fshijUshtrimeUserControl1.TabIndex = 28;
-            this.fshijUshtrimeUserControl1.Visible = false;
-            // 
-            // regjistroUshtrimeUserControl1
-            // 
-            this.regjistroUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroUshtrimeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroUshtrimeUserControl1.Name = "regjistroUshtrimeUserControl1";
-            this.regjistroUshtrimeUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroUshtrimeUserControl1.TabIndex = 27;
-            this.regjistroUshtrimeUserControl1.Visible = false;
-            // 
-            // shikoUshtrimeUserControl1
-            // 
-            this.shikoUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoUshtrimeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoUshtrimeUserControl1.Name = "shikoUshtrimeUserControl1";
-            this.shikoUshtrimeUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoUshtrimeUserControl1.TabIndex = 26;
-            this.shikoUshtrimeUserControl1.Visible = false;
-            // 
-            // editoKlubUserControl1
-            // 
-            this.editoKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoKlubUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoKlubUserControl1.Name = "editoKlubUserControl1";
-            this.editoKlubUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoKlubUserControl1.TabIndex = 25;
-            this.editoKlubUserControl1.Visible = false;
-            // 
-            // fshijKlubUserControl1
-            // 
-            this.fshijKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijKlubUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijKlubUserControl1.Name = "fshijKlubUserControl1";
-            this.fshijKlubUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijKlubUserControl1.TabIndex = 24;
-            this.fshijKlubUserControl1.Visible = false;
-            // 
-            // regjistroKlubUserControl1
-            // 
-            this.regjistroKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroKlubUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroKlubUserControl1.Name = "regjistroKlubUserControl1";
-            this.regjistroKlubUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroKlubUserControl1.TabIndex = 23;
-            this.regjistroKlubUserControl1.Visible = false;
-            // 
-            // shikoKlubUserControl1
-            // 
-            this.shikoKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoKlubUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoKlubUserControl1.Name = "shikoKlubUserControl1";
-            this.shikoKlubUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoKlubUserControl1.TabIndex = 22;
-            this.shikoKlubUserControl1.Visible = false;
-            // 
-            // editoNdeshjeUserControl1
-            // 
-            this.editoNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoNdeshjeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoNdeshjeUserControl1.Name = "editoNdeshjeUserControl1";
-            this.editoNdeshjeUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoNdeshjeUserControl1.TabIndex = 21;
-            this.editoNdeshjeUserControl1.Visible = false;
-            // 
-            // fshijNdeshjeUserControl1
-            // 
-            this.fshijNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijNdeshjeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijNdeshjeUserControl1.Name = "fshijNdeshjeUserControl1";
-            this.fshijNdeshjeUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijNdeshjeUserControl1.TabIndex = 20;
-            this.fshijNdeshjeUserControl1.Visible = false;
-            // 
-            // regjistroNdeshjeUserControl1
-            // 
-            this.regjistroNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroNdeshjeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroNdeshjeUserControl1.Name = "regjistroNdeshjeUserControl1";
-            this.regjistroNdeshjeUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroNdeshjeUserControl1.TabIndex = 19;
-            this.regjistroNdeshjeUserControl1.Visible = false;
-            // 
-            // shikoNdeshjeUserControl1
-            // 
-            this.shikoNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoNdeshjeUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoNdeshjeUserControl1.Name = "shikoNdeshjeUserControl1";
-            this.shikoNdeshjeUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoNdeshjeUserControl1.TabIndex = 18;
-            this.shikoNdeshjeUserControl1.Visible = false;
-            // 
-            // editoTrajnerUserControl1
-            // 
-            this.editoTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoTrajnerUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoTrajnerUserControl1.Name = "editoTrajnerUserControl1";
-            this.editoTrajnerUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoTrajnerUserControl1.TabIndex = 17;
-            this.editoTrajnerUserControl1.Visible = false;
-            // 
-            // fshijTrajnerUserControl1
-            // 
-            this.fshijTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijTrajnerUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijTrajnerUserControl1.Name = "fshijTrajnerUserControl1";
-            this.fshijTrajnerUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijTrajnerUserControl1.TabIndex = 16;
-            this.fshijTrajnerUserControl1.Visible = false;
-            // 
-            // regjistroTrajnerUserControl1
-            // 
-            this.regjistroTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroTrajnerUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroTrajnerUserControl1.Name = "regjistroTrajnerUserControl1";
-            this.regjistroTrajnerUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroTrajnerUserControl1.TabIndex = 15;
-            this.regjistroTrajnerUserControl1.Visible = false;
-            // 
-            // shikoTrajnerUserControl1
-            // 
-            this.shikoTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoTrajnerUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoTrajnerUserControl1.Name = "shikoTrajnerUserControl1";
-            this.shikoTrajnerUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoTrajnerUserControl1.TabIndex = 14;
-            this.shikoTrajnerUserControl1.Visible = false;
-            // 
-            // editoFormacionUserControl1
-            // 
-            this.editoFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoFormacionUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoFormacionUserControl1.Name = "editoFormacionUserControl1";
-            this.editoFormacionUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoFormacionUserControl1.TabIndex = 13;
-            this.editoFormacionUserControl1.Visible = false;
-            // 
-            // shikoFormacionUserControl1
-            // 
-            this.shikoFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoFormacionUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoFormacionUserControl1.Name = "shikoFormacionUserControl1";
-            this.shikoFormacionUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoFormacionUserControl1.TabIndex = 12;
-            this.shikoFormacionUserControl1.Visible = false;
-            // 
-            // regjistroFormacionUserControl1
-            // 
-            this.regjistroFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroFormacionUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroFormacionUserControl1.Name = "regjistroFormacionUserControl1";
-            this.regjistroFormacionUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroFormacionUserControl1.TabIndex = 11;
-            this.regjistroFormacionUserControl1.Visible = false;
-            // 
-            // fshijFormacionUserControl1
-            // 
-            this.fshijFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijFormacionUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijFormacionUserControl1.Name = "fshijFormacionUserControl1";
-            this.fshijFormacionUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijFormacionUserControl1.TabIndex = 10;
-            this.fshijFormacionUserControl1.Visible = false;
-            // 
-            // shikoLojtaretUserControl1
-            // 
-            this.shikoLojtaretUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoLojtaretUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoLojtaretUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoLojtaretUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoLojtaretUserControl1.Name = "shikoLojtaretUserControl1";
-            this.shikoLojtaretUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoLojtaretUserControl1.TabIndex = 9;
-            this.shikoLojtaretUserControl1.Visible = false;
-            // 
-            // fshijLojtarUserControl1
-            // 
-            this.fshijLojtarUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijLojtarUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijLojtarUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijLojtarUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijLojtarUserControl1.Name = "fshijLojtarUserControl1";
-            this.fshijLojtarUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijLojtarUserControl1.TabIndex = 8;
-            this.fshijLojtarUserControl1.Visible = false;
-            // 
-            // editoLojtarUserControl2
-            // 
-            this.editoLojtarUserControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoLojtarUserControl2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoLojtarUserControl2, BunifuAnimatorNS.DecorationType.None);
-            this.editoLojtarUserControl2.Location = new System.Drawing.Point(0, 31);
-            this.editoLojtarUserControl2.Name = "editoLojtarUserControl2";
-            this.editoLojtarUserControl2.Size = new System.Drawing.Size(1000, 470);
-            this.editoLojtarUserControl2.TabIndex = 7;
-            this.editoLojtarUserControl2.Visible = false;
-            // 
-            // regjistroLojtartUserControls2
-            // 
-            this.regjistroLojtartUserControls2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroLojtartUserControls2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroLojtartUserControls2, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroLojtartUserControls2.Location = new System.Drawing.Point(0, 31);
-            this.regjistroLojtartUserControls2.Name = "regjistroLojtartUserControls2";
-            this.regjistroLojtartUserControls2.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroLojtartUserControls2.TabIndex = 6;
-            this.regjistroLojtartUserControls2.Visible = false;
-            // 
-            // shikoVlersimetUserControl1
-            // 
-            this.shikoVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoVlersimetUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoVlersimetUserControl1.Name = "shikoVlersimetUserControl1";
-            this.shikoVlersimetUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoVlersimetUserControl1.TabIndex = 30;
-            this.shikoVlersimetUserControl1.Visible = false;
-            // 
-            // regjistroVlersimetUserControl1
-            // 
-            this.regjistroVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroVlersimetUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroVlersimetUserControl1.Name = "regjistroVlersimetUserControl1";
-            this.regjistroVlersimetUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroVlersimetUserControl1.TabIndex = 31;
-            this.regjistroVlersimetUserControl1.Visible = false;
-            // 
-            // fshijVlersimetUserControl1
-            // 
-            this.fshijVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijVlersimetUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijVlersimetUserControl1.Name = "fshijVlersimetUserControl1";
-            this.fshijVlersimetUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijVlersimetUserControl1.TabIndex = 32;
-            this.fshijVlersimetUserControl1.Visible = false;
-            // 
-            // editoVlersimetUserControl1
-            // 
-            this.editoVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoVlersimetUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoVlersimetUserControl1.Name = "editoVlersimetUserControl1";
-            this.editoVlersimetUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoVlersimetUserControl1.TabIndex = 33;
-            this.editoVlersimetUserControl1.Visible = false;
-            // 
-            // shikoStadiumUserControl1
-            // 
-            this.shikoStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoStadiumUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoStadiumUserControl1.Name = "shikoStadiumUserControl1";
-            this.shikoStadiumUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoStadiumUserControl1.TabIndex = 34;
-            this.shikoStadiumUserControl1.Visible = false;
-            // 
-            // regjistroStadiumUserControl1
-            // 
-            this.regjistroStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroStadiumUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroStadiumUserControl1.Name = "regjistroStadiumUserControl1";
-            this.regjistroStadiumUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroStadiumUserControl1.TabIndex = 35;
-            this.regjistroStadiumUserControl1.Visible = false;
-            // 
-            // fshijStadiumUserControl1
-            // 
-            this.fshijStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijStadiumUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijStadiumUserControl1.Name = "fshijStadiumUserControl1";
-            this.fshijStadiumUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijStadiumUserControl1.TabIndex = 36;
-            this.fshijStadiumUserControl1.Visible = false;
-            // 
-            // editoStadiumUserControl1
-            // 
-            this.editoStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoStadiumUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoStadiumUserControl1.Name = "editoStadiumUserControl1";
-            this.editoStadiumUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoStadiumUserControl1.TabIndex = 37;
-            this.editoStadiumUserControl1.Visible = false;
-            // 
-            // shikoReferatUserControl1
-            // 
-            this.shikoReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoReferatUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoReferatUserControl1.Name = "shikoReferatUserControl1";
-            this.shikoReferatUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoReferatUserControl1.TabIndex = 38;
-            this.shikoReferatUserControl1.Visible = false;
-            // 
-            // regjistroReferatUserControl1
-            // 
-            this.regjistroReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroReferatUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroReferatUserControl1.Name = "regjistroReferatUserControl1";
-            this.regjistroReferatUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroReferatUserControl1.TabIndex = 39;
-            this.regjistroReferatUserControl1.Visible = false;
-            // 
-            // fshijReferatUserControl1
-            // 
-            this.fshijReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijReferatUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijReferatUserControl1.Name = "fshijReferatUserControl1";
-            this.fshijReferatUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijReferatUserControl1.TabIndex = 40;
-            this.fshijReferatUserControl1.UseWaitCursor = true;
-            // 
-            // editoReferatUserControl1
-            // 
-            this.editoReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoReferatUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoReferatUserControl1.Name = "editoReferatUserControl1";
-            this.editoReferatUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoReferatUserControl1.TabIndex = 41;
-            this.editoReferatUserControl1.Visible = false;
-            // 
-            // shikoRaporteUserControl1
-            // 
-            this.shikoRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoRaporteUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoRaporteUserControl1.Name = "shikoRaporteUserControl1";
-            this.shikoRaporteUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoRaporteUserControl1.TabIndex = 42;
-            this.shikoRaporteUserControl1.Visible = false;
-            // 
-            // regjistroRaporteUserControl1
-            // 
-            this.regjistroRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroRaporteUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroRaporteUserControl1.Name = "regjistroRaporteUserControl1";
-            this.regjistroRaporteUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroRaporteUserControl1.TabIndex = 43;
-            this.regjistroRaporteUserControl1.Visible = false;
-            // 
-            // fshijRaporteUserControl1
-            // 
-            this.fshijRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijRaporteUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijRaporteUserControl1.Name = "fshijRaporteUserControl1";
-            this.fshijRaporteUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijRaporteUserControl1.TabIndex = 44;
-            this.fshijRaporteUserControl1.Visible = false;
-            // 
-            // editoRaporteUserControl1
-            // 
-            this.editoRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoRaporteUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoRaporteUserControl1.Name = "editoRaporteUserControl1";
-            this.editoRaporteUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoRaporteUserControl1.TabIndex = 45;
-            this.editoRaporteUserControl1.Visible = false;
-            // 
-            // shikoKategoritKluboreUserControl1
-            // 
-            this.shikoKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoKategoritKluboreUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoKategoritKluboreUserControl1.Name = "shikoKategoritKluboreUserControl1";
-            this.shikoKategoritKluboreUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoKategoritKluboreUserControl1.TabIndex = 46;
-            this.shikoKategoritKluboreUserControl1.Visible = false;
-            // 
-            // regjistroKategoritKluboreUserControl1
-            // 
-            this.regjistroKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroKategoritKluboreUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroKategoritKluboreUserControl1.Name = "regjistroKategoritKluboreUserControl1";
-            this.regjistroKategoritKluboreUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroKategoritKluboreUserControl1.TabIndex = 47;
-            this.regjistroKategoritKluboreUserControl1.Visible = false;
-            // 
-            // fshijKategoritKluboreUserControl1
-            // 
-            this.fshijKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijKategoritKluboreUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijKategoritKluboreUserControl1.Name = "fshijKategoritKluboreUserControl1";
-            this.fshijKategoritKluboreUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijKategoritKluboreUserControl1.TabIndex = 48;
-            this.fshijKategoritKluboreUserControl1.Visible = false;
-            // 
-            // editoKategoritKluboreUserControl1
-            // 
-            this.editoKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoKategoritKluboreUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoKategoritKluboreUserControl1.Name = "editoKategoritKluboreUserControl1";
-            this.editoKategoritKluboreUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoKategoritKluboreUserControl1.TabIndex = 49;
-            this.editoKategoritKluboreUserControl1.Visible = false;
-            // 
-            // shikoDelegatUserControls1
-            // 
-            this.shikoDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoDelegatUserControls1.Location = new System.Drawing.Point(0, 31);
-            this.shikoDelegatUserControls1.Name = "shikoDelegatUserControls1";
-            this.shikoDelegatUserControls1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoDelegatUserControls1.TabIndex = 50;
-            this.shikoDelegatUserControls1.Visible = false;
-            // 
-            // regjistroDelegatUserControls1
-            // 
-            this.regjistroDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroDelegatUserControls1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroDelegatUserControls1.Name = "regjistroDelegatUserControls1";
-            this.regjistroDelegatUserControls1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroDelegatUserControls1.TabIndex = 51;
-            this.regjistroDelegatUserControls1.Visible = false;
-            // 
-            // fshijeDelegatUserControls1
-            // 
-            this.fshijeDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijeDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijeDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijeDelegatUserControls1.Location = new System.Drawing.Point(0, 31);
-            this.fshijeDelegatUserControls1.Name = "fshijeDelegatUserControls1";
-            this.fshijeDelegatUserControls1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijeDelegatUserControls1.TabIndex = 52;
-            this.fshijeDelegatUserControls1.Visible = false;
-            // 
-            // editoDelegatUserControls1
-            // 
-            this.editoDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
-            this.editoDelegatUserControls1.Location = new System.Drawing.Point(0, 31);
-            this.editoDelegatUserControls1.Name = "editoDelegatUserControls1";
-            this.editoDelegatUserControls1.Size = new System.Drawing.Size(1000, 470);
-            this.editoDelegatUserControls1.TabIndex = 53;
-            this.editoDelegatUserControls1.Visible = false;
-            // 
-            // editoGolashenuesiUserControl1
-            // 
-            this.editoGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.editoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.editoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.editoGolashenuesiUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.editoGolashenuesiUserControl1.Name = "editoGolashenuesiUserControl1";
-            this.editoGolashenuesiUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.editoGolashenuesiUserControl1.TabIndex = 54;
-            this.editoGolashenuesiUserControl1.Visible = false;
-            // 
-            // fshijGolashenuesiUserControl1
-            // 
-            this.fshijGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.fshijGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.fshijGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.fshijGolashenuesiUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.fshijGolashenuesiUserControl1.Name = "fshijGolashenuesiUserControl1";
-            this.fshijGolashenuesiUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.fshijGolashenuesiUserControl1.TabIndex = 55;
-            this.fshijGolashenuesiUserControl1.Visible = false;
-            // 
-            // regjistroGolashenuesiUserControl1
-            // 
-            this.regjistroGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.regjistroGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regjistroGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.regjistroGolashenuesiUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.regjistroGolashenuesiUserControl1.Name = "regjistroGolashenuesiUserControl1";
-            this.regjistroGolashenuesiUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.regjistroGolashenuesiUserControl1.TabIndex = 56;
-            this.regjistroGolashenuesiUserControl1.Visible = false;
-            // 
-            // shikoGolashenuesiUserControl1
-            // 
-            this.shikoGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.bunifuTransition1.SetDecoration(this.shikoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.shikoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
-            this.shikoGolashenuesiUserControl1.Location = new System.Drawing.Point(0, 31);
-            this.shikoGolashenuesiUserControl1.Name = "shikoGolashenuesiUserControl1";
-            this.shikoGolashenuesiUserControl1.Size = new System.Drawing.Size(1000, 470);
-            this.shikoGolashenuesiUserControl1.TabIndex = 57;
-            this.shikoGolashenuesiUserControl1.Visible = false;
-            // 
-            // bunifuTransition2
-            // 
-            this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
-            this.bunifuTransition2.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(50);
-            animation4.RotateCoeff = 0.3F;
-            animation4.RotateLimit = 0.2F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation4;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 35;
-            this.bunifuElipse1.TargetControl = this;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 1F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation2;
             // 
             // pictureBox1
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(869, 0);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
@@ -1356,21 +701,478 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(941, 0);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // bunifuTransition2
+            // 
+            this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
+            this.bunifuTransition2.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(50);
+            animation1.RotateCoeff = 0.3F;
+            animation1.RotateLimit = 0.2F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation1;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 35;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // pictureBox3
+            // 
+            this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // dashboardHelpUserControl1
+            // 
+            this.dashboardHelpUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.dashboardHelpUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.dashboardHelpUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.dashboardHelpUserControl1, "dashboardHelpUserControl1");
+            this.dashboardHelpUserControl1.Name = "dashboardHelpUserControl1";
+            // 
+            // shikoGolashenuesiUserControl1
+            // 
+            this.shikoGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoGolashenuesiUserControl1, "shikoGolashenuesiUserControl1");
+            this.shikoGolashenuesiUserControl1.Name = "shikoGolashenuesiUserControl1";
+            // 
+            // regjistroGolashenuesiUserControl1
+            // 
+            this.regjistroGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroGolashenuesiUserControl1, "regjistroGolashenuesiUserControl1");
+            this.regjistroGolashenuesiUserControl1.Name = "regjistroGolashenuesiUserControl1";
+            // 
+            // fshijGolashenuesiUserControl1
+            // 
+            this.fshijGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijGolashenuesiUserControl1, "fshijGolashenuesiUserControl1");
+            this.fshijGolashenuesiUserControl1.Name = "fshijGolashenuesiUserControl1";
+            // 
+            // editoGolashenuesiUserControl1
+            // 
+            this.editoGolashenuesiUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoGolashenuesiUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoGolashenuesiUserControl1, "editoGolashenuesiUserControl1");
+            this.editoGolashenuesiUserControl1.Name = "editoGolashenuesiUserControl1";
+            // 
+            // editoDelegatUserControls1
+            // 
+            this.editoDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoDelegatUserControls1, "editoDelegatUserControls1");
+            this.editoDelegatUserControls1.Name = "editoDelegatUserControls1";
+            // 
+            // fshijeDelegatUserControls1
+            // 
+            this.fshijeDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijeDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijeDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijeDelegatUserControls1, "fshijeDelegatUserControls1");
+            this.fshijeDelegatUserControls1.Name = "fshijeDelegatUserControls1";
+            // 
+            // regjistroDelegatUserControls1
+            // 
+            this.regjistroDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroDelegatUserControls1, "regjistroDelegatUserControls1");
+            this.regjistroDelegatUserControls1.Name = "regjistroDelegatUserControls1";
+            // 
+            // shikoDelegatUserControls1
+            // 
+            this.shikoDelegatUserControls1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoDelegatUserControls1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoDelegatUserControls1, "shikoDelegatUserControls1");
+            this.shikoDelegatUserControls1.Name = "shikoDelegatUserControls1";
+            // 
+            // editoKategoritKluboreUserControl1
+            // 
+            this.editoKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoKategoritKluboreUserControl1, "editoKategoritKluboreUserControl1");
+            this.editoKategoritKluboreUserControl1.Name = "editoKategoritKluboreUserControl1";
+            // 
+            // fshijKategoritKluboreUserControl1
+            // 
+            this.fshijKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijKategoritKluboreUserControl1, "fshijKategoritKluboreUserControl1");
+            this.fshijKategoritKluboreUserControl1.Name = "fshijKategoritKluboreUserControl1";
+            // 
+            // regjistroKategoritKluboreUserControl1
+            // 
+            this.regjistroKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroKategoritKluboreUserControl1, "regjistroKategoritKluboreUserControl1");
+            this.regjistroKategoritKluboreUserControl1.Name = "regjistroKategoritKluboreUserControl1";
+            // 
+            // shikoKategoritKluboreUserControl1
+            // 
+            this.shikoKategoritKluboreUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoKategoritKluboreUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoKategoritKluboreUserControl1, "shikoKategoritKluboreUserControl1");
+            this.shikoKategoritKluboreUserControl1.Name = "shikoKategoritKluboreUserControl1";
+            // 
+            // editoRaporteUserControl1
+            // 
+            this.editoRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoRaporteUserControl1, "editoRaporteUserControl1");
+            this.editoRaporteUserControl1.Name = "editoRaporteUserControl1";
+            // 
+            // fshijRaporteUserControl1
+            // 
+            this.fshijRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijRaporteUserControl1, "fshijRaporteUserControl1");
+            this.fshijRaporteUserControl1.Name = "fshijRaporteUserControl1";
+            // 
+            // regjistroRaporteUserControl1
+            // 
+            this.regjistroRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroRaporteUserControl1, "regjistroRaporteUserControl1");
+            this.regjistroRaporteUserControl1.Name = "regjistroRaporteUserControl1";
+            // 
+            // shikoRaporteUserControl1
+            // 
+            this.shikoRaporteUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoRaporteUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoRaporteUserControl1, "shikoRaporteUserControl1");
+            this.shikoRaporteUserControl1.Name = "shikoRaporteUserControl1";
+            // 
+            // editoReferatUserControl1
+            // 
+            this.editoReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoReferatUserControl1, "editoReferatUserControl1");
+            this.editoReferatUserControl1.Name = "editoReferatUserControl1";
+            // 
+            // fshijReferatUserControl1
+            // 
+            this.fshijReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijReferatUserControl1, "fshijReferatUserControl1");
+            this.fshijReferatUserControl1.Name = "fshijReferatUserControl1";
+            this.fshijReferatUserControl1.UseWaitCursor = true;
+            // 
+            // regjistroReferatUserControl1
+            // 
+            this.regjistroReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroReferatUserControl1, "regjistroReferatUserControl1");
+            this.regjistroReferatUserControl1.Name = "regjistroReferatUserControl1";
+            // 
+            // shikoReferatUserControl1
+            // 
+            this.shikoReferatUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoReferatUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoReferatUserControl1, "shikoReferatUserControl1");
+            this.shikoReferatUserControl1.Name = "shikoReferatUserControl1";
+            // 
+            // editoStadiumUserControl1
+            // 
+            this.editoStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoStadiumUserControl1, "editoStadiumUserControl1");
+            this.editoStadiumUserControl1.Name = "editoStadiumUserControl1";
+            // 
+            // fshijStadiumUserControl1
+            // 
+            this.fshijStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijStadiumUserControl1, "fshijStadiumUserControl1");
+            this.fshijStadiumUserControl1.Name = "fshijStadiumUserControl1";
+            // 
+            // regjistroStadiumUserControl1
+            // 
+            this.regjistroStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroStadiumUserControl1, "regjistroStadiumUserControl1");
+            this.regjistroStadiumUserControl1.Name = "regjistroStadiumUserControl1";
+            // 
+            // shikoStadiumUserControl1
+            // 
+            this.shikoStadiumUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoStadiumUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoStadiumUserControl1, "shikoStadiumUserControl1");
+            this.shikoStadiumUserControl1.Name = "shikoStadiumUserControl1";
+            // 
+            // editoVlersimetUserControl1
+            // 
+            this.editoVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoVlersimetUserControl1, "editoVlersimetUserControl1");
+            this.editoVlersimetUserControl1.Name = "editoVlersimetUserControl1";
+            // 
+            // fshijVlersimetUserControl1
+            // 
+            this.fshijVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijVlersimetUserControl1, "fshijVlersimetUserControl1");
+            this.fshijVlersimetUserControl1.Name = "fshijVlersimetUserControl1";
+            // 
+            // regjistroVlersimetUserControl1
+            // 
+            this.regjistroVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroVlersimetUserControl1, "regjistroVlersimetUserControl1");
+            this.regjistroVlersimetUserControl1.Name = "regjistroVlersimetUserControl1";
+            // 
+            // shikoVlersimetUserControl1
+            // 
+            this.shikoVlersimetUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoVlersimetUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoVlersimetUserControl1, "shikoVlersimetUserControl1");
+            this.shikoVlersimetUserControl1.Name = "shikoVlersimetUserControl1";
+            // 
+            // editoUshtrimeUserControl1
+            // 
+            this.editoUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoUshtrimeUserControl1, "editoUshtrimeUserControl1");
+            this.editoUshtrimeUserControl1.Name = "editoUshtrimeUserControl1";
+            // 
+            // fshijUshtrimeUserControl1
+            // 
+            this.fshijUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijUshtrimeUserControl1, "fshijUshtrimeUserControl1");
+            this.fshijUshtrimeUserControl1.Name = "fshijUshtrimeUserControl1";
+            // 
+            // regjistroUshtrimeUserControl1
+            // 
+            this.regjistroUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroUshtrimeUserControl1, "regjistroUshtrimeUserControl1");
+            this.regjistroUshtrimeUserControl1.Name = "regjistroUshtrimeUserControl1";
+            // 
+            // shikoUshtrimeUserControl1
+            // 
+            this.shikoUshtrimeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoUshtrimeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoUshtrimeUserControl1, "shikoUshtrimeUserControl1");
+            this.shikoUshtrimeUserControl1.Name = "shikoUshtrimeUserControl1";
+            // 
+            // editoKlubUserControl1
+            // 
+            this.editoKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoKlubUserControl1, "editoKlubUserControl1");
+            this.editoKlubUserControl1.Name = "editoKlubUserControl1";
+            // 
+            // fshijKlubUserControl1
+            // 
+            this.fshijKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijKlubUserControl1, "fshijKlubUserControl1");
+            this.fshijKlubUserControl1.Name = "fshijKlubUserControl1";
+            // 
+            // regjistroKlubUserControl1
+            // 
+            this.regjistroKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroKlubUserControl1, "regjistroKlubUserControl1");
+            this.regjistroKlubUserControl1.Name = "regjistroKlubUserControl1";
+            // 
+            // shikoKlubUserControl1
+            // 
+            this.shikoKlubUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoKlubUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoKlubUserControl1, "shikoKlubUserControl1");
+            this.shikoKlubUserControl1.Name = "shikoKlubUserControl1";
+            // 
+            // editoNdeshjeUserControl1
+            // 
+            this.editoNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoNdeshjeUserControl1, "editoNdeshjeUserControl1");
+            this.editoNdeshjeUserControl1.Name = "editoNdeshjeUserControl1";
+            // 
+            // fshijNdeshjeUserControl1
+            // 
+            this.fshijNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijNdeshjeUserControl1, "fshijNdeshjeUserControl1");
+            this.fshijNdeshjeUserControl1.Name = "fshijNdeshjeUserControl1";
+            // 
+            // regjistroNdeshjeUserControl1
+            // 
+            this.regjistroNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroNdeshjeUserControl1, "regjistroNdeshjeUserControl1");
+            this.regjistroNdeshjeUserControl1.Name = "regjistroNdeshjeUserControl1";
+            // 
+            // shikoNdeshjeUserControl1
+            // 
+            this.shikoNdeshjeUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoNdeshjeUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoNdeshjeUserControl1, "shikoNdeshjeUserControl1");
+            this.shikoNdeshjeUserControl1.Name = "shikoNdeshjeUserControl1";
+            // 
+            // editoTrajnerUserControl1
+            // 
+            this.editoTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoTrajnerUserControl1, "editoTrajnerUserControl1");
+            this.editoTrajnerUserControl1.Name = "editoTrajnerUserControl1";
+            // 
+            // fshijTrajnerUserControl1
+            // 
+            this.fshijTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijTrajnerUserControl1, "fshijTrajnerUserControl1");
+            this.fshijTrajnerUserControl1.Name = "fshijTrajnerUserControl1";
+            // 
+            // regjistroTrajnerUserControl1
+            // 
+            this.regjistroTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroTrajnerUserControl1, "regjistroTrajnerUserControl1");
+            this.regjistroTrajnerUserControl1.Name = "regjistroTrajnerUserControl1";
+            // 
+            // shikoTrajnerUserControl1
+            // 
+            this.shikoTrajnerUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoTrajnerUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoTrajnerUserControl1, "shikoTrajnerUserControl1");
+            this.shikoTrajnerUserControl1.Name = "shikoTrajnerUserControl1";
+            // 
+            // editoFormacionUserControl1
+            // 
+            this.editoFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoFormacionUserControl1, "editoFormacionUserControl1");
+            this.editoFormacionUserControl1.Name = "editoFormacionUserControl1";
+            // 
+            // shikoFormacionUserControl1
+            // 
+            this.shikoFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoFormacionUserControl1, "shikoFormacionUserControl1");
+            this.shikoFormacionUserControl1.Name = "shikoFormacionUserControl1";
+            // 
+            // regjistroFormacionUserControl1
+            // 
+            this.regjistroFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroFormacionUserControl1, "regjistroFormacionUserControl1");
+            this.regjistroFormacionUserControl1.Name = "regjistroFormacionUserControl1";
+            // 
+            // fshijFormacionUserControl1
+            // 
+            this.fshijFormacionUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijFormacionUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijFormacionUserControl1, "fshijFormacionUserControl1");
+            this.fshijFormacionUserControl1.Name = "fshijFormacionUserControl1";
+            // 
+            // shikoLojtaretUserControl1
+            // 
+            this.shikoLojtaretUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.shikoLojtaretUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.shikoLojtaretUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.shikoLojtaretUserControl1, "shikoLojtaretUserControl1");
+            this.shikoLojtaretUserControl1.Name = "shikoLojtaretUserControl1";
+            // 
+            // fshijLojtarUserControl1
+            // 
+            this.fshijLojtarUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.fshijLojtarUserControl1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.fshijLojtarUserControl1, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.fshijLojtarUserControl1, "fshijLojtarUserControl1");
+            this.fshijLojtarUserControl1.Name = "fshijLojtarUserControl1";
+            // 
+            // editoLojtarUserControl2
+            // 
+            this.editoLojtarUserControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.editoLojtarUserControl2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.editoLojtarUserControl2, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.editoLojtarUserControl2, "editoLojtarUserControl2");
+            this.editoLojtarUserControl2.Name = "editoLojtarUserControl2";
+            // 
+            // regjistroLojtartUserControls2
+            // 
+            this.regjistroLojtartUserControls2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.bunifuTransition1.SetDecoration(this.regjistroLojtartUserControls2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regjistroLojtartUserControls2, BunifuAnimatorNS.DecorationType.None);
+            resources.ApplyResources(this.regjistroLojtartUserControls2, "regjistroLojtartUserControls2");
+            this.regjistroLojtartUserControls2.Name = "regjistroLojtartUserControls2";
+            // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.dashboardHelpUserControl1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.shikoGolashenuesiUserControl1);
@@ -1430,12 +1232,11 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1447,7 +1248,6 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem administatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
@@ -1570,5 +1370,10 @@
         private UserControls.GolashenuesiUserControls.EditoGolashenuesiUserControl editoGolashenuesiUserControl1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem gjuhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem amglishtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shqipToolStripMenuItem;
+        private UserControls.HelpUserControls.DashboardHelpUserControl dashboardHelpUserControl1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

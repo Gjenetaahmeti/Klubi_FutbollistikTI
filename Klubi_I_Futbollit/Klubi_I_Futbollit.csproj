@@ -260,6 +260,12 @@
     <Compile Include="UserControls\GolashenuesiUserControls\ShikoGolashenuesiUserControl.Designer.cs">
       <DependentUpon>ShikoGolashenuesiUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HelpUserControls\DashboardHelpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HelpUserControls\DashboardHelpUserControl.Designer.cs">
+      <DependentUpon>DashboardHelpUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\KategoritKluboreUserControls\EditoKategoritKluboreUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -504,10 +510,25 @@
     <EmbeddedResource Include="Administratori Kryesor\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administratori Kryesor\Dashboard.sq.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.ak-GH.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.sq.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mirsevini.gsw.resx">
+      <DependentUpon>Mirsevini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mirsevini.resx">
+      <DependentUpon>Mirsevini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mirsevini.sq.resx">
       <DependentUpon>Mirsevini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -556,6 +577,9 @@
     <EmbeddedResource Include="UserControls\GolashenuesiUserControls\ShikoGolashenuesiUserControl.resx">
       <DependentUpon>ShikoGolashenuesiUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HelpUserControls\DashboardHelpUserControl.resx">
+      <DependentUpon>DashboardHelpUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\KategoritKluboreUserControls\EditoKategoritKluboreUserControl.resx">
       <DependentUpon>EditoKategoritKluboreUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -571,10 +595,19 @@
     <EmbeddedResource Include="UserControls\KlubetUserControls\EditoKlubUserControl.resx">
       <DependentUpon>EditoKlubUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\KlubetUserControls\EditoKlubUserControl.sq.resx">
+      <DependentUpon>EditoKlubUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\KlubetUserControls\FshijKlubUserControl.resx">
       <DependentUpon>FshijKlubUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\KlubetUserControls\FshijKlubUserControl.sq.resx">
+      <DependentUpon>FshijKlubUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\KlubetUserControls\RegjistroKlubUserControl.resx">
+      <DependentUpon>RegjistroKlubUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\KlubetUserControls\RegjistroKlubUserControl.sq.resx">
       <DependentUpon>RegjistroKlubUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\KlubetUserControls\ShikoKlubUserControl.resx">
@@ -583,10 +616,19 @@
     <EmbeddedResource Include="UserControls\LojtartUserControls\EditoLojtarUserControl.resx">
       <DependentUpon>EditoLojtarUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LojtartUserControls\EditoLojtarUserControl.sq.resx">
+      <DependentUpon>EditoLojtarUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LojtartUserControls\FshijLojtarUserControl.resx">
       <DependentUpon>FshijLojtarUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LojtartUserControls\FshijLojtarUserControl.sq.resx">
+      <DependentUpon>FshijLojtarUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LojtartUserControls\RegjistroLojtartUserControls.resx">
+      <DependentUpon>RegjistroLojtartUserControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LojtartUserControls\RegjistroLojtartUserControls.sq.resx">
       <DependentUpon>RegjistroLojtartUserControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LojtartUserControls\ShikoLojtaretUserControl.resx">

@@ -72,346 +72,226 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 344);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 123);
-            this.panel1.TabIndex = 0;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label14, "label14");
             this.label14.ForeColor = System.Drawing.Color.Silver;
-            this.label14.Location = new System.Drawing.Point(245, 46);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(250, 37);
-            this.label14.TabIndex = 58;
-            this.label14.Text = "FC PRISHTINA";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 5);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // txtDitelindja
             // 
             this.txtDitelindja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtDitelindja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDitelindja.Location = new System.Drawing.Point(474, 105);
+            resources.ApplyResources(this.txtDitelindja, "txtDitelindja");
             this.txtDitelindja.Name = "txtDitelindja";
-            this.txtDitelindja.Size = new System.Drawing.Size(137, 20);
-            this.txtDitelindja.TabIndex = 57;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label13, "label13");
             this.label13.ForeColor = System.Drawing.Color.Silver;
-            this.label13.Location = new System.Drawing.Point(357, 101);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 20);
-            this.label13.TabIndex = 56;
-            this.label13.Text = "Ditelindja";
             // 
             // txtNumriIfanelles
             // 
             this.txtNumriIfanelles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtNumriIfanelles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumriIfanelles.Location = new System.Drawing.Point(173, 240);
+            resources.ApplyResources(this.txtNumriIfanelles, "txtNumriIfanelles");
             this.txtNumriIfanelles.Name = "txtNumriIfanelles";
-            this.txtNumriIfanelles.Size = new System.Drawing.Size(137, 20);
-            this.txtNumriIfanelles.TabIndex = 55;
             // 
             // txtGjatesia
             // 
             this.txtGjatesia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtGjatesia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGjatesia.Location = new System.Drawing.Point(829, 215);
+            resources.ApplyResources(this.txtGjatesia, "txtGjatesia");
             this.txtGjatesia.Name = "txtGjatesia";
-            this.txtGjatesia.Size = new System.Drawing.Size(137, 20);
-            this.txtGjatesia.TabIndex = 48;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label11, "label11");
             this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(669, 208);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 20);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Gjatesia";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label10, "label10");
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(669, 177);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 20);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Pesha";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label9, "label9");
             this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(672, 141);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 20);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "E-mail";
             // 
             // txtPesha
             // 
             this.txtPesha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtPesha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesha.Location = new System.Drawing.Point(829, 180);
+            resources.ApplyResources(this.txtPesha, "txtPesha");
             this.txtPesha.Name = "txtPesha";
-            this.txtPesha.Size = new System.Drawing.Size(137, 20);
-            this.txtPesha.TabIndex = 49;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label12, "label12");
             this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(16, 237);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 20);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "Numri i fanelles";
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(829, 137);
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(137, 20);
-            this.txtEmail.TabIndex = 47;
             // 
             // txtFjalekalimi
             // 
             this.txtFjalekalimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtFjalekalimi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFjalekalimi.Location = new System.Drawing.Point(173, 195);
+            resources.ApplyResources(this.txtFjalekalimi, "txtFjalekalimi");
             this.txtFjalekalimi.Name = "txtFjalekalimi";
-            this.txtFjalekalimi.Size = new System.Drawing.Size(137, 20);
-            this.txtFjalekalimi.TabIndex = 53;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(16, 192);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Fjalekalimi";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label8, "label8");
             this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(669, 102);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 20);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Numri Telefonit";
             // 
             // txtEmriPerdoruesit
             // 
             this.txtEmriPerdoruesit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtEmriPerdoruesit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmriPerdoruesit.Location = new System.Drawing.Point(173, 150);
+            resources.ApplyResources(this.txtEmriPerdoruesit, "txtEmriPerdoruesit");
             this.txtEmriPerdoruesit.Name = "txtEmriPerdoruesit";
-            this.txtEmriPerdoruesit.Size = new System.Drawing.Size(137, 20);
-            this.txtEmriPerdoruesit.TabIndex = 51;
             // 
             // Emriperdoruesit
             // 
-            this.Emriperdoruesit.AutoSize = true;
-            this.Emriperdoruesit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.Emriperdoruesit, "Emriperdoruesit");
             this.Emriperdoruesit.ForeColor = System.Drawing.Color.Silver;
-            this.Emriperdoruesit.Location = new System.Drawing.Point(15, 150);
             this.Emriperdoruesit.Name = "Emriperdoruesit";
-            this.Emriperdoruesit.Size = new System.Drawing.Size(137, 20);
-            this.Emriperdoruesit.TabIndex = 50;
-            this.Emriperdoruesit.Text = "EmriPerdoruesit";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label7, "label7");
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(669, 64);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 20);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Vendbaninmi";
             // 
             // txtNumriTelefonit
             // 
             this.txtNumriTelefonit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtNumriTelefonit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumriTelefonit.Location = new System.Drawing.Point(829, 100);
+            resources.ApplyResources(this.txtNumriTelefonit, "txtNumriTelefonit");
             this.txtNumriTelefonit.Name = "txtNumriTelefonit";
-            this.txtNumriTelefonit.Size = new System.Drawing.Size(137, 20);
-            this.txtNumriTelefonit.TabIndex = 46;
             // 
             // txtShtetesia
             // 
             this.txtShtetesia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtShtetesia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtShtetesia.Location = new System.Drawing.Point(474, 233);
+            resources.ApplyResources(this.txtShtetesia, "txtShtetesia");
             this.txtShtetesia.Name = "txtShtetesia";
-            this.txtShtetesia.Size = new System.Drawing.Size(137, 20);
-            this.txtShtetesia.TabIndex = 45;
             // 
             // txtGrupigjakut
             // 
             this.txtGrupigjakut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtGrupigjakut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGrupigjakut.Location = new System.Drawing.Point(474, 188);
+            resources.ApplyResources(this.txtGrupigjakut, "txtGrupigjakut");
             this.txtGrupigjakut.Name = "txtGrupigjakut";
-            this.txtGrupigjakut.Size = new System.Drawing.Size(137, 20);
-            this.txtGrupigjakut.TabIndex = 44;
             // 
             // txtVendlindja
             // 
             this.txtVendlindja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtVendlindja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVendlindja.Location = new System.Drawing.Point(474, 153);
+            resources.ApplyResources(this.txtVendlindja, "txtVendlindja");
             this.txtVendlindja.Name = "txtVendlindja";
-            this.txtVendlindja.Size = new System.Drawing.Size(137, 20);
-            this.txtVendlindja.TabIndex = 43;
             // 
             // txtVendbanimi
             // 
             this.txtVendbanimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtVendbanimi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVendbanimi.Location = new System.Drawing.Point(829, 68);
+            resources.ApplyResources(this.txtVendbanimi, "txtVendbanimi");
             this.txtVendbanimi.Name = "txtVendbanimi";
-            this.txtVendbanimi.Size = new System.Drawing.Size(137, 20);
-            this.txtVendbanimi.TabIndex = 42;
             // 
             // txtGjinia
             // 
             this.txtGjinia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtGjinia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGjinia.Location = new System.Drawing.Point(474, 61);
+            resources.ApplyResources(this.txtGjinia, "txtGjinia");
             this.txtGjinia.Name = "txtGjinia";
-            this.txtGjinia.Size = new System.Drawing.Size(137, 20);
-            this.txtGjinia.TabIndex = 41;
             // 
             // txtMbiemri
             // 
             this.txtMbiemri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtMbiemri.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMbiemri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMbiemri.Location = new System.Drawing.Point(173, 105);
+            resources.ApplyResources(this.txtMbiemri, "txtMbiemri");
             this.txtMbiemri.Name = "txtMbiemri";
-            this.txtMbiemri.Size = new System.Drawing.Size(137, 19);
-            this.txtMbiemri.TabIndex = 40;
             // 
             // txtEmri
             // 
             this.txtEmri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.txtEmri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmri.Location = new System.Drawing.Point(173, 62);
+            resources.ApplyResources(this.txtEmri, "txtEmri");
             this.txtEmri.Name = "txtEmri";
-            this.txtEmri.Size = new System.Drawing.Size(137, 20);
-            this.txtEmri.TabIndex = 39;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label6, "label6");
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(358, 229);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 20);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Shtetesia";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(352, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 20);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Grupi Gjakut";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(357, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Vendlindja";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(357, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Gjinia";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(13, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Mbiemri";
             // 
             // label
             // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label, "label");
             this.label.ForeColor = System.Drawing.Color.Silver;
-            this.label.Location = new System.Drawing.Point(16, 65);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(45, 20);
-            this.label.TabIndex = 28;
-            this.label.Text = "Emri";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(829, 290);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 48);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Regjistro";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RegjistroLojtartUserControls
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.Controls.Add(this.button1);
@@ -447,7 +327,6 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.panel1);
             this.Name = "RegjistroLojtartUserControls";
-            this.Size = new System.Drawing.Size(1000, 470);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

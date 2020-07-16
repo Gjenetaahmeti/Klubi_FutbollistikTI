@@ -46,7 +46,7 @@
             // txtNumriGolave
             // 
             this.txtNumriGolave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
-            this.txtNumriGolave.Location = new System.Drawing.Point(427, 122);
+            this.txtNumriGolave.Location = new System.Drawing.Point(427, 126);
             this.txtNumriGolave.Name = "txtNumriGolave";
             this.txtNumriGolave.Size = new System.Drawing.Size(163, 20);
             this.txtNumriGolave.TabIndex = 10;
@@ -55,7 +55,7 @@
             // 
             this.cmbNdeshja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(222)))));
             this.cmbNdeshja.FormattingEnabled = true;
-            this.cmbNdeshja.Location = new System.Drawing.Point(427, 155);
+            this.cmbNdeshja.Location = new System.Drawing.Point(427, 159);
             this.cmbNdeshja.Name = "cmbNdeshja";
             this.cmbNdeshja.Size = new System.Drawing.Size(163, 21);
             this.cmbNdeshja.TabIndex = 9;
@@ -74,7 +74,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(298, 153);
+            this.label3.Location = new System.Drawing.Point(298, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 8;
@@ -85,7 +85,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(295, 120);
+            this.label2.Location = new System.Drawing.Point(295, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 20);
             this.label2.TabIndex = 7;
@@ -104,7 +104,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(453, 202);
+            this.button1.Location = new System.Drawing.Point(453, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 48);
             this.button1.TabIndex = 60;

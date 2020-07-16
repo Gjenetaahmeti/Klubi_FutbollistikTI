@@ -23,6 +23,6 @@ namespace Klubi_I_Futbollit.UserControls.DelegatUserControls
             radGridView1.Visible = true;
             DelegatBLL obj = new DelegatBLL();
             radGridView1.DataSource = obj.ShfaqListenEDelegateve();
-        }
+        }   
     }
 }

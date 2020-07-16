@@ -1,6 +1,6 @@
-﻿namespace Klubi_I_Futbollit.UserControls.DelegatUserControls
+﻿namespace Klubi_I_Futbollit.UserControls.HelpUserControls
 {
-    partial class ShikoDelegatUserControls
+    partial class DashboardHelpUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShikoDelegatUserControls));
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardHelpUserControl));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.lblHelp = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,7 +45,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 344);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(994, 123);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // label14
             // 
@@ -75,52 +68,31 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // lblHelp
             // 
-            this.button1.Location = new System.Drawing.Point(429, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 34);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Shfaq Delegat";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblHelp.AutoSize = true;
+            this.lblHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblHelp.ForeColor = System.Drawing.Color.Silver;
+            this.lblHelp.Location = new System.Drawing.Point(39, 25);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(46, 20);
+            this.lblHelp.TabIndex = 3;
+            this.lblHelp.Text = "Help";
             // 
-            // radGridView1
-            // 
-            this.radGridView1.Location = new System.Drawing.Point(3, 39);
-            // 
-            // 
-            // 
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(994, 299);
-            this.radGridView1.TabIndex = 89;
-            this.radGridView1.Visible = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 50;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 50;
-            // 
-            // ShikoDelegatUserControls
+            // DashboardHelpUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.Controls.Add(this.radGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.panel1);
-            this.Name = "ShikoDelegatUserControls";
+            this.Name = "DashboardHelpUserControl";
             this.Size = new System.Drawing.Size(1000, 470);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,9 +101,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lblHelp;
     }
 }
